@@ -38,19 +38,19 @@ Quality of life / community
 ---
 ## Key themes
 
-1) Regionalism
-2) Suburbanization of poverty
-3) Concentration of poverty in Hartford
-4) Latino achievement gap
-5) Middle skills gap
-6) Aging workforce
-7) Civic health
-8) Global region
+1. Regionalism
+2. Suburbanization of poverty
+3. Concentration of poverty in Hartford
+4. Latino achievement gap
+5. Middle skills gap
+6. Aging workforce
+7. Civic health
+8. Global region
 
 ---
 ## Flat population growth
 
-Themes: regionalism, suburbanization of poverty
+Themes: regionalism, suburbanization of poverty  
 Key points: population loss in Hartford, flat population growth in suburbs
 
 
@@ -480,9 +480,9 @@ Key points: population loss in Hartford, flat population growth in suburbs
 
 
 ---
-## Aging population
+## Aging population (?)
 
-Themes: regionalism, aging workforce
+Themes: regionalism, aging workforce  
 Key points: aging population in suburbs, talent pipeline from Hartford
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
@@ -491,7 +491,7 @@ Key points: aging population in suburbs, talent pipeline from Hartford
 --- 
 ## Linguistic diversity
 
-Themes: Global region, Latino achievement gap, suburbanization of poverty. 
+Themes: Global region, Latino achievement gap, suburbanization of poverty   
 Key points: Suburbs more diverse, ELL students in public school systems.
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
@@ -500,8 +500,8 @@ Key points: Suburbs more diverse, ELL students in public school systems.
 --- 
 ## School choice unique to region
 
-Themes: Regionalism, disparities.
-Key points: Many opting out of public schools, districts not the same as towns.
+Themes: Regionalism, disparities  
+Key points: Integration through school system, districts not the same as towns.
 
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
 
@@ -509,7 +509,7 @@ Key points: Many opting out of public schools, districts not the same as towns.
 --- 
 ## Everyone commutes, mostly to Hartford
 
-Themes: Regionalism, background for aging workforce.
+Themes: Regionalism, background for aging workforce  
 Key points: Every town sends workers to Hartford; job center
 
 ![image](../mockup/commute-patterns.png)
@@ -517,17 +517,17 @@ Key points: Every town sends workers to Hartford; job center
 --- 
 ## Suburbanization of poverty
 
-Themes: suburbanization of poverty
-Key points: growth in poverty highest in suburbs
+Themes: suburbanization of poverty  
+Key points: Poverty growing fastest in suburbs
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
 
 --- 
-## Income disparities
+## Income inequality
 
-Themes: suburbanization, concentration of poverty
-Key points: Inner-ring suburbs have many low-income neighborhoods
+Themes: suburbanization, concentration of poverty  
+Key points: Affluent suburbs, inner-ring suburbs have many low-income neighborhoods
 
 ![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5.png) 
 
@@ -535,15 +535,15 @@ Key points: Inner-ring suburbs have many low-income neighborhoods
 --- 
 ## Achievement gap starts early
 
-Themes: Achievement gap, global region
-Key points: Disparities by income, race, ELL, special-ed by grade 3
+Themes: Achievement gap, global region  
+Key points: Everybody improving, but gaps remain for subgroups
 
 ![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
 
 --- 
 ## Chronic absenteeism an early warning sign
 
-Themes: Suburbanization of poverty
+Themes: Suburbanization of poverty  
 Key points: Some rural districts with high rates, otherwise same as others
 
 ![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
@@ -551,16 +551,15 @@ Key points: Some rural districts with high rates, otherwise same as others
 --- 
 ## High-school graduation rising, but with gaps
 
-Themes: Latino achievement gap, middle skills gap
+Themes: Latino achievement gap, middle skills gap  
 Key points: HS graduates are talent pipeline, need to address disparities
 
 ![plot of chunk unnamed-chunk-8](assets/fig/unnamed-chunk-8.png) 
 
-
 --- 
 ## Skilled workforce now, but need to look ahead
 
-Themes: Middle skills jobs, Latino achievement gap
+Themes: Middle skills jobs, Latino achievement gap  
 Key points: Connect workforce to schools, aging workforce
 
 ![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
@@ -569,7 +568,7 @@ Key points: Connect workforce to schools, aging workforce
 --- 
 ## Youth unemployment highest
 
-Themes: Aging workforce, middle skills gap
+Themes: Aging workforce, middle skills gap  
 Key points: 16 to 24 cohort are opportunity youth, future workforce
 
 ![plot of chunk unnamed-chunk-10](assets/fig/unnamed-chunk-10.png) 
@@ -578,35 +577,26 @@ Key points: 16 to 24 cohort are opportunity youth, future workforce
 --- 
 ## Home ownership sign of civic health
 
-Themes: Civic health, concentration of poverty
+Themes: Civic health, concentration of poverty  
 Key points: Housing market divided, higher mobility in Hartford
 
 ![plot of chunk unnamed-chunk-11](assets/fig/unnamed-chunk-11.png) 
 
-
---- 
-## Home ownership sign of civic health
-
-Themes: Civic health, concentration of poverty
-Key points: Housing market divided, higher mobility in Hartford
-
-![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
-
 --- 
 ## Hartford safest in 30 years
 
-Themes: Civic health
+Themes: Civic health  
 Key points: Progress on reducing crime, perception v. reality
 
-![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
+![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
 
 
 --- 
 ## Voter turnout another measure of civic health
 
-Themes: Civic health
+Themes: Civic health  
 Key points: Connect to home-ownership
 
-![plot of chunk unnamed-chunk-14](assets/fig/unnamed-chunk-14.png) 
+![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
 
 

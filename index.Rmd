@@ -38,19 +38,19 @@ Quality of life / community
 ---
 ## Key themes
 
-1) Regionalism
-2) Suburbanization of poverty
-3) Concentration of poverty in Hartford
-4) Latino achievement gap
-5) Middle skills gap
-6) Aging workforce
-7) Civic health
-8) Global region
+1. Regionalism
+2. Suburbanization of poverty
+3. Concentration of poverty in Hartford
+4. Latino achievement gap
+5. Middle skills gap
+6. Aging workforce
+7. Civic health
+8. Global region
 
 ---
 ## Flat population growth
 
-Themes: regionalism, suburbanization of poverty
+Themes: regionalism, suburbanization of poverty  
 Key points: population loss in Hartford, flat population growth in suburbs
 
 ```{r setup, message = F, echo = F, cache = F}
@@ -81,9 +81,9 @@ n1$print('chart1')
 ```
 
 ---
-## Aging population
+## Aging population (?)
 
-Themes: regionalism, aging workforce
+Themes: regionalism, aging workforce  
 Key points: aging population in suburbs, talent pipeline from Hartford
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
@@ -114,7 +114,7 @@ ggplot(data=aging, aes(x=AGE)) +
 --- 
 ## Linguistic diversity
 
-Themes: Global region, Latino achievement gap, suburbanization of poverty. 
+Themes: Global region, Latino achievement gap, suburbanization of poverty   
 Key points: Suburbs more diverse, ELL students in public school systems.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
@@ -144,8 +144,8 @@ ggplot(data = languages_agg) +
 --- 
 ## School choice unique to region
 
-Themes: Regionalism, disparities.
-Key points: Many opting out of public schools, districts not the same as towns.
+Themes: Regionalism, disparities  
+Key points: Integration through school system, districts not the same as towns.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 enroll <- read.csv("../regionalreport/data/all-schools.csv", stringsAsFactors=FALSE)
@@ -221,7 +221,7 @@ ggplot(data = subset(enroll, School.Year == "2010-11" & variable != "Total"),
 --- 
 ## Everyone commutes, mostly to Hartford
 
-Themes: Regionalism, background for aging workforce.
+Themes: Regionalism, background for aging workforce  
 Key points: Every town sends workers to Hartford; job center
 
 ![image](../mockup/commute-patterns.png)
@@ -229,8 +229,8 @@ Key points: Every town sends workers to Hartford; job center
 --- 
 ## Suburbanization of poverty
 
-Themes: suburbanization of poverty
-Key points: growth in poverty highest in suburbs
+Themes: suburbanization of poverty  
+Key points: Poverty growing fastest in suburbs
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 14}
 ggplot(aes(y = sumpoor, x = period), data = subset(gh_sum,period >= 1970)) + 
@@ -241,10 +241,10 @@ ggplot(aes(y = sumpoor, x = period), data = subset(gh_sum,period >= 1970)) +
 ```
 
 --- 
-## Income disparities
+## Income inequality
 
-Themes: suburbanization, concentration of poverty
-Key points: Inner-ring suburbs have many low-income neighborhoods
+Themes: suburbanization, concentration of poverty  
+Key points: Affluent suburbs, inner-ring suburbs have many low-income neighborhoods
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 7, fig.width = 11}
 B19013 = acs.fetch(geography = hartford.tracts, table.number = "B19013", col.names = "pretty")
@@ -276,10 +276,10 @@ ggplot(data = income.tract) +
 --- 
 ## Achievement gap starts early
 
-Themes: Achievement gap, global region
-Key points: Disparities by income, race, ELL, special-ed by grade 3
+Themes: Achievement gap, global region  
+Key points: Everybody improving, but gaps remain for subgroups
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 cmt_subgroups <- read.csv('../testscores/cmt-subgroups.csv', na.strings = c("**","-"))
 cmt_subgroups <- subset(cmt_subgroups, cmt_subgroups$District.ID %in% 
                      levels(as.factor(districts$districtid)))
@@ -299,17 +299,22 @@ cmt_subgroups$Status = gsub(x = cmt_subgroups$Status,
 
 cmt_subgroups <- subset(cmt_subgroups, Students.Tested > 0)
 
-ggplot(data = subset(cmt_subgroups, Test == "Reading" & Grade == 3), 
-       aes(x = Status, y = Average.Scale.Score)) + 
-  geom_boxplot() + 
-  coord_flip() + 
+cmt_subgroups_region <- ddply(cmt_subgroups,.(School.Year, Subgroup, Status),
+                              summarise,
+                              Percent.at.or.Above.Goal = weighted.mean(Percent.at.or.Above.Goal, Students.Tested, na.rm = TRUE),
+                              Average.Scale.Score = weighted.mean(Average.Scale.Score, Students.Tested, na.rm = TRUE))
+#Show trends for the region
+ggplot(data = cmt_subgroups_region, aes(x = School.Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status)) + 
+#  geom_point(aes(group = Status)) + 
+  facet_wrap(~ Subgroup, ncol = 5) + 
   theme_minimal() + 
-  labs(x = NULL, y = "Average scale score, 3rd grade reading")
+  labs(x = "School Year", y = "Average scale score, 3rd grade reading")
 ```
 --- 
 ## Chronic absenteeism an early warning sign
 
-Themes: Suburbanization of poverty
+Themes: Suburbanization of poverty  
 Key points: Some rural districts with high rates, otherwise same as others
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
@@ -326,7 +331,7 @@ ggplot(data = absenteeism, aes(x = Students.Chronically.Absent.in.District..Tota
 --- 
 ## High-school graduation rising, but with gaps
 
-Themes: Latino achievement gap, middle skills gap
+Themes: Latino achievement gap, middle skills gap  
 Key points: HS graduates are talent pipeline, need to address disparities
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
@@ -335,7 +340,7 @@ allgrads <- ddply(subset(hsgrad[1:4], Category %in% c("All Students")),
                   summarise,
                   rate = mean(X4.Year.Graduation.Rate, na.rm = TRUE))
 allgrads$District.Name <- reorder(allgrads$District.Name, -allgrads$rate)
-
+ 
 ggplot(data = subset(hsgrad, !(Category %in% c("All Students")))) + 
   geom_boxplot(aes(x = Category, y = X4.Year.Graduation.Rate)) + 
   coord_flip() + 
@@ -343,11 +348,10 @@ ggplot(data = subset(hsgrad, !(Category %in% c("All Students")))) +
   theme_minimal() + 
   labs(x = NULL, y = "Four-year graduation rate")
 ```
-
 --- 
 ## Skilled workforce now, but need to look ahead
 
-Themes: Middle skills jobs, Latino achievement gap
+Themes: Middle skills jobs, Latino achievement gap  
 Key points: Connect workforce to schools, aging workforce
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 11}
@@ -431,7 +435,7 @@ ggplot(data = attainment.by.race,
 --- 
 ## Youth unemployment highest
 
-Themes: Aging workforce, middle skills gap
+Themes: Aging workforce, middle skills gap  
 Key points: 16 to 24 cohort are opportunity youth, future workforce
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 12, fig.height = 6}
@@ -468,32 +472,7 @@ ggplot(data = B23001_sum,
 --- 
 ## Home ownership sign of civic health
 
-Themes: Civic health, concentration of poverty
-Key points: Housing market divided, higher mobility in Hartford
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
-hartford.towns = geo.make(state = "CT", county = c("Hartford","Tolland"), county.subdivision = "*", check = F)
-B25008 = acs.fetch(geography = hartford.towns, table.number = "B25008", col.names = "pretty")
-own.estimate = divide.acs(numerator=B25008[,2],denominator=B25008[,1], method = 'proportion')
-homeownership = data.frame(town=geography(B25008)[[1]], 
-                         rate=as.numeric(estimate(own.estimate)),
-                         se=standard.error(own.estimate))
-names(homeownership) <- c("town","rate","se")
-homeownership$town= gsub(" town, Tolland County, Connecticut", "", homeownership$town)
-homeownership$town= gsub(" town, Hartford County, Connecticut", "", homeownership$town)
-homeownership$town <- reorder(homeownership$town, -homeownership$rate)
-ggplot(data = subset(homeownership, !(town %in% c("Burlington","Columbia","Coventry","Hartland","Berlin","Union","Southington","Mansfield","Willington","Plainville","Bristol","New Britain")))) + 
-  geom_point(aes(x = rate, y = town)) + 
-  geom_segment(aes(xend = rate - se, x = rate + se, y = town, yend = town), colour = "grey") + 
-  labs(x = 'Rate of owner-occupied housing (2007-2011 ACS estimates)', y = NULL) + 
-  scale_x_continuous(labels = percent) + 
-  theme_minimal()
-```
-
---- 
-## Home ownership sign of civic health
-
-Themes: Civic health, concentration of poverty
+Themes: Civic health, concentration of poverty  
 Key points: Housing market divided, higher mobility in Hartford
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
@@ -527,7 +506,7 @@ ggplot(data = homeownership.tract) +
 --- 
 ## Hartford safest in 30 years
 
-Themes: Civic health
+Themes: Civic health  
 Key points: Progress on reducing crime, perception v. reality
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
@@ -544,20 +523,32 @@ ggplot(data = subset(totalcrime, Town %in% c("Bridgeport","Hartford","New Haven"
 --- 
 ## Voter turnout another measure of civic health
 
-Themes: Civic health
+Themes: Civic health  
 Key points: Connect to home-ownership
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 voting <- read.csv('2012-voting.csv')
+#voting$Town <- gsub(pattern = " (CD1&2)", replacement = "", voting$Town)
 voting <- subset(voting, voting$Town %in% levels(towns$Town))
-#voting$Town <- factor(voting$Town)
 
-voting$Town <- reorder(voting$Town, -voting$Percentage.Checked.as.Having.Voted)
+voting$Town <- reorder(voting$Town, voting$Percentage.Checked.as.Having.Voted)
 
-ggplot(data = voting) + 
-  geom_point(aes(x = Percentage.Checked.as.Having.Voted, y = Town)) + 
-  labs(x = '% checked as having voted (11/6/2012 election)', y = NULL) + 
-  scale_x_continuous(labels = percent) + 
+library(classInt)
+jenks <- classIntervals(voting$Percentage.Checked.as.Having.Voted, 
+                        n=3, style="fisher")
+choropleth=merge(CTTowns, voting, by.x = "id", by.y="Town")
+choropleth=choropleth[order(choropleth$order), ]
+choropleth$employment=cut(choropleth$Percentage.Checked.as.Having.Voted, 
+                          breaks=jenks$brks,
+                          include.lowest=T, dig.lab = T)
+#Make the map
+ggplot(data = choropleth, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = Percentage.Checked.as.Having.Voted)) + 
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = NULL, y = NULL) + 
+  coord_equal() +
+  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
   theme_minimal()
 ```
 
