@@ -28,10 +28,10 @@ Education
 Workforce / economy / talent
 * Educational attainment
 * Unemployment rate
-* Job growth
+* Job growth (need to add)
 
 Quality of life / community
-* Home-ownership / housing cost
+* Home-ownership / affordable housing
 * Crime rate
 * Voter turnout
 
@@ -575,7 +575,7 @@ Key points: 16 to 24 cohort are opportunity youth, future workforce
 
 
 --- 
-## Home ownership sign of civic health
+## Home ownership sign of civic health (replace w/ map)
 
 Themes: Civic health, concentration of poverty  
 Key points: Housing market divided, higher mobility in Hartford

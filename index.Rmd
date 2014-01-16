@@ -28,10 +28,10 @@ Education
 Workforce / economy / talent
 * Educational attainment
 * Unemployment rate
-* Job growth
+* Job growth (need to add)
 
 Quality of life / community
-* Home-ownership / housing cost
+* Home-ownership / affordable housing
 * Crime rate
 * Voter turnout
 
@@ -470,7 +470,7 @@ ggplot(data = B23001_sum,
 ```
 
 --- 
-## Home ownership sign of civic health
+## Home ownership sign of civic health (replace w/ map)
 
 Themes: Civic health, concentration of poverty  
 Key points: Housing market divided, higher mobility in Hartford
@@ -513,8 +513,8 @@ Key points: Progress on reducing crime, perception v. reality
 totalcrime <- read.csv("../crime/totalcrime.csv")
 ggplot(data = subset(totalcrime, Town %in% c("Bridgeport","Hartford","New Haven","New Britain","Stamford","Waterbury")), 
        aes(x = Year, y = Total.crime.Rate)) + 
-  geom_line(aes(group = Town)) +
-  geom_point(aes(colour = Town)) +
+  geom_line(aes(group = Town, colour = Town), size = 1) +
+#  geom_point(aes(colour = Town)) +
   labs(x = NULL, y = "Crime rate by town (per 100K residents)") +
   scale_x_continuous(breaks = c(1998,2004,2010)) + 
   theme_minimal()
