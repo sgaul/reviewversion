@@ -1,0 +1,518 @@
+District ID,District Name,School Year,Languages,Number of Students with Non-English Home Language,Number of ELL Students
+1,Andover School District,2010-11,Polish,6,1
+11,Bloomfield School District,2010-11,Arabic,**,**
+11,Bloomfield School District,2010-11,Bengali,**,**
+11,Bloomfield School District,2010-11,Creole-Haitian,**,**
+11,Bloomfield School District,2010-11,French,**,**
+11,Bloomfield School District,2010-11,Japanese,**,**
+11,Bloomfield School District,2010-11,Patois,18,17
+11,Bloomfield School District,2010-11,Russian,**,**
+11,Bloomfield School District,2010-11,Samoan,**,**
+11,Bloomfield School District,2010-11,Spanish,21,10
+11,Bloomfield School District,2010-11,Tamil,**,**
+12,Bolton School District,2010-11,Polish,**,**
+12,Bolton School District,2010-11,Spanish,**,**
+23,Canton School District,2010-11,Arabic,7,5
+23,Canton School District,2010-11,Chinese,**,**
+23,Canton School District,2010-11,French,**,**
+23,Canton School District,2010-11,Korean,**,**
+23,Canton School District,2010-11,Russian,**,**
+23,Canton School District,2010-11,Spanish,11,3
+40,East Granby School District,2010-11,Chinese,7,1
+40,East Granby School District,2010-11,Spanish,10,3
+40,East Granby School District,2010-11,Telugu,**,**
+47,East Windsor School District,2010-11,Amharic,**,**
+47,East Windsor School District,2010-11,Arabic,**,**
+47,East Windsor School District,2010-11,Chinese,**,**
+47,East Windsor School District,2010-11,Mandarin,**,**
+47,East Windsor School District,2010-11,Marathi,**,**
+47,East Windsor School District,2010-11,Polish,8,1
+47,East Windsor School District,2010-11,Spanish,37,12
+47,East Windsor School District,2010-11,Telugu,17,4
+47,East Windsor School District,2010-11,Urdu,11,6
+47,East Windsor School District,2010-11,Vietnamese,**,**
+48,Ellington School District,2010-11,Albanian,**,**
+48,Ellington School District,2010-11,Arabic,6,3
+48,Ellington School District,2010-11,Chinese,9,5
+48,Ellington School District,2010-11,Greek,**,**
+48,Ellington School District,2010-11,Gujarati,7,2
+48,Ellington School District,2010-11,Hindi,**,**
+48,Ellington School District,2010-11,Korean,**,**
+48,Ellington School District,2010-11,Pilipino (Filipino),**,**
+48,Ellington School District,2010-11,Portuguese,**,**
+48,Ellington School District,2010-11,Russian,**,**
+48,Ellington School District,2010-11,Spanish,**,**
+48,Ellington School District,2010-11,Telugu,**,**
+48,Ellington School District,2010-11,Turkish,**,**
+48,Ellington School District,2010-11,Urdu,**,**
+48,Ellington School District,2010-11,Vietnamese,**,**
+49,Enfield School District,2010-11,Arabic,33,18
+49,Enfield School District,2010-11,Chinese,7,2
+49,Enfield School District,2010-11,German,**,**
+49,Enfield School District,2010-11,Hmong,21,9
+49,Enfield School District,2010-11,Polish,27,6
+49,Enfield School District,2010-11,Somali,**,**
+49,Enfield School District,2010-11,Spanish,73,31
+49,Enfield School District,2010-11,Tagalog,**,**
+49,Enfield School District,2010-11,Turkish,**,**
+49,Enfield School District,2010-11,Twi/Fante,**,**
+49,Enfield School District,2010-11,Urdu,8,4
+49,Enfield School District,2010-11,Vietnamese,12,3
+52,Farmington School District,2010-11,Arabic,15,8
+52,Farmington School District,2010-11,Bengali,7,1
+52,Farmington School District,2010-11,Chinese,64,13
+52,Farmington School District,2010-11,Hindi,27,3
+52,Farmington School District,2010-11,Japanese,7,2
+52,Farmington School District,2010-11,Korean,36,7
+52,Farmington School District,2010-11,Lithuanian,**,**
+52,Farmington School District,2010-11,Malayalam,**,**
+52,Farmington School District,2010-11,Mandarin,6,2
+52,Farmington School District,2010-11,Polish,98,12
+52,Farmington School District,2010-11,Russian,26,4
+52,Farmington School District,2010-11,Spanish,44,6
+52,Farmington School District,2010-11,Tamil,11,2
+52,Farmington School District,2010-11,Telugu,21,1
+52,Farmington School District,2010-11,Turkish,11,3
+52,Farmington School District,2010-11,Ukrainian,6,1
+52,Farmington School District,2010-11,Urdu,19,2
+52,Farmington School District,2010-11,Vietnamese,11,2
+54,Glastonbury School District,2010-11,Albanian,13,4
+54,Glastonbury School District,2010-11,Arabic,13,4
+54,Glastonbury School District,2010-11,Basa,**,**
+54,Glastonbury School District,2010-11,Chinese,54,5
+54,Glastonbury School District,2010-11,French,**,**
+54,Glastonbury School District,2010-11,German,**,**
+54,Glastonbury School District,2010-11,Greek,**,**
+54,Glastonbury School District,2010-11,Gujarati,29,2
+54,Glastonbury School District,2010-11,Hindi,11,1
+54,Glastonbury School District,2010-11,Hungarian,**,**
+54,Glastonbury School District,2010-11,Japanese,10,6
+54,Glastonbury School District,2010-11,Korean,54,10
+54,Glastonbury School District,2010-11,Latvian,**,**
+54,Glastonbury School District,2010-11,Malayalam,**,**
+54,Glastonbury School District,2010-11,Marathi,**,**
+54,Glastonbury School District,2010-11,Nepali,**,**
+54,Glastonbury School District,2010-11,Pilipino (Filipino),**,**
+54,Glastonbury School District,2010-11,Polish,11,1
+54,Glastonbury School District,2010-11,Portuguese,13,2
+54,Glastonbury School District,2010-11,Rumanian,**,**
+54,Glastonbury School District,2010-11,Russian,15,2
+54,Glastonbury School District,2010-11,Serbo-Croatian,10,1
+54,Glastonbury School District,2010-11,Spanish,77,22
+54,Glastonbury School District,2010-11,Tamil,6,1
+54,Glastonbury School District,2010-11,Telugu,15,3
+54,Glastonbury School District,2010-11,Tigrinya,**,**
+54,Glastonbury School District,2010-11,Ukrainian,**,**
+54,Glastonbury School District,2010-11,Urdu,9,2
+54,Glastonbury School District,2010-11,Vietnamese,21,4
+56,Granby School District,2010-11,Albanian,**,**
+56,Granby School District,2010-11,Arabic,**,**
+56,Granby School District,2010-11,Danish,**,**
+56,Granby School District,2010-11,Mandarin,**,**
+56,Granby School District,2010-11,Polish,**,**
+56,Granby School District,2010-11,Spanish,**,**
+67,Hebron School District,2010-11,Farsi,**,**
+77,Manchester School District,2010-11,Akan,**,**
+77,Manchester School District,2010-11,Albanian,**,**
+77,Manchester School District,2010-11,Arabic,7,7
+77,Manchester School District,2010-11,Bangla,11,11
+77,Manchester School District,2010-11,Bengali,25,25
+77,Manchester School District,2010-11,Chinese,9,9
+77,Manchester School District,2010-11,Creole-Haitian,**,**
+77,Manchester School District,2010-11,Efik,**,**
+77,Manchester School District,2010-11,Flemish,**,**
+77,Manchester School District,2010-11,French,**,**
+77,Manchester School District,2010-11,Ga,**,**
+77,Manchester School District,2010-11,Gujarati,11,11
+77,Manchester School District,2010-11,Hindi,**,**
+77,Manchester School District,2010-11,Kannada,**,**
+77,Manchester School District,2010-11,Khmer(Cambodian),**,**
+77,Manchester School District,2010-11,Lao,**,**
+77,Manchester School District,2010-11,Mandarin,**,**
+77,Manchester School District,2010-11,Mondingo,**,**
+77,Manchester School District,2010-11,Pashto,**,**
+77,Manchester School District,2010-11,Patois,**,**
+77,Manchester School District,2010-11,Pilipino (Filipino),**,**
+77,Manchester School District,2010-11,Polish,**,**
+77,Manchester School District,2010-11,Portuguese,**,**
+77,Manchester School District,2010-11,Pushto,8,8
+77,Manchester School District,2010-11,Serbo-Croatian,**,**
+77,Manchester School District,2010-11,Spanish,178,178
+77,Manchester School District,2010-11,Tamil,**,**
+77,Manchester School District,2010-11,Telugu,12,12
+77,Manchester School District,2010-11,Turkish,**,**
+77,Manchester School District,2010-11,Twi/Fante,14,14
+77,Manchester School District,2010-11,Urdu,15,15
+77,Manchester School District,2010-11,Vietnamese,**,**
+77,Manchester School District,2010-11,Wolof,**,**
+94,Newington School District,2010-11,Albanian,22,3
+94,Newington School District,2010-11,Arabic,11,1
+94,Newington School District,2010-11,Armenian,**,**
+94,Newington School District,2010-11,Chinese,27,6
+94,Newington School District,2010-11,French,**,**
+94,Newington School District,2010-11,Giarahi,**,**
+94,Newington School District,2010-11,Gujarati,40,12
+94,Newington School District,2010-11,Italian,**,**
+94,Newington School District,2010-11,Korean,7,3
+94,Newington School District,2010-11,Lao,**,**
+94,Newington School District,2010-11,Malay(Indonesian),**,**
+94,Newington School District,2010-11,Malayalam,35,8
+94,Newington School District,2010-11,Mandarin,**,**
+94,Newington School District,2010-11,Patwa,**,**
+94,Newington School District,2010-11,Pilipino (Filipino),10,2
+94,Newington School District,2010-11,Polish,158,22
+94,Newington School District,2010-11,Portuguese,22,5
+94,Newington School District,2010-11,Punjabi,**,**
+94,Newington School District,2010-11,Russian,29,7
+94,Newington School District,2010-11,Spanish,119,37
+94,Newington School District,2010-11,Tagalog,7,3
+94,Newington School District,2010-11,Ukrainian,16,4
+94,Newington School District,2010-11,Urdu,27,3
+94,Newington School District,2010-11,Vietnamese,36,17
+119,Rocky Hill School District,2010-11,Albanian,22,3
+119,Rocky Hill School District,2010-11,Farsi,**,**
+119,Rocky Hill School District,2010-11,French,**,**
+119,Rocky Hill School District,2010-11,German,**,**
+119,Rocky Hill School District,2010-11,Greek,**,**
+119,Rocky Hill School District,2010-11,Gujarati,35,7
+119,Rocky Hill School District,2010-11,Hindi,15,1
+119,Rocky Hill School District,2010-11,Korean,**,**
+119,Rocky Hill School District,2010-11,Malayalam,9,1
+119,Rocky Hill School District,2010-11,Marathi,12,2
+119,Rocky Hill School District,2010-11,Pashto,**,**
+119,Rocky Hill School District,2010-11,Polish,40,5
+119,Rocky Hill School District,2010-11,Serbo-Croatian,33,17
+119,Rocky Hill School District,2010-11,Spanish,42,7
+119,Rocky Hill School District,2010-11,Tamil,20,10
+119,Rocky Hill School District,2010-11,Telugu,19,6
+119,Rocky Hill School District,2010-11,Turkish,7,4
+119,Rocky Hill School District,2010-11,Vietnamese,7,1
+128,Simsbury School District,2010-11,Arabic,12,10
+128,Simsbury School District,2010-11,Chinese,24,4
+128,Simsbury School District,2010-11,Farsi,**,**
+128,Simsbury School District,2010-11,Hindi,**,**
+128,Simsbury School District,2010-11,Hmong,**,**
+128,Simsbury School District,2010-11,Japanese,6,2
+128,Simsbury School District,2010-11,Konkani,**,**
+128,Simsbury School District,2010-11,Korean,24,2
+128,Simsbury School District,2010-11,Mandarin,**,**
+128,Simsbury School District,2010-11,Montenegrin,**,**
+128,Simsbury School District,2010-11,Persian,**,**
+128,Simsbury School District,2010-11,Polish,9,1
+128,Simsbury School District,2010-11,Portuguese,**,**
+128,Simsbury School District,2010-11,Punjabi,**,**
+128,Simsbury School District,2010-11,Russian,20,5
+128,Simsbury School District,2010-11,Serbo-Croatian,**,**
+128,Simsbury School District,2010-11,Spanish,50,14
+128,Simsbury School District,2010-11,Swedish,**,**
+128,Simsbury School District,2010-11,Telugu,8,3
+128,Simsbury School District,2010-11,Urdu,7,1
+129,Somers School District,2010-11,Arabic,**,**
+129,Somers School District,2010-11,Chinese,**,**
+129,Somers School District,2010-11,Creole-Haitian,**,**
+129,Somers School District,2010-11,German,**,**
+129,Somers School District,2010-11,Hebrew,**,**
+129,Somers School District,2010-11,Hungarian,**,**
+129,Somers School District,2010-11,Polish,**,**
+129,Somers School District,2010-11,Turkish,**,**
+132,South Windsor School District,2010-11,Akan,**,**
+132,South Windsor School District,2010-11,Albanian,6,2
+132,South Windsor School District,2010-11,Arabic,17,6
+132,South Windsor School District,2010-11,Bangla,**,**
+132,South Windsor School District,2010-11,Bengali,8,2
+132,South Windsor School District,2010-11,Chinese,23,1
+132,South Windsor School District,2010-11,French,6,1
+132,South Windsor School District,2010-11,Ga,**,**
+132,South Windsor School District,2010-11,Greek,**,**
+132,South Windsor School District,2010-11,Gujarati,36,10
+132,South Windsor School District,2010-11,Hindi,**,**
+132,South Windsor School District,2010-11,Korean,17,2
+132,South Windsor School District,2010-11,Latvian,**,**
+132,South Windsor School District,2010-11,Malayalam,6,1
+132,South Windsor School District,2010-11,Marathi,7,1
+132,South Windsor School District,2010-11,Pashto,**,**
+132,South Windsor School District,2010-11,Pilipino (Filipino),**,**
+132,South Windsor School District,2010-11,Polish,10,2
+132,South Windsor School District,2010-11,Portuguese,8,6
+132,South Windsor School District,2010-11,Spanish,45,19
+132,South Windsor School District,2010-11,Telugu,11,1
+132,South Windsor School District,2010-11,Thai,**,**
+132,South Windsor School District,2010-11,Turkish,**,**
+132,South Windsor School District,2010-11,Urdu,36,8
+132,South Windsor School District,2010-11,Vietnamese,28,3
+134,Stafford School District,2010-11,Hmong,**,**
+134,Stafford School District,2010-11,Lao,**,**
+134,Stafford School District,2010-11,Mandarin,**,**
+134,Stafford School District,2010-11,Polish,6,2
+134,Stafford School District,2010-11,Portuguese,**,**
+134,Stafford School District,2010-11,Russian,**,**
+134,Stafford School District,2010-11,Spanish,12,2
+134,Stafford School District,2010-11,Urdu,9,5
+134,Stafford School District,2010-11,Vietnamese,**,**
+139,Suffield School District,2010-11,Chinese,7,4
+139,Suffield School District,2010-11,Danish,**,**
+139,Suffield School District,2010-11,Russian,8,1
+139,Suffield School District,2010-11,Ukrainian,**,**
+139,Suffield School District,2010-11,Vietnamese,**,**
+142,Tolland School District,2010-11,Arabic,**,**
+142,Tolland School District,2010-11,German,**,**
+142,Tolland School District,2010-11,Gujarati,**,**
+142,Tolland School District,2010-11,Hmong,**,**
+142,Tolland School District,2010-11,Lao,**,**
+142,Tolland School District,2010-11,Rumanian,**,**
+142,Tolland School District,2010-11,Russian,**,**
+142,Tolland School District,2010-11,Spanish,**,**
+142,Tolland School District,2010-11,Swahili,**,**
+142,Tolland School District,2010-11,Urdu,**,**
+146,Vernon School District,2010-11,Arabic,12,3
+146,Vernon School District,2010-11,Chinese,9,5
+146,Vernon School District,2010-11,German,**,**
+146,Vernon School District,2010-11,Greek,**,**
+146,Vernon School District,2010-11,Gujarati,**,**
+146,Vernon School District,2010-11,Hungarian,**,**
+146,Vernon School District,2010-11,Japanese,**,**
+146,Vernon School District,2010-11,Korean,7,2
+146,Vernon School District,2010-11,Polish,14,2
+146,Vernon School District,2010-11,Punjabi,7,2
+146,Vernon School District,2010-11,Russian,**,**
+146,Vernon School District,2010-11,Serbo-Croatian,**,**
+146,Vernon School District,2010-11,Spanish,50,22
+146,Vernon School District,2010-11,Telugu,**,**
+146,Vernon School District,2010-11,Twi/Fante,**,**
+146,Vernon School District,2010-11,Urdu,67,24
+146,Vernon School District,2010-11,Vietnamese,23,10
+159,Wethersfield School District,2010-11,Albanian,38,15
+159,Wethersfield School District,2010-11,Amharic,**,**
+159,Wethersfield School District,2010-11,Armenian,**,**
+159,Wethersfield School District,2010-11,Chinese,21,6
+159,Wethersfield School District,2010-11,Georgian,**,**
+159,Wethersfield School District,2010-11,Greek,**,**
+159,Wethersfield School District,2010-11,Hindi,**,**
+159,Wethersfield School District,2010-11,Hungarian,**,**
+159,Wethersfield School District,2010-11,Italian,7,4
+159,Wethersfield School District,2010-11,Korean,**,**
+159,Wethersfield School District,2010-11,Oriya,**,**
+159,Wethersfield School District,2010-11,Pashto,**,**
+159,Wethersfield School District,2010-11,Patois,**,**
+159,Wethersfield School District,2010-11,Pilipino (Filipino),**,**
+159,Wethersfield School District,2010-11,Polish,23,7
+159,Wethersfield School District,2010-11,Portuguese,11,2
+159,Wethersfield School District,2010-11,Russian,**,**
+159,Wethersfield School District,2010-11,Serbo-Croatian,78,40
+159,Wethersfield School District,2010-11,Sindhi,**,**
+159,Wethersfield School District,2010-11,Spanish,147,72
+159,Wethersfield School District,2010-11,Telugu,**,**
+159,Wethersfield School District,2010-11,Turkish,6,4
+159,Wethersfield School District,2010-11,Ukrainian,7,4
+159,Wethersfield School District,2010-11,Urdu,12,9
+159,Wethersfield School District,2010-11,Vietnamese,12,3
+165,Windsor Locks School District,2010-11,Akan,**,**
+165,Windsor Locks School District,2010-11,Arabic,27,14
+165,Windsor Locks School District,2010-11,Chinese,15,8
+165,Windsor Locks School District,2010-11,Farsi,**,**
+165,Windsor Locks School District,2010-11,French,**,**
+165,Windsor Locks School District,2010-11,Gujarati,27,9
+165,Windsor Locks School District,2010-11,Hindi,**,**
+165,Windsor Locks School District,2010-11,Japanese,**,**
+165,Windsor Locks School District,2010-11,Lao,**,**
+165,Windsor Locks School District,2010-11,Nepali,**,**
+165,Windsor Locks School District,2010-11,Pashto,**,**
+165,Windsor Locks School District,2010-11,Polish,8,1
+165,Windsor Locks School District,2010-11,Punjabi,**,**
+165,Windsor Locks School District,2010-11,Russian,**,**
+165,Windsor Locks School District,2010-11,Spanish,25,9
+165,Windsor Locks School District,2010-11,Urdu,22,5
+164,Windsor School District,2010-11,Afrikaans,**,**
+164,Windsor School District,2010-11,Arabic,6,3
+164,Windsor School District,2010-11,Bengali,6,3
+164,Windsor School District,2010-11,Chinese,7,1
+164,Windsor School District,2010-11,Creole-Haitian,**,**
+164,Windsor School District,2010-11,Fante,**,**
+164,Windsor School District,2010-11,French,**,**
+164,Windsor School District,2010-11,Gujarati,15,4
+164,Windsor School District,2010-11,Hausa,**,**
+164,Windsor School District,2010-11,Hindi,8,2
+164,Windsor School District,2010-11,Hmong,**,**
+164,Windsor School District,2010-11,Lao,**,**
+164,Windsor School District,2010-11,Lithuanian,**,**
+164,Windsor School District,2010-11,Malay(Indonesian),**,**
+164,Windsor School District,2010-11,Nepali,**,**
+164,Windsor School District,2010-11,Patwa,8,8
+164,Windsor School District,2010-11,Portuguese,**,**
+164,Windsor School District,2010-11,Rumanian,**,**
+164,Windsor School District,2010-11,Russian,**,**
+164,Windsor School District,2010-11,Serbo-Croatian,**,**
+164,Windsor School District,2010-11,Somali,**,**
+164,Windsor School District,2010-11,Spanish,120,35
+164,Windsor School District,2010-11,Telugu,**,**
+164,Windsor School District,2010-11,Turkish,8,5
+164,Windsor School District,2010-11,Urdu,16,5
+164,Windsor School District,2010-11,Vietnamese,28,6
+164,Windsor School District,2010-11,Wolof,**,**
+155,West Hartford School District,2010-11,Albanian,19,4
+155,West Hartford School District,2010-11,Arabic,35,18
+155,West Hartford School District,2010-11,Bengali,9,3
+155,West Hartford School District,2010-11,Bikol,**,**
+155,West Hartford School District,2010-11,Cantonese,11,1
+155,West Hartford School District,2010-11,Chinese,185,50
+155,West Hartford School District,2010-11,Creole-Haitian,6,5
+155,West Hartford School District,2010-11,Creole-Jaotoam,6,1
+155,West Hartford School District,2010-11,Dari,7,4
+155,West Hartford School District,2010-11,Farsi,**,**
+155,West Hartford School District,2010-11,French,28,5
+155,West Hartford School District,2010-11,German,19,4
+155,West Hartford School District,2010-11,Gujarati,17,2
+155,West Hartford School District,2010-11,Hebrew,9,1
+155,West Hartford School District,2010-11,Hindi,14,1
+155,West Hartford School District,2010-11,Icelandic,**,**
+155,West Hartford School District,2010-11,Igbo,14,2
+155,West Hartford School District,2010-11,Italian,7,1
+155,West Hartford School District,2010-11,Kambaata,**,**
+155,West Hartford School District,2010-11,Khmer(Cambodian),12,3
+155,West Hartford School District,2010-11,Korean,21,2
+155,West Hartford School District,2010-11,Lao,8,3
+155,West Hartford School District,2010-11,Lithuanian,7,1
+155,West Hartford School District,2010-11,Maay,**,**
+155,West Hartford School District,2010-11,Malay(Indonesian),**,**
+155,West Hartford School District,2010-11,Malayalam,36,8
+155,West Hartford School District,2010-11,Mandarin,16,5
+155,West Hartford School District,2010-11,Nepali,54,25
+155,West Hartford School District,2010-11,Oriya,**,**
+155,West Hartford School District,2010-11,Persian,**,**
+155,West Hartford School District,2010-11,Pilipino (Filipino),6,1
+155,West Hartford School District,2010-11,Portuguese,112,33
+155,West Hartford School District,2010-11,Punjabi,32,15
+155,West Hartford School District,2010-11,Pushto,**,**
+155,West Hartford School District,2010-11,Rumanian,7,1
+155,West Hartford School District,2010-11,Russian,97,16
+155,West Hartford School District,2010-11,Somali,15,3
+155,West Hartford School District,2010-11,Spanish,652,229
+155,West Hartford School District,2010-11,Telugu,**,**
+155,West Hartford School District,2010-11,Thai,**,**
+155,West Hartford School District,2010-11,Turkish,10,6
+155,West Hartford School District,2010-11,Twi/Fante,**,**
+155,West Hartford School District,2010-11,Ukrainian,11,2
+155,West Hartford School District,2010-11,Urdu,75,35
+155,West Hartford School District,2010-11,Vietnamese,190,61
+155,West Hartford School District,2010-11,Wolof,**,**
+64,Hartford School District,2010-11,Afrikaans,9,8
+64,Hartford School District,2010-11,Albanian,85,33
+64,Hartford School District,2010-11,Arabic,35,24
+64,Hartford School District,2010-11,Bangla,**,**
+64,Hartford School District,2010-11,Bengali,18,5
+64,Hartford School District,2010-11,Burmese,18,18
+64,Hartford School District,2010-11,Chinese,6,5
+64,Hartford School District,2010-11,Creole-Haitian,30,11
+64,Hartford School District,2010-11,Creole-Jaotoam,**,**
+64,Hartford School District,2010-11,Ewe,**,**
+64,Hartford School District,2010-11,French,32,15
+64,Hartford School District,2010-11,Ganda,**,**
+64,Hartford School District,2010-11,German,**,**
+64,Hartford School District,2010-11,Greek,**,**
+64,Hartford School District,2010-11,Grobo,6,3
+64,Hartford School District,2010-11,Gujarati,**,**
+64,Hartford School District,2010-11,Hindi,10,3
+64,Hartford School District,2010-11,Karen,161,155
+64,Hartford School District,2010-11,Kirundi,14,6
+64,Hartford School District,2010-11,Korean,**,**
+64,Hartford School District,2010-11,Krahan,7,5
+64,Hartford School District,2010-11,Malay(Indonesian),**,**
+64,Hartford School District,2010-11,Malayalam,**,**
+64,Hartford School District,2010-11,Mandarin,**,**
+64,Hartford School District,2010-11,Mende,**,**
+64,Hartford School District,2010-11,Mondingo,**,**
+64,Hartford School District,2010-11,Nepali,8,7
+64,Hartford School District,2010-11,Patout,**,**
+64,Hartford School District,2010-11,Patwa,27,6
+64,Hartford School District,2010-11,Portuguese,72,29
+64,Hartford School District,2010-11,Punjabi,**,**
+64,Hartford School District,2010-11,Russian,22,17
+64,Hartford School District,2010-11,Serbo-Croatian,248,79
+64,Hartford School District,2010-11,Singhalese,**,**
+64,Hartford School District,2010-11,Somali,49,44
+64,Hartford School District,2010-11,Spanish,7306,3149
+64,Hartford School District,2010-11,Swahili,**,**
+64,Hartford School District,2010-11,Telugu,9,2
+64,Hartford School District,2010-11,Thai,7,5
+64,Hartford School District,2010-11,Turkish,19,13
+64,Hartford School District,2010-11,Twi/Fante,**,**
+64,Hartford School District,2010-11,Urdu,12,6
+64,Hartford School District,2010-11,Vietnamese,44,12
+43,East Hartford School District,2010-11,Akan,**,**
+43,East Hartford School District,2010-11,Albanian,7,1
+43,East Hartford School District,2010-11,Arabic,**,**
+43,East Hartford School District,2010-11,Bangla,**,**
+43,East Hartford School District,2010-11,Bengali,**,**
+43,East Hartford School District,2010-11,Chinese,13,2
+43,East Hartford School District,2010-11,Creole-Haitian,**,**
+43,East Hartford School District,2010-11,French,17,6
+43,East Hartford School District,2010-11,Greek,**,**
+43,East Hartford School District,2010-11,Guanaina,**,**
+43,East Hartford School District,2010-11,Gujarati,19,5
+43,East Hartford School District,2010-11,Hausa,**,**
+43,East Hartford School District,2010-11,Hindi,**,**
+43,East Hartford School District,2010-11,Khmer(Cambodian),**,**
+43,East Hartford School District,2010-11,Lao,35,12
+43,East Hartford School District,2010-11,Malayalam,**,**
+43,East Hartford School District,2010-11,Marathi,**,**
+43,East Hartford School District,2010-11,Pilipino (Filipino),**,**
+43,East Hartford School District,2010-11,Polish,**,**
+43,East Hartford School District,2010-11,Portuguese,11,3
+43,East Hartford School District,2010-11,Pushto,**,**
+43,East Hartford School District,2010-11,Russian,**,**
+43,East Hartford School District,2010-11,Spanish,792,445
+43,East Hartford School District,2010-11,Swahili,**,**
+43,East Hartford School District,2010-11,Tagalog,**,**
+43,East Hartford School District,2010-11,Taiwanese,6,6
+43,East Hartford School District,2010-11,Tamil,**,**
+43,East Hartford School District,2010-11,Telugu,11,8
+43,East Hartford School District,2010-11,Twi/Fante,48,22
+43,East Hartford School District,2010-11,Urdu,6,2
+43,East Hartford School District,2010-11,Vietnamese,103,35
+43,East Hartford School District,2010-11,Wala,**,**
+43,East Hartford School District,2010-11,Wolof,**,**
+4,Avon School District,2010-11,Albanian,**,**
+4,Avon School District,2010-11,Arabic,**,**
+4,Avon School District,2010-11,Assyrian,**,**
+4,Avon School District,2010-11,Bengali,**,**
+4,Avon School District,2010-11,Cantonese,**,**
+4,Avon School District,2010-11,Chinese,20,3
+4,Avon School District,2010-11,Danish,**,**
+4,Avon School District,2010-11,German,7,2
+4,Avon School District,2010-11,Gujarati,**,**
+4,Avon School District,2010-11,Italian,**,**
+4,Avon School District,2010-11,Japanese,6,4
+4,Avon School District,2010-11,Korean,21,4
+4,Avon School District,2010-11,Malayalam,**,**
+4,Avon School District,2010-11,Marathi,**,**
+4,Avon School District,2010-11,Polish,11,3
+4,Avon School District,2010-11,Portuguese,**,**
+4,Avon School District,2010-11,Russian,20,7
+4,Avon School District,2010-11,Spanish,31,10
+4,Avon School District,2010-11,Tamil,7,2
+4,Avon School District,2010-11,Telugu,11,3
+4,Avon School District,2010-11,Thai,**,**
+4,Avon School District,2010-11,Ukrainian,**,**
+288,Achievement First Hartford Academy Inc.,2010-11,Creole-Haitian,**,**
+288,Achievement First Hartford Academy Inc.,2010-11,Patois,**,**
+288,Achievement First Hartford Academy Inc.,2010-11,Patwa,9,8
+288,Achievement First Hartford Academy Inc.,2010-11,Spanish,18,17
+288,Achievement First Hartford Academy Inc.,2010-11,Tamil,**,**
+241,Capitol Region Education Council,2010-11,Chinese,6,1
+241,Capitol Region Education Council,2010-11,Creole-Haitian,6,1
+241,Capitol Region Education Council,2010-11,Gujarati,**,**
+241,Capitol Region Education Council,2010-11,Hindi,**,**
+241,Capitol Region Education Council,2010-11,Karen,**,**
+241,Capitol Region Education Council,2010-11,Korean,**,**
+241,Capitol Region Education Council,2010-11,Mandarin,**,**
+241,Capitol Region Education Council,2010-11,Patois,9,2
+241,Capitol Region Education Council,2010-11,Polish,6,1
+241,Capitol Region Education Council,2010-11,Russian,7,2
+241,Capitol Region Education Council,2010-11,Somali,**,**
+241,Capitol Region Education Council,2010-11,Spanish,221,69
+241,Capitol Region Education Council,2010-11,Tamil,6,1
+241,Capitol Region Education Council,2010-11,Twi/Fante,**,**
+241,Capitol Region Education Council,2010-11,Urdu,11,2
+241,Capitol Region Education Council,2010-11,Vietnamese,9,2
+241,Capitol Region Education Council,2010-11,Yoruba,**,**
+261,Jumoke Academy District,2010-11,Telugu,**,**

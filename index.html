@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review version of top indicators</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Review version of top indicators">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  <script src="libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
+<script src="libraries/widgets/nvd3/js/d3.v3.min.js"></script>
+<script src="libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
+<script src="libraries/widgets/nvd3/js/fisheye.js"></script>
+
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Review version of top indicators</h1>
+    <h2>Hartford regional indicators</h2>
+    <p><br/>Community Indicators Project</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Outline of indicators</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p>Snapshot / demographics</p>
+
+<ul>
+<li>Population / diversity</li>
+<li>Commuting patterns</li>
+<li>School enrollment</li>
+<li>Income levels or poverty rates</li>
+</ul>
+
+<p>Education</p>
+
+<ul>
+<li>3rd grade reading</li>
+<li>High school graduation rate</li>
+<li>Chronic absenteeism</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>Workforce / economy / talent</p>
+
+<ul>
+<li>Educational attainment</li>
+<li>Unemployment rate</li>
+<li>Job growth</li>
+</ul>
+
+<p>Quality of life / community</p>
+
+<ul>
+<li>Home-ownership / housing cost</li>
+<li>Crime rate</li>
+<li>Voter turnout</li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Key themes</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>1) Regionalism
+2) Suburbanization of poverty
+3) Concentration of poverty in Hartford
+4) Latino achievement gap
+5) Middle skills gap
+6) Aging workforce
+7) Civic health
+8) Global region</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Flat population growth</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: regionalism, suburbanization of poverty
+Key points: population loss in Hartford, flat population growth in suburbs</p>
+
+<div id = 'chart1' class = 'rChart nvd3'></div>
+
+<script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart1()
+    });
+    function drawchart1(){  
+      var opts = {
+ "dom": "chart1",
+"width":    700,
+"height":    425,
+"x": "period",
+"y": "sumpop",
+"group": "Towngroup",
+"type": "lineChart",
+"id": "chart1" 
+},
+        data = [
+ {
+ "period": 1900,
+"Towngroup": "Hartford",
+"sumpop": 79850,
+"sumpoor": null 
+},
+{
+ "period": 1900,
+"Towngroup": "Rural",
+"sumpop": 5136,
+"sumpoor": null 
+},
+{
+ "period": 1900,
+"Towngroup": "Suburban",
+"sumpop": 30970,
+"sumpoor": null 
+},
+{
+ "period": 1900,
+"Towngroup": "Urban periphery",
+"sumpop": 43141,
+"sumpoor": null 
+},
+{
+ "period": 1910,
+"Towngroup": "Hartford",
+"sumpop": 98915,
+"sumpoor": null 
+},
+{
+ "period": 1910,
+"Towngroup": "Rural",
+"sumpop": 5386,
+"sumpoor": null 
+},
+{
+ "period": 1910,
+"Towngroup": "Suburban",
+"sumpop": 33905,
+"sumpoor": null 
+},
+{
+ "period": 1910,
+"Towngroup": "Urban periphery",
+"sumpop": 55132,
+"sumpoor": null 
+},
+{
+ "period": 1920,
+"Towngroup": "Hartford",
+"sumpop": 138036,
+"sumpoor": null 
+},
+{
+ "period": 1920,
+"Towngroup": "Rural",
+"sumpop": 5803,
+"sumpoor": null 
+},
+{
+ "period": 1920,
+"Towngroup": "Suburban",
+"sumpop": 38294,
+"sumpoor": null 
+},
+{
+ "period": 1920,
+"Towngroup": "Urban periphery",
+"sumpop": 71399,
+"sumpoor": null 
+},
+{
+ "period": 1930,
+"Towngroup": "Hartford",
+"sumpop": 164072,
+"sumpoor": null 
+},
+{
+ "period": 1930,
+"Towngroup": "Rural",
+"sumpop": 6162,
+"sumpoor": null 
+},
+{
+ "period": 1930,
+"Towngroup": "Suburban",
+"sumpop": 43919,
+"sumpoor": null 
+},
+{
+ "period": 1930,
+"Towngroup": "Urban periphery",
+"sumpop": 104324,
+"sumpoor": null 
+},
+{
+ "period": 1940,
+"Towngroup": "Hartford",
+"sumpop": 166267,
+"sumpoor": null 
+},
+{
+ "period": 1940,
+"Towngroup": "Rural",
+"sumpop": 6641,
+"sumpoor": null 
+},
+{
+ "period": 1940,
+"Towngroup": "Suburban",
+"sumpop": 51271,
+"sumpoor": null 
+},
+{
+ "period": 1940,
+"Towngroup": "Urban periphery",
+"sumpop": 120848,
+"sumpoor": null 
+},
+{
+ "period": 1950,
+"Towngroup": "Hartford",
+"sumpop": 177397,
+"sumpoor": null 
+},
+{
+ "period": 1950,
+"Towngroup": "Rural",
+"sumpop": 8524,
+"sumpoor": null 
+},
+{
+ "period": 1950,
+"Towngroup": "Suburban",
+"sumpop": 66268,
+"sumpoor": null 
+},
+{
+ "period": 1950,
+"Towngroup": "Urban periphery",
+"sumpop": 166002,
+"sumpoor": null 
+},
+{
+ "period": 1960,
+"Towngroup": "Hartford",
+"sumpop": 162178,
+"sumpoor": null 
+},
+{
+ "period": 1960,
+"Towngroup": "Rural",
+"sumpop": 12973,
+"sumpoor": null 
+},
+{
+ "period": 1960,
+"Towngroup": "Suburban",
+"sumpop": 117468,
+"sumpoor": null 
+},
+{
+ "period": 1960,
+"Towngroup": "Urban periphery",
+"sumpop": 253926,
+"sumpoor": null 
+},
+{
+ "period": 1970,
+"Towngroup": "Hartford",
+"sumpop": 158017,
+"sumpoor":          26863 
+},
+{
+ "period": 1970,
+"Towngroup": "Rural",
+"sumpop": 17505,
+"sumpoor": null 
+},
+{
+ "period": 1970,
+"Towngroup": "Suburban",
+"sumpop": 168469,
+"sumpoor": null 
+},
+{
+ "period": 1970,
+"Towngroup": "Urban periphery",
+"sumpop": 325916,
+"sumpoor": null 
+},
+{
+ "period": 1980,
+"Towngroup": "Hartford",
+"sumpop": 136392,
+"sumpoor":          34371 
+},
+{
+ "period": 1980,
+"Towngroup": "Rural",
+"sumpop": 19542,
+"sumpoor":           1219 
+},
+{
+ "period": 1980,
+"Towngroup": "Suburban",
+"sumpop": 196648,
+"sumpoor":           5675 
+},
+{
+ "period": 1980,
+"Towngroup": "Urban periphery",
+"sumpop": 315897,
+"sumpoor":          14358 
+},
+{
+ "period": 1990,
+"Towngroup": "Hartford",
+"sumpop": 139739,
+"sumpoor":          38428 
+},
+{
+ "period": 1990,
+"Towngroup": "Rural",
+"sumpop": 21729,
+"sumpoor":            705 
+},
+{
+ "period": 1990,
+"Towngroup": "Suburban",
+"sumpop": 226612,
+"sumpoor":           5341 
+},
+{
+ "period": 1990,
+"Towngroup": "Urban periphery",
+"sumpop": 321324,
+"sumpoor":          11873 
+},
+{
+ "period": 2000,
+"Towngroup": "Hartford",
+"sumpop": 121578,
+"sumpoor":          37203 
+},
+{
+ "period": 2000,
+"Towngroup": "Rural",
+"sumpop": 23271,
+"sumpoor":            958 
+},
+{
+ "period": 2000,
+"Towngroup": "Suburban",
+"sumpop": 249706,
+"sumpoor":           7736 
+},
+{
+ "period": 2000,
+"Towngroup": "Urban periphery",
+"sumpop": 326765,
+"sumpoor":          19044 
+},
+{
+ "period": 2010,
+"Towngroup": "Hartford",
+"sumpop": 124775,
+"sumpoor":          40053 
+},
+{
+ "period": 2010,
+"Towngroup": "Rural",
+"sumpop": 25909,
+"sumpoor":           1205 
+},
+{
+ "period": 2010,
+"Towngroup": "Suburban",
+"sumpop": 270796,
+"sumpoor":           9245 
+},
+{
+ "period": 2010,
+"Towngroup": "Urban periphery",
+"sumpop": 336031,
+"sumpoor":          26451 
+},
+{
+ "period": 2015,
+"Towngroup": "Hartford",
+"sumpop": 125999,
+"sumpoor": null 
+},
+{
+ "period": 2015,
+"Towngroup": "Rural",
+"sumpop": 38388,
+"sumpoor": null 
+},
+{
+ "period": 2015,
+"Towngroup": "Suburban",
+"sumpop": 277497,
+"sumpoor": null 
+},
+{
+ "period": 2015,
+"Towngroup": "Urban periphery",
+"sumpop": 341742,
+"sumpoor": null 
+},
+{
+ "period": 2020,
+"Towngroup": "Hartford",
+"sumpop": 126656,
+"sumpoor": null 
+},
+{
+ "period": 2020,
+"Towngroup": "Rural",
+"sumpop": 38911,
+"sumpoor": null 
+},
+{
+ "period": 2020,
+"Towngroup": "Suburban",
+"sumpop": 282476,
+"sumpoor": null 
+},
+{
+ "period": 2020,
+"Towngroup": "Urban periphery",
+"sumpop": 346788,
+"sumpoor": null 
+},
+{
+ "period": 2025,
+"Towngroup": "Hartford",
+"sumpop": 126185,
+"sumpoor": null 
+},
+{
+ "period": 2025,
+"Towngroup": "Rural",
+"sumpop": 39463,
+"sumpoor": null 
+},
+{
+ "period": 2025,
+"Towngroup": "Suburban",
+"sumpop": 286373,
+"sumpoor": null 
+},
+{
+ "period": 2025,
+"Towngroup": "Urban periphery",
+"sumpop": 350406,
+"sumpoor": null 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+         
+        chart
+  .forceY([      0, 3.5e+05 ])
+          
+        chart.xAxis
+  .axisLabel("Year")
+
+        
+        
+        chart.yAxis
+  .tickFormat(function(d) {return d3.format(',.0f')(d)})
+  .axisLabel("Population")
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Aging population</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: regionalism, aging workforce
+Key points: aging population in suburbs, talent pipeline from Hartford</p>
+
+<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Linguistic diversity</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Global region, Latino achievement gap, suburbanization of poverty. 
+Key points: Suburbs more diverse, ELL students in public school systems.</p>
+
+<p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>School choice unique to region</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Regionalism, disparities.
+Key points: Many opting out of public schools, districts not the same as towns.</p>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Everyone commutes, mostly to Hartford</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Regionalism, background for aging workforce.
+Key points: Every town sends workers to Hartford; job center</p>
+
+<p><img src="../mockup/commute-patterns.png" alt="image"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Suburbanization of poverty</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: suburbanization of poverty
+Key points: growth in poverty highest in suburbs</p>
+
+<p><img src="assets/fig/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Income disparities</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: suburbanization, concentration of poverty
+Key points: Inner-ring suburbs have many low-income neighborhoods</p>
+
+<p><img src="assets/fig/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Achievement gap starts early</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Achievement gap, global region
+Key points: Disparities by income, race, ELL, special-ed by grade 3</p>
+
+<p><img src="assets/fig/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Chronic absenteeism an early warning sign</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Suburbanization of poverty
+Key points: Some rural districts with high rates, otherwise same as others</p>
+
+<p><img src="assets/fig/unnamed-chunk-7.png" alt="plot of chunk unnamed-chunk-7"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>High-school graduation rising, but with gaps</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Latino achievement gap, middle skills gap
+Key points: HS graduates are talent pipeline, need to address disparities</p>
+
+<p><img src="assets/fig/unnamed-chunk-8.png" alt="plot of chunk unnamed-chunk-8"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Skilled workforce now, but need to look ahead</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Middle skills jobs, Latino achievement gap
+Key points: Connect workforce to schools, aging workforce</p>
+
+<p><img src="assets/fig/unnamed-chunk-9.png" alt="plot of chunk unnamed-chunk-9"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Youth unemployment highest</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Aging workforce, middle skills gap
+Key points: 16 to 24 cohort are opportunity youth, future workforce</p>
+
+<p><img src="assets/fig/unnamed-chunk-10.png" alt="plot of chunk unnamed-chunk-10"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Home ownership sign of civic health</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Civic health, concentration of poverty
+Key points: Housing market divided, higher mobility in Hartford</p>
+
+<p><img src="assets/fig/unnamed-chunk-11.png" alt="plot of chunk unnamed-chunk-11"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Home ownership sign of civic health</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Civic health, concentration of poverty
+Key points: Housing market divided, higher mobility in Hartford</p>
+
+<p><img src="assets/fig/unnamed-chunk-12.png" alt="plot of chunk unnamed-chunk-12"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Hartford safest in 30 years</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Civic health
+Key points: Progress on reducing crime, perception v. reality</p>
+
+<p><img src="assets/fig/unnamed-chunk-13.png" alt="plot of chunk unnamed-chunk-13"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Voter turnout another measure of civic health</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Themes: Civic health
+Key points: Connect to home-ownership</p>
+
+<p><img src="assets/fig/unnamed-chunk-14.png" alt="plot of chunk unnamed-chunk-14"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Outline of indicators'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Key themes'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Flat population growth'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Aging population'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Linguistic diversity'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='School choice unique to region'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Everyone commutes, mostly to Hartford'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Suburbanization of poverty'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Income disparities'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Achievement gap starts early'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Chronic absenteeism an early warning sign'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='High-school graduation rising, but with gaps'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Skilled workforce now, but need to look ahead'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Youth unemployment highest'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Home ownership sign of civic health'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Home ownership sign of civic health'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Hartford safest in 30 years'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Voter turnout another measure of civic health'>
+         18
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

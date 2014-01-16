@@ -1,0 +1,117 @@
+"Starting.point","Destination","Number","ratio"
+"Hartford","Hartford",14661,0.342787000233809
+"Hartford","West Hartford",2981,0.0696983867196633
+"Avon","Hartford",1435,0.193814154511075
+"Avon","Farmington",874,0.118044300378174
+"Avon","Avon",738,0.0996758508914101
+"Avon","Simsbury",403,0.054430037817396
+"Avon","West Hartford",402,0.0542949756888169
+"Canton","Hartford",667,0.14449740034662
+"Canton","Canton",504,0.109185441941075
+"Canton","Farmington",430,0.0931542461005199
+"Canton","Simsbury",322,0.0697573656845754
+"Canton","Avon",313,0.0678076256499133
+"Andover","Hartford",252,0.131799163179916
+"Andover","Manchester",215,0.11244769874477
+"Andover","East Hartford",98,0.051255230125523
+"Bloomfield","Hartford",2752,0.25950023573786
+"Bloomfield","Bloomfield",1117,0.105327675624705
+"Bloomfield","West Hartford",828,0.0780763790664781
+"Bolton","Hartford",425,0.155906089508437
+"Bolton","Manchester",370,0.135730007336757
+"Bolton","East Hartford",193,0.0707997065297139
+"Bolton","Bolton",188,0.0689655172413793
+"East Granby","Hartford",406,0.148283418553689
+"East Granby","Windsor",212,0.0774287801314828
+"East Granby","East Granby",207,0.0756026296566837
+"East Granby","Bloomfield",193,0.0704894083272462
+"East Granby","Simsbury",187,0.0682980277574872
+"East Hartford","Hartford",5174,0.200643735215419
+"East Hartford","East Hartford",3216,0.124714003179897
+"East Hartford","Manchester",1849,0.0717027959824718
+"East Windsor","Hartford",737,0.143664717348928
+"East Windsor","East Windsor",614,0.119688109161793
+"East Windsor","Enfield",390,0.0760233918128655
+"East Windsor","Windsor",382,0.0744639376218324
+"East Windsor","South Windsor",299,0.0582846003898636
+"East Windsor","East Hartford",289,0.0563352826510721
+"East Windsor","Manchester",286,0.0557504873294347
+"Ellington","Hartford",1054,0.141022210329141
+"Ellington","Ellington",816,0.109178485416109
+"Ellington","Manchester",584,0.0781375434840781
+"Ellington","Vernon",550,0.0735884399250736
+"Ellington","East Hartford",440,0.0588707519400589
+"Ellington","South Windsor",405,0.0541878512175542
+"Enfield","Enfield",4600,0.241622019119655
+"Enfield","Hartford",2252,0.11828973631684
+"Enfield","Windsor",1617,0.0849353923731484
+"Farmington","Farmington",2390,0.208170020033098
+"Farmington","Hartford",1918,0.167058618587231
+"Farmington","New Britain",751,0.0654124205208605
+"Farmington","West Hartford",669,0.0582701855239091
+"Farmington","Bristol",607,0.0528699590627994
+"Glastonbury","Hartford",3392,0.192694427086292
+"Glastonbury","Glastonbury",2795,0.158779753451116
+"Glastonbury","East Hartford",1155,0.0656138158268477
+"Granby","Hartford",811,0.145549174443647
+"Granby","Granby",554,0.0994256999282125
+"Granby","Simsbury",455,0.0816582914572864
+"Granby","Windsor",429,0.0769921033740129
+"Granby","Bloomfield",323,0.0579684134960517
+"Hebron","Hartford",778,0.154702724199642
+"Hebron","Hebron",404,0.0803340624378604
+"Hebron","East Hartford",329,0.0654205607476635
+"Hebron","Glastonbury",309,0.0614436269636111
+"Hebron","Manchester",267,0.0530920660171008
+"Manchester","Manchester",5735,0.207166853303471
+"Manchester","Hartford",5223,0.18867174800419
+"Manchester","East Hartford",1984,0.0716685330347144
+"Marlborough","Hartford",536,0.18879887284255
+"Marlborough","Glastonbury",241,0.0848890454385347
+"Marlborough","East Hartford",231,0.0813666784078901
+"Marlborough","Marlborough",183,0.0644593166607961
+"Newington","Hartford",3369,0.202500450802428
+"Newington","Newington",2042,0.122738474484583
+"Newington","New Britain",1039,0.0624511630702651
+"Newington","West Hartford",945,0.0568011059686242
+"Rocky Hill","Hartford",2233,0.24616911035167
+"Rocky Hill","Rocky Hill",1215,0.133943335905633
+"Simsbury","Simsbury",2025,0.171189449657621
+"Simsbury","Hartford",1920,0.162312959675374
+"Simsbury","Farmington",657,0.0555414658889171
+"Somers","Enfield",550,0.147176879850147
+"Somers","Somers",453,0.121220230131121
+"Somers","Hartford",370,0.099009900990099
+"Somers","Windsor",260,0.0695745250200696
+"South Windsor","Hartford",2521,0.202669024841225
+"South Windsor","South Windsor",1665,0.133853203633733
+"South Windsor","Manchester",1101,0.0885119382587025
+"South Windsor","East Hartford",954,0.0766942680279765
+"Suffield","Hartford",757,0.137038377986966
+"Suffield","Suffield",616,0.11151339608979
+"Suffield","Windsor",553,0.100108616944243
+"Suffield","Enfield",525,0.0950398262128892
+"Suffield","Windsor Locks",349,0.0631788559015206
+"Tolland","Hartford",1116,0.158770806658131
+"Tolland","Tolland",741,0.105420401195049
+"Tolland","Manchester",562,0.0799544743206715
+"Tolland","Vernon",516,0.0734101579172002
+"Tolland","East Hartford",496,0.0705648029591692
+"Vernon","Vernon",2029,0.128882678015626
+"Vernon","Hartford",1948,0.123737534142158
+"Vernon","Manchester",1570,0.0997268627326431
+"Vernon","East Hartford",979,0.06218636854475
+"West Hartford","Hartford",7687,0.268241616359005
+"West Hartford","West Hartford",4789,0.167114492096172
+"West Hartford","Farmington",1846,0.0644170708727362
+"Wethersfield","Hartford",3463,0.271012678040382
+"Wethersfield","Wethersfield",945,0.0739552355611207
+"Wethersfield","Rocky Hill",693,0.0542338394114885
+"Windsor","Hartford",3613,0.225193218648716
+"Windsor","Windsor",2115,0.131824981301421
+"Windsor","Bloomfield",887,0.0552854649713288
+"Windsor Locks","Windsor Locks",1006,0.140935836368731
+"Windsor Locks","Hartford",811,0.113617259736621
+"Windsor Locks","Windsor",762,0.106752591762398
+"Windsor Locks","Enfield",399,0.0558980106472401
+"Windsor Locks","East Windsor",387,0.0542168674698795

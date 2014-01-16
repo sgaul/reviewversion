@@ -1,0 +1,563 @@
+---
+title       : Review version of top indicators
+subtitle    : Hartford regional indicators
+author      : 
+job         : Community Indicators Project
+framework   : io2012        # {io2012, html5slides, shower, dzslides, minimal ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+ext_widgets : {rCharts: ["libraries/nvd3"]} 
+mode        : selfcontained # {standalone, draft}
+
+--- &twocol
+## Outline of indicators
+
+*** =left
+Snapshot / demographics
+* Population / diversity
+* Commuting patterns
+* School enrollment
+* Income levels or poverty rates
+
+Education
+* 3rd grade reading
+* High school graduation rate
+* Chronic absenteeism
+
+*** =right
+Workforce / economy / talent
+* Educational attainment
+* Unemployment rate
+* Job growth
+
+Quality of life / community
+* Home-ownership / housing cost
+* Crime rate
+* Voter turnout
+
+---
+## Key themes
+
+1) Regionalism
+2) Suburbanization of poverty
+3) Concentration of poverty in Hartford
+4) Latino achievement gap
+5) Middle skills gap
+6) Aging workforce
+7) Civic health
+8) Global region
+
+---
+## Flat population growth
+
+Themes: regionalism, suburbanization of poverty
+Key points: population loss in Hartford, flat population growth in suburbs
+
+```{r setup, message = F, echo = F, cache = F}
+require(rCharts)
+knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = T)
+```
+ 
+ 
+```{r chart1, echo=FALSE}
+require(rCharts)
+knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = T)
+
+gh <- read.csv("../regionalreport/data/greaterhartford.csv")
+gh$poppoverty <- round((gh$poppovertyrate / 100) * gh$population,0)
+gh_test <- ddply(merge(gh,towns,by.x = "city", by.y = "Town"),
+                 .(period,Towngroup), summarise, 
+                 sumpop = sum(population),
+                 sumpoor = sum(poppoverty))
+
+n1 <- nPlot(y = 'sumpop', x = 'period', width = 700, height = 425,
+            group = 'Towngroup',
+            data = subset(gh_test, period >= 1900),
+            type = 'lineChart')
+n1$xAxis(axisLabel='Year')
+n1$yAxis(tickFormat = "#!function(d) {return d3.format(',.0f')(d)}!#", axisLabel='Population')
+n1$chart(forceY = c(0,350000))
+n1$print('chart1')
+```
+
+---
+## Aging population
+
+Themes: regionalism, aging workforce
+Key points: aging population in suburbs, talent pipeline from Hartford
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
+library(ggplot2)
+library(scales)
+library(reshape)
+projections <- read.csv('sdc-projections.csv')
+projections <- subset(projections, projections$TOWN %in% levels(towns$Town))
+projections$TOWN <- factor(projections$TOWN)
+
+projections$TYPE = ifelse(projections$TOWN == "Hartford","Hartford","Other region")
+
+aging <- ddply(projections, .(YEAR, AGE, GENDER, TYPE), summarise, sum = sum(value))
+aging <- cast(aging, TYPE + YEAR + AGE ~ GENDER)
+
+levels(aging$AGE) <- rev(levels(aging$AGE))
+
+ggplot(data=aging, aes(x=AGE)) + 
+  geom_bar(aes(y = F), fill = "light blue", stat = 'identity') + 
+  geom_bar(aes(y= M*(-1)), fill = "blue", stat = 'identity') + 
+  labs(y = "Male population", x = NULL) +
+#  scale_y_continuous(breaks=seq(-40000,40000,5000),labels=abs(seq(-40000,40000,5000))) + 
+  coord_flip() + 
+  theme_minimal() + 
+  facet_wrap(~ TYPE + YEAR)
+```
+
+--- 
+## Linguistic diversity
+
+Themes: Global region, Latino achievement gap, suburbanization of poverty. 
+Key points: Suburbs more diverse, ELL students in public school systems.
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
+library(gridExtra)
+library(scales)
+languages <- read.csv('Languages-all.csv', na.strings = c("**","-"))
+
+languages <- merge(languages, districts, by.x = "District.Name", by.y = "district")
+
+languages_agg <- merge(ddply(languages, .(District.Name), summarise,all.lang = length(unique(Languages)),all.students = sum(Number.of.Students.with.Non.English.Home.Language, na.rm = TRUE)),
+                       ddply(subset(languages, Number.of.ELL.Students > 0),
+                             .(District.Name), summarise,ell.lang = length(unique(Languages)),ell.students = sum(Number.of.ELL.Students, na.rm = TRUE)),
+                       by = "District.Name", 
+                       all = TRUE)
+
+#All linguistic diversity
+languages_agg$District.Name <- reorder(languages_agg$District.Name,
+                                       languages_agg$all.lang)
+
+ggplot(data = languages_agg) + 
+  geom_point(aes(x = all.lang, y = District.Name)) + 
+  labs(x = 'Number of languages spoken, all students', y = NULL) + 
+  scale_x_continuous(labels = comma) + 
+  theme_minimal()
+```
+
+--- 
+## School choice unique to region
+
+Themes: Regionalism, disparities.
+Key points: Many opting out of public schools, districts not the same as towns.
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
+enroll <- read.csv("../regionalreport/data/all-schools.csv", stringsAsFactors=FALSE)
+
+#Filter out the towns that are not in the region and clear out the factors
+enroll <- subset(enroll, enroll$Resident.Town %in% levels(towns$Town))
+enroll$Resident.Town <- factor(enroll$Resident.Town)
+
+charters <- data.frame(charters = c("The Bridge Academy District",
+                            "Trailblazers Academy District",
+                            "Side By Side Community School District",
+                            "Park City Prep Charter School",
+                            "Odyssey Community School District",
+                            "New Beginnings Inc., Family Academy District",
+                            "Jumoke Academy District",
+                            "Highville Charter School District",  
+                            "Highville Mustard Seed Charter School District",       
+                            "Integrated Day Charter School District",        
+                            "Interdistrict School for Arts and Comm District",
+                            "Explorations District",
+                            "Elm City College Preparatory School",
+                            "Common Ground High School District",
+                            "Charter School for Young Children on Asylum Hill",
+                            "Bridgeport Achievement First",
+                            "Achievement First Hartford Academy Inc.",                
+                            "Amistad Academy District"))
+
+#Make the charters into their own category
+enroll$School.Type[enroll$Sent.to.District %in% levels(charters[,])] <- 'Public charter'
+
+#Replace the less frequent school types with 'Other'
+enroll$School.Type <- gsub("Homebound","Other",enroll$School.Type)
+enroll$School.Type <- gsub("Voag","Other",enroll$School.Type)
+enroll$School.Type <- gsub("Interdistrict Cooperative Agreement","Other",enroll$School.Type)
+enroll$School.Type <- gsub("Designated High School","Other",enroll$School.Type)
+enroll$School.Type <- gsub("Nonpublic","Private",enroll$School.Type)
+
+#Melt the dataset to get it into a more normalized format for plotting
+enroll <- melt(enroll, 
+               measure.vars = c("PK","K","G1","G2","G3","G4","G5","G6","G7","G8","G9","G10","G11","G12","Total"),
+               id.vars = c("Resident.Town.ID","District.ID","Resident.Town","Sent.to.District","School.Year","School.Type"))
+
+#Get rid of the sent to districts since there are multiple districts for each
+enroll <- aggregate(enroll$value,
+                    list(Resident.Town = enroll$Resident.Town, 
+                         School.Year = enroll$School.Year, 
+                         School.Type = enroll$School.Type, 
+                         variable = enroll$variable), 
+                    sum)
+
+#Sort the school types for the display
+enroll$School.Type <- factor(enroll$School.Type, levels = c("Public",
+                                                            "Private",
+                                                            "Public charter",
+                                                            "Magnet School",
+                                                            "Open Choice","Other"))
+
+ggplot(data = subset(enroll, School.Year == "2010-11" & variable != "Total"), 
+       aes(x = variable, y = x, group = School.Type, fill = School.Type)) +
+  geom_area(aes(order = as.numeric(School.Type)), position = "fill") +
+  scale_y_continuous(labels = percent) +
+  scale_x_discrete(breaks = c("K","G3","G6","G9","G12")) +
+  labs(x = NULL, y = NULL) +
+  scale_fill_brewer(palette = "Greys") +
+  theme_minimal() +
+  theme(strip.text.x = element_text(size = 12)) +
+  facet_wrap(~ Resident.Town, ncol = 10)
+
+#write.csv(enrollflow, "enrollflow.csv", row.names = FALSE)
+#Next command: write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")), "commute.csv", row.names = FALSE)
+```
+
+--- 
+## Everyone commutes, mostly to Hartford
+
+Themes: Regionalism, background for aging workforce.
+Key points: Every town sends workers to Hartford; job center
+
+![image](../mockup/commute-patterns.png)
+
+--- 
+## Suburbanization of poverty
+
+Themes: suburbanization of poverty
+Key points: growth in poverty highest in suburbs
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 14}
+ggplot(aes(y = sumpoor, x = period), data = subset(gh_sum,period >= 1970)) + 
+  geom_line(aes(group = type, colour = type)) + 
+  scale_y_continuous(labels = comma, limits = c(0,41000)) + 
+  labs(x = "Year", y = 'Population', title = 'Population in poverty') +
+  theme_minimal()
+```
+
+--- 
+## Income disparities
+
+Themes: suburbanization, concentration of poverty
+Key points: Inner-ring suburbs have many low-income neighborhoods
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 7, fig.width = 11}
+B19013 = acs.fetch(geography = hartford.tracts, table.number = "B19013", col.names = "pretty")
+
+income.tract = data.frame(tract=geography(B19013)[,1],
+                    income.estimate = estimate(B19013[,1]),
+                    se=standard.error(B19013[,1]))
+
+names(income.tract) <- c("tract","income","se")
+income.tract$tract= gsub("Census Tract ", "", income.tract$tract)
+income.tract$tract= gsub(", Tolland County, Connecticut", "", income.tract$tract)
+income.tract$tract= gsub(", Hartford County, Connecticut", "", income.tract$tract)
+
+tracts <- read.csv("../mockup/tracts.csv")
+tracts <- merge(tracts, towns, by = "Town")
+
+income.tract <- merge(income.tract, tracts, by = "tract")
+
+ggplot(data = income.tract) + 
+  geom_dotplot(aes(x = income, fill = Towngroup), 
+               stackgroups = TRUE, binpositions = "all", binwidth = 5700) +
+    scale_fill_brewer(name = "Type of town") + 
+  scale_x_continuous(labels = comma) + 
+  scale_y_continuous(name = "", breaks = NULL) + 
+  labs(x = "Neighborhood household income levels") + 
+  theme_minimal()
+```
+
+--- 
+## Achievement gap starts early
+
+Themes: Achievement gap, global region
+Key points: Disparities by income, race, ELL, special-ed by grade 3
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+cmt_subgroups <- read.csv('../testscores/cmt-subgroups.csv', na.strings = c("**","-"))
+cmt_subgroups <- subset(cmt_subgroups, cmt_subgroups$District.ID %in% 
+                     levels(as.factor(districts$districtid)))
+
+#Clean up race categories - make compatible with old categories
+cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
+                                pattern = "American Indian/Alaska Native",
+                                replacement = "American Indian")
+
+cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
+                                pattern = "Black/African American",
+                                replacement = "Black, not of Hispanic Origin")
+
+cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
+                                pattern = "(White$)",
+                                replacement = "White, not of Hispanic Origin")
+
+cmt_subgroups <- subset(cmt_subgroups, Students.Tested > 0)
+
+ggplot(data = subset(cmt_subgroups, Test == "Reading" & Grade == 3), 
+       aes(x = Status, y = Average.Scale.Score)) + 
+  geom_boxplot() + 
+  coord_flip() + 
+  theme_minimal() + 
+  labs(x = NULL, y = "Average scale score, 3rd grade reading")
+```
+--- 
+## Chronic absenteeism an early warning sign
+
+Themes: Suburbanization of poverty
+Key points: Some rural districts with high rates, otherwise same as others
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+absenteeism <- read.csv("../hodgepodge/CT_ChronicAbsenteeism_2012_SDE-1.csv")
+absenteeism <- subset(absenteeism, absenteeism$District.Number %in% levels(as.factor(districts$districtid)))
+absenteeism$District <- reorder(absenteeism$District, absenteeism$Students.Chronically.Absent.in.District..Total)
+
+ggplot(data = absenteeism, aes(x = Students.Chronically.Absent.in.District..Total, 
+                               y = District)) + 
+  geom_point() + 
+  theme_minimal() +
+  labs(x = "% students chronically absent (2012)", y = NULL)
+```
+--- 
+## High-school graduation rising, but with gaps
+
+Themes: Latino achievement gap, middle skills gap
+Key points: HS graduates are talent pipeline, need to address disparities
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+allgrads <- ddply(subset(hsgrad[1:4], Category %in% c("All Students")),
+                  .(District.Name),
+                  summarise,
+                  rate = mean(X4.Year.Graduation.Rate, na.rm = TRUE))
+allgrads$District.Name <- reorder(allgrads$District.Name, -allgrads$rate)
+
+ggplot(data = subset(hsgrad, !(Category %in% c("All Students")))) + 
+  geom_boxplot(aes(x = Category, y = X4.Year.Graduation.Rate)) + 
+  coord_flip() + 
+  ylim(50,100) +
+  theme_minimal() + 
+  labs(x = NULL, y = "Four-year graduation rate")
+```
+
+--- 
+## Skilled workforce now, but need to look ahead
+
+Themes: Middle skills jobs, Latino achievement gap
+Key points: Connect workforce to schools, aging workforce
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 11}
+library(acs)
+library(maps)
+library(maptools)
+key = "ba67d3a427e1f785987b9c8bc59341bf7c8a7cc1"
+api.key.install(key)
+
+crcog.towns = geo.make(state = "CT", 
+                       county = paste(towns$County,"County"),
+                       county.subdivision = paste(towns$Town,"town"), 
+                       check = F, 
+                       combine = T,
+                       combine.term = "CRCOG region")
+
+C15002I = acs.fetch(geography = crcog.towns, table.number = "C15002I", col.names = "pretty")
+C15002B = acs.fetch(geography = crcog.towns, table.number = "C15002B", col.names = "pretty")
+C15002H = acs.fetch(geography = crcog.towns, table.number = "C15002H", col.names = "pretty")
+
+attainment.by.race = 
+  rbind(data.frame(town=geography(C15002I)[[1]],
+                 race = "Hispanic / Latino",
+                 nohs=as.numeric(estimate(divide.acs(
+                   numerator=(C15002I[,3] + C15002I[,8]),
+                   denominator=(C15002I[,1])))),
+                 hs=as.numeric(estimate(divide.acs(
+                   numerator=(C15002I[,4] + C15002I[,9]),
+                   denominator=(C15002I[,1])))),
+                 somecollege=as.numeric(estimate(divide.acs(
+                   numerator=(C15002I[,5] + C15002I[,10]),
+                   denominator=(C15002I[,1])))),
+                 college=as.numeric(estimate(divide.acs(
+                   numerator=(C15002I[,6] + C15002I[,11]),
+                   denominator=(C15002I[,1]))))),
+        data.frame(town=geography(C15002B)[[1]],
+                 race = "Black",
+                 nohs=as.numeric(estimate(divide.acs(
+                   numerator=(C15002B[,3] + C15002B[,8]),
+                   denominator=(C15002B[,1])))),
+                 hs=as.numeric(estimate(divide.acs(
+                   numerator=(C15002B[,4] + C15002B[,9]),
+                   denominator=(C15002B[,1])))),
+                 somecollege=as.numeric(estimate(divide.acs(
+                   numerator=(C15002B[,5] + C15002B[,10]),
+                   denominator=(C15002B[,1])))),
+                 college=as.numeric(estimate(divide.acs(
+                   numerator=(C15002B[,6] + C15002B[,11]),
+                   denominator=(C15002B[,1]))))),
+      data.frame(town=geography(C15002H)[[1]],
+                 race = "White",
+                 nohs=as.numeric(estimate(divide.acs(
+                   numerator=(C15002H[,3] + C15002H[,8]),
+                   denominator=(C15002H[,1])))),
+                 hs=as.numeric(estimate(divide.acs(
+                   numerator=(C15002H[,4] + C15002H[,9]),
+                   denominator=(C15002H[,1])))),
+                 somecollege=as.numeric(estimate(divide.acs(
+                   numerator=(C15002H[,5] + C15002H[,10]),
+                   denominator=(C15002H[,1])))),
+                 college=as.numeric(estimate(divide.acs(
+                   numerator=(C15002H[,6] + C15002H[,11]),
+                   denominator=(C15002H[,1]))))))
+
+attainment.by.race <- melt(attainment.by.race)
+
+ggplot(data = attainment.by.race, 
+       aes(y = value, x = race, group = race, fill = variable)) + 
+  geom_bar(position = 'fill', stat = 'identity') + 
+  scale_y_continuous(labels = percent) +
+  labs(x = NULL, y = '% of adults (2008 - 2012 ACS estimates)') +
+  scale_fill_brewer(labels = c("Less than high school degree",
+                               "High school graduate",
+                               "Some college or associate's degree",
+                               "Bachelor's degree or higher"), 
+                    name = "") +
+  coord_flip() + 
+  theme_minimal()
+```
+
+--- 
+## Youth unemployment highest
+
+Themes: Aging workforce, middle skills gap
+Key points: 16 to 24 cohort are opportunity youth, future workforce
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 12, fig.height = 6}
+library(reshape)
+B23001 <- read.csv('../unemployment/B23001.csv')
+B23001 <- melt(B23001)
+
+levels(B23001$Age) <- list(
+  "55 years and over" = c("75 years and over","70 to 74 years","65 to 69 years",
+                          "62 to 64 years","60 and 61 years","55 to 59 years"),
+  "25 to 54 years" = c("45 to 54 years","35 to 44 years","30 to 34 years",
+                       "25 to 29 years"),
+  "16 to 24 years" = c("22 to 24 years","20 and 21 years","16 to 19 years"))
+
+
+B23001_sum <- ddply(subset(B23001, Stat == "Estimate" & Military != "In Armed Forces"), 
+                      .(Gender, Age, Employment.status, variable),
+                      summarise, value = sum(value))
+
+library(ggplot2)
+library(scales)
+ggplot(data = B23001_sum, 
+       aes(x = Age, y = value, group= Employment.status, 
+           fill= Employment.status)) + 
+  geom_bar(position = 'fill', stat = 'identity') + 
+  facet_wrap(~ Gender + variable, ncol = 3) +
+  scale_y_continuous(labels = percent) +
+  labs(x = 'Age', y = '% of the population') +
+  scale_fill_brewer() +
+  coord_flip() + 
+  theme_minimal()
+```
+
+--- 
+## Home ownership sign of civic health
+
+Themes: Civic health, concentration of poverty
+Key points: Housing market divided, higher mobility in Hartford
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+hartford.towns = geo.make(state = "CT", county = c("Hartford","Tolland"), county.subdivision = "*", check = F)
+B25008 = acs.fetch(geography = hartford.towns, table.number = "B25008", col.names = "pretty")
+own.estimate = divide.acs(numerator=B25008[,2],denominator=B25008[,1], method = 'proportion')
+homeownership = data.frame(town=geography(B25008)[[1]], 
+                         rate=as.numeric(estimate(own.estimate)),
+                         se=standard.error(own.estimate))
+names(homeownership) <- c("town","rate","se")
+homeownership$town= gsub(" town, Tolland County, Connecticut", "", homeownership$town)
+homeownership$town= gsub(" town, Hartford County, Connecticut", "", homeownership$town)
+homeownership$town <- reorder(homeownership$town, -homeownership$rate)
+ggplot(data = subset(homeownership, !(town %in% c("Burlington","Columbia","Coventry","Hartland","Berlin","Union","Southington","Mansfield","Willington","Plainville","Bristol","New Britain")))) + 
+  geom_point(aes(x = rate, y = town)) + 
+  geom_segment(aes(xend = rate - se, x = rate + se, y = town, yend = town), colour = "grey") + 
+  labs(x = 'Rate of owner-occupied housing (2007-2011 ACS estimates)', y = NULL) + 
+  scale_x_continuous(labels = percent) + 
+  theme_minimal()
+```
+
+--- 
+## Home ownership sign of civic health
+
+Themes: Civic health, concentration of poverty
+Key points: Housing market divided, higher mobility in Hartford
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+hartford.tracts = geo.make(state = "CT", county = c("Hartford","Tolland"), tract = "*", check = F)
+B25008 = acs.fetch(geography = hartford.tracts, table.number = "B25008", col.names = "pretty")
+own.estimate = divide.acs(numerator=B25008[,2],denominator=B25008[,1], method = 'proportion')
+homeownership.tract = data.frame(tract=geography(B25008)[[1]], 
+                         rate=as.numeric(estimate(own.estimate)),
+                         se=standard.error(own.estimate))
+names(homeownership.tract) <- c("tract","rate","se")
+
+homeownership.tract$tract= gsub("Census Tract ", "", homeownership.tract$tract)
+homeownership.tract$tract= gsub(", Tolland County, Connecticut", "",
+                                homeownership.tract$tract)
+homeownership.tract$tract= gsub(", Hartford County, Connecticut", "", 
+                                homeownership.tract$tract)
+
+tracts <- read.csv("../mockup/tracts.csv")
+tracts <- merge(tracts, towns, by = "Town")
+
+homeownership.tract <- merge(homeownership.tract, tracts, by = "tract")
+
+ggplot(data = homeownership.tract) + 
+  geom_dotplot(aes(x = rate, fill = Towngroup, colour = Towngroup), 
+               binwidth  = .03, stackgroups = TRUE, binpositions = "all") +
+  scale_x_continuous(labels = percent) + 
+  scale_y_continuous(name = "", breaks = NULL) + 
+  labs(x = "% living in owner-occupied units by neighborhood") + 
+  theme_minimal()
+```
+--- 
+## Hartford safest in 30 years
+
+Themes: Civic health
+Key points: Progress on reducing crime, perception v. reality
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+totalcrime <- read.csv("../crime/totalcrime.csv")
+ggplot(data = subset(totalcrime, Town %in% c("Bridgeport","Hartford","New Haven","New Britain","Stamford","Waterbury")), 
+       aes(x = Year, y = Total.crime.Rate)) + 
+  geom_line(aes(group = Town)) +
+  geom_point(aes(colour = Town)) +
+  labs(x = NULL, y = "Crime rate by town (per 100K residents)") +
+  scale_x_continuous(breaks = c(1998,2004,2010)) + 
+  theme_minimal()
+```
+
+--- 
+## Voter turnout another measure of civic health
+
+Themes: Civic health
+Key points: Connect to home-ownership
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
+voting <- read.csv('2012-voting.csv')
+voting <- subset(voting, voting$Town %in% levels(towns$Town))
+#voting$Town <- factor(voting$Town)
+
+voting$Town <- reorder(voting$Town, -voting$Percentage.Checked.as.Having.Voted)
+
+ggplot(data = voting) + 
+  geom_point(aes(x = Percentage.Checked.as.Having.Voted, y = Town)) + 
+  labs(x = '% checked as having voted (11/6/2012 election)', y = NULL) + 
+  scale_x_continuous(labels = percent) + 
+  theme_minimal()
+```
+
