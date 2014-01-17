@@ -41,7 +41,7 @@ Quality of life / community
 1. Regionalism
 2. Suburbanization of poverty
 3. Concentration of poverty in Hartford
-4. Latino achievement gap
+4. Achievement gap
 5. Middle skills gap
 6. Aging workforce
 7. Civic health
@@ -114,7 +114,7 @@ ggplot(data=aging, aes(x=AGE)) +
 --- 
 ## Linguistic diversity
 
-Themes: Global region, Latino achievement gap, suburbanization of poverty   
+Themes: Global region, achievement gap, suburbanization of poverty   
 Key points: Suburbs more diverse, ELL students in public school systems.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
@@ -331,7 +331,7 @@ ggplot(data = absenteeism, aes(x = Students.Chronically.Absent.in.District..Tota
 --- 
 ## High-school graduation rising, but with gaps
 
-Themes: Latino achievement gap, middle skills gap  
+Themes: Achievement gap, middle skills gap  
 Key points: HS graduates are talent pipeline, need to address disparities
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
@@ -351,7 +351,7 @@ ggplot(data = subset(hsgrad, !(Category %in% c("All Students")))) +
 --- 
 ## Skilled workforce now, but need to look ahead
 
-Themes: Middle skills jobs, Latino achievement gap  
+Themes: Middle skills jobs, Achievement gap  
 Key points: Connect workforce to schools, aging workforce
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 11}

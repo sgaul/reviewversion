@@ -41,7 +41,7 @@ Quality of life / community
 1. Regionalism
 2. Suburbanization of poverty
 3. Concentration of poverty in Hartford
-4. Latino achievement gap
+4. Achievement gap
 5. Middle skills gap
 6. Aging workforce
 7. Civic health
@@ -491,7 +491,7 @@ Key points: aging population in suburbs, talent pipeline from Hartford
 --- 
 ## Linguistic diversity
 
-Themes: Global region, Latino achievement gap, suburbanization of poverty   
+Themes: Global region, achievement gap, suburbanization of poverty   
 Key points: Suburbs more diverse, ELL students in public school systems.
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
@@ -551,7 +551,7 @@ Key points: Some rural districts with high rates, otherwise same as others
 --- 
 ## High-school graduation rising, but with gaps
 
-Themes: Latino achievement gap, middle skills gap  
+Themes: Achievement gap, middle skills gap  
 Key points: HS graduates are talent pipeline, need to address disparities
 
 ![plot of chunk unnamed-chunk-8](assets/fig/unnamed-chunk-8.png) 
@@ -559,7 +559,7 @@ Key points: HS graduates are talent pipeline, need to address disparities
 --- 
 ## Skilled workforce now, but need to look ahead
 
-Themes: Middle skills jobs, Latino achievement gap  
+Themes: Middle skills jobs, Achievement gap  
 Key points: Connect workforce to schools, aging workforce
 
 ![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
