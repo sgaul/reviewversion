@@ -78,6 +78,8 @@ n1$xAxis(axisLabel='Year')
 n1$yAxis(tickFormat = "#!function(d) {return d3.format(',.0f')(d)}!#", axisLabel='Population')
 n1$chart(forceY = c(0,350000))
 n1$print('chart1')
+
+write.csv(subset(gh_test, period >= 1900),'slide4.csv', row.names = F)
 ```
 
 ---
@@ -109,6 +111,8 @@ ggplot(data=aging, aes(x=AGE)) +
   coord_flip() + 
   theme_minimal() + 
   facet_wrap(~ TYPE + YEAR)
+
+write.csv(aging,'slide5.csv', row.names = F)
 ```
 
 --- 
@@ -139,6 +143,8 @@ ggplot(data = languages_agg) +
   labs(x = 'Number of languages spoken, all students', y = NULL) + 
   scale_x_continuous(labels = comma) + 
   theme_minimal()
+
+write.csv(languages_agg,'slide6.csv', row.names = F)
 ```
 
 --- 
@@ -214,8 +220,12 @@ ggplot(data = subset(enroll, School.Year == "2010-11" & variable != "Total"),
   theme(strip.text.x = element_text(size = 12)) +
   facet_wrap(~ Resident.Town, ncol = 10)
 
-#write.csv(enrollflow, "enrollflow.csv", row.names = FALSE)
-#Next command: write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")), "commute.csv", row.names = FALSE)
+
+write.csv(subset(enroll, School.Year == "2010-11" & variable != "Total"), 
+          "slide7.csv", row.names = FALSE)
+
+write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")), 
+          "slide8.csv", row.names = FALSE)
 ```
 
 --- 
@@ -233,11 +243,16 @@ Themes: suburbanization of poverty
 Key points: Poverty growing fastest in suburbs
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 14}
+gh$type <- ifelse(gh$city == "Hartford","Hartford","Suburbs")
+gh_sum <- ddply(gh,.(type, period), summarise, sumpop = sum(population), sumpoor = sum(poppoverty))
+
 ggplot(aes(y = sumpoor, x = period), data = subset(gh_sum,period >= 1970)) + 
   geom_line(aes(group = type, colour = type)) + 
   scale_y_continuous(labels = comma, limits = c(0,41000)) + 
   labs(x = "Year", y = 'Population', title = 'Population in poverty') +
   theme_minimal()
+
+write.csv(subset(gh_sum,period >= 1970),"slide9.csv", row.names = FALSE)
 ```
 
 --- 
@@ -271,6 +286,8 @@ ggplot(data = income.tract) +
   scale_y_continuous(name = "", breaks = NULL) + 
   labs(x = "Neighborhood household income levels") + 
   theme_minimal()
+
+write.csv(income.tract,"slide10.csv", row.names = FALSE)
 ```
 
 --- 
@@ -310,6 +327,8 @@ ggplot(data = cmt_subgroups_region, aes(x = School.Year, y = Average.Scale.Score
   facet_wrap(~ Subgroup, ncol = 5) + 
   theme_minimal() + 
   labs(x = "School Year", y = "Average scale score, 3rd grade reading")
+
+write.csv(cmt_subgroups_region,"slide11.csv", row.names = FALSE)
 ```
 --- 
 ## Chronic absenteeism an early warning sign
@@ -327,6 +346,8 @@ ggplot(data = absenteeism, aes(x = Students.Chronically.Absent.in.District..Tota
   geom_point() + 
   theme_minimal() +
   labs(x = "% students chronically absent (2012)", y = NULL)
+
+write.csv(absenteeism,"slide12.csv", row.names = FALSE)
 ```
 --- 
 ## High-school graduation rising, but with gaps
@@ -347,6 +368,9 @@ ggplot(data = subset(hsgrad, !(Category %in% c("All Students")))) +
   ylim(50,100) +
   theme_minimal() + 
   labs(x = NULL, y = "Four-year graduation rate")
+
+write.csv(subset(hsgrad, !(Category %in% c("All Students"))),"slide13.csv", 
+          row.names = FALSE)
 ```
 --- 
 ## Skilled workforce now, but need to look ahead
@@ -430,6 +454,8 @@ ggplot(data = attainment.by.race,
                     name = "") +
   coord_flip() + 
   theme_minimal()
+
+write.csv(attainment.by.race,"slide14.csv", row.names = FALSE)
 ```
 --- 
 ## Jobs (key sectors > 20K employees in region)
@@ -465,6 +491,12 @@ ggplot(data = subset(qcew, series == "Employees" &
   labs(x = "Year", y = "Number of employees") + 
   scale_y_continuous(labels = comma) + 
   theme_minimal()
+
+write.csv(subset(qcew, series == "Employees" & 
+                       area != "Multiple locations or unknown" & 
+                       area != "Statewide" & 
+                       naicsector %in% c(44,52,54,61,62,31)),"slide15.csv", 
+          row.names = FALSE)
 ```
 
 --- 
@@ -488,6 +520,11 @@ ggplot(data = subset(qcew, series == "Establishments" &
   labs(x = "Year", y = "Number of establishments") + 
   scale_y_continuous(labels = comma) + 
   theme_minimal()
+
+write.csv(subset(qcew, series == "Establishments" & 
+                       area == "North Central" & 
+                       naicsector %in% c(311,323,332,333,334,336,337,339)),"slide16.csv", 
+          row.names = FALSE)
 ```
 
 --- 
@@ -525,10 +562,12 @@ ggplot(data = B23001_sum,
   scale_fill_brewer() +
   coord_flip() + 
   theme_minimal()
+
+write.csv(B23001_sum,"slide17.csv",row.names = FALSE)
 ```
 
 --- 
-## Home ownership sign of civic health (replace w/ map)
+## Home ownership sign of civic health (replace)
 
 Themes: Civic health, concentration of poverty  
 Key points: Housing market divided, higher mobility in Hartford
@@ -560,6 +599,8 @@ ggplot(data = homeownership.tract) +
   scale_y_continuous(name = "", breaks = NULL) + 
   labs(x = "% living in owner-occupied units by neighborhood") + 
   theme_minimal()
+
+write.csv(homeownership.tract,"slide18.csv",row.names = FALSE)
 ```
 
 --- 
@@ -591,6 +632,8 @@ ggplot(data = appeals, aes(y = Percent.Affordable, x = poppovertyrate / 100)) +
   scale_y_log10(labels = percent) + 
   theme_minimal() +
   labs(y = "% affordable housing units", x = "% living under poverty line (2010)") 
+
+write.csv(appeals,"slide19.csv",row.names = FALSE)
 ```
 
 --- 
@@ -608,6 +651,8 @@ ggplot(data = subset(totalcrime, Town %in% c("Bridgeport","Hartford","New Haven"
   labs(x = NULL, y = "Crime rate by town (per 100K residents)") +
   scale_x_continuous(breaks = c(1998,2004,2010)) + 
   theme_minimal()
+
+write.csv(subset(totalcrime, Town %in% c("Bridgeport","Hartford","New Haven","New Britain","Stamford","Waterbury")),"slide20.csv",row.names = FALSE)
 ```
 
 --- 
@@ -640,5 +685,7 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   coord_equal() +
   geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
   theme_minimal()
+
+write.csv(voting,"slide21.csv",row.names = FALSE)
 ```
 

@@ -1,0 +1,2101 @@
+"Resident.Town","School.Year","School.Type","variable","x"
+"Andover","2010-11","Magnet School","PK",0
+"Avon","2010-11","Magnet School","PK",29
+"Bloomfield","2010-11","Magnet School","PK",101
+"Bolton","2010-11","Magnet School","PK",0
+"Canton","2010-11","Magnet School","PK",5
+"East Granby","2010-11","Magnet School","PK",18
+"East Hartford","2010-11","Magnet School","PK",32
+"East Windsor","2010-11","Magnet School","PK",0
+"Ellington","2010-11","Magnet School","PK",9
+"Enfield","2010-11","Magnet School","PK",8
+"Farmington","2010-11","Magnet School","PK",16
+"Glastonbury","2010-11","Magnet School","PK",29
+"Granby","2010-11","Magnet School","PK",25
+"Hartford","2010-11","Magnet School","PK",306
+"Hebron","2010-11","Magnet School","PK",2
+"Manchester","2010-11","Magnet School","PK",6
+"Marlborough","2010-11","Magnet School","PK",1
+"Newington","2010-11","Magnet School","PK",26
+"Rocky Hill","2010-11","Magnet School","PK",7
+"Simsbury","2010-11","Magnet School","PK",42
+"Somers","2010-11","Magnet School","PK",0
+"South Windsor","2010-11","Magnet School","PK",14
+"Stafford","2010-11","Magnet School","PK",1
+"Suffield","2010-11","Magnet School","PK",0
+"Tolland","2010-11","Magnet School","PK",4
+"Vernon","2010-11","Magnet School","PK",7
+"West Hartford","2010-11","Magnet School","PK",85
+"Wethersfield","2010-11","Magnet School","PK",14
+"Windsor","2010-11","Magnet School","PK",5
+"Windsor Locks","2010-11","Magnet School","PK",0
+"Bloomfield","2010-11","Open Choice","PK",0
+"East Hartford","2010-11","Open Choice","PK",0
+"Enfield","2010-11","Open Choice","PK",0
+"Hartford","2010-11","Open Choice","PK",0
+"Manchester","2010-11","Open Choice","PK",0
+"Vernon","2010-11","Open Choice","PK",0
+"Windsor","2010-11","Open Choice","PK",0
+"Windsor Locks","2010-11","Open Choice","PK",0
+"Andover","2010-11","Other","PK",0
+"Avon","2010-11","Other","PK",0
+"Bloomfield","2010-11","Other","PK",0
+"Bolton","2010-11","Other","PK",0
+"Canton","2010-11","Other","PK",0
+"East Granby","2010-11","Other","PK",0
+"East Hartford","2010-11","Other","PK",0
+"Ellington","2010-11","Other","PK",0
+"Enfield","2010-11","Other","PK",0
+"Farmington","2010-11","Other","PK",0
+"Glastonbury","2010-11","Other","PK",0
+"Granby","2010-11","Other","PK",0
+"Hartford","2010-11","Other","PK",0
+"Hebron","2010-11","Other","PK",0
+"Manchester","2010-11","Other","PK",0
+"Marlborough","2010-11","Other","PK",0
+"Newington","2010-11","Other","PK",0
+"Rocky Hill","2010-11","Other","PK",0
+"Simsbury","2010-11","Other","PK",0
+"Somers","2010-11","Other","PK",0
+"South Windsor","2010-11","Other","PK",0
+"Stafford","2010-11","Other","PK",0
+"Suffield","2010-11","Other","PK",0
+"Tolland","2010-11","Other","PK",0
+"Vernon","2010-11","Other","PK",0
+"West Hartford","2010-11","Other","PK",0
+"Wethersfield","2010-11","Other","PK",0
+"Windsor Locks","2010-11","Other","PK",0
+"Andover","2010-11","Private","PK",2
+"Avon","2010-11","Private","PK",43
+"Bloomfield","2010-11","Private","PK",16
+"Bolton","2010-11","Private","PK",4
+"Canton","2010-11","Private","PK",29
+"East Granby","2010-11","Private","PK",2
+"East Hartford","2010-11","Private","PK",50
+"East Windsor","2010-11","Private","PK",8
+"Ellington","2010-11","Private","PK",13
+"Enfield","2010-11","Private","PK",18
+"Farmington","2010-11","Private","PK",38
+"Glastonbury","2010-11","Private","PK",11
+"Granby","2010-11","Private","PK",14
+"Hartford","2010-11","Private","PK",45
+"Hebron","2010-11","Private","PK",46
+"Manchester","2010-11","Private","PK",101
+"Marlborough","2010-11","Private","PK",7
+"Newington","2010-11","Private","PK",48
+"Rocky Hill","2010-11","Private","PK",7
+"Simsbury","2010-11","Private","PK",86
+"Somers","2010-11","Private","PK",11
+"South Windsor","2010-11","Private","PK",14
+"Stafford","2010-11","Private","PK",21
+"Suffield","2010-11","Private","PK",7
+"Tolland","2010-11","Private","PK",6
+"Vernon","2010-11","Private","PK",25
+"West Hartford","2010-11","Private","PK",175
+"Wethersfield","2010-11","Private","PK",40
+"Windsor","2010-11","Private","PK",35
+"Windsor Locks","2010-11","Private","PK",5
+"Andover","2010-11","Public","PK",33
+"Avon","2010-11","Public","PK",39
+"Bloomfield","2010-11","Public","PK",0
+"Bolton","2010-11","Public","PK",13
+"Canton","2010-11","Public","PK",29
+"East Granby","2010-11","Public","PK",11
+"East Hartford","2010-11","Public","PK",305
+"East Windsor","2010-11","Public","PK",65
+"Ellington","2010-11","Public","PK",49
+"Enfield","2010-11","Public","PK",181
+"Farmington","2010-11","Public","PK",77
+"Glastonbury","2010-11","Public","PK",76
+"Granby","2010-11","Public","PK",8
+"Hartford","2010-11","Public","PK",569
+"Hebron","2010-11","Public","PK",71
+"Manchester","2010-11","Public","PK",263
+"Marlborough","2010-11","Public","PK",26
+"Newington","2010-11","Public","PK",85
+"Rocky Hill","2010-11","Public","PK",54
+"Simsbury","2010-11","Public","PK",26
+"Somers","2010-11","Public","PK",14
+"South Windsor","2010-11","Public","PK",83
+"Stafford","2010-11","Public","PK",137
+"Suffield","2010-11","Public","PK",41
+"Tolland","2010-11","Public","PK",43
+"Vernon","2010-11","Public","PK",130
+"West Hartford","2010-11","Public","PK",178
+"Wethersfield","2010-11","Public","PK",101
+"Windsor","2010-11","Public","PK",49
+"Windsor Locks","2010-11","Public","PK",59
+"Andover","2010-11","Public charter","PK",0
+"Avon","2010-11","Public charter","PK",1
+"Bloomfield","2010-11","Public charter","PK",5
+"Bolton","2010-11","Public charter","PK",0
+"Canton","2010-11","Public charter","PK",0
+"East Hartford","2010-11","Public charter","PK",7
+"East Windsor","2010-11","Public charter","PK",0
+"Enfield","2010-11","Public charter","PK",1
+"Farmington","2010-11","Public charter","PK",0
+"Glastonbury","2010-11","Public charter","PK",0
+"Hartford","2010-11","Public charter","PK",62
+"Hebron","2010-11","Public charter","PK",1
+"Manchester","2010-11","Public charter","PK",4
+"Marlborough","2010-11","Public charter","PK",1
+"Newington","2010-11","Public charter","PK",4
+"Rocky Hill","2010-11","Public charter","PK",1
+"Simsbury","2010-11","Public charter","PK",0
+"Somers","2010-11","Public charter","PK",1
+"South Windsor","2010-11","Public charter","PK",0
+"Vernon","2010-11","Public charter","PK",0
+"West Hartford","2010-11","Public charter","PK",19
+"Wethersfield","2010-11","Public charter","PK",1
+"Windsor","2010-11","Public charter","PK",13
+"Windsor Locks","2010-11","Public charter","PK",1
+"Andover","2010-11","Magnet School","K",0
+"Avon","2010-11","Magnet School","K",21
+"Bloomfield","2010-11","Magnet School","K",58
+"Bolton","2010-11","Magnet School","K",0
+"Canton","2010-11","Magnet School","K",3
+"East Granby","2010-11","Magnet School","K",10
+"East Hartford","2010-11","Magnet School","K",51
+"East Windsor","2010-11","Magnet School","K",2
+"Ellington","2010-11","Magnet School","K",4
+"Enfield","2010-11","Magnet School","K",3
+"Farmington","2010-11","Magnet School","K",10
+"Glastonbury","2010-11","Magnet School","K",33
+"Granby","2010-11","Magnet School","K",11
+"Hartford","2010-11","Magnet School","K",209
+"Hebron","2010-11","Magnet School","K",3
+"Manchester","2010-11","Magnet School","K",16
+"Marlborough","2010-11","Magnet School","K",0
+"Newington","2010-11","Magnet School","K",8
+"Rocky Hill","2010-11","Magnet School","K",4
+"Simsbury","2010-11","Magnet School","K",15
+"Somers","2010-11","Magnet School","K",0
+"South Windsor","2010-11","Magnet School","K",16
+"Stafford","2010-11","Magnet School","K",0
+"Suffield","2010-11","Magnet School","K",1
+"Tolland","2010-11","Magnet School","K",1
+"Vernon","2010-11","Magnet School","K",21
+"West Hartford","2010-11","Magnet School","K",38
+"Wethersfield","2010-11","Magnet School","K",22
+"Windsor","2010-11","Magnet School","K",10
+"Windsor Locks","2010-11","Magnet School","K",1
+"Bloomfield","2010-11","Open Choice","K",0
+"East Hartford","2010-11","Open Choice","K",1
+"Enfield","2010-11","Open Choice","K",1
+"Hartford","2010-11","Open Choice","K",91
+"Manchester","2010-11","Open Choice","K",0
+"Vernon","2010-11","Open Choice","K",0
+"Windsor","2010-11","Open Choice","K",0
+"Windsor Locks","2010-11","Open Choice","K",0
+"Andover","2010-11","Other","K",0
+"Avon","2010-11","Other","K",0
+"Bloomfield","2010-11","Other","K",0
+"Bolton","2010-11","Other","K",0
+"Canton","2010-11","Other","K",0
+"East Granby","2010-11","Other","K",0
+"East Hartford","2010-11","Other","K",0
+"Ellington","2010-11","Other","K",0
+"Enfield","2010-11","Other","K",0
+"Farmington","2010-11","Other","K",0
+"Glastonbury","2010-11","Other","K",0
+"Granby","2010-11","Other","K",0
+"Hartford","2010-11","Other","K",0
+"Hebron","2010-11","Other","K",0
+"Manchester","2010-11","Other","K",0
+"Marlborough","2010-11","Other","K",0
+"Newington","2010-11","Other","K",0
+"Rocky Hill","2010-11","Other","K",0
+"Simsbury","2010-11","Other","K",0
+"Somers","2010-11","Other","K",0
+"South Windsor","2010-11","Other","K",0
+"Stafford","2010-11","Other","K",0
+"Suffield","2010-11","Other","K",0
+"Tolland","2010-11","Other","K",0
+"Vernon","2010-11","Other","K",0
+"West Hartford","2010-11","Other","K",0
+"Wethersfield","2010-11","Other","K",0
+"Windsor Locks","2010-11","Other","K",0
+"Andover","2010-11","Private","K",2
+"Avon","2010-11","Private","K",21
+"Bloomfield","2010-11","Private","K",19
+"Bolton","2010-11","Private","K",6
+"Canton","2010-11","Private","K",2
+"East Granby","2010-11","Private","K",2
+"East Hartford","2010-11","Private","K",49
+"East Windsor","2010-11","Private","K",6
+"Ellington","2010-11","Private","K",3
+"Enfield","2010-11","Private","K",36
+"Farmington","2010-11","Private","K",13
+"Glastonbury","2010-11","Private","K",10
+"Granby","2010-11","Private","K",4
+"Hartford","2010-11","Private","K",53
+"Hebron","2010-11","Private","K",1
+"Manchester","2010-11","Private","K",59
+"Marlborough","2010-11","Private","K",2
+"Newington","2010-11","Private","K",10
+"Rocky Hill","2010-11","Private","K",16
+"Simsbury","2010-11","Private","K",34
+"Somers","2010-11","Private","K",7
+"South Windsor","2010-11","Private","K",10
+"Stafford","2010-11","Private","K",3
+"Suffield","2010-11","Private","K",7
+"Tolland","2010-11","Private","K",1
+"Vernon","2010-11","Private","K",16
+"West Hartford","2010-11","Private","K",64
+"Wethersfield","2010-11","Private","K",22
+"Windsor","2010-11","Private","K",49
+"Windsor Locks","2010-11","Private","K",4
+"Andover","2010-11","Public","K",42
+"Avon","2010-11","Public","K",187
+"Bloomfield","2010-11","Public","K",94
+"Bolton","2010-11","Public","K",54
+"Canton","2010-11","Public","K",130
+"East Granby","2010-11","Public","K",50
+"East Hartford","2010-11","Public","K",529
+"East Windsor","2010-11","Public","K",87
+"Ellington","2010-11","Public","K",193
+"Enfield","2010-11","Public","K",435
+"Farmington","2010-11","Public","K",270
+"Glastonbury","2010-11","Public","K",398
+"Granby","2010-11","Public","K",102
+"Hartford","2010-11","Public","K",1545
+"Hebron","2010-11","Public","K",112
+"Manchester","2010-11","Public","K",616
+"Marlborough","2010-11","Public","K",85
+"Newington","2010-11","Public","K",281
+"Rocky Hill","2010-11","Public","K",158
+"Simsbury","2010-11","Public","K",236
+"Somers","2010-11","Public","K",100
+"South Windsor","2010-11","Public","K",239
+"Stafford","2010-11","Public","K",124
+"Suffield","2010-11","Public","K",114
+"Tolland","2010-11","Public","K",192
+"Vernon","2010-11","Public","K",256
+"West Hartford","2010-11","Public","K",687
+"Wethersfield","2010-11","Public","K",245
+"Windsor","2010-11","Public","K",198
+"Windsor Locks","2010-11","Public","K",131
+"Andover","2010-11","Public charter","K",0
+"Avon","2010-11","Public charter","K",0
+"Bloomfield","2010-11","Public charter","K",2
+"Bolton","2010-11","Public charter","K",0
+"Canton","2010-11","Public charter","K",0
+"East Hartford","2010-11","Public charter","K",8
+"East Windsor","2010-11","Public charter","K",2
+"Enfield","2010-11","Public charter","K",0
+"Farmington","2010-11","Public charter","K",1
+"Glastonbury","2010-11","Public charter","K",2
+"Hartford","2010-11","Public charter","K",136
+"Hebron","2010-11","Public charter","K",0
+"Manchester","2010-11","Public charter","K",4
+"Marlborough","2010-11","Public charter","K",0
+"Newington","2010-11","Public charter","K",3
+"Rocky Hill","2010-11","Public charter","K",0
+"Simsbury","2010-11","Public charter","K",0
+"Somers","2010-11","Public charter","K",1
+"South Windsor","2010-11","Public charter","K",0
+"Vernon","2010-11","Public charter","K",0
+"West Hartford","2010-11","Public charter","K",4
+"Wethersfield","2010-11","Public charter","K",1
+"Windsor","2010-11","Public charter","K",11
+"Windsor Locks","2010-11","Public charter","K",0
+"Andover","2010-11","Magnet School","G1",0
+"Avon","2010-11","Magnet School","G1",10
+"Bloomfield","2010-11","Magnet School","G1",10
+"Bolton","2010-11","Magnet School","G1",0
+"Canton","2010-11","Magnet School","G1",3
+"East Granby","2010-11","Magnet School","G1",0
+"East Hartford","2010-11","Magnet School","G1",57
+"East Windsor","2010-11","Magnet School","G1",0
+"Ellington","2010-11","Magnet School","G1",3
+"Enfield","2010-11","Magnet School","G1",6
+"Farmington","2010-11","Magnet School","G1",5
+"Glastonbury","2010-11","Magnet School","G1",31
+"Granby","2010-11","Magnet School","G1",0
+"Hartford","2010-11","Magnet School","G1",199
+"Hebron","2010-11","Magnet School","G1",1
+"Manchester","2010-11","Magnet School","G1",29
+"Marlborough","2010-11","Magnet School","G1",0
+"Newington","2010-11","Magnet School","G1",2
+"Rocky Hill","2010-11","Magnet School","G1",2
+"Simsbury","2010-11","Magnet School","G1",8
+"Somers","2010-11","Magnet School","G1",0
+"South Windsor","2010-11","Magnet School","G1",8
+"Stafford","2010-11","Magnet School","G1",0
+"Suffield","2010-11","Magnet School","G1",2
+"Tolland","2010-11","Magnet School","G1",0
+"Vernon","2010-11","Magnet School","G1",10
+"West Hartford","2010-11","Magnet School","G1",21
+"Wethersfield","2010-11","Magnet School","G1",11
+"Windsor","2010-11","Magnet School","G1",14
+"Windsor Locks","2010-11","Magnet School","G1",0
+"Bloomfield","2010-11","Open Choice","G1",0
+"East Hartford","2010-11","Open Choice","G1",0
+"Enfield","2010-11","Open Choice","G1",0
+"Hartford","2010-11","Open Choice","G1",121
+"Manchester","2010-11","Open Choice","G1",1
+"Vernon","2010-11","Open Choice","G1",2
+"Windsor","2010-11","Open Choice","G1",0
+"Windsor Locks","2010-11","Open Choice","G1",0
+"Andover","2010-11","Other","G1",0
+"Avon","2010-11","Other","G1",0
+"Bloomfield","2010-11","Other","G1",0
+"Bolton","2010-11","Other","G1",0
+"Canton","2010-11","Other","G1",0
+"East Granby","2010-11","Other","G1",0
+"East Hartford","2010-11","Other","G1",0
+"Ellington","2010-11","Other","G1",0
+"Enfield","2010-11","Other","G1",0
+"Farmington","2010-11","Other","G1",0
+"Glastonbury","2010-11","Other","G1",0
+"Granby","2010-11","Other","G1",0
+"Hartford","2010-11","Other","G1",0
+"Hebron","2010-11","Other","G1",0
+"Manchester","2010-11","Other","G1",0
+"Marlborough","2010-11","Other","G1",0
+"Newington","2010-11","Other","G1",0
+"Rocky Hill","2010-11","Other","G1",0
+"Simsbury","2010-11","Other","G1",0
+"Somers","2010-11","Other","G1",0
+"South Windsor","2010-11","Other","G1",0
+"Stafford","2010-11","Other","G1",0
+"Suffield","2010-11","Other","G1",0
+"Tolland","2010-11","Other","G1",0
+"Vernon","2010-11","Other","G1",0
+"West Hartford","2010-11","Other","G1",0
+"Wethersfield","2010-11","Other","G1",0
+"Windsor Locks","2010-11","Other","G1",0
+"Andover","2010-11","Private","G1",1
+"Avon","2010-11","Private","G1",12
+"Bloomfield","2010-11","Private","G1",29
+"Bolton","2010-11","Private","G1",0
+"Canton","2010-11","Private","G1",5
+"East Granby","2010-11","Private","G1",4
+"East Hartford","2010-11","Private","G1",46
+"East Windsor","2010-11","Private","G1",5
+"Ellington","2010-11","Private","G1",8
+"Enfield","2010-11","Private","G1",47
+"Farmington","2010-11","Private","G1",14
+"Glastonbury","2010-11","Private","G1",3
+"Granby","2010-11","Private","G1",7
+"Hartford","2010-11","Private","G1",44
+"Hebron","2010-11","Private","G1",4
+"Manchester","2010-11","Private","G1",60
+"Marlborough","2010-11","Private","G1",3
+"Newington","2010-11","Private","G1",9
+"Rocky Hill","2010-11","Private","G1",4
+"Simsbury","2010-11","Private","G1",24
+"Somers","2010-11","Private","G1",5
+"South Windsor","2010-11","Private","G1",13
+"Stafford","2010-11","Private","G1",8
+"Suffield","2010-11","Private","G1",9
+"Tolland","2010-11","Private","G1",1
+"Vernon","2010-11","Private","G1",15
+"West Hartford","2010-11","Private","G1",34
+"Wethersfield","2010-11","Private","G1",32
+"Windsor","2010-11","Private","G1",39
+"Windsor Locks","2010-11","Private","G1",3
+"Andover","2010-11","Public","G1",46
+"Avon","2010-11","Public","G1",232
+"Bloomfield","2010-11","Public","G1",126
+"Bolton","2010-11","Public","G1",63
+"Canton","2010-11","Public","G1",125
+"East Granby","2010-11","Public","G1",53
+"East Hartford","2010-11","Public","G1",528
+"East Windsor","2010-11","Public","G1",96
+"Ellington","2010-11","Public","G1",202
+"Enfield","2010-11","Public","G1",412
+"Farmington","2010-11","Public","G1",302
+"Glastonbury","2010-11","Public","G1",456
+"Granby","2010-11","Public","G1",148
+"Hartford","2010-11","Public","G1",1423
+"Hebron","2010-11","Public","G1",129
+"Manchester","2010-11","Public","G1",579
+"Marlborough","2010-11","Public","G1",84
+"Newington","2010-11","Public","G1",322
+"Rocky Hill","2010-11","Public","G1",201
+"Simsbury","2010-11","Public","G1",304
+"Somers","2010-11","Public","G1",100
+"South Windsor","2010-11","Public","G1",276
+"Stafford","2010-11","Public","G1",118
+"Suffield","2010-11","Public","G1",165
+"Tolland","2010-11","Public","G1",202
+"Vernon","2010-11","Public","G1",307
+"West Hartford","2010-11","Public","G1",799
+"Wethersfield","2010-11","Public","G1",287
+"Windsor","2010-11","Public","G1",204
+"Windsor Locks","2010-11","Public","G1",118
+"Andover","2010-11","Public charter","G1",0
+"Avon","2010-11","Public charter","G1",0
+"Bloomfield","2010-11","Public charter","G1",10
+"Bolton","2010-11","Public charter","G1",0
+"Canton","2010-11","Public charter","G1",0
+"East Hartford","2010-11","Public charter","G1",7
+"East Windsor","2010-11","Public charter","G1",0
+"Enfield","2010-11","Public charter","G1",0
+"Farmington","2010-11","Public charter","G1",0
+"Glastonbury","2010-11","Public charter","G1",1
+"Hartford","2010-11","Public charter","G1",133
+"Hebron","2010-11","Public charter","G1",0
+"Manchester","2010-11","Public charter","G1",2
+"Marlborough","2010-11","Public charter","G1",0
+"Newington","2010-11","Public charter","G1",0
+"Rocky Hill","2010-11","Public charter","G1",0
+"Simsbury","2010-11","Public charter","G1",0
+"Somers","2010-11","Public charter","G1",1
+"South Windsor","2010-11","Public charter","G1",1
+"Vernon","2010-11","Public charter","G1",1
+"West Hartford","2010-11","Public charter","G1",2
+"Wethersfield","2010-11","Public charter","G1",2
+"Windsor","2010-11","Public charter","G1",10
+"Windsor Locks","2010-11","Public charter","G1",0
+"Andover","2010-11","Magnet School","G2",0
+"Avon","2010-11","Magnet School","G2",6
+"Bloomfield","2010-11","Magnet School","G2",16
+"Bolton","2010-11","Magnet School","G2",0
+"Canton","2010-11","Magnet School","G2",3
+"East Granby","2010-11","Magnet School","G2",0
+"East Hartford","2010-11","Magnet School","G2",58
+"East Windsor","2010-11","Magnet School","G2",2
+"Ellington","2010-11","Magnet School","G2",1
+"Enfield","2010-11","Magnet School","G2",3
+"Farmington","2010-11","Magnet School","G2",1
+"Glastonbury","2010-11","Magnet School","G2",19
+"Granby","2010-11","Magnet School","G2",0
+"Hartford","2010-11","Magnet School","G2",217
+"Hebron","2010-11","Magnet School","G2",0
+"Manchester","2010-11","Magnet School","G2",19
+"Marlborough","2010-11","Magnet School","G2",0
+"Newington","2010-11","Magnet School","G2",4
+"Rocky Hill","2010-11","Magnet School","G2",6
+"Simsbury","2010-11","Magnet School","G2",4
+"Somers","2010-11","Magnet School","G2",0
+"South Windsor","2010-11","Magnet School","G2",4
+"Stafford","2010-11","Magnet School","G2",1
+"Suffield","2010-11","Magnet School","G2",0
+"Tolland","2010-11","Magnet School","G2",0
+"Vernon","2010-11","Magnet School","G2",5
+"West Hartford","2010-11","Magnet School","G2",13
+"Wethersfield","2010-11","Magnet School","G2",8
+"Windsor","2010-11","Magnet School","G2",12
+"Windsor Locks","2010-11","Magnet School","G2",0
+"Bloomfield","2010-11","Open Choice","G2",0
+"East Hartford","2010-11","Open Choice","G2",1
+"Enfield","2010-11","Open Choice","G2",0
+"Hartford","2010-11","Open Choice","G2",134
+"Manchester","2010-11","Open Choice","G2",0
+"Vernon","2010-11","Open Choice","G2",0
+"Windsor","2010-11","Open Choice","G2",0
+"Windsor Locks","2010-11","Open Choice","G2",0
+"Andover","2010-11","Other","G2",0
+"Avon","2010-11","Other","G2",0
+"Bloomfield","2010-11","Other","G2",0
+"Bolton","2010-11","Other","G2",0
+"Canton","2010-11","Other","G2",0
+"East Granby","2010-11","Other","G2",0
+"East Hartford","2010-11","Other","G2",0
+"Ellington","2010-11","Other","G2",0
+"Enfield","2010-11","Other","G2",0
+"Farmington","2010-11","Other","G2",0
+"Glastonbury","2010-11","Other","G2",0
+"Granby","2010-11","Other","G2",0
+"Hartford","2010-11","Other","G2",2
+"Hebron","2010-11","Other","G2",0
+"Manchester","2010-11","Other","G2",0
+"Marlborough","2010-11","Other","G2",0
+"Newington","2010-11","Other","G2",0
+"Rocky Hill","2010-11","Other","G2",0
+"Simsbury","2010-11","Other","G2",0
+"Somers","2010-11","Other","G2",0
+"South Windsor","2010-11","Other","G2",0
+"Stafford","2010-11","Other","G2",0
+"Suffield","2010-11","Other","G2",0
+"Tolland","2010-11","Other","G2",0
+"Vernon","2010-11","Other","G2",0
+"West Hartford","2010-11","Other","G2",0
+"Wethersfield","2010-11","Other","G2",0
+"Windsor Locks","2010-11","Other","G2",0
+"Andover","2010-11","Private","G2",1
+"Avon","2010-11","Private","G2",12
+"Bloomfield","2010-11","Private","G2",24
+"Bolton","2010-11","Private","G2",3
+"Canton","2010-11","Private","G2",4
+"East Granby","2010-11","Private","G2",2
+"East Hartford","2010-11","Private","G2",39
+"East Windsor","2010-11","Private","G2",11
+"Ellington","2010-11","Private","G2",6
+"Enfield","2010-11","Private","G2",39
+"Farmington","2010-11","Private","G2",12
+"Glastonbury","2010-11","Private","G2",7
+"Granby","2010-11","Private","G2",4
+"Hartford","2010-11","Private","G2",65
+"Hebron","2010-11","Private","G2",3
+"Manchester","2010-11","Private","G2",71
+"Marlborough","2010-11","Private","G2",2
+"Newington","2010-11","Private","G2",12
+"Rocky Hill","2010-11","Private","G2",10
+"Simsbury","2010-11","Private","G2",24
+"Somers","2010-11","Private","G2",3
+"South Windsor","2010-11","Private","G2",8
+"Stafford","2010-11","Private","G2",2
+"Suffield","2010-11","Private","G2",6
+"Tolland","2010-11","Private","G2",4
+"Vernon","2010-11","Private","G2",22
+"West Hartford","2010-11","Private","G2",48
+"Wethersfield","2010-11","Private","G2",24
+"Windsor","2010-11","Private","G2",51
+"Windsor Locks","2010-11","Private","G2",5
+"Andover","2010-11","Public","G2",44
+"Avon","2010-11","Public","G2",256
+"Bloomfield","2010-11","Public","G2",131
+"Bolton","2010-11","Public","G2",52
+"Canton","2010-11","Public","G2",149
+"East Granby","2010-11","Public","G2",65
+"East Hartford","2010-11","Public","G2",555
+"East Windsor","2010-11","Public","G2",91
+"Ellington","2010-11","Public","G2",193
+"Enfield","2010-11","Public","G2",413
+"Farmington","2010-11","Public","G2",311
+"Glastonbury","2010-11","Public","G2",474
+"Granby","2010-11","Public","G2",144
+"Hartford","2010-11","Public","G2",1401
+"Hebron","2010-11","Public","G2",158
+"Manchester","2010-11","Public","G2",548
+"Marlborough","2010-11","Public","G2",102
+"Newington","2010-11","Public","G2",305
+"Rocky Hill","2010-11","Public","G2",212
+"Simsbury","2010-11","Public","G2",321
+"Somers","2010-11","Public","G2",111
+"South Windsor","2010-11","Public","G2",288
+"Stafford","2010-11","Public","G2",124
+"Suffield","2010-11","Public","G2",161
+"Tolland","2010-11","Public","G2",223
+"Vernon","2010-11","Public","G2",263
+"West Hartford","2010-11","Public","G2",762
+"Wethersfield","2010-11","Public","G2",255
+"Windsor","2010-11","Public","G2",233
+"Windsor Locks","2010-11","Public","G2",126
+"Andover","2010-11","Public charter","G2",0
+"Avon","2010-11","Public charter","G2",1
+"Bloomfield","2010-11","Public charter","G2",6
+"Bolton","2010-11","Public charter","G2",0
+"Canton","2010-11","Public charter","G2",0
+"East Hartford","2010-11","Public charter","G2",11
+"East Windsor","2010-11","Public charter","G2",0
+"Enfield","2010-11","Public charter","G2",1
+"Farmington","2010-11","Public charter","G2",0
+"Glastonbury","2010-11","Public charter","G2",0
+"Hartford","2010-11","Public charter","G2",147
+"Hebron","2010-11","Public charter","G2",0
+"Manchester","2010-11","Public charter","G2",3
+"Marlborough","2010-11","Public charter","G2",0
+"Newington","2010-11","Public charter","G2",1
+"Rocky Hill","2010-11","Public charter","G2",0
+"Simsbury","2010-11","Public charter","G2",0
+"Somers","2010-11","Public charter","G2",0
+"South Windsor","2010-11","Public charter","G2",0
+"Vernon","2010-11","Public charter","G2",0
+"West Hartford","2010-11","Public charter","G2",2
+"Wethersfield","2010-11","Public charter","G2",2
+"Windsor","2010-11","Public charter","G2",9
+"Windsor Locks","2010-11","Public charter","G2",0
+"Andover","2010-11","Magnet School","G3",0
+"Avon","2010-11","Magnet School","G3",1
+"Bloomfield","2010-11","Magnet School","G3",11
+"Bolton","2010-11","Magnet School","G3",0
+"Canton","2010-11","Magnet School","G3",1
+"East Granby","2010-11","Magnet School","G3",1
+"East Hartford","2010-11","Magnet School","G3",57
+"East Windsor","2010-11","Magnet School","G3",1
+"Ellington","2010-11","Magnet School","G3",1
+"Enfield","2010-11","Magnet School","G3",3
+"Farmington","2010-11","Magnet School","G3",2
+"Glastonbury","2010-11","Magnet School","G3",20
+"Granby","2010-11","Magnet School","G3",0
+"Hartford","2010-11","Magnet School","G3",179
+"Hebron","2010-11","Magnet School","G3",2
+"Manchester","2010-11","Magnet School","G3",13
+"Marlborough","2010-11","Magnet School","G3",0
+"Newington","2010-11","Magnet School","G3",3
+"Rocky Hill","2010-11","Magnet School","G3",4
+"Simsbury","2010-11","Magnet School","G3",2
+"Somers","2010-11","Magnet School","G3",0
+"South Windsor","2010-11","Magnet School","G3",2
+"Stafford","2010-11","Magnet School","G3",1
+"Suffield","2010-11","Magnet School","G3",0
+"Tolland","2010-11","Magnet School","G3",2
+"Vernon","2010-11","Magnet School","G3",6
+"West Hartford","2010-11","Magnet School","G3",13
+"Wethersfield","2010-11","Magnet School","G3",7
+"Windsor","2010-11","Magnet School","G3",10
+"Windsor Locks","2010-11","Magnet School","G3",0
+"Bloomfield","2010-11","Open Choice","G3",0
+"East Hartford","2010-11","Open Choice","G3",1
+"Enfield","2010-11","Open Choice","G3",0
+"Hartford","2010-11","Open Choice","G3",118
+"Manchester","2010-11","Open Choice","G3",0
+"Vernon","2010-11","Open Choice","G3",0
+"Windsor","2010-11","Open Choice","G3",0
+"Windsor Locks","2010-11","Open Choice","G3",0
+"Andover","2010-11","Other","G3",0
+"Avon","2010-11","Other","G3",0
+"Bloomfield","2010-11","Other","G3",0
+"Bolton","2010-11","Other","G3",0
+"Canton","2010-11","Other","G3",0
+"East Granby","2010-11","Other","G3",0
+"East Hartford","2010-11","Other","G3",0
+"Ellington","2010-11","Other","G3",0
+"Enfield","2010-11","Other","G3",1
+"Farmington","2010-11","Other","G3",0
+"Glastonbury","2010-11","Other","G3",0
+"Granby","2010-11","Other","G3",0
+"Hartford","2010-11","Other","G3",0
+"Hebron","2010-11","Other","G3",0
+"Manchester","2010-11","Other","G3",0
+"Marlborough","2010-11","Other","G3",0
+"Newington","2010-11","Other","G3",0
+"Rocky Hill","2010-11","Other","G3",0
+"Simsbury","2010-11","Other","G3",0
+"Somers","2010-11","Other","G3",0
+"South Windsor","2010-11","Other","G3",0
+"Stafford","2010-11","Other","G3",0
+"Suffield","2010-11","Other","G3",0
+"Tolland","2010-11","Other","G3",0
+"Vernon","2010-11","Other","G3",0
+"West Hartford","2010-11","Other","G3",0
+"Wethersfield","2010-11","Other","G3",0
+"Windsor Locks","2010-11","Other","G3",0
+"Andover","2010-11","Private","G3",2
+"Avon","2010-11","Private","G3",16
+"Bloomfield","2010-11","Private","G3",37
+"Bolton","2010-11","Private","G3",2
+"Canton","2010-11","Private","G3",4
+"East Granby","2010-11","Private","G3",4
+"East Hartford","2010-11","Private","G3",51
+"East Windsor","2010-11","Private","G3",4
+"Ellington","2010-11","Private","G3",8
+"Enfield","2010-11","Private","G3",37
+"Farmington","2010-11","Private","G3",6
+"Glastonbury","2010-11","Private","G3",9
+"Granby","2010-11","Private","G3",3
+"Hartford","2010-11","Private","G3",48
+"Hebron","2010-11","Private","G3",6
+"Manchester","2010-11","Private","G3",44
+"Marlborough","2010-11","Private","G3",4
+"Newington","2010-11","Private","G3",7
+"Rocky Hill","2010-11","Private","G3",11
+"Simsbury","2010-11","Private","G3",24
+"Somers","2010-11","Private","G3",6
+"South Windsor","2010-11","Private","G3",13
+"Stafford","2010-11","Private","G3",10
+"Suffield","2010-11","Private","G3",5
+"Tolland","2010-11","Private","G3",4
+"Vernon","2010-11","Private","G3",12
+"West Hartford","2010-11","Private","G3",47
+"Wethersfield","2010-11","Private","G3",29
+"Windsor","2010-11","Private","G3",38
+"Windsor Locks","2010-11","Private","G3",6
+"Andover","2010-11","Public","G3",49
+"Avon","2010-11","Public","G3",260
+"Bloomfield","2010-11","Public","G3",139
+"Bolton","2010-11","Public","G3",46
+"Canton","2010-11","Public","G3",136
+"East Granby","2010-11","Public","G3",56
+"East Hartford","2010-11","Public","G3",507
+"East Windsor","2010-11","Public","G3",97
+"Ellington","2010-11","Public","G3",207
+"Enfield","2010-11","Public","G3",427
+"Farmington","2010-11","Public","G3",277
+"Glastonbury","2010-11","Public","G3",514
+"Granby","2010-11","Public","G3",159
+"Hartford","2010-11","Public","G3",1292
+"Hebron","2010-11","Public","G3",161
+"Manchester","2010-11","Public","G3",492
+"Marlborough","2010-11","Public","G3",90
+"Newington","2010-11","Public","G3",305
+"Rocky Hill","2010-11","Public","G3",187
+"Simsbury","2010-11","Public","G3",340
+"Somers","2010-11","Public","G3",105
+"South Windsor","2010-11","Public","G3",318
+"Stafford","2010-11","Public","G3",134
+"Suffield","2010-11","Public","G3",160
+"Tolland","2010-11","Public","G3",244
+"Vernon","2010-11","Public","G3",252
+"West Hartford","2010-11","Public","G3",764
+"Wethersfield","2010-11","Public","G3",269
+"Windsor","2010-11","Public","G3",278
+"Windsor Locks","2010-11","Public","G3",117
+"Andover","2010-11","Public charter","G3",0
+"Avon","2010-11","Public charter","G3",0
+"Bloomfield","2010-11","Public charter","G3",4
+"Bolton","2010-11","Public charter","G3",0
+"Canton","2010-11","Public charter","G3",0
+"East Hartford","2010-11","Public charter","G3",3
+"East Windsor","2010-11","Public charter","G3",1
+"Enfield","2010-11","Public charter","G3",0
+"Farmington","2010-11","Public charter","G3",0
+"Glastonbury","2010-11","Public charter","G3",0
+"Hartford","2010-11","Public charter","G3",106
+"Hebron","2010-11","Public charter","G3",0
+"Manchester","2010-11","Public charter","G3",0
+"Marlborough","2010-11","Public charter","G3",0
+"Newington","2010-11","Public charter","G3",0
+"Rocky Hill","2010-11","Public charter","G3",0
+"Simsbury","2010-11","Public charter","G3",0
+"Somers","2010-11","Public charter","G3",0
+"South Windsor","2010-11","Public charter","G3",1
+"Vernon","2010-11","Public charter","G3",0
+"West Hartford","2010-11","Public charter","G3",1
+"Wethersfield","2010-11","Public charter","G3",0
+"Windsor","2010-11","Public charter","G3",6
+"Windsor Locks","2010-11","Public charter","G3",0
+"Andover","2010-11","Magnet School","G4",0
+"Avon","2010-11","Magnet School","G4",2
+"Bloomfield","2010-11","Magnet School","G4",9
+"Bolton","2010-11","Magnet School","G4",1
+"Canton","2010-11","Magnet School","G4",0
+"East Granby","2010-11","Magnet School","G4",0
+"East Hartford","2010-11","Magnet School","G4",47
+"East Windsor","2010-11","Magnet School","G4",4
+"Ellington","2010-11","Magnet School","G4",1
+"Enfield","2010-11","Magnet School","G4",2
+"Farmington","2010-11","Magnet School","G4",5
+"Glastonbury","2010-11","Magnet School","G4",25
+"Granby","2010-11","Magnet School","G4",0
+"Hartford","2010-11","Magnet School","G4",182
+"Hebron","2010-11","Magnet School","G4",0
+"Manchester","2010-11","Magnet School","G4",13
+"Marlborough","2010-11","Magnet School","G4",0
+"Newington","2010-11","Magnet School","G4",1
+"Rocky Hill","2010-11","Magnet School","G4",5
+"Simsbury","2010-11","Magnet School","G4",1
+"Somers","2010-11","Magnet School","G4",0
+"South Windsor","2010-11","Magnet School","G4",4
+"Stafford","2010-11","Magnet School","G4",0
+"Suffield","2010-11","Magnet School","G4",0
+"Tolland","2010-11","Magnet School","G4",1
+"Vernon","2010-11","Magnet School","G4",7
+"West Hartford","2010-11","Magnet School","G4",14
+"Wethersfield","2010-11","Magnet School","G4",11
+"Windsor","2010-11","Magnet School","G4",17
+"Windsor Locks","2010-11","Magnet School","G4",0
+"Bloomfield","2010-11","Open Choice","G4",0
+"East Hartford","2010-11","Open Choice","G4",2
+"Enfield","2010-11","Open Choice","G4",0
+"Hartford","2010-11","Open Choice","G4",106
+"Manchester","2010-11","Open Choice","G4",0
+"Vernon","2010-11","Open Choice","G4",0
+"Windsor","2010-11","Open Choice","G4",0
+"Windsor Locks","2010-11","Open Choice","G4",0
+"Andover","2010-11","Other","G4",0
+"Avon","2010-11","Other","G4",0
+"Bloomfield","2010-11","Other","G4",0
+"Bolton","2010-11","Other","G4",0
+"Canton","2010-11","Other","G4",0
+"East Granby","2010-11","Other","G4",0
+"East Hartford","2010-11","Other","G4",0
+"Ellington","2010-11","Other","G4",0
+"Enfield","2010-11","Other","G4",0
+"Farmington","2010-11","Other","G4",0
+"Glastonbury","2010-11","Other","G4",0
+"Granby","2010-11","Other","G4",0
+"Hartford","2010-11","Other","G4",1
+"Hebron","2010-11","Other","G4",0
+"Manchester","2010-11","Other","G4",0
+"Marlborough","2010-11","Other","G4",0
+"Newington","2010-11","Other","G4",0
+"Rocky Hill","2010-11","Other","G4",0
+"Simsbury","2010-11","Other","G4",0
+"Somers","2010-11","Other","G4",0
+"South Windsor","2010-11","Other","G4",0
+"Stafford","2010-11","Other","G4",0
+"Suffield","2010-11","Other","G4",0
+"Tolland","2010-11","Other","G4",0
+"Vernon","2010-11","Other","G4",0
+"West Hartford","2010-11","Other","G4",0
+"Wethersfield","2010-11","Other","G4",0
+"Windsor Locks","2010-11","Other","G4",0
+"Andover","2010-11","Private","G4",0
+"Avon","2010-11","Private","G4",17
+"Bloomfield","2010-11","Private","G4",18
+"Bolton","2010-11","Private","G4",4
+"Canton","2010-11","Private","G4",6
+"East Granby","2010-11","Private","G4",5
+"East Hartford","2010-11","Private","G4",40
+"East Windsor","2010-11","Private","G4",7
+"Ellington","2010-11","Private","G4",7
+"Enfield","2010-11","Private","G4",47
+"Farmington","2010-11","Private","G4",16
+"Glastonbury","2010-11","Private","G4",12
+"Granby","2010-11","Private","G4",5
+"Hartford","2010-11","Private","G4",60
+"Hebron","2010-11","Private","G4",0
+"Manchester","2010-11","Private","G4",61
+"Marlborough","2010-11","Private","G4",1
+"Newington","2010-11","Private","G4",17
+"Rocky Hill","2010-11","Private","G4",13
+"Simsbury","2010-11","Private","G4",23
+"Somers","2010-11","Private","G4",7
+"South Windsor","2010-11","Private","G4",8
+"Stafford","2010-11","Private","G4",7
+"Suffield","2010-11","Private","G4",8
+"Tolland","2010-11","Private","G4",5
+"Vernon","2010-11","Private","G4",10
+"West Hartford","2010-11","Private","G4",53
+"Wethersfield","2010-11","Private","G4",27
+"Windsor","2010-11","Private","G4",44
+"Windsor Locks","2010-11","Private","G4",7
+"Andover","2010-11","Public","G4",35
+"Avon","2010-11","Public","G4",276
+"Bloomfield","2010-11","Public","G4",144
+"Bolton","2010-11","Public","G4",52
+"Canton","2010-11","Public","G4",133
+"East Granby","2010-11","Public","G4",78
+"East Hartford","2010-11","Public","G4",549
+"East Windsor","2010-11","Public","G4",98
+"Ellington","2010-11","Public","G4",213
+"Enfield","2010-11","Public","G4",411
+"Farmington","2010-11","Public","G4",271
+"Glastonbury","2010-11","Public","G4",529
+"Granby","2010-11","Public","G4",168
+"Hartford","2010-11","Public","G4",1316
+"Hebron","2010-11","Public","G4",146
+"Manchester","2010-11","Public","G4",496
+"Marlborough","2010-11","Public","G4",105
+"Newington","2010-11","Public","G4",307
+"Rocky Hill","2010-11","Public","G4",185
+"Simsbury","2010-11","Public","G4",359
+"Somers","2010-11","Public","G4",122
+"South Windsor","2010-11","Public","G4",304
+"Stafford","2010-11","Public","G4",134
+"Suffield","2010-11","Public","G4",199
+"Tolland","2010-11","Public","G4",221
+"Vernon","2010-11","Public","G4",271
+"West Hartford","2010-11","Public","G4",815
+"Wethersfield","2010-11","Public","G4",283
+"Windsor","2010-11","Public","G4",269
+"Windsor Locks","2010-11","Public","G4",122
+"Andover","2010-11","Public charter","G4",0
+"Avon","2010-11","Public charter","G4",0
+"Bloomfield","2010-11","Public charter","G4",7
+"Bolton","2010-11","Public charter","G4",1
+"Canton","2010-11","Public charter","G4",0
+"East Hartford","2010-11","Public charter","G4",10
+"East Windsor","2010-11","Public charter","G4",1
+"Enfield","2010-11","Public charter","G4",0
+"Farmington","2010-11","Public charter","G4",0
+"Glastonbury","2010-11","Public charter","G4",0
+"Hartford","2010-11","Public charter","G4",33
+"Hebron","2010-11","Public charter","G4",0
+"Manchester","2010-11","Public charter","G4",26
+"Marlborough","2010-11","Public charter","G4",0
+"Newington","2010-11","Public charter","G4",0
+"Rocky Hill","2010-11","Public charter","G4",0
+"Simsbury","2010-11","Public charter","G4",0
+"Somers","2010-11","Public charter","G4",0
+"South Windsor","2010-11","Public charter","G4",0
+"Vernon","2010-11","Public charter","G4",0
+"West Hartford","2010-11","Public charter","G4",0
+"Wethersfield","2010-11","Public charter","G4",0
+"Windsor","2010-11","Public charter","G4",4
+"Windsor Locks","2010-11","Public charter","G4",0
+"Andover","2010-11","Magnet School","G5",1
+"Avon","2010-11","Magnet School","G5",1
+"Bloomfield","2010-11","Magnet School","G5",12
+"Bolton","2010-11","Magnet School","G5",0
+"Canton","2010-11","Magnet School","G5",0
+"East Granby","2010-11","Magnet School","G5",2
+"East Hartford","2010-11","Magnet School","G5",42
+"East Windsor","2010-11","Magnet School","G5",1
+"Ellington","2010-11","Magnet School","G5",0
+"Enfield","2010-11","Magnet School","G5",4
+"Farmington","2010-11","Magnet School","G5",0
+"Glastonbury","2010-11","Magnet School","G5",20
+"Granby","2010-11","Magnet School","G5",1
+"Hartford","2010-11","Magnet School","G5",205
+"Hebron","2010-11","Magnet School","G5",0
+"Manchester","2010-11","Magnet School","G5",7
+"Marlborough","2010-11","Magnet School","G5",0
+"Newington","2010-11","Magnet School","G5",1
+"Rocky Hill","2010-11","Magnet School","G5",1
+"Simsbury","2010-11","Magnet School","G5",3
+"Somers","2010-11","Magnet School","G5",0
+"South Windsor","2010-11","Magnet School","G5",1
+"Stafford","2010-11","Magnet School","G5",0
+"Suffield","2010-11","Magnet School","G5",0
+"Tolland","2010-11","Magnet School","G5",1
+"Vernon","2010-11","Magnet School","G5",6
+"West Hartford","2010-11","Magnet School","G5",6
+"Wethersfield","2010-11","Magnet School","G5",10
+"Windsor","2010-11","Magnet School","G5",11
+"Windsor Locks","2010-11","Magnet School","G5",0
+"Bloomfield","2010-11","Open Choice","G5",0
+"East Hartford","2010-11","Open Choice","G5",0
+"Enfield","2010-11","Open Choice","G5",0
+"Hartford","2010-11","Open Choice","G5",116
+"Manchester","2010-11","Open Choice","G5",0
+"Vernon","2010-11","Open Choice","G5",1
+"Windsor","2010-11","Open Choice","G5",0
+"Windsor Locks","2010-11","Open Choice","G5",1
+"Andover","2010-11","Other","G5",0
+"Avon","2010-11","Other","G5",0
+"Bloomfield","2010-11","Other","G5",0
+"Bolton","2010-11","Other","G5",0
+"Canton","2010-11","Other","G5",0
+"East Granby","2010-11","Other","G5",0
+"East Hartford","2010-11","Other","G5",0
+"Ellington","2010-11","Other","G5",0
+"Enfield","2010-11","Other","G5",0
+"Farmington","2010-11","Other","G5",0
+"Glastonbury","2010-11","Other","G5",0
+"Granby","2010-11","Other","G5",0
+"Hartford","2010-11","Other","G5",1
+"Hebron","2010-11","Other","G5",0
+"Manchester","2010-11","Other","G5",0
+"Marlborough","2010-11","Other","G5",0
+"Newington","2010-11","Other","G5",0
+"Rocky Hill","2010-11","Other","G5",0
+"Simsbury","2010-11","Other","G5",0
+"Somers","2010-11","Other","G5",0
+"South Windsor","2010-11","Other","G5",0
+"Stafford","2010-11","Other","G5",0
+"Suffield","2010-11","Other","G5",0
+"Tolland","2010-11","Other","G5",0
+"Vernon","2010-11","Other","G5",0
+"West Hartford","2010-11","Other","G5",0
+"Wethersfield","2010-11","Other","G5",0
+"Windsor Locks","2010-11","Other","G5",0
+"Andover","2010-11","Private","G5",2
+"Avon","2010-11","Private","G5",15
+"Bloomfield","2010-11","Private","G5",28
+"Bolton","2010-11","Private","G5",1
+"Canton","2010-11","Private","G5",10
+"East Granby","2010-11","Private","G5",4
+"East Hartford","2010-11","Private","G5",30
+"East Windsor","2010-11","Private","G5",5
+"Ellington","2010-11","Private","G5",9
+"Enfield","2010-11","Private","G5",35
+"Farmington","2010-11","Private","G5",13
+"Glastonbury","2010-11","Private","G5",7
+"Granby","2010-11","Private","G5",7
+"Hartford","2010-11","Private","G5",104
+"Hebron","2010-11","Private","G5",8
+"Manchester","2010-11","Private","G5",48
+"Marlborough","2010-11","Private","G5",3
+"Newington","2010-11","Private","G5",13
+"Rocky Hill","2010-11","Private","G5",5
+"Simsbury","2010-11","Private","G5",26
+"Somers","2010-11","Private","G5",9
+"South Windsor","2010-11","Private","G5",8
+"Stafford","2010-11","Private","G5",12
+"Suffield","2010-11","Private","G5",4
+"Tolland","2010-11","Private","G5",6
+"Vernon","2010-11","Private","G5",12
+"West Hartford","2010-11","Private","G5",53
+"Wethersfield","2010-11","Private","G5",30
+"Windsor","2010-11","Private","G5",33
+"Windsor Locks","2010-11","Private","G5",3
+"Andover","2010-11","Public","G5",38
+"Avon","2010-11","Public","G5",301
+"Bloomfield","2010-11","Public","G5",147
+"Bolton","2010-11","Public","G5",64
+"Canton","2010-11","Public","G5",132
+"East Granby","2010-11","Public","G5",70
+"East Hartford","2010-11","Public","G5",529
+"East Windsor","2010-11","Public","G5",110
+"Ellington","2010-11","Public","G5",202
+"Enfield","2010-11","Public","G5",433
+"Farmington","2010-11","Public","G5",283
+"Glastonbury","2010-11","Public","G5",515
+"Granby","2010-11","Public","G5",168
+"Hartford","2010-11","Public","G5",1228
+"Hebron","2010-11","Public","G5",190
+"Manchester","2010-11","Public","G5",480
+"Marlborough","2010-11","Public","G5",98
+"Newington","2010-11","Public","G5",315
+"Rocky Hill","2010-11","Public","G5",195
+"Simsbury","2010-11","Public","G5",356
+"Somers","2010-11","Public","G5",118
+"South Windsor","2010-11","Public","G5",380
+"Stafford","2010-11","Public","G5",112
+"Suffield","2010-11","Public","G5",187
+"Tolland","2010-11","Public","G5",242
+"Vernon","2010-11","Public","G5",269
+"West Hartford","2010-11","Public","G5",776
+"Wethersfield","2010-11","Public","G5",289
+"Windsor","2010-11","Public","G5",285
+"Windsor Locks","2010-11","Public","G5",129
+"Andover","2010-11","Public charter","G5",0
+"Avon","2010-11","Public charter","G5",0
+"Bloomfield","2010-11","Public charter","G5",14
+"Bolton","2010-11","Public charter","G5",0
+"Canton","2010-11","Public charter","G5",0
+"East Hartford","2010-11","Public charter","G5",10
+"East Windsor","2010-11","Public charter","G5",0
+"Enfield","2010-11","Public charter","G5",0
+"Farmington","2010-11","Public charter","G5",0
+"Glastonbury","2010-11","Public charter","G5",1
+"Hartford","2010-11","Public charter","G5",114
+"Hebron","2010-11","Public charter","G5",0
+"Manchester","2010-11","Public charter","G5",30
+"Marlborough","2010-11","Public charter","G5",0
+"Newington","2010-11","Public charter","G5",0
+"Rocky Hill","2010-11","Public charter","G5",0
+"Simsbury","2010-11","Public charter","G5",0
+"Somers","2010-11","Public charter","G5",0
+"South Windsor","2010-11","Public charter","G5",0
+"Vernon","2010-11","Public charter","G5",2
+"West Hartford","2010-11","Public charter","G5",0
+"Wethersfield","2010-11","Public charter","G5",0
+"Windsor","2010-11","Public charter","G5",2
+"Windsor Locks","2010-11","Public charter","G5",0
+"Andover","2010-11","Magnet School","G6",0
+"Avon","2010-11","Magnet School","G6",0
+"Bloomfield","2010-11","Magnet School","G6",30
+"Bolton","2010-11","Magnet School","G6",0
+"Canton","2010-11","Magnet School","G6",0
+"East Granby","2010-11","Magnet School","G6",3
+"East Hartford","2010-11","Magnet School","G6",125
+"East Windsor","2010-11","Magnet School","G6",9
+"Ellington","2010-11","Magnet School","G6",3
+"Enfield","2010-11","Magnet School","G6",35
+"Farmington","2010-11","Magnet School","G6",0
+"Glastonbury","2010-11","Magnet School","G6",13
+"Granby","2010-11","Magnet School","G6",2
+"Hartford","2010-11","Magnet School","G6",451
+"Hebron","2010-11","Magnet School","G6",6
+"Manchester","2010-11","Magnet School","G6",92
+"Marlborough","2010-11","Magnet School","G6",3
+"Newington","2010-11","Magnet School","G6",5
+"Rocky Hill","2010-11","Magnet School","G6",6
+"Simsbury","2010-11","Magnet School","G6",1
+"Somers","2010-11","Magnet School","G6",0
+"South Windsor","2010-11","Magnet School","G6",21
+"Stafford","2010-11","Magnet School","G6",0
+"Suffield","2010-11","Magnet School","G6",3
+"Tolland","2010-11","Magnet School","G6",5
+"Vernon","2010-11","Magnet School","G6",18
+"West Hartford","2010-11","Magnet School","G6",17
+"Wethersfield","2010-11","Magnet School","G6",12
+"Windsor","2010-11","Magnet School","G6",60
+"Windsor Locks","2010-11","Magnet School","G6",10
+"Bloomfield","2010-11","Open Choice","G6",0
+"East Hartford","2010-11","Open Choice","G6",0
+"Enfield","2010-11","Open Choice","G6",0
+"Hartford","2010-11","Open Choice","G6",104
+"Manchester","2010-11","Open Choice","G6",0
+"Vernon","2010-11","Open Choice","G6",1
+"Windsor","2010-11","Open Choice","G6",0
+"Windsor Locks","2010-11","Open Choice","G6",0
+"Andover","2010-11","Other","G6",0
+"Avon","2010-11","Other","G6",0
+"Bloomfield","2010-11","Other","G6",0
+"Bolton","2010-11","Other","G6",0
+"Canton","2010-11","Other","G6",0
+"East Granby","2010-11","Other","G6",0
+"East Hartford","2010-11","Other","G6",0
+"Ellington","2010-11","Other","G6",0
+"Enfield","2010-11","Other","G6",0
+"Farmington","2010-11","Other","G6",0
+"Glastonbury","2010-11","Other","G6",0
+"Granby","2010-11","Other","G6",0
+"Hartford","2010-11","Other","G6",2
+"Hebron","2010-11","Other","G6",0
+"Manchester","2010-11","Other","G6",0
+"Marlborough","2010-11","Other","G6",0
+"Newington","2010-11","Other","G6",0
+"Rocky Hill","2010-11","Other","G6",0
+"Simsbury","2010-11","Other","G6",0
+"Somers","2010-11","Other","G6",0
+"South Windsor","2010-11","Other","G6",0
+"Stafford","2010-11","Other","G6",0
+"Suffield","2010-11","Other","G6",0
+"Tolland","2010-11","Other","G6",0
+"Vernon","2010-11","Other","G6",0
+"West Hartford","2010-11","Other","G6",0
+"Wethersfield","2010-11","Other","G6",0
+"Windsor Locks","2010-11","Other","G6",0
+"Andover","2010-11","Private","G6",0
+"Avon","2010-11","Private","G6",17
+"Bloomfield","2010-11","Private","G6",31
+"Bolton","2010-11","Private","G6",3
+"Canton","2010-11","Private","G6",13
+"East Granby","2010-11","Private","G6",3
+"East Hartford","2010-11","Private","G6",37
+"East Windsor","2010-11","Private","G6",4
+"Ellington","2010-11","Private","G6",8
+"Enfield","2010-11","Private","G6",49
+"Farmington","2010-11","Private","G6",16
+"Glastonbury","2010-11","Private","G6",12
+"Granby","2010-11","Private","G6",5
+"Hartford","2010-11","Private","G6",83
+"Hebron","2010-11","Private","G6",1
+"Manchester","2010-11","Private","G6",67
+"Marlborough","2010-11","Private","G6",3
+"Newington","2010-11","Private","G6",11
+"Rocky Hill","2010-11","Private","G6",14
+"Simsbury","2010-11","Private","G6",33
+"Somers","2010-11","Private","G6",3
+"South Windsor","2010-11","Private","G6",7
+"Stafford","2010-11","Private","G6",7
+"Suffield","2010-11","Private","G6",4
+"Tolland","2010-11","Private","G6",12
+"Vernon","2010-11","Private","G6",9
+"West Hartford","2010-11","Private","G6",125
+"Wethersfield","2010-11","Private","G6",31
+"Windsor","2010-11","Private","G6",44
+"Windsor Locks","2010-11","Private","G6",6
+"Andover","2010-11","Public","G6",48
+"Avon","2010-11","Public","G6",283
+"Bloomfield","2010-11","Public","G6",159
+"Bolton","2010-11","Public","G6",59
+"Canton","2010-11","Public","G6",136
+"East Granby","2010-11","Public","G6",61
+"East Hartford","2010-11","Public","G6",462
+"East Windsor","2010-11","Public","G6",89
+"Ellington","2010-11","Public","G6",228
+"Enfield","2010-11","Public","G6",371
+"Farmington","2010-11","Public","G6",309
+"Glastonbury","2010-11","Public","G6",503
+"Granby","2010-11","Public","G6",160
+"Hartford","2010-11","Public","G6",1016
+"Hebron","2010-11","Public","G6",169
+"Manchester","2010-11","Public","G6",455
+"Marlborough","2010-11","Public","G6",87
+"Newington","2010-11","Public","G6",312
+"Rocky Hill","2010-11","Public","G6",205
+"Simsbury","2010-11","Public","G6",377
+"Somers","2010-11","Public","G6",114
+"South Windsor","2010-11","Public","G6",350
+"Stafford","2010-11","Public","G6",156
+"Suffield","2010-11","Public","G6",178
+"Tolland","2010-11","Public","G6",247
+"Vernon","2010-11","Public","G6",259
+"West Hartford","2010-11","Public","G6",715
+"Wethersfield","2010-11","Public","G6",275
+"Windsor","2010-11","Public","G6",260
+"Windsor Locks","2010-11","Public","G6",125
+"Andover","2010-11","Public charter","G6",0
+"Avon","2010-11","Public charter","G6",0
+"Bloomfield","2010-11","Public charter","G6",3
+"Bolton","2010-11","Public charter","G6",0
+"Canton","2010-11","Public charter","G6",0
+"East Hartford","2010-11","Public charter","G6",18
+"East Windsor","2010-11","Public charter","G6",1
+"Enfield","2010-11","Public charter","G6",0
+"Farmington","2010-11","Public charter","G6",1
+"Glastonbury","2010-11","Public charter","G6",0
+"Hartford","2010-11","Public charter","G6",118
+"Hebron","2010-11","Public charter","G6",0
+"Manchester","2010-11","Public charter","G6",23
+"Marlborough","2010-11","Public charter","G6",0
+"Newington","2010-11","Public charter","G6",0
+"Rocky Hill","2010-11","Public charter","G6",0
+"Simsbury","2010-11","Public charter","G6",0
+"Somers","2010-11","Public charter","G6",0
+"South Windsor","2010-11","Public charter","G6",0
+"Vernon","2010-11","Public charter","G6",2
+"West Hartford","2010-11","Public charter","G6",0
+"Wethersfield","2010-11","Public charter","G6",0
+"Windsor","2010-11","Public charter","G6",1
+"Windsor Locks","2010-11","Public charter","G6",0
+"Andover","2010-11","Magnet School","G7",0
+"Avon","2010-11","Magnet School","G7",1
+"Bloomfield","2010-11","Magnet School","G7",37
+"Bolton","2010-11","Magnet School","G7",2
+"Canton","2010-11","Magnet School","G7",0
+"East Granby","2010-11","Magnet School","G7",0
+"East Hartford","2010-11","Magnet School","G7",148
+"East Windsor","2010-11","Magnet School","G7",18
+"Ellington","2010-11","Magnet School","G7",1
+"Enfield","2010-11","Magnet School","G7",35
+"Farmington","2010-11","Magnet School","G7",1
+"Glastonbury","2010-11","Magnet School","G7",12
+"Granby","2010-11","Magnet School","G7",2
+"Hartford","2010-11","Magnet School","G7",460
+"Hebron","2010-11","Magnet School","G7",1
+"Manchester","2010-11","Magnet School","G7",106
+"Marlborough","2010-11","Magnet School","G7",2
+"Newington","2010-11","Magnet School","G7",10
+"Rocky Hill","2010-11","Magnet School","G7",6
+"Simsbury","2010-11","Magnet School","G7",2
+"Somers","2010-11","Magnet School","G7",0
+"South Windsor","2010-11","Magnet School","G7",20
+"Stafford","2010-11","Magnet School","G7",0
+"Suffield","2010-11","Magnet School","G7",0
+"Tolland","2010-11","Magnet School","G7",3
+"Vernon","2010-11","Magnet School","G7",15
+"West Hartford","2010-11","Magnet School","G7",19
+"Wethersfield","2010-11","Magnet School","G7",10
+"Windsor","2010-11","Magnet School","G7",44
+"Windsor Locks","2010-11","Magnet School","G7",12
+"Bloomfield","2010-11","Open Choice","G7",0
+"East Hartford","2010-11","Open Choice","G7",0
+"Enfield","2010-11","Open Choice","G7",0
+"Hartford","2010-11","Open Choice","G7",92
+"Manchester","2010-11","Open Choice","G7",0
+"Vernon","2010-11","Open Choice","G7",0
+"Windsor","2010-11","Open Choice","G7",0
+"Windsor Locks","2010-11","Open Choice","G7",0
+"Andover","2010-11","Other","G7",0
+"Avon","2010-11","Other","G7",0
+"Bloomfield","2010-11","Other","G7",0
+"Bolton","2010-11","Other","G7",0
+"Canton","2010-11","Other","G7",0
+"East Granby","2010-11","Other","G7",0
+"East Hartford","2010-11","Other","G7",1
+"Ellington","2010-11","Other","G7",0
+"Enfield","2010-11","Other","G7",0
+"Farmington","2010-11","Other","G7",0
+"Glastonbury","2010-11","Other","G7",0
+"Granby","2010-11","Other","G7",0
+"Hartford","2010-11","Other","G7",2
+"Hebron","2010-11","Other","G7",0
+"Manchester","2010-11","Other","G7",1
+"Marlborough","2010-11","Other","G7",0
+"Newington","2010-11","Other","G7",0
+"Rocky Hill","2010-11","Other","G7",0
+"Simsbury","2010-11","Other","G7",0
+"Somers","2010-11","Other","G7",0
+"South Windsor","2010-11","Other","G7",0
+"Stafford","2010-11","Other","G7",0
+"Suffield","2010-11","Other","G7",0
+"Tolland","2010-11","Other","G7",0
+"Vernon","2010-11","Other","G7",0
+"West Hartford","2010-11","Other","G7",0
+"Wethersfield","2010-11","Other","G7",0
+"Windsor Locks","2010-11","Other","G7",0
+"Andover","2010-11","Private","G7",1
+"Avon","2010-11","Private","G7",12
+"Bloomfield","2010-11","Private","G7",28
+"Bolton","2010-11","Private","G7",3
+"Canton","2010-11","Private","G7",8
+"East Granby","2010-11","Private","G7",3
+"East Hartford","2010-11","Private","G7",43
+"East Windsor","2010-11","Private","G7",4
+"Ellington","2010-11","Private","G7",2
+"Enfield","2010-11","Private","G7",32
+"Farmington","2010-11","Private","G7",17
+"Glastonbury","2010-11","Private","G7",17
+"Granby","2010-11","Private","G7",5
+"Hartford","2010-11","Private","G7",59
+"Hebron","2010-11","Private","G7",6
+"Manchester","2010-11","Private","G7",43
+"Marlborough","2010-11","Private","G7",2
+"Newington","2010-11","Private","G7",12
+"Rocky Hill","2010-11","Private","G7",7
+"Simsbury","2010-11","Private","G7",25
+"Somers","2010-11","Private","G7",5
+"South Windsor","2010-11","Private","G7",9
+"Stafford","2010-11","Private","G7",9
+"Suffield","2010-11","Private","G7",1
+"Tolland","2010-11","Private","G7",6
+"Vernon","2010-11","Private","G7",14
+"West Hartford","2010-11","Private","G7",93
+"Wethersfield","2010-11","Private","G7",25
+"Windsor","2010-11","Private","G7",35
+"Windsor Locks","2010-11","Private","G7",3
+"Andover","2010-11","Public","G7",52
+"Avon","2010-11","Public","G7",278
+"Bloomfield","2010-11","Public","G7",124
+"Bolton","2010-11","Public","G7",74
+"Canton","2010-11","Public","G7",112
+"East Granby","2010-11","Public","G7",79
+"East Hartford","2010-11","Public","G7",449
+"East Windsor","2010-11","Public","G7",92
+"Ellington","2010-11","Public","G7",194
+"Enfield","2010-11","Public","G7",439
+"Farmington","2010-11","Public","G7",333
+"Glastonbury","2010-11","Public","G7",554
+"Granby","2010-11","Public","G7",188
+"Hartford","2010-11","Public","G7",1036
+"Hebron","2010-11","Public","G7",163
+"Manchester","2010-11","Public","G7",441
+"Marlborough","2010-11","Public","G7",86
+"Newington","2010-11","Public","G7",316
+"Rocky Hill","2010-11","Public","G7",217
+"Simsbury","2010-11","Public","G7",397
+"Somers","2010-11","Public","G7",138
+"South Windsor","2010-11","Public","G7",343
+"Stafford","2010-11","Public","G7",143
+"Suffield","2010-11","Public","G7",208
+"Tolland","2010-11","Public","G7",256
+"Vernon","2010-11","Public","G7",242
+"West Hartford","2010-11","Public","G7",780
+"Wethersfield","2010-11","Public","G7",326
+"Windsor","2010-11","Public","G7",268
+"Windsor Locks","2010-11","Public","G7",139
+"Andover","2010-11","Public charter","G7",1
+"Avon","2010-11","Public charter","G7",0
+"Bloomfield","2010-11","Public charter","G7",6
+"Bolton","2010-11","Public charter","G7",0
+"Canton","2010-11","Public charter","G7",0
+"East Hartford","2010-11","Public charter","G7",7
+"East Windsor","2010-11","Public charter","G7",0
+"Enfield","2010-11","Public charter","G7",0
+"Farmington","2010-11","Public charter","G7",0
+"Glastonbury","2010-11","Public charter","G7",0
+"Hartford","2010-11","Public charter","G7",105
+"Hebron","2010-11","Public charter","G7",0
+"Manchester","2010-11","Public charter","G7",29
+"Marlborough","2010-11","Public charter","G7",0
+"Newington","2010-11","Public charter","G7",0
+"Rocky Hill","2010-11","Public charter","G7",0
+"Simsbury","2010-11","Public charter","G7",0
+"Somers","2010-11","Public charter","G7",0
+"South Windsor","2010-11","Public charter","G7",0
+"Vernon","2010-11","Public charter","G7",1
+"West Hartford","2010-11","Public charter","G7",1
+"Wethersfield","2010-11","Public charter","G7",0
+"Windsor","2010-11","Public charter","G7",2
+"Windsor Locks","2010-11","Public charter","G7",0
+"Andover","2010-11","Magnet School","G8",1
+"Avon","2010-11","Magnet School","G8",1
+"Bloomfield","2010-11","Magnet School","G8",48
+"Bolton","2010-11","Magnet School","G8",1
+"Canton","2010-11","Magnet School","G8",2
+"East Granby","2010-11","Magnet School","G8",0
+"East Hartford","2010-11","Magnet School","G8",135
+"East Windsor","2010-11","Magnet School","G8",6
+"Ellington","2010-11","Magnet School","G8",0
+"Enfield","2010-11","Magnet School","G8",19
+"Farmington","2010-11","Magnet School","G8",3
+"Glastonbury","2010-11","Magnet School","G8",17
+"Granby","2010-11","Magnet School","G8",4
+"Hartford","2010-11","Magnet School","G8",489
+"Hebron","2010-11","Magnet School","G8",1
+"Manchester","2010-11","Magnet School","G8",66
+"Marlborough","2010-11","Magnet School","G8",1
+"Newington","2010-11","Magnet School","G8",5
+"Rocky Hill","2010-11","Magnet School","G8",5
+"Simsbury","2010-11","Magnet School","G8",1
+"Somers","2010-11","Magnet School","G8",0
+"South Windsor","2010-11","Magnet School","G8",22
+"Stafford","2010-11","Magnet School","G8",0
+"Suffield","2010-11","Magnet School","G8",1
+"Tolland","2010-11","Magnet School","G8",4
+"Vernon","2010-11","Magnet School","G8",18
+"West Hartford","2010-11","Magnet School","G8",21
+"Wethersfield","2010-11","Magnet School","G8",14
+"Windsor","2010-11","Magnet School","G8",46
+"Windsor Locks","2010-11","Magnet School","G8",11
+"Bloomfield","2010-11","Open Choice","G8",1
+"East Hartford","2010-11","Open Choice","G8",0
+"Enfield","2010-11","Open Choice","G8",0
+"Hartford","2010-11","Open Choice","G8",100
+"Manchester","2010-11","Open Choice","G8",0
+"Vernon","2010-11","Open Choice","G8",0
+"Windsor","2010-11","Open Choice","G8",0
+"Windsor Locks","2010-11","Open Choice","G8",0
+"Andover","2010-11","Other","G8",0
+"Avon","2010-11","Other","G8",0
+"Bloomfield","2010-11","Other","G8",1
+"Bolton","2010-11","Other","G8",0
+"Canton","2010-11","Other","G8",0
+"East Granby","2010-11","Other","G8",0
+"East Hartford","2010-11","Other","G8",0
+"Ellington","2010-11","Other","G8",0
+"Enfield","2010-11","Other","G8",0
+"Farmington","2010-11","Other","G8",0
+"Glastonbury","2010-11","Other","G8",0
+"Granby","2010-11","Other","G8",0
+"Hartford","2010-11","Other","G8",2
+"Hebron","2010-11","Other","G8",0
+"Manchester","2010-11","Other","G8",0
+"Marlborough","2010-11","Other","G8",0
+"Newington","2010-11","Other","G8",0
+"Rocky Hill","2010-11","Other","G8",0
+"Simsbury","2010-11","Other","G8",0
+"Somers","2010-11","Other","G8",0
+"South Windsor","2010-11","Other","G8",0
+"Stafford","2010-11","Other","G8",0
+"Suffield","2010-11","Other","G8",0
+"Tolland","2010-11","Other","G8",0
+"Vernon","2010-11","Other","G8",0
+"West Hartford","2010-11","Other","G8",0
+"Wethersfield","2010-11","Other","G8",0
+"Windsor Locks","2010-11","Other","G8",0
+"Andover","2010-11","Private","G8",1
+"Avon","2010-11","Private","G8",18
+"Bloomfield","2010-11","Private","G8",30
+"Bolton","2010-11","Private","G8",5
+"Canton","2010-11","Private","G8",4
+"East Granby","2010-11","Private","G8",4
+"East Hartford","2010-11","Private","G8",39
+"East Windsor","2010-11","Private","G8",9
+"Ellington","2010-11","Private","G8",5
+"Enfield","2010-11","Private","G8",39
+"Farmington","2010-11","Private","G8",24
+"Glastonbury","2010-11","Private","G8",21
+"Granby","2010-11","Private","G8",3
+"Hartford","2010-11","Private","G8",77
+"Hebron","2010-11","Private","G8",6
+"Manchester","2010-11","Private","G8",63
+"Marlborough","2010-11","Private","G8",3
+"Newington","2010-11","Private","G8",14
+"Rocky Hill","2010-11","Private","G8",10
+"Simsbury","2010-11","Private","G8",36
+"Somers","2010-11","Private","G8",4
+"South Windsor","2010-11","Private","G8",17
+"Stafford","2010-11","Private","G8",14
+"Suffield","2010-11","Private","G8",4
+"Tolland","2010-11","Private","G8",7
+"Vernon","2010-11","Private","G8",9
+"West Hartford","2010-11","Private","G8",89
+"Wethersfield","2010-11","Private","G8",29
+"Windsor","2010-11","Private","G8",46
+"Windsor Locks","2010-11","Private","G8",4
+"Andover","2010-11","Public","G8",46
+"Avon","2010-11","Public","G8",288
+"Bloomfield","2010-11","Public","G8",140
+"Bolton","2010-11","Public","G8",65
+"Canton","2010-11","Public","G8",145
+"East Granby","2010-11","Public","G8",66
+"East Hartford","2010-11","Public","G8",479
+"East Windsor","2010-11","Public","G8",93
+"Ellington","2010-11","Public","G8",211
+"Enfield","2010-11","Public","G8",398
+"Farmington","2010-11","Public","G8",336
+"Glastonbury","2010-11","Public","G8",552
+"Granby","2010-11","Public","G8",154
+"Hartford","2010-11","Public","G8",994
+"Hebron","2010-11","Public","G8",168
+"Manchester","2010-11","Public","G8",471
+"Marlborough","2010-11","Public","G8",94
+"Newington","2010-11","Public","G8",360
+"Rocky Hill","2010-11","Public","G8",211
+"Simsbury","2010-11","Public","G8",392
+"Somers","2010-11","Public","G8",130
+"South Windsor","2010-11","Public","G8",379
+"Stafford","2010-11","Public","G8",118
+"Suffield","2010-11","Public","G8",204
+"Tolland","2010-11","Public","G8",249
+"Vernon","2010-11","Public","G8",273
+"West Hartford","2010-11","Public","G8",703
+"Wethersfield","2010-11","Public","G8",293
+"Windsor","2010-11","Public","G8",286
+"Windsor Locks","2010-11","Public","G8",143
+"Andover","2010-11","Public charter","G8",0
+"Avon","2010-11","Public charter","G8",0
+"Bloomfield","2010-11","Public charter","G8",2
+"Bolton","2010-11","Public charter","G8",0
+"Canton","2010-11","Public charter","G8",0
+"East Hartford","2010-11","Public charter","G8",2
+"East Windsor","2010-11","Public charter","G8",0
+"Enfield","2010-11","Public charter","G8",0
+"Farmington","2010-11","Public charter","G8",0
+"Glastonbury","2010-11","Public charter","G8",1
+"Hartford","2010-11","Public charter","G8",32
+"Hebron","2010-11","Public charter","G8",0
+"Manchester","2010-11","Public charter","G8",24
+"Marlborough","2010-11","Public charter","G8",0
+"Newington","2010-11","Public charter","G8",0
+"Rocky Hill","2010-11","Public charter","G8",0
+"Simsbury","2010-11","Public charter","G8",0
+"Somers","2010-11","Public charter","G8",1
+"South Windsor","2010-11","Public charter","G8",0
+"Vernon","2010-11","Public charter","G8",3
+"West Hartford","2010-11","Public charter","G8",0
+"Wethersfield","2010-11","Public charter","G8",0
+"Windsor","2010-11","Public charter","G8",4
+"Windsor Locks","2010-11","Public charter","G8",0
+"Andover","2010-11","Magnet School","G9",1
+"Avon","2010-11","Magnet School","G9",1
+"Bloomfield","2010-11","Magnet School","G9",60
+"Bolton","2010-11","Magnet School","G9",6
+"Canton","2010-11","Magnet School","G9",2
+"East Granby","2010-11","Magnet School","G9",2
+"East Hartford","2010-11","Magnet School","G9",121
+"East Windsor","2010-11","Magnet School","G9",10
+"Ellington","2010-11","Magnet School","G9",6
+"Enfield","2010-11","Magnet School","G9",25
+"Farmington","2010-11","Magnet School","G9",5
+"Glastonbury","2010-11","Magnet School","G9",10
+"Granby","2010-11","Magnet School","G9",3
+"Hartford","2010-11","Magnet School","G9",496
+"Hebron","2010-11","Magnet School","G9",4
+"Manchester","2010-11","Magnet School","G9",46
+"Marlborough","2010-11","Magnet School","G9",4
+"Newington","2010-11","Magnet School","G9",18
+"Rocky Hill","2010-11","Magnet School","G9",5
+"Simsbury","2010-11","Magnet School","G9",7
+"Somers","2010-11","Magnet School","G9",0
+"South Windsor","2010-11","Magnet School","G9",6
+"Stafford","2010-11","Magnet School","G9",3
+"Suffield","2010-11","Magnet School","G9",6
+"Tolland","2010-11","Magnet School","G9",6
+"Vernon","2010-11","Magnet School","G9",27
+"West Hartford","2010-11","Magnet School","G9",13
+"Wethersfield","2010-11","Magnet School","G9",12
+"Windsor","2010-11","Magnet School","G9",45
+"Windsor Locks","2010-11","Magnet School","G9",16
+"Bloomfield","2010-11","Open Choice","G9",0
+"East Hartford","2010-11","Open Choice","G9",1
+"Enfield","2010-11","Open Choice","G9",0
+"Hartford","2010-11","Open Choice","G9",76
+"Manchester","2010-11","Open Choice","G9",1
+"Vernon","2010-11","Open Choice","G9",0
+"Windsor","2010-11","Open Choice","G9",0
+"Windsor Locks","2010-11","Open Choice","G9",0
+"Andover","2010-11","Other","G9",2
+"Avon","2010-11","Other","G9",0
+"Bloomfield","2010-11","Other","G9",12
+"Bolton","2010-11","Other","G9",0
+"Canton","2010-11","Other","G9",1
+"East Granby","2010-11","Other","G9",3
+"East Hartford","2010-11","Other","G9",5
+"Ellington","2010-11","Other","G9",3
+"Enfield","2010-11","Other","G9",9
+"Farmington","2010-11","Other","G9",0
+"Glastonbury","2010-11","Other","G9",13
+"Granby","2010-11","Other","G9",1
+"Hartford","2010-11","Other","G9",21
+"Hebron","2010-11","Other","G9",1
+"Manchester","2010-11","Other","G9",9
+"Marlborough","2010-11","Other","G9",0
+"Newington","2010-11","Other","G9",6
+"Rocky Hill","2010-11","Other","G9",1
+"Simsbury","2010-11","Other","G9",2
+"Somers","2010-11","Other","G9",2
+"South Windsor","2010-11","Other","G9",0
+"Stafford","2010-11","Other","G9",6
+"Suffield","2010-11","Other","G9",17
+"Tolland","2010-11","Other","G9",3
+"Vernon","2010-11","Other","G9",13
+"West Hartford","2010-11","Other","G9",0
+"Wethersfield","2010-11","Other","G9",1
+"Windsor Locks","2010-11","Other","G9",5
+"Andover","2010-11","Private","G9",3
+"Avon","2010-11","Private","G9",50
+"Bloomfield","2010-11","Private","G9",32
+"Bolton","2010-11","Private","G9",6
+"Canton","2010-11","Private","G9",13
+"East Granby","2010-11","Private","G9",9
+"East Hartford","2010-11","Private","G9",22
+"East Windsor","2010-11","Private","G9",6
+"Ellington","2010-11","Private","G9",9
+"Enfield","2010-11","Private","G9",10
+"Farmington","2010-11","Private","G9",29
+"Glastonbury","2010-11","Private","G9",59
+"Granby","2010-11","Private","G9",15
+"Hartford","2010-11","Private","G9",66
+"Hebron","2010-11","Private","G9",22
+"Manchester","2010-11","Private","G9",48
+"Marlborough","2010-11","Private","G9",11
+"Newington","2010-11","Private","G9",10
+"Rocky Hill","2010-11","Private","G9",20
+"Simsbury","2010-11","Private","G9",58
+"Somers","2010-11","Private","G9",10
+"South Windsor","2010-11","Private","G9",47
+"Stafford","2010-11","Private","G9",7
+"Suffield","2010-11","Private","G9",27
+"Tolland","2010-11","Private","G9",14
+"Vernon","2010-11","Private","G9",22
+"West Hartford","2010-11","Private","G9",120
+"Wethersfield","2010-11","Private","G9",33
+"Windsor","2010-11","Private","G9",63
+"Windsor Locks","2010-11","Private","G9",2
+"Andover","2010-11","Public","G9",53
+"Avon","2010-11","Public","G9",279
+"Bloomfield","2010-11","Public","G9",160
+"Bolton","2010-11","Public","G9",85
+"Canton","2010-11","Public","G9",147
+"East Granby","2010-11","Public","G9",63
+"East Hartford","2010-11","Public","G9",614
+"East Windsor","2010-11","Public","G9",114
+"Ellington","2010-11","Public","G9",221
+"Enfield","2010-11","Public","G9",516
+"Farmington","2010-11","Public","G9",345
+"Glastonbury","2010-11","Public","G9",546
+"Granby","2010-11","Public","G9",185
+"Hartford","2010-11","Public","G9",1320
+"Hebron","2010-11","Public","G9",188
+"Manchester","2010-11","Public","G9",605
+"Marlborough","2010-11","Public","G9",87
+"Newington","2010-11","Public","G9",385
+"Rocky Hill","2010-11","Public","G9",184
+"Simsbury","2010-11","Public","G9",407
+"Somers","2010-11","Public","G9",138
+"South Windsor","2010-11","Public","G9",361
+"Stafford","2010-11","Public","G9",178
+"Suffield","2010-11","Public","G9",181
+"Tolland","2010-11","Public","G9",246
+"Vernon","2010-11","Public","G9",295
+"West Hartford","2010-11","Public","G9",758
+"Wethersfield","2010-11","Public","G9",316
+"Windsor","2010-11","Public","G9",355
+"Windsor Locks","2010-11","Public","G9",138
+"Andover","2010-11","Public charter","G9",0
+"Avon","2010-11","Public charter","G9",0
+"Bloomfield","2010-11","Public charter","G9",0
+"Bolton","2010-11","Public charter","G9",0
+"Canton","2010-11","Public charter","G9",0
+"East Hartford","2010-11","Public charter","G9",0
+"East Windsor","2010-11","Public charter","G9",0
+"Enfield","2010-11","Public charter","G9",0
+"Farmington","2010-11","Public charter","G9",0
+"Glastonbury","2010-11","Public charter","G9",0
+"Hartford","2010-11","Public charter","G9",0
+"Hebron","2010-11","Public charter","G9",0
+"Manchester","2010-11","Public charter","G9",0
+"Marlborough","2010-11","Public charter","G9",0
+"Newington","2010-11","Public charter","G9",0
+"Rocky Hill","2010-11","Public charter","G9",0
+"Simsbury","2010-11","Public charter","G9",0
+"Somers","2010-11","Public charter","G9",0
+"South Windsor","2010-11","Public charter","G9",0
+"Vernon","2010-11","Public charter","G9",0
+"West Hartford","2010-11","Public charter","G9",0
+"Wethersfield","2010-11","Public charter","G9",0
+"Windsor","2010-11","Public charter","G9",0
+"Windsor Locks","2010-11","Public charter","G9",0
+"Andover","2010-11","Magnet School","G10",1
+"Avon","2010-11","Magnet School","G10",1
+"Bloomfield","2010-11","Magnet School","G10",78
+"Bolton","2010-11","Magnet School","G10",3
+"Canton","2010-11","Magnet School","G10",2
+"East Granby","2010-11","Magnet School","G10",2
+"East Hartford","2010-11","Magnet School","G10",111
+"East Windsor","2010-11","Magnet School","G10",9
+"Ellington","2010-11","Magnet School","G10",3
+"Enfield","2010-11","Magnet School","G10",12
+"Farmington","2010-11","Magnet School","G10",2
+"Glastonbury","2010-11","Magnet School","G10",13
+"Granby","2010-11","Magnet School","G10",0
+"Hartford","2010-11","Magnet School","G10",354
+"Hebron","2010-11","Magnet School","G10",1
+"Manchester","2010-11","Magnet School","G10",54
+"Marlborough","2010-11","Magnet School","G10",3
+"Newington","2010-11","Magnet School","G10",5
+"Rocky Hill","2010-11","Magnet School","G10",5
+"Simsbury","2010-11","Magnet School","G10",0
+"Somers","2010-11","Magnet School","G10",0
+"South Windsor","2010-11","Magnet School","G10",3
+"Stafford","2010-11","Magnet School","G10",1
+"Suffield","2010-11","Magnet School","G10",1
+"Tolland","2010-11","Magnet School","G10",3
+"Vernon","2010-11","Magnet School","G10",15
+"West Hartford","2010-11","Magnet School","G10",13
+"Wethersfield","2010-11","Magnet School","G10",6
+"Windsor","2010-11","Magnet School","G10",45
+"Windsor Locks","2010-11","Magnet School","G10",8
+"Bloomfield","2010-11","Open Choice","G10",5
+"East Hartford","2010-11","Open Choice","G10",5
+"Enfield","2010-11","Open Choice","G10",0
+"Hartford","2010-11","Open Choice","G10",81
+"Manchester","2010-11","Open Choice","G10",0
+"Vernon","2010-11","Open Choice","G10",0
+"Windsor","2010-11","Open Choice","G10",2
+"Windsor Locks","2010-11","Open Choice","G10",0
+"Andover","2010-11","Other","G10",2
+"Avon","2010-11","Other","G10",0
+"Bloomfield","2010-11","Other","G10",18
+"Bolton","2010-11","Other","G10",2
+"Canton","2010-11","Other","G10",0
+"East Granby","2010-11","Other","G10",1
+"East Hartford","2010-11","Other","G10",5
+"Ellington","2010-11","Other","G10",8
+"Enfield","2010-11","Other","G10",6
+"Farmington","2010-11","Other","G10",0
+"Glastonbury","2010-11","Other","G10",1
+"Granby","2010-11","Other","G10",2
+"Hartford","2010-11","Other","G10",23
+"Hebron","2010-11","Other","G10",6
+"Manchester","2010-11","Other","G10",8
+"Marlborough","2010-11","Other","G10",1
+"Newington","2010-11","Other","G10",0
+"Rocky Hill","2010-11","Other","G10",0
+"Simsbury","2010-11","Other","G10",2
+"Somers","2010-11","Other","G10",0
+"South Windsor","2010-11","Other","G10",1
+"Stafford","2010-11","Other","G10",1
+"Suffield","2010-11","Other","G10",12
+"Tolland","2010-11","Other","G10",1
+"Vernon","2010-11","Other","G10",10
+"West Hartford","2010-11","Other","G10",0
+"Wethersfield","2010-11","Other","G10",2
+"Windsor Locks","2010-11","Other","G10",7
+"Andover","2010-11","Private","G10",1
+"Avon","2010-11","Private","G10",61
+"Bloomfield","2010-11","Private","G10",31
+"Bolton","2010-11","Private","G10",8
+"Canton","2010-11","Private","G10",8
+"East Granby","2010-11","Private","G10",9
+"East Hartford","2010-11","Private","G10",17
+"East Windsor","2010-11","Private","G10",10
+"Ellington","2010-11","Private","G10",8
+"Enfield","2010-11","Private","G10",12
+"Farmington","2010-11","Private","G10",35
+"Glastonbury","2010-11","Private","G10",47
+"Granby","2010-11","Private","G10",10
+"Hartford","2010-11","Private","G10",74
+"Hebron","2010-11","Private","G10",8
+"Manchester","2010-11","Private","G10",62
+"Marlborough","2010-11","Private","G10",2
+"Newington","2010-11","Private","G10",19
+"Rocky Hill","2010-11","Private","G10",29
+"Simsbury","2010-11","Private","G10",54
+"Somers","2010-11","Private","G10",7
+"South Windsor","2010-11","Private","G10",37
+"Stafford","2010-11","Private","G10",3
+"Suffield","2010-11","Private","G10",19
+"Tolland","2010-11","Private","G10",11
+"Vernon","2010-11","Private","G10",11
+"West Hartford","2010-11","Private","G10",108
+"Wethersfield","2010-11","Private","G10",43
+"Windsor","2010-11","Private","G10",48
+"Windsor Locks","2010-11","Private","G10",4
+"Andover","2010-11","Public","G10",43
+"Avon","2010-11","Public","G10",265
+"Bloomfield","2010-11","Public","G10",135
+"Bolton","2010-11","Public","G10",71
+"Canton","2010-11","Public","G10",124
+"East Granby","2010-11","Public","G10",66
+"East Hartford","2010-11","Public","G10",521
+"East Windsor","2010-11","Public","G10",101
+"Ellington","2010-11","Public","G10",201
+"Enfield","2010-11","Public","G10",445
+"Farmington","2010-11","Public","G10",335
+"Glastonbury","2010-11","Public","G10",544
+"Granby","2010-11","Public","G10",177
+"Hartford","2010-11","Public","G10",1161
+"Hebron","2010-11","Public","G10",171
+"Manchester","2010-11","Public","G10",523
+"Marlborough","2010-11","Public","G10",92
+"Newington","2010-11","Public","G10",365
+"Rocky Hill","2010-11","Public","G10",184
+"Simsbury","2010-11","Public","G10",392
+"Somers","2010-11","Public","G10",144
+"South Windsor","2010-11","Public","G10",395
+"Stafford","2010-11","Public","G10",161
+"Suffield","2010-11","Public","G10",168
+"Tolland","2010-11","Public","G10",250
+"Vernon","2010-11","Public","G10",231
+"West Hartford","2010-11","Public","G10",832
+"Wethersfield","2010-11","Public","G10",264
+"Windsor","2010-11","Public","G10",354
+"Windsor Locks","2010-11","Public","G10",140
+"Andover","2010-11","Public charter","G10",0
+"Avon","2010-11","Public charter","G10",0
+"Bloomfield","2010-11","Public charter","G10",0
+"Bolton","2010-11","Public charter","G10",0
+"Canton","2010-11","Public charter","G10",2
+"East Hartford","2010-11","Public charter","G10",0
+"East Windsor","2010-11","Public charter","G10",0
+"Enfield","2010-11","Public charter","G10",0
+"Farmington","2010-11","Public charter","G10",0
+"Glastonbury","2010-11","Public charter","G10",0
+"Hartford","2010-11","Public charter","G10",0
+"Hebron","2010-11","Public charter","G10",0
+"Manchester","2010-11","Public charter","G10",0
+"Marlborough","2010-11","Public charter","G10",0
+"Newington","2010-11","Public charter","G10",0
+"Rocky Hill","2010-11","Public charter","G10",0
+"Simsbury","2010-11","Public charter","G10",0
+"Somers","2010-11","Public charter","G10",0
+"South Windsor","2010-11","Public charter","G10",0
+"Vernon","2010-11","Public charter","G10",0
+"West Hartford","2010-11","Public charter","G10",0
+"Wethersfield","2010-11","Public charter","G10",0
+"Windsor","2010-11","Public charter","G10",0
+"Windsor Locks","2010-11","Public charter","G10",0
+"Andover","2010-11","Magnet School","G11",4
+"Avon","2010-11","Magnet School","G11",2
+"Bloomfield","2010-11","Magnet School","G11",66
+"Bolton","2010-11","Magnet School","G11",2
+"Canton","2010-11","Magnet School","G11",1
+"East Granby","2010-11","Magnet School","G11",0
+"East Hartford","2010-11","Magnet School","G11",85
+"East Windsor","2010-11","Magnet School","G11",5
+"Ellington","2010-11","Magnet School","G11",1
+"Enfield","2010-11","Magnet School","G11",8
+"Farmington","2010-11","Magnet School","G11",1
+"Glastonbury","2010-11","Magnet School","G11",6
+"Granby","2010-11","Magnet School","G11",1
+"Hartford","2010-11","Magnet School","G11",346
+"Hebron","2010-11","Magnet School","G11",3
+"Manchester","2010-11","Magnet School","G11",43
+"Marlborough","2010-11","Magnet School","G11",7
+"Newington","2010-11","Magnet School","G11",4
+"Rocky Hill","2010-11","Magnet School","G11",3
+"Simsbury","2010-11","Magnet School","G11",2
+"Somers","2010-11","Magnet School","G11",1
+"South Windsor","2010-11","Magnet School","G11",6
+"Stafford","2010-11","Magnet School","G11",3
+"Suffield","2010-11","Magnet School","G11",0
+"Tolland","2010-11","Magnet School","G11",4
+"Vernon","2010-11","Magnet School","G11",11
+"West Hartford","2010-11","Magnet School","G11",10
+"Wethersfield","2010-11","Magnet School","G11",6
+"Windsor","2010-11","Magnet School","G11",34
+"Windsor Locks","2010-11","Magnet School","G11",10
+"Bloomfield","2010-11","Open Choice","G11",2
+"East Hartford","2010-11","Open Choice","G11",1
+"Enfield","2010-11","Open Choice","G11",0
+"Hartford","2010-11","Open Choice","G11",49
+"Manchester","2010-11","Open Choice","G11",1
+"Vernon","2010-11","Open Choice","G11",0
+"Windsor","2010-11","Open Choice","G11",0
+"Windsor Locks","2010-11","Open Choice","G11",0
+"Andover","2010-11","Other","G11",1
+"Avon","2010-11","Other","G11",0
+"Bloomfield","2010-11","Other","G11",32
+"Bolton","2010-11","Other","G11",0
+"Canton","2010-11","Other","G11",2
+"East Granby","2010-11","Other","G11",1
+"East Hartford","2010-11","Other","G11",6
+"Ellington","2010-11","Other","G11",0
+"Enfield","2010-11","Other","G11",4
+"Farmington","2010-11","Other","G11",2
+"Glastonbury","2010-11","Other","G11",2
+"Granby","2010-11","Other","G11",3
+"Hartford","2010-11","Other","G11",7
+"Hebron","2010-11","Other","G11",1
+"Manchester","2010-11","Other","G11",6
+"Marlborough","2010-11","Other","G11",1
+"Newington","2010-11","Other","G11",1
+"Rocky Hill","2010-11","Other","G11",0
+"Simsbury","2010-11","Other","G11",2
+"Somers","2010-11","Other","G11",1
+"South Windsor","2010-11","Other","G11",2
+"Stafford","2010-11","Other","G11",0
+"Suffield","2010-11","Other","G11",14
+"Tolland","2010-11","Other","G11",2
+"Vernon","2010-11","Other","G11",7
+"West Hartford","2010-11","Other","G11",1
+"Wethersfield","2010-11","Other","G11",0
+"Windsor Locks","2010-11","Other","G11",5
+"Andover","2010-11","Private","G11",1
+"Avon","2010-11","Private","G11",45
+"Bloomfield","2010-11","Private","G11",27
+"Bolton","2010-11","Private","G11",14
+"Canton","2010-11","Private","G11",20
+"East Granby","2010-11","Private","G11",4
+"East Hartford","2010-11","Private","G11",24
+"East Windsor","2010-11","Private","G11",9
+"Ellington","2010-11","Private","G11",16
+"Enfield","2010-11","Private","G11",11
+"Farmington","2010-11","Private","G11",38
+"Glastonbury","2010-11","Private","G11",60
+"Granby","2010-11","Private","G11",10
+"Hartford","2010-11","Private","G11",94
+"Hebron","2010-11","Private","G11",8
+"Manchester","2010-11","Private","G11",55
+"Marlborough","2010-11","Private","G11",11
+"Newington","2010-11","Private","G11",19
+"Rocky Hill","2010-11","Private","G11",23
+"Simsbury","2010-11","Private","G11",62
+"Somers","2010-11","Private","G11",6
+"South Windsor","2010-11","Private","G11",49
+"Stafford","2010-11","Private","G11",6
+"Suffield","2010-11","Private","G11",28
+"Tolland","2010-11","Private","G11",10
+"Vernon","2010-11","Private","G11",18
+"West Hartford","2010-11","Private","G11",116
+"Wethersfield","2010-11","Private","G11",25
+"Windsor","2010-11","Private","G11",60
+"Windsor Locks","2010-11","Private","G11",6
+"Andover","2010-11","Public","G11",62
+"Avon","2010-11","Public","G11",281
+"Bloomfield","2010-11","Public","G11",125
+"Bolton","2010-11","Public","G11",55
+"Canton","2010-11","Public","G11",123
+"East Granby","2010-11","Public","G11",64
+"East Hartford","2010-11","Public","G11",551
+"East Windsor","2010-11","Public","G11",89
+"Ellington","2010-11","Public","G11",203
+"Enfield","2010-11","Public","G11",561
+"Farmington","2010-11","Public","G11",286
+"Glastonbury","2010-11","Public","G11",495
+"Granby","2010-11","Public","G11",174
+"Hartford","2010-11","Public","G11",918
+"Hebron","2010-11","Public","G11",162
+"Manchester","2010-11","Public","G11",503
+"Marlborough","2010-11","Public","G11",90
+"Newington","2010-11","Public","G11",352
+"Rocky Hill","2010-11","Public","G11",203
+"Simsbury","2010-11","Public","G11",401
+"Somers","2010-11","Public","G11",140
+"South Windsor","2010-11","Public","G11",387
+"Stafford","2010-11","Public","G11",150
+"Suffield","2010-11","Public","G11",177
+"Tolland","2010-11","Public","G11",237
+"Vernon","2010-11","Public","G11",237
+"West Hartford","2010-11","Public","G11",737
+"Wethersfield","2010-11","Public","G11",296
+"Windsor","2010-11","Public","G11",301
+"Windsor Locks","2010-11","Public","G11",144
+"Andover","2010-11","Public charter","G11",0
+"Avon","2010-11","Public charter","G11",0
+"Bloomfield","2010-11","Public charter","G11",0
+"Bolton","2010-11","Public charter","G11",0
+"Canton","2010-11","Public charter","G11",3
+"East Hartford","2010-11","Public charter","G11",0
+"East Windsor","2010-11","Public charter","G11",0
+"Enfield","2010-11","Public charter","G11",0
+"Farmington","2010-11","Public charter","G11",1
+"Glastonbury","2010-11","Public charter","G11",0
+"Hartford","2010-11","Public charter","G11",0
+"Hebron","2010-11","Public charter","G11",0
+"Manchester","2010-11","Public charter","G11",0
+"Marlborough","2010-11","Public charter","G11",0
+"Newington","2010-11","Public charter","G11",0
+"Rocky Hill","2010-11","Public charter","G11",0
+"Simsbury","2010-11","Public charter","G11",1
+"Somers","2010-11","Public charter","G11",0
+"South Windsor","2010-11","Public charter","G11",0
+"Vernon","2010-11","Public charter","G11",0
+"West Hartford","2010-11","Public charter","G11",0
+"Wethersfield","2010-11","Public charter","G11",0
+"Windsor","2010-11","Public charter","G11",0
+"Windsor Locks","2010-11","Public charter","G11",0
+"Andover","2010-11","Magnet School","G12",1
+"Avon","2010-11","Magnet School","G12",0
+"Bloomfield","2010-11","Magnet School","G12",54
+"Bolton","2010-11","Magnet School","G12",5
+"Canton","2010-11","Magnet School","G12",1
+"East Granby","2010-11","Magnet School","G12",2
+"East Hartford","2010-11","Magnet School","G12",65
+"East Windsor","2010-11","Magnet School","G12",6
+"Ellington","2010-11","Magnet School","G12",2
+"Enfield","2010-11","Magnet School","G12",5
+"Farmington","2010-11","Magnet School","G12",0
+"Glastonbury","2010-11","Magnet School","G12",6
+"Granby","2010-11","Magnet School","G12",4
+"Hartford","2010-11","Magnet School","G12",317
+"Hebron","2010-11","Magnet School","G12",3
+"Manchester","2010-11","Magnet School","G12",37
+"Marlborough","2010-11","Magnet School","G12",1
+"Newington","2010-11","Magnet School","G12",3
+"Rocky Hill","2010-11","Magnet School","G12",4
+"Simsbury","2010-11","Magnet School","G12",5
+"Somers","2010-11","Magnet School","G12",0
+"South Windsor","2010-11","Magnet School","G12",12
+"Stafford","2010-11","Magnet School","G12",0
+"Suffield","2010-11","Magnet School","G12",1
+"Tolland","2010-11","Magnet School","G12",5
+"Vernon","2010-11","Magnet School","G12",8
+"West Hartford","2010-11","Magnet School","G12",9
+"Wethersfield","2010-11","Magnet School","G12",7
+"Windsor","2010-11","Magnet School","G12",46
+"Windsor Locks","2010-11","Magnet School","G12",11
+"Bloomfield","2010-11","Open Choice","G12",0
+"East Hartford","2010-11","Open Choice","G12",0
+"Enfield","2010-11","Open Choice","G12",0
+"Hartford","2010-11","Open Choice","G12",67
+"Manchester","2010-11","Open Choice","G12",0
+"Vernon","2010-11","Open Choice","G12",0
+"Windsor","2010-11","Open Choice","G12",0
+"Windsor Locks","2010-11","Open Choice","G12",0
+"Andover","2010-11","Other","G12",1
+"Avon","2010-11","Other","G12",1
+"Bloomfield","2010-11","Other","G12",18
+"Bolton","2010-11","Other","G12",0
+"Canton","2010-11","Other","G12",1
+"East Granby","2010-11","Other","G12",1
+"East Hartford","2010-11","Other","G12",2
+"Ellington","2010-11","Other","G12",1
+"Enfield","2010-11","Other","G12",6
+"Farmington","2010-11","Other","G12",2
+"Glastonbury","2010-11","Other","G12",0
+"Granby","2010-11","Other","G12",1
+"Hartford","2010-11","Other","G12",9
+"Hebron","2010-11","Other","G12",2
+"Manchester","2010-11","Other","G12",5
+"Marlborough","2010-11","Other","G12",2
+"Newington","2010-11","Other","G12",0
+"Rocky Hill","2010-11","Other","G12",0
+"Simsbury","2010-11","Other","G12",3
+"Somers","2010-11","Other","G12",0
+"South Windsor","2010-11","Other","G12",3
+"Stafford","2010-11","Other","G12",3
+"Suffield","2010-11","Other","G12",14
+"Tolland","2010-11","Other","G12",0
+"Vernon","2010-11","Other","G12",6
+"West Hartford","2010-11","Other","G12",1
+"Wethersfield","2010-11","Other","G12",1
+"Windsor Locks","2010-11","Other","G12",12
+"Andover","2010-11","Private","G12",4
+"Avon","2010-11","Private","G12",51
+"Bloomfield","2010-11","Private","G12",32
+"Bolton","2010-11","Private","G12",3
+"Canton","2010-11","Private","G12",23
+"East Granby","2010-11","Private","G12",4
+"East Hartford","2010-11","Private","G12",51
+"East Windsor","2010-11","Private","G12",10
+"Ellington","2010-11","Private","G12",6
+"Enfield","2010-11","Private","G12",10
+"Farmington","2010-11","Private","G12",36
+"Glastonbury","2010-11","Private","G12",71
+"Granby","2010-11","Private","G12",13
+"Hartford","2010-11","Private","G12",88
+"Hebron","2010-11","Private","G12",7
+"Manchester","2010-11","Private","G12",54
+"Marlborough","2010-11","Private","G12",9
+"Newington","2010-11","Private","G12",22
+"Rocky Hill","2010-11","Private","G12",18
+"Simsbury","2010-11","Private","G12",74
+"Somers","2010-11","Private","G12",7
+"South Windsor","2010-11","Private","G12",41
+"Stafford","2010-11","Private","G12",8
+"Suffield","2010-11","Private","G12",13
+"Tolland","2010-11","Private","G12",12
+"Vernon","2010-11","Private","G12",16
+"West Hartford","2010-11","Private","G12",112
+"Wethersfield","2010-11","Private","G12",23
+"Windsor","2010-11","Private","G12",44
+"Windsor Locks","2010-11","Private","G12",10
+"Andover","2010-11","Public","G12",50
+"Avon","2010-11","Public","G12",259
+"Bloomfield","2010-11","Public","G12",121
+"Bolton","2010-11","Public","G12",62
+"Canton","2010-11","Public","G12",118
+"East Granby","2010-11","Public","G12",79
+"East Hartford","2010-11","Public","G12",457
+"East Windsor","2010-11","Public","G12",84
+"Ellington","2010-11","Public","G12",183
+"Enfield","2010-11","Public","G12",449
+"Farmington","2010-11","Public","G12",333
+"Glastonbury","2010-11","Public","G12",551
+"Granby","2010-11","Public","G12",175
+"Hartford","2010-11","Public","G12",1005
+"Hebron","2010-11","Public","G12",121
+"Manchester","2010-11","Public","G12",494
+"Marlborough","2010-11","Public","G12",73
+"Newington","2010-11","Public","G12",397
+"Rocky Hill","2010-11","Public","G12",191
+"Simsbury","2010-11","Public","G12",357
+"Somers","2010-11","Public","G12",142
+"South Windsor","2010-11","Public","G12",405
+"Stafford","2010-11","Public","G12",141
+"Suffield","2010-11","Public","G12",178
+"Tolland","2010-11","Public","G12",228
+"Vernon","2010-11","Public","G12",269
+"West Hartford","2010-11","Public","G12",816
+"Wethersfield","2010-11","Public","G12",316
+"Windsor","2010-11","Public","G12",326
+"Windsor Locks","2010-11","Public","G12",136
+"Andover","2010-11","Public charter","G12",0
+"Avon","2010-11","Public charter","G12",0
+"Bloomfield","2010-11","Public charter","G12",1
+"Bolton","2010-11","Public charter","G12",0
+"Canton","2010-11","Public charter","G12",2
+"East Hartford","2010-11","Public charter","G12",0
+"East Windsor","2010-11","Public charter","G12",0
+"Enfield","2010-11","Public charter","G12",0
+"Farmington","2010-11","Public charter","G12",0
+"Glastonbury","2010-11","Public charter","G12",0
+"Hartford","2010-11","Public charter","G12",0
+"Hebron","2010-11","Public charter","G12",0
+"Manchester","2010-11","Public charter","G12",0
+"Marlborough","2010-11","Public charter","G12",0
+"Newington","2010-11","Public charter","G12",0
+"Rocky Hill","2010-11","Public charter","G12",0
+"Simsbury","2010-11","Public charter","G12",1
+"Somers","2010-11","Public charter","G12",0
+"South Windsor","2010-11","Public charter","G12",0
+"Vernon","2010-11","Public charter","G12",0
+"West Hartford","2010-11","Public charter","G12",0
+"Wethersfield","2010-11","Public charter","G12",0
+"Windsor","2010-11","Public charter","G12",0
+"Windsor Locks","2010-11","Public charter","G12",0

@@ -1,0 +1,61 @@
+"period","Towngroup","sumpop","sumpoor"
+1900,"Hartford",79850,NA
+1900,"Rural",5136,NA
+1900,"Suburban",30970,NA
+1900,"Urban periphery",43141,NA
+1910,"Hartford",98915,NA
+1910,"Rural",5386,NA
+1910,"Suburban",33905,NA
+1910,"Urban periphery",55132,NA
+1920,"Hartford",138036,NA
+1920,"Rural",5803,NA
+1920,"Suburban",38294,NA
+1920,"Urban periphery",71399,NA
+1930,"Hartford",164072,NA
+1930,"Rural",6162,NA
+1930,"Suburban",43919,NA
+1930,"Urban periphery",104324,NA
+1940,"Hartford",166267,NA
+1940,"Rural",6641,NA
+1940,"Suburban",51271,NA
+1940,"Urban periphery",120848,NA
+1950,"Hartford",177397,NA
+1950,"Rural",8524,NA
+1950,"Suburban",66268,NA
+1950,"Urban periphery",166002,NA
+1960,"Hartford",162178,NA
+1960,"Rural",12973,NA
+1960,"Suburban",117468,NA
+1960,"Urban periphery",253926,NA
+1970,"Hartford",158017,26863
+1970,"Rural",17505,NA
+1970,"Suburban",168469,NA
+1970,"Urban periphery",325916,NA
+1980,"Hartford",136392,34371
+1980,"Rural",19542,1219
+1980,"Suburban",196648,5675
+1980,"Urban periphery",315897,14358
+1990,"Hartford",139739,38428
+1990,"Rural",21729,705
+1990,"Suburban",226612,5341
+1990,"Urban periphery",321324,11873
+2000,"Hartford",121578,37203
+2000,"Rural",23271,958
+2000,"Suburban",249706,7736
+2000,"Urban periphery",326765,19044
+2010,"Hartford",124775,40053
+2010,"Rural",25909,1205
+2010,"Suburban",270796,9245
+2010,"Urban periphery",336031,26451
+2015,"Hartford",125999,NA
+2015,"Rural",38388,NA
+2015,"Suburban",277497,NA
+2015,"Urban periphery",341742,NA
+2020,"Hartford",126656,NA
+2020,"Rural",38911,NA
+2020,"Suburban",282476,NA
+2020,"Urban periphery",346788,NA
+2025,"Hartford",126185,NA
+2025,"Rural",39463,NA
+2025,"Suburban",286373,NA
+2025,"Urban periphery",350406,NA

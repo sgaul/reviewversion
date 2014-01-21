@@ -505,6 +505,10 @@ Key points: Integration through school system, districts not the same as towns.
 
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
 
+```
+Error: object 'otm' not found
+```
+
 
 --- 
 ## Everyone commutes, mostly to Hartford
@@ -592,7 +596,7 @@ Key points: 16 to 24 cohort are opportunity youth, future workforce
 
 
 --- 
-## Home ownership sign of civic health (replace w/ map)
+## Home ownership sign of civic health (replace)
 
 Themes: Civic health, concentration of poverty  
 Key points: Housing market divided, higher mobility in Hartford
