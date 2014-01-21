@@ -83,7 +83,7 @@ write.csv(subset(gh_test, period >= 1900),'slide4.csv', row.names = F)
 ```
 
 ---
-## Aging population (?)
+## Aging population
 
 Themes: regionalism, aging workforce  
 Key points: aging population in suburbs, talent pipeline from Hartford
@@ -95,22 +95,44 @@ library(reshape)
 projections <- read.csv('sdc-projections.csv')
 projections <- subset(projections, projections$TOWN %in% levels(towns$Town))
 projections$TOWN <- factor(projections$TOWN)
+projections$YEAR <- paste("20",projections$YEAR, sep = "")
 
-projections$TYPE = ifelse(projections$TOWN == "Hartford","Hartford","Other region")
+projections <- merge(projections, towns, by.x = "TOWN", by.y = "Town")
 
-aging <- ddply(projections, .(YEAR, AGE, GENDER, TYPE), summarise, sum = sum(value))
-aging <- cast(aging, TYPE + YEAR + AGE ~ GENDER)
+levels(projections$AGE) <- list(
+  "55 years and over" = c("8084","6064","7579","5559","90OV","7074","8589","6569"),
+  "25 to 54 years" = c("4549","2529","4044","3539","5054","3034"),
+  "16 to 24 years" = c("2024","1519"),
+  "0 to 16 years" = c("0004","0509","1014"))
 
-levels(aging$AGE) <- rev(levels(aging$AGE))
+#projections$TYPE = ifelse(projections$TOWN == "Hartford","Hartford","Other region")
 
-ggplot(data=aging, aes(x=AGE)) + 
-  geom_bar(aes(y = F), fill = "light blue", stat = 'identity') + 
-  geom_bar(aes(y= M*(-1)), fill = "blue", stat = 'identity') + 
-  labs(y = "Male population", x = NULL) +
+#aging <- ddply(projections, .(YEAR, AGE, GENDER, TYPE), summarise, sum = sum(value))
+#aging <- cast(aging, TYPE + YEAR + AGE ~ GENDER)
+
+#levels(aging$AGE) <- rev(levels(aging$AGE))
+
+projections$AGE <- factor(projections$AGE, levels = c("0 to 16 years",
+                                                            "16 to 24 years",
+                                                            "25 to 54 years","55 years and over"))
+
+ggplot(data = ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),
+       aes(x = AGE, y = value)) + 
+  geom_freqpoly(stat = 'identity', aes(group = as.factor(YEAR), color = as.factor(YEAR))) + 
+  facet_wrap(~ Towngroup, ncol = 4) +
+  scale_colour_brewer(name = "Year") +
+  scale_y_continuous(labels = comma) + 
+  labs(y = "Projected population", x = "Age group") +
+  theme_minimal()
+
+#ggplot(data=aging, aes(x=AGE)) + 
+#  geom_bar(aes(y = F), fill = "light blue", stat = 'identity') + 
+#  geom_bar(aes(y= M*(-1)), fill = "blue", stat = 'identity') + 
+#  labs(y = "Male population", x = NULL) +
 #  scale_y_continuous(breaks=seq(-40000,40000,5000),labels=abs(seq(-40000,40000,5000))) + 
-  coord_flip() + 
-  theme_minimal() + 
-  facet_wrap(~ TYPE + YEAR)
+#  coord_flip() + 
+#  theme_minimal() + 
+# facet_wrap(~ TYPE + YEAR)
 
 write.csv(aging,'slide5.csv', row.names = F)
 ```

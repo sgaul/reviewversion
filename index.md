@@ -480,7 +480,7 @@ Key points: population loss in Hartford, flat population growth in suburbs
 
 
 ---
-## Aging population (?)
+## Aging population
 
 Themes: regionalism, aging workforce  
 Key points: aging population in suburbs, talent pipeline from Hartford
