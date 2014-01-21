@@ -431,6 +431,64 @@ ggplot(data = attainment.by.race,
   coord_flip() + 
   theme_minimal()
 ```
+--- 
+## Jobs (key sectors > 20K employees in region)
+
+Themes: Middle skills jobs, aging workforce  
+Key points: Eroding regional strengths in finance and manufacturing, growth in healthcare
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 13}
+qcew <- read.csv('../mockup/qcewannual-t.csv')
+
+#qcew <- melt(qcew, id.vars = c("area","naicsector","sectortitle"))
+
+qcew <- rbind(qcew,
+              ddply(subset(qcew,naicsector > 100), .(area,series,year), summarise,
+                    naicsector = 31,
+                    sectortitle = "Manufacturing",
+                    value = sum(value)))
+
+#Find sectors with most employment in the region
+#subset(qcew, area == "North Central" & 
+#         series == "Employees" & 
+#         naicsector < 100 & 
+#         naicsector > 0 & year == 2013 & value > 20000)[2]
+
+ggplot(data = subset(qcew, series == "Employees" & 
+                       area != "Multiple locations or unknown" & 
+                       area != "Statewide" & 
+                       naicsector %in% c(44,52,54,61,62,31)), 
+       aes(x = year, y = value)) + 
+  geom_line(aes(group = area, color = area)) + 
+  geom_point(aes(group = area, color = area)) + 
+  facet_wrap(~ sectortitle, ncol = 3) + 
+  labs(x = "Year", y = "Number of employees") + 
+  scale_y_continuous(labels = comma) + 
+  theme_minimal()
+```
+
+--- 
+## Manufacturing jobs (> 50 establishments)
+
+Themes: Middle skills jobs, aging workforce  
+Key points: Which manufacturing businesses are growing in the region?
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 13}
+#Find manufacturing subsectors with most employment in the region
+#subset(qcew, area == "North Central" & 
+#         series == "Establishments" & 
+#         naicsector > 300 & year == 2013 & value > 50)[2]
+
+ggplot(data = subset(qcew, series == "Establishments" & 
+                       area == "North Central" & 
+                       naicsector %in% c(311,323,332,333,334,336,337,339)), 
+       aes(x = year, y = value)) + 
+  geom_line(aes(group = area)) + 
+  facet_wrap(~ sectortitle, ncol = 4) + 
+  labs(x = "Year", y = "Number of establishments") + 
+  scale_y_continuous(labels = comma) + 
+  theme_minimal()
+```
 
 --- 
 ## Youth unemployment highest

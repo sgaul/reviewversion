@@ -564,6 +564,23 @@ Key points: Connect workforce to schools, aging workforce
 
 ![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
 
+--- 
+## Jobs (key sectors > 20K employees in region)
+
+Themes: Middle skills jobs, aging workforce  
+Key points: Eroding regional strengths in finance and manufacturing, growth in healthcare
+
+![plot of chunk unnamed-chunk-10](assets/fig/unnamed-chunk-10.png) 
+
+
+--- 
+## Manufacturing jobs (> 50 establishments)
+
+Themes: Middle skills jobs, aging workforce  
+Key points: Which manufacturing businesses are growing in the region?
+
+![plot of chunk unnamed-chunk-11](assets/fig/unnamed-chunk-11.png) 
+
 
 --- 
 ## Youth unemployment highest
@@ -571,7 +588,7 @@ Key points: Connect workforce to schools, aging workforce
 Themes: Aging workforce, middle skills gap  
 Key points: 16 to 24 cohort are opportunity youth, future workforce
 
-![plot of chunk unnamed-chunk-10](assets/fig/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
 
 
 --- 
@@ -580,7 +597,7 @@ Key points: 16 to 24 cohort are opportunity youth, future workforce
 Themes: Civic health, concentration of poverty  
 Key points: Housing market divided, higher mobility in Hartford
 
-![plot of chunk unnamed-chunk-11](assets/fig/unnamed-chunk-11.png) 
+![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
 
 --- 
 ## Hartford safest in 30 years
@@ -588,7 +605,7 @@ Key points: Housing market divided, higher mobility in Hartford
 Themes: Civic health  
 Key points: Progress on reducing crime, perception v. reality
 
-![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
+![plot of chunk unnamed-chunk-14](assets/fig/unnamed-chunk-14.png) 
 
 
 --- 
@@ -597,6 +614,6 @@ Key points: Progress on reducing crime, perception v. reality
 Themes: Civic health  
 Key points: Connect to home-ownership
 
-![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
+![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15.png) 
 
 
