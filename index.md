@@ -599,13 +599,23 @@ Key points: Housing market divided, higher mobility in Hartford
 
 ![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
 
+
+--- 
+## Affordable housing
+
+Themes: Concentration of poverty  
+Key points: Affordable housing limited to few towns
+
+![plot of chunk unnamed-chunk-14](assets/fig/unnamed-chunk-14.png) 
+
+
 --- 
 ## Hartford safest in 30 years
 
 Themes: Civic health  
 Key points: Progress on reducing crime, perception v. reality
 
-![plot of chunk unnamed-chunk-14](assets/fig/unnamed-chunk-14.png) 
+![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15.png) 
 
 
 --- 
@@ -614,6 +624,6 @@ Key points: Progress on reducing crime, perception v. reality
 Themes: Civic health  
 Key points: Connect to home-ownership
 
-![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15.png) 
+![plot of chunk unnamed-chunk-16](assets/fig/unnamed-chunk-16.png) 
 
 
