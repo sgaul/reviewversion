@@ -22,15 +22,14 @@ Background on the region
 Education
 * 3rd grade reading
 * High school graduation rate
-* Chronic absenteeism
 
 *** =right
 Jobs
 * Educational attainment
-* Unemployment rate
 * Job growth
 
 Quality of life / civic health
+* Home ownership
 * Affordable housing
 * Crime rate
 * Voter turnout
@@ -44,25 +43,23 @@ Quality of life / civic health
 4. Aging population and workforce
 5. Globally connected region
 6. Achievement gap and talent pipeline
-7. Creating opportunity in communities in the region?
+7. Creating opportunity in communities throughout the region
 
---- &twocol
+---
+
 ## Defining the region: Hartford + surrounding towns
 
-*** =left
-Urban periphery
-* Bloomfield, East Hartford, Enfield, Manchester, Newington, Rocky Hill, Vernon, West Hartford, Wethersfield, Windsor, Windsor Locks
+CRCOG region. Based on characteristics of each town, using UConn categories from [5 CTs report](http://ctsdc.uconn.edu/projections/5cts.html), with slight updates. 
 
-*** =right
-Suburban / rural 
-* Andover, Avon, Bolton, Canton, East Granby, East Windsor, Ellington, Farmington, Glastonbury, Granby, Hebron, Marlborough, Simsbury, Somers, South Windsor, Suffield, Stafford, Tolland
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
+
 
 ---
 ## Low population growth
 
 Low population growth overall; losing population in center city, slow outside, most rapid in outer suburbs. Not great at attracting people to the region. 
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
 
 
 --- 
@@ -70,7 +67,7 @@ Low population growth overall; losing population in center city, slow outside, m
 
 New poverty will occur in suburbs, new challenges towns can't ignore. 
 
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
 
 
 ---
@@ -78,11 +75,7 @@ New poverty will occur in suburbs, new challenges towns can't ignore.
 
 Suburbs are aging quickly and not good prospects for replacing with younger generation, based on current projections. 
 
-![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
-
-```
-## Error: object 'aging' not found
-```
+![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
 
 --- 
@@ -90,7 +83,7 @@ Suburbs are aging quickly and not good prospects for replacing with younger gene
 
 Aging population reflected in overall declining school enrollment. Local schools hit twice - once with demographics, again through increase in magnet / private enrollment.
 
-![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5.png) 
 
 ```
 ## Error: object 'otm' not found
@@ -102,7 +95,7 @@ Aging population reflected in overall declining school enrollment. Local schools
 
 Diversity part of changing population (tie back to 1st chart); which suburbs will 'globalize'? Where will new population in our region come from? (Add refugee factoid.)
 
-![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
 
 
 --- 
@@ -113,25 +106,17 @@ Globally connected city via employers as well. Draws high-skill jobs to the regi
 ![image](../mockup/commute-patterns.png)
 
 --- 
-## Meeting demands for a skilled workforce
+## Demand for a skilled workforce
 
 Commuting and the next 2 slides together, making the case that region has high skilled jobs as an asset, but skills not equitably distributed in the workforce. 
 
-![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
 
 
 --- 
 ## Job growth
 
 And job growth in historically strong sectors (finance & insurance, manufacturing) has not been strong recently. Changes in job market - strengths are strengths no longer. 
-
-![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
-
-
---- 
-## Youth unemployment highest
-
-Possibly lose this one, somewhat redundant with other figures. 
 
 ![plot of chunk unnamed-chunk-8](assets/fig/unnamed-chunk-8.png) 
 
@@ -153,19 +138,11 @@ And can start addressing gaps in education early on, including even earlier in e
 
 
 --- 
-## Chronic absenteeism an early warning sign
-
-Possibly drop, add in grade-level breakout - where are kids chronically absent in K - 3, middle school. 
-
-![plot of chunk unnamed-chunk-11](assets/fig/unnamed-chunk-11.png) 
-
-
---- 
-## Where would you like to live?
+## What makes a vibrant community?
 
 Creating opportunity in the region, what makes 'vibrant communities'? Knit together four slides with maps of region for homeownership, crime, affordable housing and voting. 
 
-![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
+![plot of chunk unnamed-chunk-11](assets/fig/unnamed-chunk-11.png) 
 
 
 --- 
@@ -173,15 +150,15 @@ Creating opportunity in the region, what makes 'vibrant communities'? Knit toget
 
 Part of creating opportunity outside areas of concentrated poverty. 
 
-![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
+![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
 
 
 --- 
-## Hartford getting safer.
+## Hartford getting safer
 
-Choice in housing based on factors like schools and safety. Doing better but still understandable that those who can afford to live in low-crime towns. Swith to regional map.
+Choice in housing based on factors like schools and safety. Doing better but still understandable that those who can afford to live in low-crime towns. 
 
-![plot of chunk unnamed-chunk-14](assets/fig/unnamed-chunk-14.png) 
+![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
 
 
 --- 
@@ -189,6 +166,6 @@ Choice in housing based on factors like schools and safety. Doing better but sti
 
 With with housing, crime. Add in factoid about diversity of gov't officials representing electorate (Hartford / region are among the worst nationally).
 
-![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15.png) 
+![plot of chunk unnamed-chunk-14](assets/fig/unnamed-chunk-14.png) 
 
 

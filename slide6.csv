@@ -1,33 +1,25 @@
-"District.Name","all.lang","all.students","ell.lang","ell.students"
-"Achievement First Hartford Academy Inc.",5,27,2,25
-"Andover School District",1,6,1,1
-"Avon School District",22,134,9,38
-"Bloomfield School District",10,39,2,27
-"Bolton School District",2,0,NA,NA
-"Canton School District",6,18,2,8
-"Capitol Region Education Council",17,281,9,81
-"East Granby School District",3,17,2,4
-"East Hartford School District",33,1068,12,547
-"East Windsor School District",10,73,4,23
-"Ellington School District",15,22,3,10
-"Enfield School District",12,181,7,73
-"Farmington School District",18,409,16,69
-"Glastonbury School District",29,361,16,70
-"Granby School District",6,0,NA,NA
-"Hartford School District",43,8254,25,3660
-"Hebron School District",1,0,NA,NA
-"Jumoke Academy District",1,0,NA,NA
-"Manchester School District",33,290,10,290
-"Newington School District",24,566,15,133
-"Rocky Hill School District",18,261,12,64
-"Simsbury School District",20,160,9,42
-"Somers School District",8,0,NA,NA
-"South Windsor School District",25,264,15,65
-"Stafford School District",9,27,3,9
-"Suffield School District",5,15,2,5
-"Tolland School District",10,0,NA,NA
-"Vernon School District",17,189,8,70
-"West Hartford School District",46,1747,33,551
-"Wethersfield School District",25,362,11,166
-"Windsor Locks School District",16,124,6,46
-"Windsor School District",27,222,10,72
+"Towngroup","period","population","population.under.poverty"
+"Hartford",1970,158017,26863
+"Hartford",1980,136392,34371
+"Hartford",1990,139739,38428
+"Hartford",2000,121578,37203
+"Hartford",2010,124775,40053
+"Hartford",2015,125999,NA
+"Hartford",2020,126656,NA
+"Hartford",2025,126185,NA
+"Suburban / rural",1970,145171,NA
+"Suburban / rural",1980,172378,5341
+"Suburban / rural",1990,201041,4579
+"Suburban / rural",2000,225153,6160
+"Suburban / rural",2010,247175,7888
+"Suburban / rural",2015,265584,NA
+"Suburban / rural",2020,270603,NA
+"Suburban / rural",2025,274846,NA
+"Urban periphery",1970,366719,NA
+"Urban periphery",1980,359709,15911
+"Urban periphery",1990,368624,13340
+"Urban periphery",2000,374589,21578
+"Urban periphery",2010,385561,29013
+"Urban periphery",2015,392043,NA
+"Urban periphery",2020,397572,NA
+"Urban periphery",2025,401396,NA

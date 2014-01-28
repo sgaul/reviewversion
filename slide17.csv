@@ -1,37 +1,31 @@
-"Gender","Age","Employment.status","variable","value"
-" Female","55 years and over","Employed","Bridgeport.Stamford.Norwalk.Metro",45361
-" Female","55 years and over","Employed","Hartford.West.Hartford.East.Hartford.Metro",61712
-" Female","55 years and over","Employed","New.Haven.Milford.Metro",45197
-" Female","55 years and over","Unemployed","Bridgeport.Stamford.Norwalk.Metro",3492
-" Female","55 years and over","Unemployed","Hartford.West.Hartford.East.Hartford.Metro",3520
-" Female","55 years and over","Unemployed","New.Haven.Milford.Metro",3111
-" Female","25 to 54 years","Employed","Bridgeport.Stamford.Norwalk.Metro",136842
-" Female","25 to 54 years","Employed","Hartford.West.Hartford.East.Hartford.Metro",196228
-" Female","25 to 54 years","Employed","New.Haven.Milford.Metro",137468
-" Female","25 to 54 years","Unemployed","Bridgeport.Stamford.Norwalk.Metro",11300
-" Female","25 to 54 years","Unemployed","Hartford.West.Hartford.East.Hartford.Metro",14555
-" Female","25 to 54 years","Unemployed","New.Haven.Milford.Metro",10894
-" Female","16 to 24 years","Employed","Bridgeport.Stamford.Norwalk.Metro",24068
-" Female","16 to 24 years","Employed","Hartford.West.Hartford.East.Hartford.Metro",38255
-" Female","16 to 24 years","Employed","New.Haven.Milford.Metro",28705
-" Female","16 to 24 years","Unemployed","Bridgeport.Stamford.Norwalk.Metro",4320
-" Female","16 to 24 years","Unemployed","Hartford.West.Hartford.East.Hartford.Metro",7527
-" Female","16 to 24 years","Unemployed","New.Haven.Milford.Metro",5865
-" Male","55 years and over","Employed","Bridgeport.Stamford.Norwalk.Metro",51203
-" Male","55 years and over","Employed","Hartford.West.Hartford.East.Hartford.Metro",67467
-" Male","55 years and over","Employed","New.Haven.Milford.Metro",45375
-" Male","55 years and over","Unemployed","Bridgeport.Stamford.Norwalk.Metro",3938
-" Male","55 years and over","Unemployed","Hartford.West.Hartford.East.Hartford.Metro",5001
-" Male","55 years and over","Unemployed","New.Haven.Milford.Metro",3559
-" Male","25 to 54 years","Employed","Bridgeport.Stamford.Norwalk.Metro",162390
-" Male","25 to 54 years","Employed","Hartford.West.Hartford.East.Hartford.Metro",202305
-" Male","25 to 54 years","Employed","New.Haven.Milford.Metro",142996
-" Male","25 to 54 years","Unemployed","Bridgeport.Stamford.Norwalk.Metro",11765
-" Male","25 to 54 years","Unemployed","Hartford.West.Hartford.East.Hartford.Metro",15521
-" Male","25 to 54 years","Unemployed","New.Haven.Milford.Metro",12845
-" Male","16 to 24 years","Employed","Bridgeport.Stamford.Norwalk.Metro",22563
-" Male","16 to 24 years","Employed","Hartford.West.Hartford.East.Hartford.Metro",38872
-" Male","16 to 24 years","Employed","New.Haven.Milford.Metro",25041
-" Male","16 to 24 years","Unemployed","Bridgeport.Stamford.Norwalk.Metro",6503
-" Male","16 to 24 years","Unemployed","Hartford.West.Hartford.East.Hartford.Metro",8401
-" Male","16 to 24 years","Unemployed","New.Haven.Milford.Metro",7171
+"Town","Total.crime.Rate"
+"Andover",806.25135155096
+"Avon",1035.99816546518
+"Bloomfield",3091.69659765587
+"Bolton",693.748684284397
+"Canton",1213.80480743081
+"East Granby",1124.83673599874
+"East Hartford",3671.10135433238
+"East Windsor",3706.90023096978
+"Ellington",663.746360546927
+"Enfield",2357.16617974516
+"Farmington",2767.1994944
+"Glastonbury",1161.07119869092
+"Granby",1216.74301085154
+"Hartford",6728.12822988732
+"Hebron",584.957029184441
+"Manchester",3764.61688427382
+"Marlborough",887.442705420417
+"Newington",3045.77831274661
+"Rocky Hill",1554.71915280676
+"Simsbury",928.56126008288
+"Somers",622.852290498817
+"South Windsor",1809.85033831573
+"Stafford",719.134741262258
+"Suffield",1062.85554162527
+"Tolland",564.386187119993
+"Vernon",1282.6445527321
+"West Hartford",2656.7926559717
+"Wethersfield",2109.17310629367
+"Windsor",2037.90487601532
+"Windsor Locks",2192.2756646141

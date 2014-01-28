@@ -1,721 +1,254 @@
-"area","naicsector","sectortitle","series","year","value"
-"Eastern",44,"Retail Trade","Employees",1990,18898
-"Eastern",44,"Retail Trade","Employees",1991,17643
-"Eastern",44,"Retail Trade","Employees",1992,17189
-"Eastern",44,"Retail Trade","Employees",1993,17215
-"Eastern",44,"Retail Trade","Employees",1994,17952
-"Eastern",44,"Retail Trade","Employees",1995,18480
-"Eastern",44,"Retail Trade","Employees",1996,18807
-"Eastern",44,"Retail Trade","Employees",1997,19444
-"Eastern",44,"Retail Trade","Employees",1998,19650
-"Eastern",44,"Retail Trade","Employees",1999,19856
-"Eastern",44,"Retail Trade","Employees",2000,19897
-"Eastern",44,"Retail Trade","Employees",2001,20292
-"Eastern",44,"Retail Trade","Employees",2002,20717
-"Eastern",44,"Retail Trade","Employees",2003,20796
-"Eastern",44,"Retail Trade","Employees",2004,20767
-"Eastern",44,"Retail Trade","Employees",2005,20786
-"Eastern",44,"Retail Trade","Employees",2006,20905
-"Eastern",44,"Retail Trade","Employees",2007,20886
-"Eastern",44,"Retail Trade","Employees",2008,20279
-"Eastern",44,"Retail Trade","Employees",2009,19715
-"Eastern",44,"Retail Trade","Employees",2010,19717
-"Eastern",44,"Retail Trade","Employees",2011,19845
-"Eastern",44,"Retail Trade","Employees",2012,20014
-"Eastern",44,"Retail Trade","Employees",2013,20328
-"Eastern",52,"Finance & Insurance","Employees",1990,3614
-"Eastern",52,"Finance & Insurance","Employees",1991,3357
-"Eastern",52,"Finance & Insurance","Employees",1992,3315
-"Eastern",52,"Finance & Insurance","Employees",1993,3302
-"Eastern",52,"Finance & Insurance","Employees",1994,3038
-"Eastern",52,"Finance & Insurance","Employees",1995,2881
-"Eastern",52,"Finance & Insurance","Employees",1996,2911
-"Eastern",52,"Finance & Insurance","Employees",1997,3036
-"Eastern",52,"Finance & Insurance","Employees",1998,3043
-"Eastern",52,"Finance & Insurance","Employees",1999,3106
-"Eastern",52,"Finance & Insurance","Employees",2000,2833
-"Eastern",52,"Finance & Insurance","Employees",2001,2698
-"Eastern",52,"Finance & Insurance","Employees",2002,2702
-"Eastern",52,"Finance & Insurance","Employees",2003,2774
-"Eastern",52,"Finance & Insurance","Employees",2004,2793
-"Eastern",52,"Finance & Insurance","Employees",2005,2757
-"Eastern",52,"Finance & Insurance","Employees",2006,2781
-"Eastern",52,"Finance & Insurance","Employees",2007,2761
-"Eastern",52,"Finance & Insurance","Employees",2008,2720
-"Eastern",52,"Finance & Insurance","Employees",2009,2631
-"Eastern",52,"Finance & Insurance","Employees",2010,2660
-"Eastern",52,"Finance & Insurance","Employees",2011,2621
-"Eastern",52,"Finance & Insurance","Employees",2012,2635
-"Eastern",52,"Finance & Insurance","Employees",2013,2663
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1990,6557
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1991,5842
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1992,6092
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1993,5904
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1994,5677
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1995,5719
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1996,5809
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1997,5728
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1998,5773
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",1999,5727
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2000,5993
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2001,6490
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2002,7093
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2003,6824
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2004,6790
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2005,6775
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2006,6979
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2007,7028
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2008,7232
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2009,7011
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2010,6956
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2011,6765
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2012,6466
-"Eastern",54,"Professional, Scientific, & Technical Services","Employees",2013,6255
-"Eastern",61,"Educational Services","Employees",1990,17093
-"Eastern",61,"Educational Services","Employees",1991,17123
-"Eastern",61,"Educational Services","Employees",1992,17368
-"Eastern",61,"Educational Services","Employees",1993,17686
-"Eastern",61,"Educational Services","Employees",1994,18180
-"Eastern",61,"Educational Services","Employees",1995,18725
-"Eastern",61,"Educational Services","Employees",1996,19115
-"Eastern",61,"Educational Services","Employees",1997,19417
-"Eastern",61,"Educational Services","Employees",1998,19825
-"Eastern",61,"Educational Services","Employees",1999,20636
-"Eastern",61,"Educational Services","Employees",2000,21010
-"Eastern",61,"Educational Services","Employees",2001,21792
-"Eastern",61,"Educational Services","Employees",2002,22223
-"Eastern",61,"Educational Services","Employees",2003,22096
-"Eastern",61,"Educational Services","Employees",2004,21825
-"Eastern",61,"Educational Services","Employees",2005,22225
-"Eastern",61,"Educational Services","Employees",2006,23091
-"Eastern",61,"Educational Services","Employees",2007,23388
-"Eastern",61,"Educational Services","Employees",2008,23982
-"Eastern",61,"Educational Services","Employees",2009,23944
-"Eastern",61,"Educational Services","Employees",2010,23756
-"Eastern",61,"Educational Services","Employees",2011,23574
-"Eastern",61,"Educational Services","Employees",2012,23302
-"Eastern",61,"Educational Services","Employees",2013,23081
-"Eastern",62,"Health Care & Social Assistance","Employees",1990,17817
-"Eastern",62,"Health Care & Social Assistance","Employees",1991,18368
-"Eastern",62,"Health Care & Social Assistance","Employees",1992,18301
-"Eastern",62,"Health Care & Social Assistance","Employees",1993,18395
-"Eastern",62,"Health Care & Social Assistance","Employees",1994,18887
-"Eastern",62,"Health Care & Social Assistance","Employees",1995,19172
-"Eastern",62,"Health Care & Social Assistance","Employees",1996,19251
-"Eastern",62,"Health Care & Social Assistance","Employees",1997,19698
-"Eastern",62,"Health Care & Social Assistance","Employees",1998,20423
-"Eastern",62,"Health Care & Social Assistance","Employees",1999,20460
-"Eastern",62,"Health Care & Social Assistance","Employees",2000,21120
-"Eastern",62,"Health Care & Social Assistance","Employees",2001,21461
-"Eastern",62,"Health Care & Social Assistance","Employees",2002,22235
-"Eastern",62,"Health Care & Social Assistance","Employees",2003,22570
-"Eastern",62,"Health Care & Social Assistance","Employees",2004,22922
-"Eastern",62,"Health Care & Social Assistance","Employees",2005,23259
-"Eastern",62,"Health Care & Social Assistance","Employees",2006,23816
-"Eastern",62,"Health Care & Social Assistance","Employees",2007,24701
-"Eastern",62,"Health Care & Social Assistance","Employees",2008,25298
-"Eastern",62,"Health Care & Social Assistance","Employees",2009,25538
-"Eastern",62,"Health Care & Social Assistance","Employees",2010,25806
-"Eastern",62,"Health Care & Social Assistance","Employees",2011,26550
-"Eastern",62,"Health Care & Social Assistance","Employees",2012,27135
-"Eastern",62,"Health Care & Social Assistance","Employees",2013,27420
-"North Central",44,"Retail Trade","Employees",1990,61688
-"North Central",44,"Retail Trade","Employees",1991,56586
-"North Central",44,"Retail Trade","Employees",1992,54576
-"North Central",44,"Retail Trade","Employees",1993,54362
-"North Central",44,"Retail Trade","Employees",1994,54150
-"North Central",44,"Retail Trade","Employees",1995,55430
-"North Central",44,"Retail Trade","Employees",1996,55958
-"North Central",44,"Retail Trade","Employees",1997,56907
-"North Central",44,"Retail Trade","Employees",1998,55180
-"North Central",44,"Retail Trade","Employees",1999,55743
-"North Central",44,"Retail Trade","Employees",2000,55066
-"North Central",44,"Retail Trade","Employees",2001,54646
-"North Central",44,"Retail Trade","Employees",2002,55176
-"North Central",44,"Retail Trade","Employees",2003,53135
-"North Central",44,"Retail Trade","Employees",2004,54046
-"North Central",44,"Retail Trade","Employees",2005,54717
-"North Central",44,"Retail Trade","Employees",2006,54521
-"North Central",44,"Retail Trade","Employees",2007,54418
-"North Central",44,"Retail Trade","Employees",2008,54221
-"North Central",44,"Retail Trade","Employees",2009,51252
-"North Central",44,"Retail Trade","Employees",2010,51058
-"North Central",44,"Retail Trade","Employees",2011,51566
-"North Central",44,"Retail Trade","Employees",2012,52159
-"North Central",44,"Retail Trade","Employees",2013,52380
-"North Central",52,"Finance & Insurance","Employees",1990,72598
-"North Central",52,"Finance & Insurance","Employees",1991,70676
-"North Central",52,"Finance & Insurance","Employees",1992,67994
-"North Central",52,"Finance & Insurance","Employees",1993,66354
-"North Central",52,"Finance & Insurance","Employees",1994,62571
-"North Central",52,"Finance & Insurance","Employees",1995,59050
-"North Central",52,"Finance & Insurance","Employees",1996,54567
-"North Central",52,"Finance & Insurance","Employees",1997,54735
-"North Central",52,"Finance & Insurance","Employees",1998,58685
-"North Central",52,"Finance & Insurance","Employees",1999,60022
-"North Central",52,"Finance & Insurance","Employees",2000,59956
-"North Central",52,"Finance & Insurance","Employees",2001,60611
-"North Central",52,"Finance & Insurance","Employees",2002,60332
-"North Central",52,"Finance & Insurance","Employees",2003,59121
-"North Central",52,"Finance & Insurance","Employees",2004,57534
-"North Central",52,"Finance & Insurance","Employees",2005,57442
-"North Central",52,"Finance & Insurance","Employees",2006,57945
-"North Central",52,"Finance & Insurance","Employees",2007,58063
-"North Central",52,"Finance & Insurance","Employees",2008,57954
-"North Central",52,"Finance & Insurance","Employees",2009,55993
-"North Central",52,"Finance & Insurance","Employees",2010,56416
-"North Central",52,"Finance & Insurance","Employees",2011,55504
-"North Central",52,"Finance & Insurance","Employees",2012,54653
-"North Central",52,"Finance & Insurance","Employees",2013,53063
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1990,25465
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1991,21898
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1992,21611
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1993,21542
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1994,21530
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1995,22178
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1996,22726
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1997,23672
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1998,26028
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",1999,27127
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2000,27514
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2001,27513
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2002,26341
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2003,25768
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2004,25521
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2005,26271
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2006,27690
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2007,28471
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2008,27993
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2009,26736
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2010,26792
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2011,27720
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2012,28714
-"North Central",54,"Professional, Scientific, & Technical Services","Employees",2013,29129
-"North Central",61,"Educational Services","Employees",1990,33120
-"North Central",61,"Educational Services","Employees",1991,33629
-"North Central",61,"Educational Services","Employees",1992,31866
-"North Central",61,"Educational Services","Employees",1993,32101
-"North Central",61,"Educational Services","Employees",1994,32792
-"North Central",61,"Educational Services","Employees",1995,32838
-"North Central",61,"Educational Services","Employees",1996,33432
-"North Central",61,"Educational Services","Employees",1997,34570
-"North Central",61,"Educational Services","Employees",1998,35283
-"North Central",61,"Educational Services","Employees",1999,36876
-"North Central",61,"Educational Services","Employees",2000,37780
-"North Central",61,"Educational Services","Employees",2001,39261
-"North Central",61,"Educational Services","Employees",2002,40604
-"North Central",61,"Educational Services","Employees",2003,40143
-"North Central",61,"Educational Services","Employees",2004,40572
-"North Central",61,"Educational Services","Employees",2005,41338
-"North Central",61,"Educational Services","Employees",2006,43039
-"North Central",61,"Educational Services","Employees",2007,44034
-"North Central",61,"Educational Services","Employees",2008,44227
-"North Central",61,"Educational Services","Employees",2009,44400
-"North Central",61,"Educational Services","Employees",2010,44559
-"North Central",61,"Educational Services","Employees",2011,44947
-"North Central",61,"Educational Services","Employees",2012,45110
-"North Central",61,"Educational Services","Employees",2013,44134
-"North Central",62,"Health Care & Social Assistance","Employees",1990,58788
-"North Central",62,"Health Care & Social Assistance","Employees",1991,59647
-"North Central",62,"Health Care & Social Assistance","Employees",1992,60662
-"North Central",62,"Health Care & Social Assistance","Employees",1993,62434
-"North Central",62,"Health Care & Social Assistance","Employees",1994,65414
-"North Central",62,"Health Care & Social Assistance","Employees",1995,66231
-"North Central",62,"Health Care & Social Assistance","Employees",1996,67585
-"North Central",62,"Health Care & Social Assistance","Employees",1997,68652
-"North Central",62,"Health Care & Social Assistance","Employees",1998,69243
-"North Central",62,"Health Care & Social Assistance","Employees",1999,68503
-"North Central",62,"Health Care & Social Assistance","Employees",2000,68047
-"North Central",62,"Health Care & Social Assistance","Employees",2001,70058
-"North Central",62,"Health Care & Social Assistance","Employees",2002,71299
-"North Central",62,"Health Care & Social Assistance","Employees",2003,71142
-"North Central",62,"Health Care & Social Assistance","Employees",2004,71962
-"North Central",62,"Health Care & Social Assistance","Employees",2005,72763
-"North Central",62,"Health Care & Social Assistance","Employees",2006,75123
-"North Central",62,"Health Care & Social Assistance","Employees",2007,78120
-"North Central",62,"Health Care & Social Assistance","Employees",2008,80177
-"North Central",62,"Health Care & Social Assistance","Employees",2009,82042
-"North Central",62,"Health Care & Social Assistance","Employees",2010,82798
-"North Central",62,"Health Care & Social Assistance","Employees",2011,84109
-"North Central",62,"Health Care & Social Assistance","Employees",2012,83238
-"North Central",62,"Health Care & Social Assistance","Employees",2013,84631
-"Northwest",44,"Retail Trade","Employees",1990,29536
-"Northwest",44,"Retail Trade","Employees",1991,27842
-"Northwest",44,"Retail Trade","Employees",1992,27909
-"Northwest",44,"Retail Trade","Employees",1993,28046
-"Northwest",44,"Retail Trade","Employees",1994,28354
-"Northwest",44,"Retail Trade","Employees",1995,28950
-"Northwest",44,"Retail Trade","Employees",1996,29540
-"Northwest",44,"Retail Trade","Employees",1997,31223
-"Northwest",44,"Retail Trade","Employees",1998,31460
-"Northwest",44,"Retail Trade","Employees",1999,31828
-"Northwest",44,"Retail Trade","Employees",2000,31682
-"Northwest",44,"Retail Trade","Employees",2001,30895
-"Northwest",44,"Retail Trade","Employees",2002,31054
-"Northwest",44,"Retail Trade","Employees",2003,31593
-"Northwest",44,"Retail Trade","Employees",2004,31655
-"Northwest",44,"Retail Trade","Employees",2005,31408
-"Northwest",44,"Retail Trade","Employees",2006,31740
-"Northwest",44,"Retail Trade","Employees",2007,32000
-"Northwest",44,"Retail Trade","Employees",2008,31301
-"Northwest",44,"Retail Trade","Employees",2009,29606
-"Northwest",44,"Retail Trade","Employees",2010,29465
-"Northwest",44,"Retail Trade","Employees",2011,29922
-"Northwest",44,"Retail Trade","Employees",2012,30538
-"Northwest",44,"Retail Trade","Employees",2013,30801
-"Northwest",52,"Finance & Insurance","Employees",1990,7537
-"Northwest",52,"Finance & Insurance","Employees",1991,7144
-"Northwest",52,"Finance & Insurance","Employees",1992,6875
-"Northwest",52,"Finance & Insurance","Employees",1993,6998
-"Northwest",52,"Finance & Insurance","Employees",1994,7209
-"Northwest",52,"Finance & Insurance","Employees",1995,7026
-"Northwest",52,"Finance & Insurance","Employees",1996,7144
-"Northwest",52,"Finance & Insurance","Employees",1997,7287
-"Northwest",52,"Finance & Insurance","Employees",1998,7583
-"Northwest",52,"Finance & Insurance","Employees",1999,7550
-"Northwest",52,"Finance & Insurance","Employees",2000,7350
-"Northwest",52,"Finance & Insurance","Employees",2001,7333
-"Northwest",52,"Finance & Insurance","Employees",2002,7271
-"Northwest",52,"Finance & Insurance","Employees",2003,7369
-"Northwest",52,"Finance & Insurance","Employees",2004,7241
-"Northwest",52,"Finance & Insurance","Employees",2005,7336
-"Northwest",52,"Finance & Insurance","Employees",2006,7300
-"Northwest",52,"Finance & Insurance","Employees",2007,7179
-"Northwest",52,"Finance & Insurance","Employees",2008,6688
-"Northwest",52,"Finance & Insurance","Employees",2009,6309
-"Northwest",52,"Finance & Insurance","Employees",2010,6058
-"Northwest",52,"Finance & Insurance","Employees",2011,5979
-"Northwest",52,"Finance & Insurance","Employees",2012,5866
-"Northwest",52,"Finance & Insurance","Employees",2013,5814
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1990,6440
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1991,7558
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1992,8577
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1993,8299
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1994,8386
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1995,8546
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1996,9195
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1997,9735
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1998,9230
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",1999,9683
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2000,11165
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2001,10811
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2002,10511
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2003,10357
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2004,10225
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2005,10085
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2006,10118
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2007,9844
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2008,9924
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2009,9233
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2010,8779
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2011,8787
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2012,9007
-"Northwest",54,"Professional, Scientific, & Technical Services","Employees",2013,8884
-"Northwest",61,"Educational Services","Employees",1990,16398
-"Northwest",61,"Educational Services","Employees",1991,16594
-"Northwest",61,"Educational Services","Employees",1992,15881
-"Northwest",61,"Educational Services","Employees",1993,16152
-"Northwest",61,"Educational Services","Employees",1994,16234
-"Northwest",61,"Educational Services","Employees",1995,15864
-"Northwest",61,"Educational Services","Employees",1996,16957
-"Northwest",61,"Educational Services","Employees",1997,17315
-"Northwest",61,"Educational Services","Employees",1998,17330
-"Northwest",61,"Educational Services","Employees",1999,18662
-"Northwest",61,"Educational Services","Employees",2000,18796
-"Northwest",61,"Educational Services","Employees",2001,19507
-"Northwest",61,"Educational Services","Employees",2002,20334
-"Northwest",61,"Educational Services","Employees",2003,20469
-"Northwest",61,"Educational Services","Employees",2004,20749
-"Northwest",61,"Educational Services","Employees",2005,21176
-"Northwest",61,"Educational Services","Employees",2006,21973
-"Northwest",61,"Educational Services","Employees",2007,22205
-"Northwest",61,"Educational Services","Employees",2008,22550
-"Northwest",61,"Educational Services","Employees",2009,22507
-"Northwest",61,"Educational Services","Employees",2010,22412
-"Northwest",61,"Educational Services","Employees",2011,22623
-"Northwest",61,"Educational Services","Employees",2012,22746
-"Northwest",61,"Educational Services","Employees",2013,22627
-"Northwest",62,"Health Care & Social Assistance","Employees",1990,28492
-"Northwest",62,"Health Care & Social Assistance","Employees",1991,29619
-"Northwest",62,"Health Care & Social Assistance","Employees",1992,29700
-"Northwest",62,"Health Care & Social Assistance","Employees",1993,31423
-"Northwest",62,"Health Care & Social Assistance","Employees",1994,31472
-"Northwest",62,"Health Care & Social Assistance","Employees",1995,32098
-"Northwest",62,"Health Care & Social Assistance","Employees",1996,32632
-"Northwest",62,"Health Care & Social Assistance","Employees",1997,33053
-"Northwest",62,"Health Care & Social Assistance","Employees",1998,34329
-"Northwest",62,"Health Care & Social Assistance","Employees",1999,34894
-"Northwest",62,"Health Care & Social Assistance","Employees",2000,34299
-"Northwest",62,"Health Care & Social Assistance","Employees",2001,34196
-"Northwest",62,"Health Care & Social Assistance","Employees",2002,35254
-"Northwest",62,"Health Care & Social Assistance","Employees",2003,35780
-"Northwest",62,"Health Care & Social Assistance","Employees",2004,35905
-"Northwest",62,"Health Care & Social Assistance","Employees",2005,36371
-"Northwest",62,"Health Care & Social Assistance","Employees",2006,37197
-"Northwest",62,"Health Care & Social Assistance","Employees",2007,38359
-"Northwest",62,"Health Care & Social Assistance","Employees",2008,39450
-"Northwest",62,"Health Care & Social Assistance","Employees",2009,39845
-"Northwest",62,"Health Care & Social Assistance","Employees",2010,40186
-"Northwest",62,"Health Care & Social Assistance","Employees",2011,40651
-"Northwest",62,"Health Care & Social Assistance","Employees",2012,40899
-"Northwest",62,"Health Care & Social Assistance","Employees",2013,41065
-"South Central",44,"Retail Trade","Employees",1990,39522
-"South Central",44,"Retail Trade","Employees",1991,36576
-"South Central",44,"Retail Trade","Employees",1992,34828
-"South Central",44,"Retail Trade","Employees",1993,34556
-"South Central",44,"Retail Trade","Employees",1994,35070
-"South Central",44,"Retail Trade","Employees",1995,35120
-"South Central",44,"Retail Trade","Employees",1996,36192
-"South Central",44,"Retail Trade","Employees",1997,37564
-"South Central",44,"Retail Trade","Employees",1998,38262
-"South Central",44,"Retail Trade","Employees",1999,38365
-"South Central",44,"Retail Trade","Employees",2000,38987
-"South Central",44,"Retail Trade","Employees",2001,38640
-"South Central",44,"Retail Trade","Employees",2002,39880
-"South Central",44,"Retail Trade","Employees",2003,38959
-"South Central",44,"Retail Trade","Employees",2004,39801
-"South Central",44,"Retail Trade","Employees",2005,38502
-"South Central",44,"Retail Trade","Employees",2006,39028
-"South Central",44,"Retail Trade","Employees",2007,39043
-"South Central",44,"Retail Trade","Employees",2008,37927
-"South Central",44,"Retail Trade","Employees",2009,35945
-"South Central",44,"Retail Trade","Employees",2010,36128
-"South Central",44,"Retail Trade","Employees",2011,36383
-"South Central",44,"Retail Trade","Employees",2012,36840
-"South Central",44,"Retail Trade","Employees",2013,36859
-"South Central",52,"Finance & Insurance","Employees",1990,22008
-"South Central",52,"Finance & Insurance","Employees",1991,21341
-"South Central",52,"Finance & Insurance","Employees",1992,19050
-"South Central",52,"Finance & Insurance","Employees",1993,18644
-"South Central",52,"Finance & Insurance","Employees",1994,18152
-"South Central",52,"Finance & Insurance","Employees",1995,17707
-"South Central",52,"Finance & Insurance","Employees",1996,17397
-"South Central",52,"Finance & Insurance","Employees",1997,16843
-"South Central",52,"Finance & Insurance","Employees",1998,16407
-"South Central",52,"Finance & Insurance","Employees",1999,16084
-"South Central",52,"Finance & Insurance","Employees",2000,16023
-"South Central",52,"Finance & Insurance","Employees",2001,16595
-"South Central",52,"Finance & Insurance","Employees",2002,16788
-"South Central",52,"Finance & Insurance","Employees",2003,17195
-"South Central",52,"Finance & Insurance","Employees",2004,17362
-"South Central",52,"Finance & Insurance","Employees",2005,17224
-"South Central",52,"Finance & Insurance","Employees",2006,17346
-"South Central",52,"Finance & Insurance","Employees",2007,15859
-"South Central",52,"Finance & Insurance","Employees",2008,14898
-"South Central",52,"Finance & Insurance","Employees",2009,13645
-"South Central",52,"Finance & Insurance","Employees",2010,10612
-"South Central",52,"Finance & Insurance","Employees",2011,10272
-"South Central",52,"Finance & Insurance","Employees",2012,10091
-"South Central",52,"Finance & Insurance","Employees",2013,10050
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1990,13140
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1991,12477
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1992,12901
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1993,13034
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1994,12971
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1995,12656
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1996,13481
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1997,13536
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1998,13586
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",1999,14069
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2000,14383
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2001,14135
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2002,13987
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2003,13534
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2004,13399
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2005,13273
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2006,13285
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2007,13233
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2008,13814
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2009,13243
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2010,12977
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2011,13090
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2012,13294
-"South Central",54,"Professional, Scientific, & Technical Services","Employees",2013,13651
-"South Central",61,"Educational Services","Employees",1990,20882
-"South Central",61,"Educational Services","Employees",1991,20836
-"South Central",61,"Educational Services","Employees",1992,20198
-"South Central",61,"Educational Services","Employees",1993,20493
-"South Central",61,"Educational Services","Employees",1994,20891
-"South Central",61,"Educational Services","Employees",1995,21977
-"South Central",61,"Educational Services","Employees",1996,22805
-"South Central",61,"Educational Services","Employees",1997,25618
-"South Central",61,"Educational Services","Employees",1998,34007
-"South Central",61,"Educational Services","Employees",1999,35910
-"South Central",61,"Educational Services","Employees",2000,37801
-"South Central",61,"Educational Services","Employees",2001,38005
-"South Central",61,"Educational Services","Employees",2002,39154
-"South Central",61,"Educational Services","Employees",2003,39892
-"South Central",61,"Educational Services","Employees",2004,40253
-"South Central",61,"Educational Services","Employees",2005,40688
-"South Central",61,"Educational Services","Employees",2006,43327
-"South Central",61,"Educational Services","Employees",2007,44114
-"South Central",61,"Educational Services","Employees",2008,45594
-"South Central",61,"Educational Services","Employees",2009,45805
-"South Central",61,"Educational Services","Employees",2010,45966
-"South Central",61,"Educational Services","Employees",2011,46953
-"South Central",61,"Educational Services","Employees",2012,46818
-"South Central",61,"Educational Services","Employees",2013,46412
-"South Central",62,"Health Care & Social Assistance","Employees",1990,44795
-"South Central",62,"Health Care & Social Assistance","Employees",1991,45129
-"South Central",62,"Health Care & Social Assistance","Employees",1992,45827
-"South Central",62,"Health Care & Social Assistance","Employees",1993,46384
-"South Central",62,"Health Care & Social Assistance","Employees",1994,48650
-"South Central",62,"Health Care & Social Assistance","Employees",1995,50115
-"South Central",62,"Health Care & Social Assistance","Employees",1996,50421
-"South Central",62,"Health Care & Social Assistance","Employees",1997,51139
-"South Central",62,"Health Care & Social Assistance","Employees",1998,51831
-"South Central",62,"Health Care & Social Assistance","Employees",1999,54204
-"South Central",62,"Health Care & Social Assistance","Employees",2000,53600
-"South Central",62,"Health Care & Social Assistance","Employees",2001,53910
-"South Central",62,"Health Care & Social Assistance","Employees",2002,55867
-"South Central",62,"Health Care & Social Assistance","Employees",2003,56142
-"South Central",62,"Health Care & Social Assistance","Employees",2004,56885
-"South Central",62,"Health Care & Social Assistance","Employees",2005,57895
-"South Central",62,"Health Care & Social Assistance","Employees",2006,59213
-"South Central",62,"Health Care & Social Assistance","Employees",2007,60421
-"South Central",62,"Health Care & Social Assistance","Employees",2008,61548
-"South Central",62,"Health Care & Social Assistance","Employees",2009,62840
-"South Central",62,"Health Care & Social Assistance","Employees",2010,63450
-"South Central",62,"Health Care & Social Assistance","Employees",2011,64335
-"South Central",62,"Health Care & Social Assistance","Employees",2012,65943
-"South Central",62,"Health Care & Social Assistance","Employees",2013,66801
-"Southwest",44,"Retail Trade","Employees",1990,44213
-"Southwest",44,"Retail Trade","Employees",1991,40453
-"Southwest",44,"Retail Trade","Employees",1992,39202
-"Southwest",44,"Retail Trade","Employees",1993,38803
-"Southwest",44,"Retail Trade","Employees",1994,40406
-"Southwest",44,"Retail Trade","Employees",1995,40452
-"Southwest",44,"Retail Trade","Employees",1996,40763
-"Southwest",44,"Retail Trade","Employees",1997,41585
-"Southwest",44,"Retail Trade","Employees",1998,42515
-"Southwest",44,"Retail Trade","Employees",1999,42809
-"Southwest",44,"Retail Trade","Employees",2000,43669
-"Southwest",44,"Retail Trade","Employees",2001,42113
-"Southwest",44,"Retail Trade","Employees",2002,41529
-"Southwest",44,"Retail Trade","Employees",2003,40807
-"Southwest",44,"Retail Trade","Employees",2004,40786
-"Southwest",44,"Retail Trade","Employees",2005,41060
-"Southwest",44,"Retail Trade","Employees",2006,41250
-"Southwest",44,"Retail Trade","Employees",2007,41096
-"Southwest",44,"Retail Trade","Employees",2008,40513
-"Southwest",44,"Retail Trade","Employees",2009,38038
-"Southwest",44,"Retail Trade","Employees",2010,38167
-"Southwest",44,"Retail Trade","Employees",2011,38684
-"Southwest",44,"Retail Trade","Employees",2012,39066
-"Southwest",44,"Retail Trade","Employees",2013,39080
-"Southwest",52,"Finance & Insurance","Employees",1990,26274
-"Southwest",52,"Finance & Insurance","Employees",1991,25255
-"Southwest",52,"Finance & Insurance","Employees",1992,23588
-"Southwest",52,"Finance & Insurance","Employees",1993,24239
-"Southwest",52,"Finance & Insurance","Employees",1994,24911
-"Southwest",52,"Finance & Insurance","Employees",1995,24761
-"Southwest",52,"Finance & Insurance","Employees",1996,24873
-"Southwest",52,"Finance & Insurance","Employees",1997,26312
-"Southwest",52,"Finance & Insurance","Employees",1998,28701
-"Southwest",52,"Finance & Insurance","Employees",1999,31196
-"Southwest",52,"Finance & Insurance","Employees",2000,32350
-"Southwest",52,"Finance & Insurance","Employees",2001,32321
-"Southwest",52,"Finance & Insurance","Employees",2002,32536
-"Southwest",52,"Finance & Insurance","Employees",2003,33305
-"Southwest",52,"Finance & Insurance","Employees",2004,33162
-"Southwest",52,"Finance & Insurance","Employees",2005,34469
-"Southwest",52,"Finance & Insurance","Employees",2006,35174
-"Southwest",52,"Finance & Insurance","Employees",2007,36687
-"Southwest",52,"Finance & Insurance","Employees",2008,36912
-"Southwest",52,"Finance & Insurance","Employees",2009,35135
-"Southwest",52,"Finance & Insurance","Employees",2010,34777
-"Southwest",52,"Finance & Insurance","Employees",2011,34809
-"Southwest",52,"Finance & Insurance","Employees",2012,33937
-"Southwest",52,"Finance & Insurance","Employees",2013,33527
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1990,23324
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1991,22934
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1992,22666
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1993,23301
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1994,23747
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1995,24449
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1996,25247
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1997,27142
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1998,28419
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",1999,30082
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2000,31645
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2001,31010
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2002,28940
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2003,27725
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2004,27054
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2005,26901
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2006,27596
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2007,27752
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2008,27515
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2009,25738
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2010,25093
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2011,25853
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2012,24940
-"Southwest",54,"Professional, Scientific, & Technical Services","Employees",2013,25073
-"Southwest",61,"Educational Services","Employees",1990,22767
-"Southwest",61,"Educational Services","Employees",1991,22350
-"Southwest",61,"Educational Services","Employees",1992,19724
-"Southwest",61,"Educational Services","Employees",1993,19905
-"Southwest",61,"Educational Services","Employees",1994,21060
-"Southwest",61,"Educational Services","Employees",1995,21298
-"Southwest",61,"Educational Services","Employees",1996,21738
-"Southwest",61,"Educational Services","Employees",1997,22730
-"Southwest",61,"Educational Services","Employees",1998,23682
-"Southwest",61,"Educational Services","Employees",1999,24293
-"Southwest",61,"Educational Services","Employees",2000,24970
-"Southwest",61,"Educational Services","Employees",2001,26267
-"Southwest",61,"Educational Services","Employees",2002,27490
-"Southwest",61,"Educational Services","Employees",2003,27824
-"Southwest",61,"Educational Services","Employees",2004,28639
-"Southwest",61,"Educational Services","Employees",2005,29025
-"Southwest",61,"Educational Services","Employees",2006,29824
-"Southwest",61,"Educational Services","Employees",2007,30546
-"Southwest",61,"Educational Services","Employees",2008,31232
-"Southwest",61,"Educational Services","Employees",2009,30734
-"Southwest",61,"Educational Services","Employees",2010,30235
-"Southwest",61,"Educational Services","Employees",2011,30483
-"Southwest",61,"Educational Services","Employees",2012,30436
-"Southwest",61,"Educational Services","Employees",2013,29897
-"Southwest",62,"Health Care & Social Assistance","Employees",1990,30649
-"Southwest",62,"Health Care & Social Assistance","Employees",1991,30823
-"Southwest",62,"Health Care & Social Assistance","Employees",1992,33054
-"Southwest",62,"Health Care & Social Assistance","Employees",1993,35205
-"Southwest",62,"Health Care & Social Assistance","Employees",1994,36608
-"Southwest",62,"Health Care & Social Assistance","Employees",1995,38580
-"Southwest",62,"Health Care & Social Assistance","Employees",1996,40629
-"Southwest",62,"Health Care & Social Assistance","Employees",1997,41426
-"Southwest",62,"Health Care & Social Assistance","Employees",1998,42115
-"Southwest",62,"Health Care & Social Assistance","Employees",1999,42637
-"Southwest",62,"Health Care & Social Assistance","Employees",2000,43032
-"Southwest",62,"Health Care & Social Assistance","Employees",2001,44231
-"Southwest",62,"Health Care & Social Assistance","Employees",2002,45671
-"Southwest",62,"Health Care & Social Assistance","Employees",2003,45522
-"Southwest",62,"Health Care & Social Assistance","Employees",2004,45630
-"Southwest",62,"Health Care & Social Assistance","Employees",2005,45956
-"Southwest",62,"Health Care & Social Assistance","Employees",2006,46491
-"Southwest",62,"Health Care & Social Assistance","Employees",2007,47262
-"Southwest",62,"Health Care & Social Assistance","Employees",2008,48543
-"Southwest",62,"Health Care & Social Assistance","Employees",2009,49254
-"Southwest",62,"Health Care & Social Assistance","Employees",2010,50029
-"Southwest",62,"Health Care & Social Assistance","Employees",2011,50485
-"Southwest",62,"Health Care & Social Assistance","Employees",2012,51871
-"Southwest",62,"Health Care & Social Assistance","Employees",2013,52976
-"Eastern",31,"Manufacturing","Employees",1990,14788
-"Eastern",31,"Manufacturing","Employees",1991,13643
-"Eastern",31,"Manufacturing","Employees",1992,13502
-"Eastern",31,"Manufacturing","Employees",1993,13864
-"Eastern",31,"Manufacturing","Employees",1994,14501
-"Eastern",31,"Manufacturing","Employees",1995,14539
-"Eastern",31,"Manufacturing","Employees",1996,14266
-"Eastern",31,"Manufacturing","Employees",1997,14447
-"Eastern",31,"Manufacturing","Employees",1998,14469
-"Eastern",31,"Manufacturing","Employees",1999,14381
-"Eastern",31,"Manufacturing","Employees",2000,13943
-"Eastern",31,"Manufacturing","Employees",2001,13112
-"Eastern",31,"Manufacturing","Employees",2002,12067
-"Eastern",31,"Manufacturing","Employees",2003,11549
-"Eastern",31,"Manufacturing","Employees",2004,11316
-"Eastern",31,"Manufacturing","Employees",2005,11160
-"Eastern",31,"Manufacturing","Employees",2006,10984
-"Eastern",31,"Manufacturing","Employees",2007,10784
-"Eastern",31,"Manufacturing","Employees",2008,10077
-"Eastern",31,"Manufacturing","Employees",2009,8701
-"Eastern",31,"Manufacturing","Employees",2010,8572
-"Eastern",31,"Manufacturing","Employees",2011,8723
-"Eastern",31,"Manufacturing","Employees",2012,11259
-"Eastern",31,"Manufacturing","Employees",2013,11042
-"North Central",31,"Manufacturing","Employees",1990,96520
-"North Central",31,"Manufacturing","Employees",1991,93051
-"North Central",31,"Manufacturing","Employees",1992,86931
-"North Central",31,"Manufacturing","Employees",1993,82059
-"North Central",31,"Manufacturing","Employees",1994,78169
-"North Central",31,"Manufacturing","Employees",1995,74550
-"North Central",31,"Manufacturing","Employees",1996,74901
-"North Central",31,"Manufacturing","Employees",1997,76192
-"North Central",31,"Manufacturing","Employees",1998,77196
-"North Central",31,"Manufacturing","Employees",1999,74716
-"North Central",31,"Manufacturing","Employees",2000,73745
-"North Central",31,"Manufacturing","Employees",2001,71585
-"North Central",31,"Manufacturing","Employees",2002,67020
-"North Central",31,"Manufacturing","Employees",2003,63156
-"North Central",31,"Manufacturing","Employees",2004,63095
-"North Central",31,"Manufacturing","Employees",2005,63268
-"North Central",31,"Manufacturing","Employees",2006,63601
-"North Central",31,"Manufacturing","Employees",2007,63771
-"North Central",31,"Manufacturing","Employees",2008,63026
-"North Central",31,"Manufacturing","Employees",2009,58086
-"North Central",31,"Manufacturing","Employees",2010,55824
-"North Central",31,"Manufacturing","Employees",2011,56590
-"North Central",31,"Manufacturing","Employees",2012,56905
-"North Central",31,"Manufacturing","Employees",2013,56404
-"Northwest",31,"Manufacturing","Employees",1990,49668
-"Northwest",31,"Manufacturing","Employees",1991,45770
-"Northwest",31,"Manufacturing","Employees",1992,44045
-"Northwest",31,"Manufacturing","Employees",1993,42595
-"Northwest",31,"Manufacturing","Employees",1994,42193
-"Northwest",31,"Manufacturing","Employees",1995,42100
-"Northwest",31,"Manufacturing","Employees",1996,41664
-"Northwest",31,"Manufacturing","Employees",1997,42057
-"Northwest",31,"Manufacturing","Employees",1998,42715
-"Northwest",31,"Manufacturing","Employees",1999,41295
-"Northwest",31,"Manufacturing","Employees",2000,40691
-"Northwest",31,"Manufacturing","Employees",2001,38235
-"Northwest",31,"Manufacturing","Employees",2002,34801
-"Northwest",31,"Manufacturing","Employees",2003,33588
-"Northwest",31,"Manufacturing","Employees",2004,32431
-"Northwest",31,"Manufacturing","Employees",2005,31647
-"Northwest",31,"Manufacturing","Employees",2006,31705
-"Northwest",31,"Manufacturing","Employees",2007,31664
-"Northwest",31,"Manufacturing","Employees",2008,30856
-"Northwest",31,"Manufacturing","Employees",2009,27192
-"Northwest",31,"Manufacturing","Employees",2010,26458
-"Northwest",31,"Manufacturing","Employees",2011,26798
-"Northwest",31,"Manufacturing","Employees",2012,26771
-"Northwest",31,"Manufacturing","Employees",2013,26806
-"South Central",31,"Manufacturing","Employees",1990,53489
-"South Central",31,"Manufacturing","Employees",1991,52422
-"South Central",31,"Manufacturing","Employees",1992,50936
-"South Central",31,"Manufacturing","Employees",1993,49711
-"South Central",31,"Manufacturing","Employees",1994,47940
-"South Central",31,"Manufacturing","Employees",1995,48414
-"South Central",31,"Manufacturing","Employees",1996,48816
-"South Central",31,"Manufacturing","Employees",1997,51175
-"South Central",31,"Manufacturing","Employees",1998,50860
-"South Central",31,"Manufacturing","Employees",1999,50274
-"South Central",31,"Manufacturing","Employees",2000,49901
-"South Central",31,"Manufacturing","Employees",2001,49034
-"South Central",31,"Manufacturing","Employees",2002,45804
-"South Central",31,"Manufacturing","Employees",2003,42004
-"South Central",31,"Manufacturing","Employees",2004,41488
-"South Central",31,"Manufacturing","Employees",2005,40703
-"South Central",31,"Manufacturing","Employees",2006,40093
-"South Central",31,"Manufacturing","Employees",2007,39373
-"South Central",31,"Manufacturing","Employees",2008,38496
-"South Central",31,"Manufacturing","Employees",2009,34538
-"South Central",31,"Manufacturing","Employees",2010,33216
-"South Central",31,"Manufacturing","Employees",2011,32925
-"South Central",31,"Manufacturing","Employees",2012,32963
-"South Central",31,"Manufacturing","Employees",2013,32661
-"Southwest",31,"Manufacturing","Employees",1990,64605
-"Southwest",31,"Manufacturing","Employees",1991,56837
-"Southwest",31,"Manufacturing","Employees",1992,57525
-"Southwest",31,"Manufacturing","Employees",1993,55035
-"Southwest",31,"Manufacturing","Employees",1994,52442
-"Southwest",31,"Manufacturing","Employees",1995,50514
-"Southwest",31,"Manufacturing","Employees",1996,48403
-"Southwest",31,"Manufacturing","Employees",1997,47608
-"Southwest",31,"Manufacturing","Employees",1998,46587
-"Southwest",31,"Manufacturing","Employees",1999,44115
-"Southwest",31,"Manufacturing","Employees",2000,42455
-"Southwest",31,"Manufacturing","Employees",2001,40964
-"Southwest",31,"Manufacturing","Employees",2002,37934
-"Southwest",31,"Manufacturing","Employees",2003,35491
-"Southwest",31,"Manufacturing","Employees",2004,34929
-"Southwest",31,"Manufacturing","Employees",2005,34350
-"Southwest",31,"Manufacturing","Employees",2006,33230
-"Southwest",31,"Manufacturing","Employees",2007,32418
-"Southwest",31,"Manufacturing","Employees",2008,31669
-"Southwest",31,"Manufacturing","Employees",2009,29666
-"Southwest",31,"Manufacturing","Employees",2010,28742
-"Southwest",31,"Manufacturing","Employees",2011,28541
-"Southwest",31,"Manufacturing","Employees",2012,27598
-"Southwest",31,"Manufacturing","Employees",2013,27011
+"tract","rate","se"
+"3301",0.935483870967742,0.0614888116153436
+"4001",0.850006787023212,0.0431028802656407
+"4002",0.981002352089741,0.0388303767506464
+"4003",0.949299135102893,0.0392934920755891
+"4051",0.676368237899399,0.071928975258668
+"4052",0.764374050770232,0.0505309909859302
+"4053",0.721618458451764,0.0442602345879623
+"4054.01",0.894803952821167,0.0628732008892805
+"4054.02",0.5,0.063140229732939
+"4055",0.719398438987245,0.0578953997201242
+"4056",0.684435261707989,0.0589782745485449
+"4057",0.470720720720721,0.0564069106509629
+"4058",0.874881644799134,0.0619124357481623
+"4059",0.924116877453118,0.0349982130262812
+"4060.01",0.527106133876304,0.03559498090817
+"4060.02",0.923899102180419,0.0438892031499852
+"4061",0.13604876697146,0.0383096383892721
+"4101.01",0.954435107376284,0.0336334721022778
+"4101.02",0.988731656184486,0.0389935243742893
+"4153",0.200373134328358,0.0705206808129602
+"4154",0.506233595800525,0.0686869476279587
+"4155",0.282655246252677,0.057849278932297
+"4156",0.438830469351116,0.0765948470816471
+"4157",0.448255114320096,0.0726753729950057
+"4158",0.476146788990826,0.0715457850169661
+"4159",0.157959434542102,0.047030840025336
+"4160",0.333265139116203,0.0661380944183613
+"4161",0.215499141057454,0.0455682979607474
+"4162",0.164763458401305,0.0457467818624357
+"4163",0.435255055840628,0.0555531803023054
+"4164",0.828413284132841,0.0770478220954958
+"4165",0.56818668379362,0.0549228643013489
+"4166",0.252160841788801,0.0504067997641605
+"4167",0.59727405484342,0.0626968093585438
+"4168",0.588800904977376,0.0812057242985141
+"4171",0.02652683528686,0.0187626493680754
+"4172",0.511744966442953,0.0770818409124469
+"4173",0,3.99478940512375
+"4174",0.549738219895288,0.0814473548392647
+"4175",0.744767970882621,0.0536773669647473
+"4204",0.960349217897417,0.0635728351346705
+"4205",0.655776601569629,0.0633923562975526
+"4206",0.761347765363129,0.0473216090017957
+"4207",0.939478845615018,0.0490191013332014
+"4301",0.596363636363636,0.071419333047755
+"4302.01",0.8734375,0.0619401692989051
+"4302.02",0.994090998621233,0.0371429201492422
+"4302.03",0.915625736507188,0.0439742168520067
+"4303.01",0.963511972633979,0.049645142029821
+"4303.02",0.901094752736882,0.0765613814514337
+"4304",0.855007473841555,0.0548001327152007
+"4305",0.963716674554346,0.0385907036947464
+"4306.01",0.854516702905713,0.0643188040572467
+"4306.02",0.883295838020247,0.0434104225626388
+"4601",0.903809523809524,0.0459458962018023
+"4602.02",0.806474820143885,0.0518533305706503
+"4602.03",0.642302259887006,0.0684493434270021
+"4602.04",0.822588705647176,0.0527903796410228
+"4603.01",0.840745192307692,0.0343828203889618
+"4603.02",0.843611761644549,0.0549170143311969
+"4621.01",0.937686501667544,0.0446613987157675
+"4621.02",0.919854721549637,0.0396741294124634
+"4622.01",0.855447470817121,0.0448761779253738
+"4622.02",0.687836797536567,0.0489904767212693
+"4641.01",0.977893118031526,0.0365270273282984
+"4641.02",0.780160857908847,0.0399206193103403
+"4661.01",0.940447253281478,0.0388981718741805
+"4661.02",0.923632610939113,0.0406109142829721
+"4662.01",0.779567418315693,0.0439192648127994
+"4662.02",0.954731623194654,0.0316768105463268
+"4663",0.91700487012987,0.0518504722221024
+"4664",0.841939298383918,0.0458432412591139
+"4681.01",0.940304652120214,0.0288620084965639
+"4681.02",0.902920284135754,0.0404857669587094
+"4701",0.850445103857567,0.0372607182128894
+"4711",0.848769698645286,0.0686331595219124
+"4712",0.838720770288858,0.060910060747308
+"4713",0.710341898492249,0.0427541873514722
+"4714",0.864701436130008,0.0509800780309736
+"4715",0.788433166125701,0.0810881969345685
+"4731",0.944206008583691,0.0636503483297334
+"4734",0.728132387706856,0.0804871090470387
+"4735.01",0.902063024257538,0.0535910676128988
+"4735.02",0.900418660287081,0.076349405997247
+"4736.01",0.974076474400518,0.0496711680288848
+"4736.02",0.495421686746988,0.0760586113939709
+"4737",0.797695035460993,0.0597468338123081
+"4738",0.579385736595523,0.10231971963479
+"4761",0.816402997502082,0.0585270518908458
+"4762",0.943932411674347,0.101526237241305
+"4763",0.80055899381114,0.0664073159562304
+"4771.01",0.847222222222222,0.0508648635400437
+"4771.02",0.897949297594058,0.0360319846796403
+"4772",0.96373779637378,0.0540159163502547
+"4803",0.829361296472831,0.069276327390502
+"4804",0.966106080206986,0.0582947440522753
+"4805",0.844817073170732,0.0613089137926373
+"4806",0.258472027270904,0.0508405647676521
+"4807",0.651660101294316,0.0756358455794047
+"4808",0.849728014505893,0.0428610218185408
+"4809",0.905750108084738,0.0647682410911726
+"4810",0.980837667670408,0.0352063379609126
+"4811",0.913032389696506,0.0419626368872402
+"4812",0.827445652173913,0.0719713182554426
+"4813",0.909776902887139,0.0440371551583628
+"4841",0.735885537509667,0.0652973389951453
+"4842",0.632292595896521,0.0401995114977038
+"4871",0.961431742508324,0.036006302112215
+"4872.01",0.950562789671154,0.053861956033733
+"4872.02",1,0.0431258424087814
+"4873",0.92846034214619,0.0968346251095902
+"4874",0.980046403712297,0.0498457286841632
+"4875",0.877288545922227,0.0504943245098992
+"4901",0.617627856365615,0.0505916755853605
+"4903.02",0.685113636363636,0.0465994498632238
+"4921",0.779040045441636,0.0489024474553303
+"4922",0.836222054760111,0.060639244730245
+"4923",0.682058512513218,0.0497121931612341
+"4924",0.938125894134478,0.0605023455008591
+"4925",0.997653958944282,0.0411725900279245
+"4926",0.898167873881551,0.029279728402117
+"4941",0.855024995690398,0.0492589171829031
+"4942.01",0.787161441671998,0.0438487711397693
+"4942.02",0.869081779053085,0.0506326858189077
+"4943",0.900370828182942,0.0531085128066078
+"4944",0.821788548144971,0.0467108572330122
+"4945",0.805688232739904,0.051550408619994
+"4946",0.898953662182362,0.049720296260932
+"4961",0.622073578595318,0.10469398097185
+"4962",0.903464807147527,0.0379256676410426
+"4963",0.872011251758087,0.05386014099369
+"4964",0.964488636363636,0.04113152910253
+"4965",0.832152974504249,0.0387400275399223
+"4966",0.996776504297994,0.0434998646857822
+"4967",0.47136447611507,0.0616063394215832
+"4968",0.788414468316562,0.0727445535589866
+"4969",0.464454976303318,0.0478622131353306
+"4970",0.958167796214069,0.0410838624448358
+"4971",0.560519902518278,0.0393793661871704
+"4972",0.805961070559611,0.0623509929782423
+"4973",0.913697720734676,0.0453607340731876
+"4974",0.959783449342614,0.0366463170564784
+"4975",0.896201797622499,0.0514920973517188
+"4976",0.848144952545298,0.0720968849818846
+"4977",0.920934411500449,0.0453603474166989
+"5001",0.175829498667958,0.0676187929285004
+"5002",0.079785035138487,0.0300463217024141
+"5003",0.0842663523865645,0.029458159642474
+"5004",0.0242253521126761,0.0234221822060603
+"5005",0.0475206611570248,0.0226323933647108
+"5007",NA,NA
+"5009",0.0688437775816417,0.0417448829510006
+"5012",0.131392604248623,0.0650271729958801
+"5013",0.0992990654205607,0.0431790270506669
+"5014",0.176015473887814,0.0750911406739957
+"5015",0.129612686794754,0.0389336718972905
+"5017",0.00744416873449132,0.0219038855118175
+"5018",0.188300449982693,0.0375058000482232
+"5021",0.293275217932752,0.0579002540494404
+"5023",0.561497326203209,0.0445927419072698
+"5024",0.198861840025292,0.0466768578239209
+"5025",0.299303944315545,0.077422110444041
+"5026",0.288139646102343,0.0649415239015688
+"5027",0.135399124284271,0.0555317150979149
+"5028",0.0442083618917066,0.0187048522569741
+"5029",0.0678200692041522,0.0317550766072772
+"5030",0.0758293838862559,0.0255846663624257
+"5031",0.129963898916967,0.0643264812141434
+"5033",0.170533170533171,0.0574857566418341
+"5035",0.130141190914672,0.0643145843340412
+"5037",0.289118065433855,0.0855106002483544
+"5038",0.0269516728624535,0.0240295456790632
+"5039",0.655956112852665,0.0795788828349915
+"5040",0.449197860962567,0.0703325473893886
+"5041",0.253083794130157,0.112945726455737
+"5042",0.229658792650919,0.0553281291222758
+"5043",0.199074074074074,0.0426625114571602
+"5045",0.252998909487459,0.0450590874613414
+"5048",0.64255677039529,0.0695253729592066
+"5049",0.398741105637657,0.0681180170347417
+"5101",0.515446466356327,0.0901124610613986
+"5102",0.547829581993569,0.0695019203418746
+"5103",0.486145528272133,0.0992814127178008
+"5104",0.165796868727419,0.0498337007920553
+"5105",0.40235792019347,0.0477966136937229
+"5106",0.303324385711336,0.0628799252134196
+"5107",0.655582426440951,0.0742966267164777
+"5108",0.606453471622011,0.0654721731604791
+"5109",0.949554069119287,0.0541882336994069
+"5110",0.973371104815864,0.0423072827018298
+"5111",0.932889628397116,0.0610863255981839
+"5112",0.652731156545621,0.0601992684328979
+"5113",0.374846625766871,0.0520213434309814
+"5114",0.985106382978723,0.0891363606354401
+"5141.01",0.880023296447292,0.052842467821799
+"5141.02",0.266535874439462,0.0409915208842273
+"5142",0.537190082644628,0.0591040645547571
+"5143",0.831151542045707,0.0572722272954094
+"5144",0.62926718252162,0.054851193894023
+"5145",0.772967772967773,0.0571728847202041
+"5146",0.380961923847695,0.0582210748166759
+"5147",0.251456310679612,0.0589859094726542
+"5148",0.573775216138328,0.0753734843764972
+"5149",0.973973607038123,0.0558020658135725
+"5150",0.886555938577248,0.0390644857879447
+"5151.01",0.757943143812709,0.0806976666900243
+"5151.02",0.648606271777003,0.0521113304564483
+"5152",0.841724537037037,0.0601645073070228
+"5201",0.970144011239902,0.0469999159132101
+"5202.01",0.989196675900277,0.0630084020890889
+"5202.02",0.989010989010989,0.0492743617327363
+"5203.01",0.691157894736842,0.0516484915349135
+"5203.02",0.556214865708932,0.0759932952193177
+"5204",0.898615787504676,0.0375951606712888
+"5205.01",0.906102229227651,0.057560893290517
+"5241",0.91385948026949,0.0387791400835201
+"5242",0.782063833953397,0.0564780513030293
+"5243",0.961093585699264,0.0497045572730104
+"5244",0.343577348066298,0.0639749753185963
+"5245.01",0.256944444444444,0.0610029999143882
+"5245.02",0.492035398230089,0.08583470965538
+"5246",0.116491794457896,0.0390216077909153
+"5247",0.617838541666667,0.0772190770334291
+"9800",NA,NA
+"5261.01",0.952214706524111,0.0419675332358673
+"5261.02",0.942675159235669,0.0360906967238694
+"5281",0.910423971947721,0.0526382282464676
+"5291",0.835531574740208,0.0363644880137347
+"5301",0.760977818017202,0.09163092927404
+"5302",0.410719754977029,0.051978787987139
+"5303.01",0.566854327938072,0.0466433574262302
+"5303.02",0.746927871772039,0.0462881227900852
+"5304",0.421052631578947,0.0478308690221876
+"5305",0.943618125216188,0.073473061148637
+"5306",0.993919885550787,0.0600824630335359
+"5331.01",0.958717610891524,0.0231843713420537
+"5331.02",0.942127215849844,0.0317066683125626
+"5351",0.767525953575178,0.0358341555882003
+"5352",0.775106916384014,0.0539668003144937
+"5381",NA,NA
+"5382.01",0.967431104259009,0.0586422016336376
+"5382.02",0.945601568243078,0.0690038982532028
+"8401",0.722369731164952,0.0317528705790285
+"8501",0.908448083364347,0.0419958108485338
+"8502",0.871295633500358,0.0379449324100083
+"8601",0.954276194002221,0.0238260166548347
+"8811",0.810828300258844,0.0882132305666114
+"8812",0.335,0.299352752263277
+"8813",0.509386733416771,0.0671979134692214
+"8815",0.723311546840959,0.0882691467997751
+"8901",0.678282828282828,0.0678317470735111
+"8902.01",0.941927409261577,0.0599381315795701
+"8902.02",0.85489404641776,0.0708365852096638

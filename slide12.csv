@@ -1,36 +1,20 @@
-"District.Number","District","Students.Chronically.Absent.in.District..Total","X.Students.Chronically.Absent..Elementary..Level..Grades.K.3...Percent","X.Students.Chronically.Absent..Middle..Grades..Grades.4.8...Percent","X.Students.Chronically.Absent..Secondary..School..Grades.9.12...Percent","X.Students.Chronically.Absent..American.Indian.or.Alaska.Native..Percent","X.Students.Chronically.Absent..Asian..Percent","X.Students.Chronically.Absent..Black.or.African.American..Percent","X.Students.Chronically.Absent..Hispanic.Latino.of.any.race..Percent","X.Students.Chronically.Absent..Native.Hawaiian.or.Other.Pacific.Islander..Percent","X.Students.Chronically.Absent..Two.or.More.Races..Percent","X.Students.Chronically.Absent..White..Percent","Enrollment","X","X.1"
-1,"Andover School District ",0.7,"*","*","","","","","","","","*",NA,NA,NA
-4,"Avon School District ",4.3,"4.7","5.2","2.9","","*","*","*","","*","4.0",3457,NA,NA
-11,"Bloomfield School District ",7.4,"6.3","5.9","9.7","","*","6.8","13.6","","*","*",1915,NA,NA
-12,"Bolton School District ",2.6,"*","*","*","","*","*","","","","*",874,NA,NA
-23,"Canton School District ",4.5,"4.7","4.2","4.7","","*","*","*","","","3.4",1714,NA,NA
-40,"East Granby School District ",5.1,"*","*","9.4","*","*","*","*","","*","4.5",840,NA,NA
-43,"East Hartford School District ",9.9,"6.7","6.2","17.5","*","*","7.6","12.5","","*","9.7",6845,NA,NA
-47,"East Windsor School District ",11.5,"11.7","8.9","14.6","*","*","14.1","13.7","","*","10.6",1223,NA,NA
-48,"Ellington School District ",4.4,"3.7","4.8","4.5","","*","*","*","","*","3.4",2658,NA,NA
-49,"Enfield School District ",11.6,"8.8","11.4","14.3","*","*","13.9","14.0","","8.7","11.4",5451,NA,NA
-52,"Farmington School District",5.5,"3.5","4.9","8.0","*","*","10.3","11.6","","","5.2",4022,NA,NA
-54,"Glastonbury School District ",3.4,"3.2","2.8","4.3","","*","*","6.5","","*","3.1",6618,NA,NA
-56,"Granby School District ",4.6,"5.4","4.5","4.1","","*","*","*","","*","3.8",2144,NA,NA
-64,"Hartford School District ",26.5,"23.5","20.1","40.4","*","12.1","22.2","33.3","*","23.9","10.3",19713,NA,NA
-67,"Hebron School District ",3.7,"4.9","*","","","","","*","","*","3.6",1001,NA,NA
-77,"Manchester School District ",21.2,"10.4","9.6","47.8","*","17.4","22.3","26.0","","8.3","20.1",5996,NA,NA
-79,"Marlborough School District ",4.1,"*","*","","","*","","*","","","4.3",652,NA,NA
-94,"Newington School District ",4.6,"3.4","4.6","5.5","","*","8.8","7.2","","*","3.8",4268,NA,NA
-119,"Rocky Hill School District ",7.4,"6.1","5.2","11.6","*","10.1","*","12.8","","*","6.0",2508,NA,NA
-128,"Simsbury School District ",4.7,"4.2","5.3","4.2","","*","*","*","","","4.7",4640,NA,NA
-129,"Somers School District ",14.5,"11.5","17.4","13.7","*","*","*","*","","*","14.3",1583,NA,NA
-132,"South Windsor School District ",13.6,"17.9","21.0","*","*","12.4","15.2","19.1","*","*","12.9",4301,NA,NA
-134,"Stafford School District ",7.8,"5.7","9.4","7.9","","","*","*","","*","7.8",1663,NA,NA
-139,"Suffield School District",7.5,"4.9","5.6","11.5","","*","*","*","","*","7.2",2442,NA,NA
-142,"Tolland School District",5,"2.9","3.2","9.3","","*","*","*","","","4.9",2895,NA,NA
-146,"Vernon School District ",9.8,"8.7","5.8","16.0","*","*","12.6","17.9","","*","7.7",3373,NA,NA
-155,"West Hartford School District",5.5,"4.5","5.1","6.9","*","5.9","6.1","10.5","","*","4.2",9905,NA,NA
-159,"Wethersfield School District",4.7,"3.1","4.4","6.6","","*","*","8.9","","*","3.8",3601,NA,NA
-164,"Windsor School District",7.9,"5.5","5.2","12.4","","*","8.4","10.6","*","*","6.1",3430,NA,NA
-165,"Windsor Locks School District",11.2,"8.0","8.2","17.7","","*","17.0","13.3","","*","10.5",1688,NA,NA
-208,"Regional School District 08",15.7,"","15.8","15.6","*","*","*","*","","","15.4",1759,NA,NA
-241,"Capitol Region Education Council",14.3,"7.5","7.9","27.4","*","8.1","11.7","19.2","","*","13.6",4725,NA,NA
-261,"Jumoke Academy District",2.5,"*","2.0","","","","*","","","","",443,NA,NA
-263,"Odyssey Community School District",8.9,"*","9.0","","","*","*","*","","*","*",302,NA,NA
-288,"Achievement First Hartford Academy Inc.",8.1,"5.8","10.1","","","","8.0","*","","","",743,NA,NA
+"sectortitle","X2003","X2013","growth"
+"Accommodation & Food Services",29089,35080,0.205954140740486
+"Admin. & Support & Waste Mgmt. & Remed. Services",24256,26349,0.0862879287598945
+"Agric., Forestry, Fishing & Hunting",2001,1979,-0.0109945027486257
+"Arts, Entertainment, & Recreation",6291,7070,0.123827690351296
+"Construction",18316,16260,-0.112251583315134
+"Educational Services",40143,44134,0.0994195750193059
+"Finance & Insurance",59121,53063,-0.102467820233081
+"Government Employment",29841,31966,0.0712107503099761
+"Health Care & Social Assistance",71142,84631,0.18960670208878
+"Information",10859,11023,0.0151026798047702
+"Management of Companies & Enterprises",6492,9276,0.428835489833642
+"Other Services (except Public Administration)",16667,16864,0.0118197636047279
+"Professional, Scientific, & Technical Services",25768,29129,0.130433095312015
+"Real Estate and Rental & Leasing",5364,6108,0.138702460850112
+"Retail Trade",53135,52380,-0.0142090900536369
+"Transportation & Warehousing",18393,17495,-0.0488229217637145
+"Utilities",3353,1198,-0.642708022666269
+"Wholesale Trade",20577,19573,-0.0487923409632114
+"Manufacturing",63156,56404,-0.106909873962886

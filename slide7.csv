@@ -1,86 +1,49 @@
-"Towngroup","School.Type","School.Year","x"
-"Hartford","Public","2006-07",19018
-"Hartford","Public","2007-08",18459
-"Hartford","Public","2008-09",17922
-"Hartford","Public","2009-10",17264
-"Hartford","Public","2010-11",16224
-"Hartford","Private","2006-07",1092
-"Hartford","Private","2007-08",1048
-"Hartford","Private","2008-09",865
-"Hartford","Private","2009-10",964
-"Hartford","Private","2010-11",960
-"Hartford","Public charter","2006-07",275
-"Hartford","Public charter","2007-08",272
-"Hartford","Public charter","2008-09",623
-"Hartford","Public charter","2009-10",826
-"Hartford","Public charter","2010-11",986
-"Hartford","Magnet School","2006-07",3188
-"Hartford","Magnet School","2007-08",3533
-"Hartford","Magnet School","2008-09",3542
-"Hartford","Magnet School","2009-10",3780
-"Hartford","Magnet School","2010-11",4410
-"Hartford","Open Choice","2006-07",1065
-"Hartford","Open Choice","2007-08",1085
-"Hartford","Open Choice","2008-09",1112
-"Hartford","Open Choice","2009-10",1221
-"Hartford","Open Choice","2010-11",1255
-"Hartford","Other","2006-07",31
-"Hartford","Other","2007-08",83
-"Hartford","Other","2008-09",46
-"Hartford","Other","2009-10",57
-"Hartford","Other","2010-11",70
-"Suburban / rural","Public","2006-07",47164
-"Suburban / rural","Public","2007-08",47068
-"Suburban / rural","Public","2008-09",46806
-"Suburban / rural","Public","2009-10",46326
-"Suburban / rural","Public","2010-11",45859
-"Suburban / rural","Private","2006-07",3481
-"Suburban / rural","Private","2007-08",3520
-"Suburban / rural","Private","2008-09",3306
-"Suburban / rural","Private","2009-10",3252
-"Suburban / rural","Private","2010-11",3146
-"Suburban / rural","Public charter","2006-07",10
-"Suburban / rural","Public charter","2007-08",13
-"Suburban / rural","Public charter","2008-09",22
-"Suburban / rural","Public charter","2009-10",31
-"Suburban / rural","Public charter","2010-11",34
-"Suburban / rural","Magnet School","2006-07",566
-"Suburban / rural","Magnet School","2007-08",565
-"Suburban / rural","Magnet School","2008-09",691
-"Suburban / rural","Magnet School","2009-10",881
-"Suburban / rural","Magnet School","2010-11",980
-"Suburban / rural","Other","2006-07",187
-"Suburban / rural","Other","2007-08",153
-"Suburban / rural","Other","2008-09",157
-"Suburban / rural","Other","2009-10",157
-"Suburban / rural","Other","2010-11",163
-"Urban periphery","Public","2006-07",54198
-"Urban periphery","Public","2007-08",53185
-"Urban periphery","Public","2008-09",52769
-"Urban periphery","Public","2009-10",52389
-"Urban periphery","Public","2010-11",51555
-"Urban periphery","Private","2006-07",5935
-"Urban periphery","Private","2007-08",5981
-"Urban periphery","Private","2008-09",5932
-"Urban periphery","Private","2009-10",5486
-"Urban periphery","Private","2010-11",5146
-"Urban periphery","Public charter","2006-07",215
-"Urban periphery","Public charter","2007-08",262
-"Urban periphery","Public charter","2008-09",336
-"Urban periphery","Public charter","2009-10",366
-"Urban periphery","Public charter","2010-11",406
-"Urban periphery","Magnet School","2006-07",2352
-"Urban periphery","Magnet School","2007-08",2479
-"Urban periphery","Magnet School","2008-09",2696
-"Urban periphery","Magnet School","2009-10",3091
-"Urban periphery","Magnet School","2010-11",3691
-"Urban periphery","Open Choice","2006-07",1
-"Urban periphery","Open Choice","2007-08",1
-"Urban periphery","Open Choice","2008-09",1
-"Urban periphery","Open Choice","2009-10",27
-"Urban periphery","Open Choice","2010-11",31
-"Urban periphery","Other","2006-07",212
-"Urban periphery","Other","2007-08",224
-"Urban periphery","Other","2008-09",240
-"Urban periphery","Other","2009-10",236
-"Urban periphery","Other","2010-11",234
+"YEAR","AGE","Towngroup","value"
+"2010","0 to 16 years","Hartford",26550
+"2010","0 to 16 years","Urban periphery",66180
+"2010","0 to 16 years","Suburban / rural",50492
+"2010","16 to 24 years","Hartford",24894
+"2010","16 to 24 years","Urban periphery",45528
+"2010","16 to 24 years","Suburban / rural",28297
+"2010","25 to 54 years","Hartford",50749
+"2010","25 to 54 years","Urban periphery",161770
+"2010","25 to 54 years","Suburban / rural",108138
+"2010","55 years and over","Hartford",22582
+"2010","55 years and over","Urban periphery",112083
+"2010","55 years and over","Suburban / rural",72335
+"2015","0 to 16 years","Hartford",25958
+"2015","0 to 16 years","Urban periphery",64101
+"2015","0 to 16 years","Suburban / rural",43773
+"2015","16 to 24 years","Hartford",22399
+"2015","16 to 24 years","Urban periphery",46712
+"2015","16 to 24 years","Suburban / rural",37378
+"2015","25 to 54 years","Hartford",52101
+"2015","25 to 54 years","Urban periphery",156723
+"2015","25 to 54 years","Suburban / rural",98309
+"2015","55 years and over","Hartford",25541
+"2015","55 years and over","Urban periphery",124507
+"2015","55 years and over","Suburban / rural",86124
+"2020","0 to 16 years","Hartford",26204
+"2020","0 to 16 years","Urban periphery",63047
+"2020","0 to 16 years","Suburban / rural",36789
+"2020","16 to 24 years","Hartford",19611
+"2020","16 to 24 years","Urban periphery",46358
+"2020","16 to 24 years","Suburban / rural",42162
+"2020","25 to 54 years","Hartford",52341
+"2020","25 to 54 years","Urban periphery",152541
+"2020","25 to 54 years","Suburban / rural",92378
+"2020","55 years and over","Hartford",28500
+"2020","55 years and over","Urban periphery",135626
+"2020","55 years and over","Suburban / rural",99274
+"2025","0 to 16 years","Hartford",25705
+"2025","0 to 16 years","Urban periphery",62095
+"2025","0 to 16 years","Suburban / rural",34127
+"2025","16 to 24 years","Hartford",18395
+"2025","16 to 24 years","Urban periphery",44551
+"2025","16 to 24 years","Suburban / rural",38590
+"2025","25 to 54 years","Hartford",51608
+"2025","25 to 54 years","Urban periphery",153362
+"2025","25 to 54 years","Suburban / rural",93077
+"2025","55 years and over","Hartford",30477
+"2025","55 years and over","Urban periphery",141388
+"2025","55 years and over","Suburban / rural",109052

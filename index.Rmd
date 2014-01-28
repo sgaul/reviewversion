@@ -22,15 +22,14 @@ Background on the region
 Education
 * 3rd grade reading
 * High school graduation rate
-* Chronic absenteeism
 
 *** =right
 Jobs
 * Educational attainment
-* Unemployment rate
 * Job growth
 
 Quality of life / civic health
+* Home ownership
 * Affordable housing
 * Crime rate
 * Voter turnout
@@ -44,18 +43,33 @@ Quality of life / civic health
 4. Aging population and workforce
 5. Globally connected region
 6. Achievement gap and talent pipeline
-7. Creating opportunity in communities in the region?
+7. Creating opportunity in communities throughout the region
 
---- &twocol
+---
+
 ## Defining the region: Hartford + surrounding towns
 
-*** =left
-Urban periphery
-* Bloomfield, East Hartford, Enfield, Manchester, Newington, Rocky Hill, Vernon, West Hartford, Wethersfield, Windsor, Windsor Locks
+CRCOG region. Based on characteristics of each town, using UConn categories from [5 CTs report](http://ctsdc.uconn.edu/projections/5cts.html), with slight updates. 
 
-*** =right
-Suburban / rural 
-* Andover, Avon, Bolton, Canton, East Granby, East Windsor, Ellington, Farmington, Glastonbury, Granby, Hebron, Marlborough, Simsbury, Somers, South Windsor, Suffield, Stafford, Tolland
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
+towns <- read.csv("../regionalreport/data/hartford-towns.csv")
+
+choropleth=merge(CTTowns, towns, by.x = "id", by.y="Town")
+choropleth=choropleth[order(choropleth$order), ]
+
+#Make the map
+ggplot(data = choropleth, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = Towngroup)) + 
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = NULL, y = NULL) + 
+  coord_equal() +
+  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
+  scale_fill_brewer(palette = "Purples", name = "Types of towns") +
+  theme_minimal(base_size = 16)
+
+write.csv(towns,"slide4.csv", row.names = FALSE)
+```
 
 ---
 ## Low population growth
@@ -82,6 +96,8 @@ ggplot() +
   theme_minimal(base_size = 16) + 
   scale_y_continuous(labels = comma, lim = c(0,500000)) +  
   labs(x = "Year", y = "Population")
+
+write.csv(subset(gh_test, period >= 1900),"slide5.csv", row.names = FALSE)
 ```
 
 --- 
@@ -101,7 +117,7 @@ ggplot(aes(y = population.under.poverty,
   labs(x = "Year", y = 'Population') +
   theme_minimal(base_size = 16)
 
-write.csv(subset(gh_sum,period >= 1970),"slide9.csv", row.names = FALSE)
+write.csv(subset(gh_sum,period >= 1970),"slide6.csv", row.names = FALSE)
 ```
 
 ---
@@ -151,7 +167,7 @@ ggplot(data =
   labs(y = "Population", x = "Year") +
   theme_minimal(base_size = 16)
 
-write.csv(aging,'slide5.csv', row.names = F)
+write.csv(ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),'slide7.csv', row.names = F)
 ```
 
 --- 
@@ -230,10 +246,10 @@ ggplot(data = ddply(merge(subset(enroll, variable == "Total"), towns,
 write.csv(ddply(merge(subset(enroll, variable == "Total"), towns, 
                           by.x = "Resident.Town",by.y = "Town"),
       .(Towngroup, School.Type, School.Year),summarise, x = sum(x)), 
-          "slide7.csv", row.names = FALSE)
+          "slide8.csv", row.names = FALSE)
 
 write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")), 
-          "slide8.csv", row.names = FALSE)
+          "slide9.csv", row.names = FALSE)
 ```
 
 --- 
@@ -262,7 +278,7 @@ ggplot(data = languages_agg) +
   scale_x_continuous(labels = comma) + 
   theme_minimal(base_size = 16)
 
-write.csv(languages_agg,'slide6.csv', row.names = F)
+write.csv(languages,'slide10.csv', row.names = F)
 ```
 
 --- 
@@ -273,7 +289,7 @@ Globally connected city via employers as well. Draws high-skill jobs to the regi
 ![image](../mockup/commute-patterns.png)
 
 --- 
-## Meeting demands for a skilled workforce
+## Demand for a skilled workforce
 
 Commuting and the next 2 slides together, making the case that region has high skilled jobs as an asset, but skills not equitably distributed in the workforce. 
 
@@ -354,7 +370,7 @@ ggplot(data = attainment.by.race,
   coord_flip() + 
   theme_minimal(base_size = 16)
 
-write.csv(attainment.by.race,"slide14.csv", row.names = FALSE)
+write.csv(attainment.by.race,"slide11.csv", row.names = FALSE)
 ```
 
 --- 
@@ -389,44 +405,9 @@ ggplot(data = subset(jobgrowth, X2013 > 1000 &
   scale_size(name = "Number of\n employees (2013)") + 
   labs(x = "Growth (2010 - 2013)", y = "Sector") +
   scale_x_continuous(labels = percent)
-```
 
---- 
-## Youth unemployment highest
-
-Possibly lose this one, somewhat redundant with other figures. 
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 12, fig.height = 6}
-library(reshape)
-B23001 <- read.csv('../unemployment/B23001.csv')
-B23001 <- melt(B23001)
-
-levels(B23001$Age) <- list(
-  "55 years and over" = c("75 years and over","70 to 74 years","65 to 69 years",
-                          "62 to 64 years","60 and 61 years","55 to 59 years"),
-  "25 to 54 years" = c("45 to 54 years","35 to 44 years","30 to 34 years",
-                       "25 to 29 years"),
-  "16 to 24 years" = c("22 to 24 years","20 and 21 years","16 to 19 years"))
-
-
-B23001_sum <- ddply(subset(B23001, Stat == "Estimate" & Military != "In Armed Forces"), 
-                      .(Gender, Age, Employment.status, variable),
-                      summarise, value = sum(value))
-
-library(ggplot2)
-library(scales)
-ggplot(data = B23001_sum, 
-       aes(x = Age, y = value, group= Employment.status, 
-           fill= Employment.status)) + 
-  geom_bar(position = 'fill', stat = 'identity') + 
-  facet_wrap(~ Gender + variable, ncol = 3) +
-  scale_y_continuous(labels = percent) +
-  labs(x = 'Age', y = '% of the population') +
-  scale_fill_brewer() +
-  coord_flip() + 
-  theme_minimal()
-
-write.csv(B23001_sum,"slide17.csv",row.names = FALSE)
+write.csv(subset(jobgrowth, X2013 > 1000 & sectortitle != "Total - All Industries"),
+          "slide12.csv", row.names = FALSE)
 ```
 
 --- 
@@ -467,9 +448,10 @@ ggplot(data = subset(gradregion, !(Category %in% c("American Indian")))) +
   coord_flip() + 
   ylim(0,100) +
   theme_minimal(base_size = 16) + 
-  labs(x = NULL, y = "Average four-year graduation rate by major subgroup (2010 - 2011)")
+  geom_hline(yintercept = 82.18249, alpha = 0.5) + 
+  labs(x = NULL, y = "Average four-year graduation rate by major subgroup (2003 - 2011)")
 
-write.csv(subset(hsgrad, !(Category %in% c("All Students"))),"slide13.csv", 
+write.csv(subset(gradregion, !(Category %in% c("American Indian"))),"slide13.csv", 
           row.names = FALSE)
 ```
 
@@ -507,35 +489,15 @@ ggplot(data = cmt_subgroups_region, aes(x = School.Year, y = Average.Scale.Score
   geom_line(aes(group = Status)) + 
 #  geom_point(aes(group = Status)) + 
   facet_wrap(~ Subgroup, ncol = 5) + 
-  scale_x_discrete(breaks = c("2005-06","2009-2010")) + 
+  scale_x_discrete(breaks = c("2006-07","2008-09","2010-11")) +
   theme_minimal(base_size = 16) + 
   labs(x = "School Year", y = "Average scale score, 3rd grade reading")
 
-write.csv(cmt_subgroups_region,"slide11.csv", row.names = FALSE)
+write.csv(cmt_subgroups_region,"slide14.csv", row.names = FALSE)
 ```
 
 --- 
-## Chronic absenteeism an early warning sign
-
-Possibly drop, add in grade-level breakout - where are kids chronically absent in K - 3, middle school. 
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
-absenteeism <- read.csv("../hodgepodge/CT_ChronicAbsenteeism_2012_SDE-1.csv")
-districts <- read.csv("../regionalreport/data/hartford-districts.csv")
-absenteeism <- subset(absenteeism, absenteeism$District.Number %in% levels(as.factor(districts$districtid)))
-absenteeism$District <- reorder(absenteeism$District, absenteeism$Students.Chronically.Absent.in.District..Total)
-
-ggplot(data = absenteeism, aes(x = Students.Chronically.Absent.in.District..Total, 
-                               y = District)) + 
-  geom_point() + 
-  theme_minimal(base_size = 16) +
-  labs(x = "% students chronically absent (2012)", y = NULL)
-
-write.csv(absenteeism,"slide12.csv", row.names = FALSE)
-```
-
---- 
-## Where would you like to live?
+## What makes a vibrant community?
 
 Creating opportunity in the region, what makes 'vibrant communities'? Knit together four slides with maps of region for homeownership, crime, affordable housing and voting. 
 
@@ -585,8 +547,10 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   labs(x = NULL, y = NULL) + 
   coord_equal() +
   geom_polygon(data = CTTowns, colour = "grey", alpha = 0.1, fill = NA) +
-  scale_fill_brewer(palette = "Purples", name = "Home ownership\nrate") +
+  scale_fill_brewer(palette = "Purples", name = "% owner-occupied\nhousing") +
   theme_minimal(base_size = 16)
+
+write.csv(homeownership.tract,"slide15.csv", row.names = FALSE)
 ```
 
 --- 
@@ -622,13 +586,13 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   scale_fill_brewer(palette = "Purples", name = "% Affordable\nHousing (2012)") +
   theme_minimal()
 
-write.csv(appeals,"slide19.csv",row.names = FALSE)
+write.csv(appeals,"slide16.csv",row.names = FALSE)
 ```
 
 --- 
-## Hartford getting safer.
+## Hartford getting safer
 
-Choice in housing based on factors like schools and safety. Doing better but still understandable that those who can afford to live in low-crime towns. Swith to regional map.
+Choice in housing based on factors like schools and safety. Doing better but still understandable that those who can afford to live in low-crime towns. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
 totalcrime <- read.csv("../crime/totalcrime.csv")
@@ -653,10 +617,10 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   labs(x = NULL, y = NULL) + 
   coord_equal() +
   geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
-  scale_fill_brewer(palette = "Purples", name = "Total crime\nrate") +
+  scale_fill_brewer(palette = "Purples", name = "Total crime rate\n(Crimes per 100K residents)") +
   theme_minimal(base_size = 16)
 
-write.csv(totalcrime_avg,"slide20.csv",row.names = FALSE)
+write.csv(totalcrime_avg,"slide17.csv",row.names = FALSE)
 ```
 
 --- 
@@ -690,5 +654,7 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
   scale_fill_brewer(palette = "Purples", name = "% registered voters\nthat voted") +
   theme_minimal(base_size = 16)
+
+write.csv(voting,"slide18.csv",row.names = FALSE)
 ```
 
