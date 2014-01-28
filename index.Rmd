@@ -13,11 +13,11 @@ mode        : selfcontained # {standalone, draft}
 ## Outline of indicators
 
 *** =left
-Snapshot / demographics
+Background on the region
 * Population / diversity
 * Commuting patterns
 * School enrollment
-* Income levels or poverty rates
+* Income levels and poverty rates
 
 Education
 * 3rd grade reading
@@ -25,43 +25,47 @@ Education
 * Chronic absenteeism
 
 *** =right
-Workforce / economy / talent
+Jobs
 * Educational attainment
 * Unemployment rate
-* Job growth (need to add)
+* Job growth
 
-Quality of life / community
-* Home-ownership / affordable housing
+Quality of life / civic health
+* Affordable housing
 * Crime rate
 * Voter turnout
 
 ---
 ## Key themes
 
-1. Regionalism
-2. Suburbanization of poverty
-3. Concentration of poverty in Hartford
-4. Achievement gap
-5. Middle skills gap
-6. Aging workforce
-7. Civic health
-8. Global region
+1. 'We are a region'
+2. Concentration of poverty in Hartford
+3. Suburbanization of poverty
+4. Aging population and workforce
+5. Globally connected region
+6. Achievement gap and talent pipeline
+7. Creating opportunity in communities in the region?
+
+--- &twocol
+## Defining the region: Hartford + surrounding towns
+
+*** =left
+Urban periphery
+* Bloomfield, East Hartford, Enfield, Manchester, Newington, Rocky Hill, Vernon, West Hartford, Wethersfield, Windsor, Windsor Locks
+
+*** =right
+Suburban / rural 
+* Andover, Avon, Bolton, Canton, East Granby, East Windsor, Ellington, Farmington, Glastonbury, Granby, Hebron, Marlborough, Simsbury, Somers, South Windsor, Suffield, Stafford, Tolland
 
 ---
-## Flat population growth
+## Low population growth
 
-Themes: regionalism, suburbanization of poverty  
-Key points: population loss in Hartford, flat population growth in suburbs
+Low population growth overall; losing population in center city, slow outside, most rapid in outer suburbs. Not great at attracting people to the region. 
 
-```{r setup, message = F, echo = F, cache = F}
-require(rCharts)
-knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = T)
-```
- 
- 
-```{r chart1, echo=FALSE}
-require(rCharts)
-knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = T)
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
+library(ggplot2)
+library(scales)
+library(reshape)
 
 gh <- read.csv("../regionalreport/data/greaterhartford.csv")
 gh$poppoverty <- round((gh$poppovertyrate / 100) * gh$population,0)
@@ -70,29 +74,44 @@ gh_test <- ddply(merge(gh,towns,by.x = "city", by.y = "Town"),
                  sumpop = sum(population),
                  sumpoor = sum(poppoverty))
 
-n1 <- nPlot(y = 'sumpop', x = 'period', width = 700, height = 425,
-            group = 'Towngroup',
-            data = subset(gh_test, period >= 1900),
-            type = 'lineChart')
-n1$xAxis(axisLabel='Year')
-n1$yAxis(tickFormat = "#!function(d) {return d3.format(',.0f')(d)}!#", axisLabel='Population')
-n1$chart(forceY = c(0,350000))
-n1$print('chart1')
+ggplot() + 
+  geom_line(data = subset(gh_test, period >= 1900 & period <= 2010), size = 1, 
+            aes(x = period, y = sumpop, group = Towngroup, colour = Towngroup)) + 
+  geom_line(data = subset(gh_test, period >= 2010), linetype = 'dotted', size = 1,
+            aes(x = period, y = sumpop, group = Towngroup, colour = Towngroup)) + 
+  theme_minimal(base_size = 16) + 
+  scale_y_continuous(labels = comma, lim = c(0,500000)) +  
+  labs(x = "Year", y = "Population")
+```
 
-write.csv(subset(gh_test, period >= 1900),'slide4.csv', row.names = F)
+--- 
+## Suburbanization of poverty
+
+New poverty will occur in suburbs, new challenges towns can't ignore. 
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
+gh <- merge(gh,towns, by.x = "city", by.y = "Town")
+
+gh_sum <- ddply(gh,.(Towngroup, period), summarise, population = sum(population), population.under.poverty = sum(poppoverty))
+
+ggplot(aes(y = population.under.poverty, 
+           x = period), data = subset(gh_sum,period >= 1970)) + 
+  geom_line(aes(group = Towngroup, colour = Towngroup), size = 1) + 
+  scale_y_continuous(labels = comma, limits = c(0,41000)) + 
+  labs(x = "Year", y = 'Population') +
+  theme_minimal(base_size = 16)
+
+write.csv(subset(gh_sum,period >= 1970),"slide9.csv", row.names = FALSE)
 ```
 
 ---
 ## Aging population
 
-Themes: regionalism, aging workforce  
-Key points: aging population in suburbs, talent pipeline from Hartford
+Suburbs are aging quickly and not good prospects for replacing with younger generation, based on current projections. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
-library(ggplot2)
-library(scales)
-library(reshape)
-projections <- read.csv('sdc-projections.csv')
+projections <- read.csv('../reviewversion/sdc-projections.csv')
+towns <- read.csv("../regionalreport/data/hartford-towns.csv")
 projections <- subset(projections, projections$TOWN %in% levels(towns$Town))
 projections$TOWN <- factor(projections$TOWN)
 projections$YEAR <- paste("20",projections$YEAR, sep = "")
@@ -103,7 +122,7 @@ levels(projections$AGE) <- list(
   "55 years and over" = c("8084","6064","7579","5559","90OV","7074","8589","6569"),
   "25 to 54 years" = c("4549","2529","4044","3539","5054","3034"),
   "16 to 24 years" = c("2024","1519"),
-  "0 to 16 years" = c("0004","0509","1014"))
+  "0 to 16 years" = c("0004","0509","1014","4","509"))
 
 #projections$TYPE = ifelse(projections$TOWN == "Hartford","Hartford","Other region")
 
@@ -113,67 +132,32 @@ levels(projections$AGE) <- list(
 #levels(aging$AGE) <- rev(levels(aging$AGE))
 
 projections$AGE <- factor(projections$AGE, levels = c("0 to 16 years",
-                                                            "16 to 24 years",
-                                                            "25 to 54 years","55 years and over"))
+                                                      "16 to 24 years",
+                                                      "25 to 54 years",
+                                                      "55 years and over"))
 
-ggplot(data = ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),
-       aes(x = AGE, y = value)) + 
-  geom_freqpoly(stat = 'identity', aes(group = as.factor(YEAR), color = as.factor(YEAR))) + 
-  facet_wrap(~ Towngroup, ncol = 4) +
-  scale_colour_brewer(name = "Year") +
+projections$Towngroup <- factor(projections$Towngroup, levels = c("Hartford",
+                                                                  "Urban periphery",
+                                                                  "Suburban / rural"))
+
+ggplot(data = 
+         ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),
+       aes(x = YEAR, y = value)) + 
+  geom_line(aes(group = AGE, colour = AGE), size = 1, linetype = 'dotted') +
+  geom_point(aes(group = AGE, colour = AGE, shape = AGE)) +
+  facet_wrap(~ Towngroup, ncol = 3) +
+  scale_fill_brewer(name = "Age") +
   scale_y_continuous(labels = comma) + 
-  labs(y = "Projected population", x = "Age group") +
-  theme_minimal()
-
-#ggplot(data=aging, aes(x=AGE)) + 
-#  geom_bar(aes(y = F), fill = "light blue", stat = 'identity') + 
-#  geom_bar(aes(y= M*(-1)), fill = "blue", stat = 'identity') + 
-#  labs(y = "Male population", x = NULL) +
-#  scale_y_continuous(breaks=seq(-40000,40000,5000),labels=abs(seq(-40000,40000,5000))) + 
-#  coord_flip() + 
-#  theme_minimal() + 
-# facet_wrap(~ TYPE + YEAR)
+  labs(y = "Population", x = "Year") +
+  theme_minimal(base_size = 16)
 
 write.csv(aging,'slide5.csv', row.names = F)
 ```
 
 --- 
-## Linguistic diversity
+## School enrollment declining
 
-Themes: Global region, achievement gap, suburbanization of poverty   
-Key points: Suburbs more diverse, ELL students in public school systems.
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
-library(gridExtra)
-library(scales)
-languages <- read.csv('Languages-all.csv', na.strings = c("**","-"))
-
-languages <- merge(languages, districts, by.x = "District.Name", by.y = "district")
-
-languages_agg <- merge(ddply(languages, .(District.Name), summarise,all.lang = length(unique(Languages)),all.students = sum(Number.of.Students.with.Non.English.Home.Language, na.rm = TRUE)),
-                       ddply(subset(languages, Number.of.ELL.Students > 0),
-                             .(District.Name), summarise,ell.lang = length(unique(Languages)),ell.students = sum(Number.of.ELL.Students, na.rm = TRUE)),
-                       by = "District.Name", 
-                       all = TRUE)
-
-#All linguistic diversity
-languages_agg$District.Name <- reorder(languages_agg$District.Name,
-                                       languages_agg$all.lang)
-
-ggplot(data = languages_agg) + 
-  geom_point(aes(x = all.lang, y = District.Name)) + 
-  labs(x = 'Number of languages spoken, all students', y = NULL) + 
-  scale_x_continuous(labels = comma) + 
-  theme_minimal()
-
-write.csv(languages_agg,'slide6.csv', row.names = F)
-```
-
---- 
-## School choice unique to region
-
-Themes: Regionalism, disparities  
-Key points: Integration through school system, districts not the same as towns.
+Aging population reflected in overall declining school enrollment. Local schools hit twice - once with demographics, again through increase in magnet / private enrollment.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 enroll <- read.csv("../regionalreport/data/all-schools.csv", stringsAsFactors=FALSE)
@@ -231,19 +215,21 @@ enroll$School.Type <- factor(enroll$School.Type, levels = c("Public",
                                                             "Magnet School",
                                                             "Open Choice","Other"))
 
-ggplot(data = subset(enroll, School.Year == "2010-11" & variable != "Total"), 
-       aes(x = variable, y = x, group = School.Type, fill = School.Type)) +
-  geom_area(aes(order = as.numeric(School.Type)), position = "fill") +
-  scale_y_continuous(labels = percent) +
-  scale_x_discrete(breaks = c("K","G3","G6","G9","G12")) +
+ggplot(data = ddply(merge(subset(enroll, variable == "Total"), towns, 
+                          by.x = "Resident.Town",by.y = "Town"),
+      .(Towngroup, School.Type, School.Year),summarise, x = sum(x)),
+       aes(x = School.Year, y = x, group = School.Type, fill = School.Type)) +
+  geom_line(aes(group = School.Type, colour = School.Type)) +
+  geom_point(aes(group = School.Type, colour = School.Type, shape = School.Type)) +
+  scale_y_continuous(labels = comma) +
+  scale_x_discrete(breaks = c("2006-07","2008-09","2010-11")) +
   labs(x = NULL, y = NULL) +
-  scale_fill_brewer(palette = "Greys") +
-  theme_minimal() +
-  theme(strip.text.x = element_text(size = 12)) +
-  facet_wrap(~ Resident.Town, ncol = 10)
+  theme_minimal(base_size = 16) +
+  facet_wrap(~ Towngroup, ncol = 3)
 
-
-write.csv(subset(enroll, School.Year == "2010-11" & variable != "Total"), 
+write.csv(ddply(merge(subset(enroll, variable == "Total"), towns, 
+                          by.x = "Resident.Town",by.y = "Town"),
+      .(Towngroup, School.Type, School.Year),summarise, x = sum(x)), 
           "slide7.csv", row.names = FALSE)
 
 write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")), 
@@ -251,156 +237,47 @@ write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")),
 ```
 
 --- 
+## Linguistic diversity
+
+Diversity part of changing population (tie back to 1st chart); which suburbs will 'globalize'? Where will new population in our region come from? (Add refugee factoid.)
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
+languages <- read.csv('../reviewversion/Languages-all.csv', na.strings = c("**","-"))
+districts <- read.csv("../regionalreport/data/hartford-districts.csv")
+languages <- merge(languages, districts, by.x = "District.Name", by.y = "district")
+
+languages_agg <- merge(ddply(languages, .(District.Name), summarise,all.lang = length(unique(Languages)),all.students = sum(Number.of.Students.with.Non.English.Home.Language, na.rm = TRUE)),
+                       ddply(subset(languages, Number.of.ELL.Students > 0),
+                             .(District.Name), summarise,ell.lang = length(unique(Languages)),ell.students = sum(Number.of.ELL.Students, na.rm = TRUE)),
+                       by = "District.Name", 
+                       all = TRUE)
+
+#All linguistic diversity
+languages_agg$District.Name <- reorder(languages_agg$District.Name,
+                                       languages_agg$all.lang)
+
+ggplot(data = languages_agg) + 
+  geom_point(aes(x = all.lang, y = District.Name)) + 
+  labs(x = 'Number of languages spoken, all students', y = NULL) + 
+  scale_x_continuous(labels = comma) + 
+  theme_minimal(base_size = 16)
+
+write.csv(languages_agg,'slide6.csv', row.names = F)
+```
+
+--- 
 ## Everyone commutes, mostly to Hartford
 
-Themes: Regionalism, background for aging workforce  
-Key points: Every town sends workers to Hartford; job center
+Globally connected city via employers as well. Draws high-skill jobs to the region, so people commute to the job centers (Hartford and some other towns).
 
 ![image](../mockup/commute-patterns.png)
 
 --- 
-## Suburbanization of poverty
+## Meeting demands for a skilled workforce
 
-Themes: suburbanization of poverty  
-Key points: Poverty growing fastest in suburbs
+Commuting and the next 2 slides together, making the case that region has high skilled jobs as an asset, but skills not equitably distributed in the workforce. 
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 14}
-gh$type <- ifelse(gh$city == "Hartford","Hartford","Suburbs")
-gh_sum <- ddply(gh,.(type, period), summarise, sumpop = sum(population), sumpoor = sum(poppoverty))
-
-ggplot(aes(y = sumpoor, x = period), data = subset(gh_sum,period >= 1970)) + 
-  geom_line(aes(group = type, colour = type)) + 
-  scale_y_continuous(labels = comma, limits = c(0,41000)) + 
-  labs(x = "Year", y = 'Population', title = 'Population in poverty') +
-  theme_minimal()
-
-write.csv(subset(gh_sum,period >= 1970),"slide9.csv", row.names = FALSE)
-```
-
---- 
-## Income inequality
-
-Themes: suburbanization, concentration of poverty  
-Key points: Affluent suburbs, inner-ring suburbs have many low-income neighborhoods
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 7, fig.width = 11}
-B19013 = acs.fetch(geography = hartford.tracts, table.number = "B19013", col.names = "pretty")
-
-income.tract = data.frame(tract=geography(B19013)[,1],
-                    income.estimate = estimate(B19013[,1]),
-                    se=standard.error(B19013[,1]))
-
-names(income.tract) <- c("tract","income","se")
-income.tract$tract= gsub("Census Tract ", "", income.tract$tract)
-income.tract$tract= gsub(", Tolland County, Connecticut", "", income.tract$tract)
-income.tract$tract= gsub(", Hartford County, Connecticut", "", income.tract$tract)
-
-tracts <- read.csv("../mockup/tracts.csv")
-tracts <- merge(tracts, towns, by = "Town")
-
-income.tract <- merge(income.tract, tracts, by = "tract")
-
-ggplot(data = income.tract) + 
-  geom_dotplot(aes(x = income, fill = Towngroup), 
-               stackgroups = TRUE, binpositions = "all", binwidth = 5700) +
-    scale_fill_brewer(name = "Type of town") + 
-  scale_x_continuous(labels = comma) + 
-  scale_y_continuous(name = "", breaks = NULL) + 
-  labs(x = "Neighborhood household income levels") + 
-  theme_minimal()
-
-write.csv(income.tract,"slide10.csv", row.names = FALSE)
-```
-
---- 
-## Achievement gap starts early
-
-Themes: Achievement gap, global region  
-Key points: Everybody improving, but gaps remain for subgroups
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
-cmt_subgroups <- read.csv('../testscores/cmt-subgroups.csv', na.strings = c("**","-"))
-cmt_subgroups <- subset(cmt_subgroups, cmt_subgroups$District.ID %in% 
-                     levels(as.factor(districts$districtid)))
-
-#Clean up race categories - make compatible with old categories
-cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
-                                pattern = "American Indian/Alaska Native",
-                                replacement = "American Indian")
-
-cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
-                                pattern = "Black/African American",
-                                replacement = "Black, not of Hispanic Origin")
-
-cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
-                                pattern = "(White$)",
-                                replacement = "White, not of Hispanic Origin")
-
-cmt_subgroups <- subset(cmt_subgroups, Students.Tested > 0)
-
-cmt_subgroups_region <- ddply(cmt_subgroups,.(School.Year, Subgroup, Status),
-                              summarise,
-                              Percent.at.or.Above.Goal = weighted.mean(Percent.at.or.Above.Goal, Students.Tested, na.rm = TRUE),
-                              Average.Scale.Score = weighted.mean(Average.Scale.Score, Students.Tested, na.rm = TRUE))
-#Show trends for the region
-ggplot(data = cmt_subgroups_region, aes(x = School.Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status)) + 
-#  geom_point(aes(group = Status)) + 
-  facet_wrap(~ Subgroup, ncol = 5) + 
-  theme_minimal() + 
-  labs(x = "School Year", y = "Average scale score, 3rd grade reading")
-
-write.csv(cmt_subgroups_region,"slide11.csv", row.names = FALSE)
-```
---- 
-## Chronic absenteeism an early warning sign
-
-Themes: Suburbanization of poverty  
-Key points: Some rural districts with high rates, otherwise same as others
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
-absenteeism <- read.csv("../hodgepodge/CT_ChronicAbsenteeism_2012_SDE-1.csv")
-absenteeism <- subset(absenteeism, absenteeism$District.Number %in% levels(as.factor(districts$districtid)))
-absenteeism$District <- reorder(absenteeism$District, absenteeism$Students.Chronically.Absent.in.District..Total)
-
-ggplot(data = absenteeism, aes(x = Students.Chronically.Absent.in.District..Total, 
-                               y = District)) + 
-  geom_point() + 
-  theme_minimal() +
-  labs(x = "% students chronically absent (2012)", y = NULL)
-
-write.csv(absenteeism,"slide12.csv", row.names = FALSE)
-```
---- 
-## High-school graduation rising, but with gaps
-
-Themes: Achievement gap, middle skills gap  
-Key points: HS graduates are talent pipeline, need to address disparities
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
-allgrads <- ddply(subset(hsgrad[1:4], Category %in% c("All Students")),
-                  .(District.Name),
-                  summarise,
-                  rate = mean(X4.Year.Graduation.Rate, na.rm = TRUE))
-allgrads$District.Name <- reorder(allgrads$District.Name, -allgrads$rate)
- 
-ggplot(data = subset(hsgrad, !(Category %in% c("All Students")))) + 
-  geom_boxplot(aes(x = Category, y = X4.Year.Graduation.Rate)) + 
-  coord_flip() + 
-  ylim(50,100) +
-  theme_minimal() + 
-  labs(x = NULL, y = "Four-year graduation rate")
-
-write.csv(subset(hsgrad, !(Category %in% c("All Students"))),"slide13.csv", 
-          row.names = FALSE)
-```
---- 
-## Skilled workforce now, but need to look ahead
-
-Themes: Middle skills jobs, Achievement gap  
-Key points: Connect workforce to schools, aging workforce
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 11}
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 library(acs)
 library(maps)
 library(maptools)
@@ -475,20 +352,18 @@ ggplot(data = attainment.by.race,
                                "Bachelor's degree or higher"), 
                     name = "") +
   coord_flip() + 
-  theme_minimal()
+  theme_minimal(base_size = 16)
 
 write.csv(attainment.by.race,"slide14.csv", row.names = FALSE)
 ```
+
 --- 
-## Jobs (key sectors > 20K employees in region)
+## Job growth
 
-Themes: Middle skills jobs, aging workforce  
-Key points: Eroding regional strengths in finance and manufacturing, growth in healthcare
+And job growth in historically strong sectors (finance & insurance, manufacturing) has not been strong recently. Changes in job market - strengths are strengths no longer. 
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 13}
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 qcew <- read.csv('../mockup/qcewannual-t.csv')
-
-#qcew <- melt(qcew, id.vars = c("area","naicsector","sectortitle"))
 
 qcew <- rbind(qcew,
               ddply(subset(qcew,naicsector > 100), .(area,series,year), summarise,
@@ -496,64 +371,30 @@ qcew <- rbind(qcew,
                     sectortitle = "Manufacturing",
                     value = sum(value)))
 
-#Find sectors with most employment in the region
-#subset(qcew, area == "North Central" & 
-#         series == "Employees" & 
-#         naicsector < 100 & 
-#         naicsector > 0 & year == 2013 & value > 20000)[2]
+jobgrowth <- cast(subset(qcew, series == "Employees" &
+                           area == "North Central" &
+                           naicsector < 100 & 
+                           year %in% c(2013, 2003)),
+                  sectortitle ~ year)
+names(jobgrowth) <- make.names(names(jobgrowth))
+jobgrowth$growth = jobgrowth$X2013 / jobgrowth$X2003 - 1
 
-ggplot(data = subset(qcew, series == "Employees" & 
-                       area != "Multiple locations or unknown" & 
-                       area != "Statewide" & 
-                       naicsector %in% c(44,52,54,61,62,31)), 
-       aes(x = year, y = value)) + 
-  geom_line(aes(group = area, color = area)) + 
-  geom_point(aes(group = area, color = area)) + 
-  facet_wrap(~ sectortitle, ncol = 3) + 
-  labs(x = "Year", y = "Number of employees") + 
-  scale_y_continuous(labels = comma) + 
-  theme_minimal()
+jobgrowth$sectortitle <- reorder(jobgrowth$sectortitle, jobgrowth$growth)
 
-write.csv(subset(qcew, series == "Employees" & 
-                       area != "Multiple locations or unknown" & 
-                       area != "Statewide" & 
-                       naicsector %in% c(44,52,54,61,62,31)),"slide15.csv", 
-          row.names = FALSE)
-```
-
---- 
-## Manufacturing jobs (> 50 establishments)
-
-Themes: Middle skills jobs, aging workforce  
-Key points: Which manufacturing businesses are growing in the region?
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 13}
-#Find manufacturing subsectors with most employment in the region
-#subset(qcew, area == "North Central" & 
-#         series == "Establishments" & 
-#         naicsector > 300 & year == 2013 & value > 50)[2]
-
-ggplot(data = subset(qcew, series == "Establishments" & 
-                       area == "North Central" & 
-                       naicsector %in% c(311,323,332,333,334,336,337,339)), 
-       aes(x = year, y = value)) + 
-  geom_line(aes(group = area)) + 
-  facet_wrap(~ sectortitle, ncol = 4) + 
-  labs(x = "Year", y = "Number of establishments") + 
-  scale_y_continuous(labels = comma) + 
-  theme_minimal()
-
-write.csv(subset(qcew, series == "Establishments" & 
-                       area == "North Central" & 
-                       naicsector %in% c(311,323,332,333,334,336,337,339)),"slide16.csv", 
-          row.names = FALSE)
+ggplot(data = subset(jobgrowth, X2013 > 1000 & 
+                       sectortitle != "Total - All Industries"), 
+       aes(x = growth, y = sectortitle)) + 
+  geom_point(aes(size = X2013)) +
+  theme_minimal(base_size = 16) +
+  scale_size(name = "Number of\n employees (2013)") + 
+  labs(x = "Growth (2010 - 2013)", y = "Sector") +
+  scale_x_continuous(labels = percent)
 ```
 
 --- 
 ## Youth unemployment highest
 
-Themes: Aging workforce, middle skills gap  
-Key points: 16 to 24 cohort are opportunity youth, future workforce
+Possibly lose this one, somewhat redundant with other figures. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 12, fig.height = 6}
 library(reshape)
@@ -589,14 +430,123 @@ write.csv(B23001_sum,"slide17.csv",row.names = FALSE)
 ```
 
 --- 
-## Home ownership sign of civic health (replace)
+## Talent pipeline from schools
 
-Themes: Civic health, concentration of poverty  
-Key points: Housing market divided, higher mobility in Hartford
+Where is future workforce? Don't know what future jobs will be, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+hsgrad <- read.csv("../hsgraduation/hsgraduationrates-district.csv")
+
+#Filter to just regional districts
+districts <- read.csv("../regionalreport/data/hartford-districts.csv")
+hsgrad <- subset(hsgrad, hsgrad$District.Name %in% levels(districts$district))
+hsgrad$District.Name <- factor(hsgrad$District.Name)
+
+#Clean up categories
+hsgrad$Category <- gsub(pattern = "^Indian$", replacement = "American Indian", hsgrad$Category)
+hsgrad$Category <- gsub(pattern = "Asian American", replacement = "Asian", hsgrad$Category)
+hsgrad$Category <- gsub(pattern = "Asian ", replacement = "Asian", hsgrad$Category)
+hsgrad$Category <- gsub(pattern = "Non- Special", replacement = "Non-Special", hsgrad$Category)
+
+#Merge with enrollment data to allow aggregation
+#Doing this with entire enrollment for the school, need better data by year
+hsenroll <- read.csv("../hsgraduation/Race_and_Gender_by_district_2011_for_N_5_suppressed.csv")
+hsenroll <- melt(hsenroll, id.vars = c("Inst","dist","District.Name"))
+hsenroll$variable <- gsub(pattern = "All.Students", replacement = "All Students", hsenroll$variable)
+
+gradenroll <- merge(hsgrad, hsenroll, by.x = c("District.Name","Category"), by.y = c("District.Name","variable"))
+
+#Show trends for region
+gradregion <- ddply(gradenroll, .(Category), summarise, 
+                    wm = weighted.mean(X4.Year.Graduation.Rate, value, na.rm = TRUE))
+
+gradregion$Category <- reorder(gradregion$Category, gradregion$wm)
+
+ggplot(data = subset(gradregion, !(Category %in% c("American Indian")))) + 
+  geom_point(aes(x = Category, y = wm)) + 
+  coord_flip() + 
+  ylim(0,100) +
+  theme_minimal(base_size = 16) + 
+  labs(x = NULL, y = "Average four-year graduation rate by major subgroup (2010 - 2011)")
+
+write.csv(subset(hsgrad, !(Category %in% c("All Students"))),"slide13.csv", 
+          row.names = FALSE)
+```
+
+--- 
+## Achievement gap starts early
+
+And can start addressing gaps in education early on, including even earlier in early childhood. 
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
+cmt_subgroups <- read.csv('../testscores/cmt-subgroups.csv', na.strings = c("**","-"))
+cmt_subgroups <- subset(cmt_subgroups, cmt_subgroups$District.ID %in% 
+                     levels(as.factor(districts$districtid)))
+
+#Clean up race categories - make compatible with old categories
+cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
+                                pattern = "American Indian/Alaska Native",
+                                replacement = "American Indian")
+
+cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
+                                pattern = "Black/African American",
+                                replacement = "Black, not of Hispanic Origin")
+
+cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
+                                pattern = "(White$)",
+                                replacement = "White, not of Hispanic Origin")
+
+cmt_subgroups <- subset(cmt_subgroups, Students.Tested > 0)
+
+cmt_subgroups_region <- ddply(cmt_subgroups,.(School.Year, Subgroup, Status),
+                              summarise,
+                              Percent.at.or.Above.Goal = weighted.mean(Percent.at.or.Above.Goal, Students.Tested, na.rm = TRUE),
+                              Average.Scale.Score = weighted.mean(Average.Scale.Score, Students.Tested, na.rm = TRUE))
+#Show trends for the region
+ggplot(data = cmt_subgroups_region, aes(x = School.Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status)) + 
+#  geom_point(aes(group = Status)) + 
+  facet_wrap(~ Subgroup, ncol = 5) + 
+  scale_x_discrete(breaks = c("2005-06","2009-2010")) + 
+  theme_minimal(base_size = 16) + 
+  labs(x = "School Year", y = "Average scale score, 3rd grade reading")
+
+write.csv(cmt_subgroups_region,"slide11.csv", row.names = FALSE)
+```
+
+--- 
+## Chronic absenteeism an early warning sign
+
+Possibly drop, add in grade-level breakout - where are kids chronically absent in K - 3, middle school. 
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+absenteeism <- read.csv("../hodgepodge/CT_ChronicAbsenteeism_2012_SDE-1.csv")
+districts <- read.csv("../regionalreport/data/hartford-districts.csv")
+absenteeism <- subset(absenteeism, absenteeism$District.Number %in% levels(as.factor(districts$districtid)))
+absenteeism$District <- reorder(absenteeism$District, absenteeism$Students.Chronically.Absent.in.District..Total)
+
+ggplot(data = absenteeism, aes(x = Students.Chronically.Absent.in.District..Total, 
+                               y = District)) + 
+  geom_point() + 
+  theme_minimal(base_size = 16) +
+  labs(x = "% students chronically absent (2012)", y = NULL)
+
+write.csv(absenteeism,"slide12.csv", row.names = FALSE)
+```
+
+--- 
+## Where would you like to live?
+
+Creating opportunity in the region, what makes 'vibrant communities'? Knit together four slides with maps of region for homeownership, crime, affordable housing and voting. 
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+library(acs)
+library(maps)
+library(maptools)
+key = "ba67d3a427e1f785987b9c8bc59341bf7c8a7cc1"
+api.key.install(key)
 hartford.tracts = geo.make(state = "CT", county = c("Hartford","Tolland"), tract = "*", check = F)
-B25008 = acs.fetch(geography = hartford.tracts, table.number = "B25008", col.names = "pretty")
+B25008 = acs.fetch(geography = hartford.tracts, table.number = "B25008", col.names = "pretty", year = 2012)
 own.estimate = divide.acs(numerator=B25008[,2],denominator=B25008[,1], method = 'proportion')
 homeownership.tract = data.frame(tract=geography(B25008)[[1]], 
                          rate=as.numeric(estimate(own.estimate)),
@@ -609,79 +559,110 @@ homeownership.tract$tract= gsub(", Tolland County, Connecticut", "",
 homeownership.tract$tract= gsub(", Hartford County, Connecticut", "", 
                                 homeownership.tract$tract)
 
-tracts <- read.csv("../mockup/tracts.csv")
-tracts <- merge(tracts, towns, by = "Town")
-
-homeownership.tract <- merge(homeownership.tract, tracts, by = "tract")
-
-ggplot(data = homeownership.tract) + 
-  geom_dotplot(aes(x = rate, fill = Towngroup, colour = Towngroup), 
-               binwidth  = .03, stackgroups = TRUE, binpositions = "all") +
-  scale_x_continuous(labels = percent) + 
-  scale_y_continuous(name = "", breaks = NULL) + 
-  labs(x = "% living in owner-occupied units by neighborhood") + 
-  theme_minimal()
-
-write.csv(homeownership.tract,"slide18.csv",row.names = FALSE)
+#Load the UConn tract and town-level shapefiles
+CTTracts <- readShapeSpatial(fn="../tractct_37800_0000_2010_s100_census_1_shp/wgs84/tractct_37800_0000_2010_s100_census_1_shp_wgs84")
+CTTracts <- fortify(CTTracts, region = "NAME10")
+CTTracts <- CTTracts[order(CTTracts$order),]
+#Load the UConn shapefile
+CTTowns <- readShapeSpatial(fn="../townshp/wgs84/townct_37800_0000_2010_s100_census_1_shp_wgs84")
+#Fortify and order the CTTowns to allow ggmap to use that
+CTTowns <- fortify(CTTowns, region = "NAME10")
+CTTowns <- CTTowns[order(CTTowns$order),]
+#Merge with data
+library(classInt)
+jenks <- classIntervals(homeownership.tract$rate, 
+                        n=4, style="fisher")
+choropleth=merge(CTTracts, homeownership.tract, by.x = "id", by.y="tract")
+choropleth=choropleth[order(choropleth$order), ]
+choropleth$rate=cut(choropleth$rate, 
+                          breaks=jenks$brks,
+                          include.lowest=T, dig.lab = T)
+#Make the map
+ggplot(data = choropleth, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = rate)) + 
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = NULL, y = NULL) + 
+  coord_equal() +
+  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.1, fill = NA) +
+  scale_fill_brewer(palette = "Purples", name = "Home ownership\nrate") +
+  theme_minimal(base_size = 16)
 ```
 
 --- 
 ## Affordable housing
 
-Themes: Concentration of poverty  
-Key points: Affordable housing limited to few towns
+Part of creating opportunity outside areas of concentrated poverty. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
 appeals <- read.csv('../housingcost/appeals-list-2012.csv')
 
-#appeals <- subset(appeals, appeals$Town %in% levels(towns$Town))
+appeals <- subset(appeals, appeals$Town %in% levels(towns$Town) & Year == 2012)
 
 #appeals <- merge(appeals,towns, by = "Town")
 
-appeals <- merge(appeals, subset(gh, period == 2010), by.x = "Town", by.y = "city")
+#appeals <- merge(appeals, subset(gh, period == 2010), by.x = "Town", by.y = "city")
 
-#appeals_agg <- ddply(merge(appeals,towns, by = "Town"),
-#                 .(Towngroup), summarise, 
-#                 Percent.Affordable = weighted.mean(Percent.Affordable, 
-#                                                    Total.housing.units...2010.census,
-#                                                    na.rm = TRUE))
-
-ggplot(data = appeals, aes(y = Percent.Affordable, x = poppovertyrate / 100)) + 
-#  geom_point() + 
-  geom_text(aes(label = Town)) + 
-  geom_abline(intercept = 0, slope = 1) + 
-  scale_x_log10(labels = percent) + 
-  scale_y_log10(labels = percent) + 
-  theme_minimal() +
-  labs(y = "% affordable housing units", x = "% living under poverty line (2010)") 
+library(classInt)
+jenks <- classIntervals(appeals$Percent.Affordable, 
+                        n=4, style="fisher")
+choropleth=merge(CTTowns, appeals, by.x = "id", by.y="Town")
+choropleth=choropleth[order(choropleth$order), ]
+choropleth$Percent.Affordable=cut(choropleth$Percent.Affordable, 
+                          breaks=jenks$brks,
+                          include.lowest=T, dig.lab = T)
+#Make the map
+ggplot(data = choropleth, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = Percent.Affordable)) + 
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = NULL, y = NULL) + 
+  coord_equal() +
+  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
+  scale_fill_brewer(palette = "Purples", name = "% Affordable\nHousing (2012)") +
+  theme_minimal()
 
 write.csv(appeals,"slide19.csv",row.names = FALSE)
 ```
 
 --- 
-## Hartford safest in 30 years
+## Hartford getting safer.
 
-Themes: Civic health  
-Key points: Progress on reducing crime, perception v. reality
+Choice in housing based on factors like schools and safety. Doing better but still understandable that those who can afford to live in low-crime towns. Swith to regional map.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
 totalcrime <- read.csv("../crime/totalcrime.csv")
-ggplot(data = subset(totalcrime, Town %in% c("Bridgeport","Hartford","New Haven","New Britain","Stamford","Waterbury")), 
-       aes(x = Year, y = Total.crime.Rate)) + 
-  geom_line(aes(group = Town, colour = Town), size = 1) +
-#  geom_point(aes(colour = Town)) +
-  labs(x = NULL, y = "Crime rate by town (per 100K residents)") +
-  scale_x_continuous(breaks = c(1998,2004,2010)) + 
-  theme_minimal()
+totalcrime <- subset(totalcrime, totalcrime$Town %in% levels(towns$Town))
+totalcrime$Town <- factor(totalcrime$Town)
+totalcrime_avg <- ddply(subset(totalcrime, Year > 2005), .(Town), summarise, 
+                    Total.crime.Rate = weighted.mean(Total.crime.Rate, Total.estimated.population..Number, na.rm = TRUE))
 
-write.csv(subset(totalcrime, Town %in% c("Bridgeport","Hartford","New Haven","New Britain","Stamford","Waterbury")),"slide20.csv",row.names = FALSE)
+library(classInt)
+jenks <- classIntervals(totalcrime_avg$Total.crime.Rate, 
+                        n=3, style="fisher")
+choropleth=merge(CTTowns, totalcrime_avg, by.x = "id", by.y="Town")
+choropleth=choropleth[order(choropleth$order), ]
+choropleth$Total.crime.Rate= cut(choropleth$Total.crime.Rate, 
+                          breaks=jenks$brks,
+                          include.lowest=T, dig.lab = T)
+#Make the map
+ggplot(data = choropleth, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = Total.crime.Rate)) + 
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = NULL, y = NULL) + 
+  coord_equal() +
+  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
+  scale_fill_brewer(palette = "Purples", name = "Total crime\nrate") +
+  theme_minimal(base_size = 16)
+
+write.csv(totalcrime_avg,"slide20.csv",row.names = FALSE)
 ```
 
 --- 
 ## Voter turnout another measure of civic health
 
-Themes: Civic health  
-Key points: Connect to home-ownership
+With with housing, crime. Add in factoid about diversity of gov't officials representing electorate (Hartford / region are among the worst nationally).
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 voting <- read.csv('2012-voting.csv')
@@ -695,7 +676,8 @@ jenks <- classIntervals(voting$Percentage.Checked.as.Having.Voted,
                         n=3, style="fisher")
 choropleth=merge(CTTowns, voting, by.x = "id", by.y="Town")
 choropleth=choropleth[order(choropleth$order), ]
-choropleth$employment=cut(choropleth$Percentage.Checked.as.Having.Voted, 
+choropleth$Percentage.Checked.as.Having.Voted=
+  cut(choropleth$Percentage.Checked.as.Having.Voted, 
                           breaks=jenks$brks,
                           include.lowest=T, dig.lab = T)
 #Make the map
@@ -706,8 +688,7 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   labs(x = NULL, y = NULL) + 
   coord_equal() +
   geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
-  theme_minimal()
-
-write.csv(voting,"slide21.csv",row.names = FALSE)
+  scale_fill_brewer(palette = "Purples", name = "% registered voters\nthat voted") +
+  theme_minimal(base_size = 16)
 ```
 

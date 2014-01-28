@@ -13,11 +13,11 @@ mode        : selfcontained # {standalone, draft}
 ## Outline of indicators
 
 *** =left
-Snapshot / demographics
+Background on the region
 * Population / diversity
 * Commuting patterns
 * School enrollment
-* Income levels or poverty rates
+* Income levels and poverty rates
 
 Education
 * 3rd grade reading
@@ -25,609 +25,170 @@ Education
 * Chronic absenteeism
 
 *** =right
-Workforce / economy / talent
+Jobs
 * Educational attainment
 * Unemployment rate
-* Job growth (need to add)
+* Job growth
 
-Quality of life / community
-* Home-ownership / affordable housing
+Quality of life / civic health
+* Affordable housing
 * Crime rate
 * Voter turnout
 
 ---
 ## Key themes
 
-1. Regionalism
-2. Suburbanization of poverty
-3. Concentration of poverty in Hartford
-4. Achievement gap
-5. Middle skills gap
-6. Aging workforce
-7. Civic health
-8. Global region
+1. 'We are a region'
+2. Concentration of poverty in Hartford
+3. Suburbanization of poverty
+4. Aging population and workforce
+5. Globally connected region
+6. Achievement gap and talent pipeline
+7. Creating opportunity in communities in the region?
+
+--- &twocol
+## Defining the region: Hartford + surrounding towns
+
+*** =left
+Urban periphery
+* Bloomfield, East Hartford, Enfield, Manchester, Newington, Rocky Hill, Vernon, West Hartford, Wethersfield, Windsor, Windsor Locks
+
+*** =right
+Suburban / rural 
+* Andover, Avon, Bolton, Canton, East Granby, East Windsor, Ellington, Farmington, Glastonbury, Granby, Hebron, Marlborough, Simsbury, Somers, South Windsor, Suffield, Stafford, Tolland
 
 ---
-## Flat population growth
+## Low population growth
 
-Themes: regionalism, suburbanization of poverty  
-Key points: population loss in Hartford, flat population growth in suburbs
-
-
-
- 
- 
-
-<div id = 'chart1' class = 'rChart nvd3'></div>
-<script type='text/javascript'>
- $(document).ready(function(){
-      drawchart1()
-    });
-    function drawchart1(){  
-      var opts = {
- "dom": "chart1",
-"width":    700,
-"height":    425,
-"x": "period",
-"y": "sumpop",
-"group": "Towngroup",
-"type": "lineChart",
-"id": "chart1" 
-},
-        data = [
- {
- "period": 1900,
-"Towngroup": "Hartford",
-"sumpop": 79850,
-"sumpoor": null 
-},
-{
- "period": 1900,
-"Towngroup": "Rural",
-"sumpop": 5136,
-"sumpoor": null 
-},
-{
- "period": 1900,
-"Towngroup": "Suburban",
-"sumpop": 30970,
-"sumpoor": null 
-},
-{
- "period": 1900,
-"Towngroup": "Urban periphery",
-"sumpop": 43141,
-"sumpoor": null 
-},
-{
- "period": 1910,
-"Towngroup": "Hartford",
-"sumpop": 98915,
-"sumpoor": null 
-},
-{
- "period": 1910,
-"Towngroup": "Rural",
-"sumpop": 5386,
-"sumpoor": null 
-},
-{
- "period": 1910,
-"Towngroup": "Suburban",
-"sumpop": 33905,
-"sumpoor": null 
-},
-{
- "period": 1910,
-"Towngroup": "Urban periphery",
-"sumpop": 55132,
-"sumpoor": null 
-},
-{
- "period": 1920,
-"Towngroup": "Hartford",
-"sumpop": 138036,
-"sumpoor": null 
-},
-{
- "period": 1920,
-"Towngroup": "Rural",
-"sumpop": 5803,
-"sumpoor": null 
-},
-{
- "period": 1920,
-"Towngroup": "Suburban",
-"sumpop": 38294,
-"sumpoor": null 
-},
-{
- "period": 1920,
-"Towngroup": "Urban periphery",
-"sumpop": 71399,
-"sumpoor": null 
-},
-{
- "period": 1930,
-"Towngroup": "Hartford",
-"sumpop": 164072,
-"sumpoor": null 
-},
-{
- "period": 1930,
-"Towngroup": "Rural",
-"sumpop": 6162,
-"sumpoor": null 
-},
-{
- "period": 1930,
-"Towngroup": "Suburban",
-"sumpop": 43919,
-"sumpoor": null 
-},
-{
- "period": 1930,
-"Towngroup": "Urban periphery",
-"sumpop": 104324,
-"sumpoor": null 
-},
-{
- "period": 1940,
-"Towngroup": "Hartford",
-"sumpop": 166267,
-"sumpoor": null 
-},
-{
- "period": 1940,
-"Towngroup": "Rural",
-"sumpop": 6641,
-"sumpoor": null 
-},
-{
- "period": 1940,
-"Towngroup": "Suburban",
-"sumpop": 51271,
-"sumpoor": null 
-},
-{
- "period": 1940,
-"Towngroup": "Urban periphery",
-"sumpop": 120848,
-"sumpoor": null 
-},
-{
- "period": 1950,
-"Towngroup": "Hartford",
-"sumpop": 177397,
-"sumpoor": null 
-},
-{
- "period": 1950,
-"Towngroup": "Rural",
-"sumpop": 8524,
-"sumpoor": null 
-},
-{
- "period": 1950,
-"Towngroup": "Suburban",
-"sumpop": 66268,
-"sumpoor": null 
-},
-{
- "period": 1950,
-"Towngroup": "Urban periphery",
-"sumpop": 166002,
-"sumpoor": null 
-},
-{
- "period": 1960,
-"Towngroup": "Hartford",
-"sumpop": 162178,
-"sumpoor": null 
-},
-{
- "period": 1960,
-"Towngroup": "Rural",
-"sumpop": 12973,
-"sumpoor": null 
-},
-{
- "period": 1960,
-"Towngroup": "Suburban",
-"sumpop": 117468,
-"sumpoor": null 
-},
-{
- "period": 1960,
-"Towngroup": "Urban periphery",
-"sumpop": 253926,
-"sumpoor": null 
-},
-{
- "period": 1970,
-"Towngroup": "Hartford",
-"sumpop": 158017,
-"sumpoor":          26863 
-},
-{
- "period": 1970,
-"Towngroup": "Rural",
-"sumpop": 17505,
-"sumpoor": null 
-},
-{
- "period": 1970,
-"Towngroup": "Suburban",
-"sumpop": 168469,
-"sumpoor": null 
-},
-{
- "period": 1970,
-"Towngroup": "Urban periphery",
-"sumpop": 325916,
-"sumpoor": null 
-},
-{
- "period": 1980,
-"Towngroup": "Hartford",
-"sumpop": 136392,
-"sumpoor":          34371 
-},
-{
- "period": 1980,
-"Towngroup": "Rural",
-"sumpop": 19542,
-"sumpoor":           1219 
-},
-{
- "period": 1980,
-"Towngroup": "Suburban",
-"sumpop": 196648,
-"sumpoor":           5675 
-},
-{
- "period": 1980,
-"Towngroup": "Urban periphery",
-"sumpop": 315897,
-"sumpoor":          14358 
-},
-{
- "period": 1990,
-"Towngroup": "Hartford",
-"sumpop": 139739,
-"sumpoor":          38428 
-},
-{
- "period": 1990,
-"Towngroup": "Rural",
-"sumpop": 21729,
-"sumpoor":            705 
-},
-{
- "period": 1990,
-"Towngroup": "Suburban",
-"sumpop": 226612,
-"sumpoor":           5341 
-},
-{
- "period": 1990,
-"Towngroup": "Urban periphery",
-"sumpop": 321324,
-"sumpoor":          11873 
-},
-{
- "period": 2000,
-"Towngroup": "Hartford",
-"sumpop": 121578,
-"sumpoor":          37203 
-},
-{
- "period": 2000,
-"Towngroup": "Rural",
-"sumpop": 23271,
-"sumpoor":            958 
-},
-{
- "period": 2000,
-"Towngroup": "Suburban",
-"sumpop": 249706,
-"sumpoor":           7736 
-},
-{
- "period": 2000,
-"Towngroup": "Urban periphery",
-"sumpop": 326765,
-"sumpoor":          19044 
-},
-{
- "period": 2010,
-"Towngroup": "Hartford",
-"sumpop": 124775,
-"sumpoor":          40053 
-},
-{
- "period": 2010,
-"Towngroup": "Rural",
-"sumpop": 25909,
-"sumpoor":           1205 
-},
-{
- "period": 2010,
-"Towngroup": "Suburban",
-"sumpop": 270796,
-"sumpoor":           9245 
-},
-{
- "period": 2010,
-"Towngroup": "Urban periphery",
-"sumpop": 336031,
-"sumpoor":          26451 
-},
-{
- "period": 2015,
-"Towngroup": "Hartford",
-"sumpop": 125999,
-"sumpoor": null 
-},
-{
- "period": 2015,
-"Towngroup": "Rural",
-"sumpop": 38388,
-"sumpoor": null 
-},
-{
- "period": 2015,
-"Towngroup": "Suburban",
-"sumpop": 277497,
-"sumpoor": null 
-},
-{
- "period": 2015,
-"Towngroup": "Urban periphery",
-"sumpop": 341742,
-"sumpoor": null 
-},
-{
- "period": 2020,
-"Towngroup": "Hartford",
-"sumpop": 126656,
-"sumpoor": null 
-},
-{
- "period": 2020,
-"Towngroup": "Rural",
-"sumpop": 38911,
-"sumpoor": null 
-},
-{
- "period": 2020,
-"Towngroup": "Suburban",
-"sumpop": 282476,
-"sumpoor": null 
-},
-{
- "period": 2020,
-"Towngroup": "Urban periphery",
-"sumpop": 346788,
-"sumpoor": null 
-},
-{
- "period": 2025,
-"Towngroup": "Hartford",
-"sumpop": 126185,
-"sumpoor": null 
-},
-{
- "period": 2025,
-"Towngroup": "Rural",
-"sumpop": 39463,
-"sumpoor": null 
-},
-{
- "period": 2025,
-"Towngroup": "Suburban",
-"sumpop": 286373,
-"sumpoor": null 
-},
-{
- "period": 2025,
-"Towngroup": "Urban periphery",
-"sumpop": 350406,
-"sumpoor": null 
-} 
-]
-  
-      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus")) {
-        var data = d3.nest()
-          .key(function(d){
-            //return opts.group === undefined ? 'main' : d[opts.group]
-            //instead of main would think a better default is opts.x
-            return opts.group === undefined ? opts.y : d[opts.group];
-          })
-          .entries(data);
-      }
-      
-      nv.addGraph(function() {
-        var chart = nv.models[opts.type]()
-          .x(function(d) { return d[opts.x] })
-          .y(function(d) { return d[opts.y] })
-          .width(opts.width)
-          .height(opts.height)
-         
-        chart
-  .forceY([      0, 3.5e+05 ])
-          
-        chart.xAxis
-  .axisLabel("Year")
-
-        
-        
-        chart.yAxis
-  .tickFormat(function(d) {return d3.format(',.0f')(d)})
-  .axisLabel("Population")
-      
-       d3.select("#" + opts.id)
-        .append('svg')
-        .datum(data)
-        .transition().duration(500)
-        .call(chart);
-
-       nv.utils.windowResize(chart.update);
-       return chart;
-      });
-    };
-</script>
-
-
----
-## Aging population
-
-Themes: regionalism, aging workforce  
-Key points: aging population in suburbs, talent pipeline from Hartford
+Low population growth overall; losing population in center city, slow outside, most rapid in outer suburbs. Not great at attracting people to the region. 
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
 
 
 --- 
-## Linguistic diversity
+## Suburbanization of poverty
 
-Themes: Global region, achievement gap, suburbanization of poverty   
-Key points: Suburbs more diverse, ELL students in public school systems.
+New poverty will occur in suburbs, new challenges towns can't ignore. 
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
 
 
---- 
-## School choice unique to region
+---
+## Aging population
 
-Themes: Regionalism, disparities  
-Key points: Integration through school system, districts not the same as towns.
+Suburbs are aging quickly and not good prospects for replacing with younger generation, based on current projections. 
 
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
 
 ```
-Error: object 'otm' not found
+## Error: object 'aging' not found
 ```
 
 
 --- 
-## Everyone commutes, mostly to Hartford
+## School enrollment declining
 
-Themes: Regionalism, background for aging workforce  
-Key points: Every town sends workers to Hartford; job center
-
-![image](../mockup/commute-patterns.png)
-
---- 
-## Suburbanization of poverty
-
-Themes: suburbanization of poverty  
-Key points: Poverty growing fastest in suburbs
+Aging population reflected in overall declining school enrollment. Local schools hit twice - once with demographics, again through increase in magnet / private enrollment.
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
+```
+## Error: object 'otm' not found
+```
+
 
 --- 
-## Income inequality
+## Linguistic diversity
 
-Themes: suburbanization, concentration of poverty  
-Key points: Affluent suburbs, inner-ring suburbs have many low-income neighborhoods
+Diversity part of changing population (tie back to 1st chart); which suburbs will 'globalize'? Where will new population in our region come from? (Add refugee factoid.)
 
 ![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5.png) 
 
 
 --- 
-## Achievement gap starts early
+## Everyone commutes, mostly to Hartford
 
-Themes: Achievement gap, global region  
-Key points: Everybody improving, but gaps remain for subgroups
+Globally connected city via employers as well. Draws high-skill jobs to the region, so people commute to the job centers (Hartford and some other towns).
+
+![image](../mockup/commute-patterns.png)
+
+--- 
+## Meeting demands for a skilled workforce
+
+Commuting and the next 2 slides together, making the case that region has high skilled jobs as an asset, but skills not equitably distributed in the workforce. 
 
 ![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
 
---- 
-## Chronic absenteeism an early warning sign
 
-Themes: Suburbanization of poverty  
-Key points: Some rural districts with high rates, otherwise same as others
+--- 
+## Job growth
+
+And job growth in historically strong sectors (finance & insurance, manufacturing) has not been strong recently. Changes in job market - strengths are strengths no longer. 
 
 ![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
-
---- 
-## High-school graduation rising, but with gaps
-
-Themes: Achievement gap, middle skills gap  
-Key points: HS graduates are talent pipeline, need to address disparities
-
-![plot of chunk unnamed-chunk-8](assets/fig/unnamed-chunk-8.png) 
-
---- 
-## Skilled workforce now, but need to look ahead
-
-Themes: Middle skills jobs, Achievement gap  
-Key points: Connect workforce to schools, aging workforce
-
-![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
-
---- 
-## Jobs (key sectors > 20K employees in region)
-
-Themes: Middle skills jobs, aging workforce  
-Key points: Eroding regional strengths in finance and manufacturing, growth in healthcare
-
-![plot of chunk unnamed-chunk-10](assets/fig/unnamed-chunk-10.png) 
-
-
---- 
-## Manufacturing jobs (> 50 establishments)
-
-Themes: Middle skills jobs, aging workforce  
-Key points: Which manufacturing businesses are growing in the region?
-
-![plot of chunk unnamed-chunk-11](assets/fig/unnamed-chunk-11.png) 
 
 
 --- 
 ## Youth unemployment highest
 
-Themes: Aging workforce, middle skills gap  
-Key points: 16 to 24 cohort are opportunity youth, future workforce
+Possibly lose this one, somewhat redundant with other figures. 
+
+![plot of chunk unnamed-chunk-8](assets/fig/unnamed-chunk-8.png) 
+
+
+--- 
+## Talent pipeline from schools
+
+Where is future workforce? Don't know what future jobs will be, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand.
+
+![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
+
+
+--- 
+## Achievement gap starts early
+
+And can start addressing gaps in education early on, including even earlier in early childhood. 
+
+![plot of chunk unnamed-chunk-10](assets/fig/unnamed-chunk-10.png) 
+
+
+--- 
+## Chronic absenteeism an early warning sign
+
+Possibly drop, add in grade-level breakout - where are kids chronically absent in K - 3, middle school. 
+
+![plot of chunk unnamed-chunk-11](assets/fig/unnamed-chunk-11.png) 
+
+
+--- 
+## Where would you like to live?
+
+Creating opportunity in the region, what makes 'vibrant communities'? Knit together four slides with maps of region for homeownership, crime, affordable housing and voting. 
 
 ![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
 
 
 --- 
-## Home ownership sign of civic health (replace)
+## Affordable housing
 
-Themes: Civic health, concentration of poverty  
-Key points: Housing market divided, higher mobility in Hartford
+Part of creating opportunity outside areas of concentrated poverty. 
 
 ![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
 
 
 --- 
-## Affordable housing
+## Hartford getting safer.
 
-Themes: Concentration of poverty  
-Key points: Affordable housing limited to few towns
+Choice in housing based on factors like schools and safety. Doing better but still understandable that those who can afford to live in low-crime towns. Swith to regional map.
 
 ![plot of chunk unnamed-chunk-14](assets/fig/unnamed-chunk-14.png) 
 
 
 --- 
-## Hartford safest in 30 years
-
-Themes: Civic health  
-Key points: Progress on reducing crime, perception v. reality
-
-![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15.png) 
-
-
---- 
 ## Voter turnout another measure of civic health
 
-Themes: Civic health  
-Key points: Connect to home-ownership
+With with housing, crime. Add in factoid about diversity of gov't officials representing electorate (Hartford / region are among the worst nationally).
 
-![plot of chunk unnamed-chunk-16](assets/fig/unnamed-chunk-16.png) 
+![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15.png) 
 
 

@@ -54,13 +54,13 @@
   <article data-timings="">
     
 <div style='float:left;width:48%;' class='centered'>
-  <p>Snapshot / demographics</p>
+  <p>Background on the region</p>
 
 <ul>
 <li>Population / diversity</li>
 <li>Commuting patterns</li>
 <li>School enrollment</li>
-<li>Income levels or poverty rates</li>
+<li>Income levels and poverty rates</li>
 </ul>
 
 <p>Education</p>
@@ -73,18 +73,18 @@
 
 </div>
 <div style='float:right;width:48%;'>
-  <p>Workforce / economy / talent</p>
+  <p>Jobs</p>
 
 <ul>
 <li>Educational attainment</li>
 <li>Unemployment rate</li>
-<li>Job growth (need to add)</li>
+<li>Job growth</li>
 </ul>
 
-<p>Quality of life / community</p>
+<p>Quality of life / civic health</p>
 
 <ul>
-<li>Home-ownership / affordable housing</li>
+<li>Affordable housing</li>
 <li>Crime rate</li>
 <li>Voter turnout</li>
 </ul>
@@ -100,14 +100,13 @@
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Regionalism</li>
-<li>Suburbanization of poverty</li>
+<li>&#39;We are a region&#39;</li>
 <li>Concentration of poverty in Hartford</li>
-<li>Achievement gap</li>
-<li>Middle skills gap</li>
-<li>Aging workforce</li>
-<li>Civic health</li>
-<li>Global region</li>
+<li>Suburbanization of poverty</li>
+<li>Aging population and workforce</li>
+<li>Globally connected region</li>
+<li>Achievement gap and talent pipeline</li>
+<li>Creating opportunity in communities in the region?</li>
 </ol>
 
   </article>
@@ -116,444 +115,36 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Flat population growth</h2>
+    <h2>Defining the region: Hartford + surrounding towns</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: regionalism, suburbanization of poverty<br>
-Key points: population loss in Hartford, flat population growth in suburbs</p>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p>Urban periphery</p>
 
-<div id = 'chart1' class = 'rChart nvd3'></div>
+<ul>
+<li>Bloomfield, East Hartford, Enfield, Manchester, Newington, Rocky Hill, Vernon, West Hartford, Wethersfield, Windsor, Windsor Locks</li>
+</ul>
 
-<script type='text/javascript'>
- $(document).ready(function(){
-      drawchart1()
-    });
-    function drawchart1(){  
-      var opts = {
- "dom": "chart1",
-"width":    700,
-"height":    425,
-"x": "period",
-"y": "sumpop",
-"group": "Towngroup",
-"type": "lineChart",
-"id": "chart1" 
-},
-        data = [
- {
- "period": 1900,
-"Towngroup": "Hartford",
-"sumpop": 79850,
-"sumpoor": null 
-},
-{
- "period": 1900,
-"Towngroup": "Rural",
-"sumpop": 5136,
-"sumpoor": null 
-},
-{
- "period": 1900,
-"Towngroup": "Suburban",
-"sumpop": 30970,
-"sumpoor": null 
-},
-{
- "period": 1900,
-"Towngroup": "Urban periphery",
-"sumpop": 43141,
-"sumpoor": null 
-},
-{
- "period": 1910,
-"Towngroup": "Hartford",
-"sumpop": 98915,
-"sumpoor": null 
-},
-{
- "period": 1910,
-"Towngroup": "Rural",
-"sumpop": 5386,
-"sumpoor": null 
-},
-{
- "period": 1910,
-"Towngroup": "Suburban",
-"sumpop": 33905,
-"sumpoor": null 
-},
-{
- "period": 1910,
-"Towngroup": "Urban periphery",
-"sumpop": 55132,
-"sumpoor": null 
-},
-{
- "period": 1920,
-"Towngroup": "Hartford",
-"sumpop": 138036,
-"sumpoor": null 
-},
-{
- "period": 1920,
-"Towngroup": "Rural",
-"sumpop": 5803,
-"sumpoor": null 
-},
-{
- "period": 1920,
-"Towngroup": "Suburban",
-"sumpop": 38294,
-"sumpoor": null 
-},
-{
- "period": 1920,
-"Towngroup": "Urban periphery",
-"sumpop": 71399,
-"sumpoor": null 
-},
-{
- "period": 1930,
-"Towngroup": "Hartford",
-"sumpop": 164072,
-"sumpoor": null 
-},
-{
- "period": 1930,
-"Towngroup": "Rural",
-"sumpop": 6162,
-"sumpoor": null 
-},
-{
- "period": 1930,
-"Towngroup": "Suburban",
-"sumpop": 43919,
-"sumpoor": null 
-},
-{
- "period": 1930,
-"Towngroup": "Urban periphery",
-"sumpop": 104324,
-"sumpoor": null 
-},
-{
- "period": 1940,
-"Towngroup": "Hartford",
-"sumpop": 166267,
-"sumpoor": null 
-},
-{
- "period": 1940,
-"Towngroup": "Rural",
-"sumpop": 6641,
-"sumpoor": null 
-},
-{
- "period": 1940,
-"Towngroup": "Suburban",
-"sumpop": 51271,
-"sumpoor": null 
-},
-{
- "period": 1940,
-"Towngroup": "Urban periphery",
-"sumpop": 120848,
-"sumpoor": null 
-},
-{
- "period": 1950,
-"Towngroup": "Hartford",
-"sumpop": 177397,
-"sumpoor": null 
-},
-{
- "period": 1950,
-"Towngroup": "Rural",
-"sumpop": 8524,
-"sumpoor": null 
-},
-{
- "period": 1950,
-"Towngroup": "Suburban",
-"sumpop": 66268,
-"sumpoor": null 
-},
-{
- "period": 1950,
-"Towngroup": "Urban periphery",
-"sumpop": 166002,
-"sumpoor": null 
-},
-{
- "period": 1960,
-"Towngroup": "Hartford",
-"sumpop": 162178,
-"sumpoor": null 
-},
-{
- "period": 1960,
-"Towngroup": "Rural",
-"sumpop": 12973,
-"sumpoor": null 
-},
-{
- "period": 1960,
-"Towngroup": "Suburban",
-"sumpop": 117468,
-"sumpoor": null 
-},
-{
- "period": 1960,
-"Towngroup": "Urban periphery",
-"sumpop": 253926,
-"sumpoor": null 
-},
-{
- "period": 1970,
-"Towngroup": "Hartford",
-"sumpop": 158017,
-"sumpoor":          26863 
-},
-{
- "period": 1970,
-"Towngroup": "Rural",
-"sumpop": 17505,
-"sumpoor": null 
-},
-{
- "period": 1970,
-"Towngroup": "Suburban",
-"sumpop": 168469,
-"sumpoor": null 
-},
-{
- "period": 1970,
-"Towngroup": "Urban periphery",
-"sumpop": 325916,
-"sumpoor": null 
-},
-{
- "period": 1980,
-"Towngroup": "Hartford",
-"sumpop": 136392,
-"sumpoor":          34371 
-},
-{
- "period": 1980,
-"Towngroup": "Rural",
-"sumpop": 19542,
-"sumpoor":           1219 
-},
-{
- "period": 1980,
-"Towngroup": "Suburban",
-"sumpop": 196648,
-"sumpoor":           5675 
-},
-{
- "period": 1980,
-"Towngroup": "Urban periphery",
-"sumpop": 315897,
-"sumpoor":          14358 
-},
-{
- "period": 1990,
-"Towngroup": "Hartford",
-"sumpop": 139739,
-"sumpoor":          38428 
-},
-{
- "period": 1990,
-"Towngroup": "Rural",
-"sumpop": 21729,
-"sumpoor":            705 
-},
-{
- "period": 1990,
-"Towngroup": "Suburban",
-"sumpop": 226612,
-"sumpoor":           5341 
-},
-{
- "period": 1990,
-"Towngroup": "Urban periphery",
-"sumpop": 321324,
-"sumpoor":          11873 
-},
-{
- "period": 2000,
-"Towngroup": "Hartford",
-"sumpop": 121578,
-"sumpoor":          37203 
-},
-{
- "period": 2000,
-"Towngroup": "Rural",
-"sumpop": 23271,
-"sumpoor":            958 
-},
-{
- "period": 2000,
-"Towngroup": "Suburban",
-"sumpop": 249706,
-"sumpoor":           7736 
-},
-{
- "period": 2000,
-"Towngroup": "Urban periphery",
-"sumpop": 326765,
-"sumpoor":          19044 
-},
-{
- "period": 2010,
-"Towngroup": "Hartford",
-"sumpop": 124775,
-"sumpoor":          40053 
-},
-{
- "period": 2010,
-"Towngroup": "Rural",
-"sumpop": 25909,
-"sumpoor":           1205 
-},
-{
- "period": 2010,
-"Towngroup": "Suburban",
-"sumpop": 270796,
-"sumpoor":           9245 
-},
-{
- "period": 2010,
-"Towngroup": "Urban periphery",
-"sumpop": 336031,
-"sumpoor":          26451 
-},
-{
- "period": 2015,
-"Towngroup": "Hartford",
-"sumpop": 125999,
-"sumpoor": null 
-},
-{
- "period": 2015,
-"Towngroup": "Rural",
-"sumpop": 38388,
-"sumpoor": null 
-},
-{
- "period": 2015,
-"Towngroup": "Suburban",
-"sumpop": 277497,
-"sumpoor": null 
-},
-{
- "period": 2015,
-"Towngroup": "Urban periphery",
-"sumpop": 341742,
-"sumpoor": null 
-},
-{
- "period": 2020,
-"Towngroup": "Hartford",
-"sumpop": 126656,
-"sumpoor": null 
-},
-{
- "period": 2020,
-"Towngroup": "Rural",
-"sumpop": 38911,
-"sumpoor": null 
-},
-{
- "period": 2020,
-"Towngroup": "Suburban",
-"sumpop": 282476,
-"sumpoor": null 
-},
-{
- "period": 2020,
-"Towngroup": "Urban periphery",
-"sumpop": 346788,
-"sumpoor": null 
-},
-{
- "period": 2025,
-"Towngroup": "Hartford",
-"sumpop": 126185,
-"sumpoor": null 
-},
-{
- "period": 2025,
-"Towngroup": "Rural",
-"sumpop": 39463,
-"sumpoor": null 
-},
-{
- "period": 2025,
-"Towngroup": "Suburban",
-"sumpop": 286373,
-"sumpoor": null 
-},
-{
- "period": 2025,
-"Towngroup": "Urban periphery",
-"sumpop": 350406,
-"sumpoor": null 
-} 
-]
-  
-      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus")) {
-        var data = d3.nest()
-          .key(function(d){
-            //return opts.group === undefined ? 'main' : d[opts.group]
-            //instead of main would think a better default is opts.x
-            return opts.group === undefined ? opts.y : d[opts.group];
-          })
-          .entries(data);
-      }
-      
-      nv.addGraph(function() {
-        var chart = nv.models[opts.type]()
-          .x(function(d) { return d[opts.x] })
-          .y(function(d) { return d[opts.y] })
-          .width(opts.width)
-          .height(opts.height)
-         
-        chart
-  .forceY([      0, 3.5e+05 ])
-          
-        chart.xAxis
-  .axisLabel("Year")
+</div>
+<div style='float:right;width:48%;'>
+  <p>Suburban / rural </p>
 
-        
-        
-        chart.yAxis
-  .tickFormat(function(d) {return d3.format(',.0f')(d)})
-  .axisLabel("Population")
-      
-       d3.select("#" + opts.id)
-        .append('svg')
-        .datum(data)
-        .transition().duration(500)
-        .call(chart);
+<ul>
+<li>Andover, Avon, Bolton, Canton, East Granby, East Windsor, Ellington, Farmington, Glastonbury, Granby, Hebron, Marlborough, Simsbury, Somers, South Windsor, Suffield, Stafford, Tolland</li>
+</ul>
 
-       nv.utils.windowResize(chart.update);
-       return chart;
-      });
-    };
-</script>
-
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Aging population</h2>
+    <h2>Low population growth</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: regionalism, aging workforce<br>
-Key points: aging population in suburbs, talent pipeline from Hartford</p>
+    <p>Low population growth overall; losing population in center city, slow outside, most rapid in outer suburbs. Not great at attracting people to the region. </p>
 
 <p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
 
@@ -563,11 +154,10 @@ Key points: aging population in suburbs, talent pipeline from Hartford</p>
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>Linguistic diversity</h2>
+    <h2>Suburbanization of poverty</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Global region, achievement gap, suburbanization of poverty<br>
-Key points: Suburbs more diverse, ELL students in public school systems.</p>
+    <p>New poverty will occur in suburbs, new challenges towns can&#39;t ignore. </p>
 
 <p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
 
@@ -577,15 +167,14 @@ Key points: Suburbs more diverse, ELL students in public school systems.</p>
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>School choice unique to region</h2>
+    <h2>Aging population</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Regionalism, disparities<br>
-Key points: Integration through school system, districts not the same as towns.</p>
+    <p>Suburbs are aging quickly and not good prospects for replacing with younger generation, based on current projections. </p>
 
 <p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
 
-<pre><code>Error: object &#39;otm&#39; not found
+<pre><code>## Error: object &#39;aging&#39; not found
 </code></pre>
 
   </article>
@@ -594,13 +183,15 @@ Key points: Integration through school system, districts not the same as towns.<
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Everyone commutes, mostly to Hartford</h2>
+    <h2>School enrollment declining</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Regionalism, background for aging workforce<br>
-Key points: Every town sends workers to Hartford; job center</p>
+    <p>Aging population reflected in overall declining school enrollment. Local schools hit twice - once with demographics, again through increase in magnet / private enrollment.</p>
 
-<p><img src="../mockup/commute-patterns.png" alt="image"></p>
+<p><img src="assets/fig/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
+
+<pre><code>## Error: object &#39;otm&#39; not found
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -608,25 +199,10 @@ Key points: Every town sends workers to Hartford; job center</p>
 
 <slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>Suburbanization of poverty</h2>
+    <h2>Linguistic diversity</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: suburbanization of poverty<br>
-Key points: Poverty growing fastest in suburbs</p>
-
-<p><img src="assets/fig/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-9" style="background:;">
-  <hgroup>
-    <h2>Income inequality</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Themes: suburbanization, concentration of poverty<br>
-Key points: Affluent suburbs, inner-ring suburbs have many low-income neighborhoods</p>
+    <p>Diversity part of changing population (tie back to 1st chart); which suburbs will &#39;globalize&#39;? Where will new population in our region come from? (Add refugee factoid.)</p>
 
 <p><img src="assets/fig/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5"> </p>
 
@@ -634,13 +210,25 @@ Key points: Affluent suburbs, inner-ring suburbs have many low-income neighborho
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-9" style="background:;">
   <hgroup>
-    <h2>Achievement gap starts early</h2>
+    <h2>Everyone commutes, mostly to Hartford</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Achievement gap, global region<br>
-Key points: Everybody improving, but gaps remain for subgroups</p>
+    <p>Globally connected city via employers as well. Draws high-skill jobs to the region, so people commute to the job centers (Hartford and some other towns).</p>
+
+<p><img src="../mockup/commute-patterns.png" alt="image"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Meeting demands for a skilled workforce</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Commuting and the next 2 slides together, making the case that region has high skilled jobs as an asset, but skills not equitably distributed in the workforce. </p>
 
 <p><img src="assets/fig/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6"> </p>
 
@@ -650,11 +238,10 @@ Key points: Everybody improving, but gaps remain for subgroups</p>
 
 <slide class="" id="slide-11" style="background:;">
   <hgroup>
-    <h2>Chronic absenteeism an early warning sign</h2>
+    <h2>Job growth</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Suburbanization of poverty<br>
-Key points: Some rural districts with high rates, otherwise same as others</p>
+    <p>And job growth in historically strong sectors (finance &amp; insurance, manufacturing) has not been strong recently. Changes in job market - strengths are strengths no longer. </p>
 
 <p><img src="assets/fig/unnamed-chunk-7.png" alt="plot of chunk unnamed-chunk-7"> </p>
 
@@ -664,11 +251,10 @@ Key points: Some rural districts with high rates, otherwise same as others</p>
 
 <slide class="" id="slide-12" style="background:;">
   <hgroup>
-    <h2>High-school graduation rising, but with gaps</h2>
+    <h2>Youth unemployment highest</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Achievement gap, middle skills gap<br>
-Key points: HS graduates are talent pipeline, need to address disparities</p>
+    <p>Possibly lose this one, somewhat redundant with other figures. </p>
 
 <p><img src="assets/fig/unnamed-chunk-8.png" alt="plot of chunk unnamed-chunk-8"> </p>
 
@@ -678,11 +264,10 @@ Key points: HS graduates are talent pipeline, need to address disparities</p>
 
 <slide class="" id="slide-13" style="background:;">
   <hgroup>
-    <h2>Skilled workforce now, but need to look ahead</h2>
+    <h2>Talent pipeline from schools</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Middle skills jobs, Achievement gap<br>
-Key points: Connect workforce to schools, aging workforce</p>
+    <p>Where is future workforce? Don&#39;t know what future jobs will be, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand.</p>
 
 <p><img src="assets/fig/unnamed-chunk-9.png" alt="plot of chunk unnamed-chunk-9"> </p>
 
@@ -692,11 +277,10 @@ Key points: Connect workforce to schools, aging workforce</p>
 
 <slide class="" id="slide-14" style="background:;">
   <hgroup>
-    <h2>Jobs (key sectors &gt; 20K employees in region)</h2>
+    <h2>Achievement gap starts early</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Middle skills jobs, aging workforce<br>
-Key points: Eroding regional strengths in finance and manufacturing, growth in healthcare</p>
+    <p>And can start addressing gaps in education early on, including even earlier in early childhood. </p>
 
 <p><img src="assets/fig/unnamed-chunk-10.png" alt="plot of chunk unnamed-chunk-10"> </p>
 
@@ -706,11 +290,10 @@ Key points: Eroding regional strengths in finance and manufacturing, growth in h
 
 <slide class="" id="slide-15" style="background:;">
   <hgroup>
-    <h2>Manufacturing jobs (&gt; 50 establishments)</h2>
+    <h2>Chronic absenteeism an early warning sign</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Middle skills jobs, aging workforce<br>
-Key points: Which manufacturing businesses are growing in the region?</p>
+    <p>Possibly drop, add in grade-level breakout - where are kids chronically absent in K - 3, middle school. </p>
 
 <p><img src="assets/fig/unnamed-chunk-11.png" alt="plot of chunk unnamed-chunk-11"> </p>
 
@@ -720,11 +303,10 @@ Key points: Which manufacturing businesses are growing in the region?</p>
 
 <slide class="" id="slide-16" style="background:;">
   <hgroup>
-    <h2>Youth unemployment highest</h2>
+    <h2>Where would you like to live?</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Aging workforce, middle skills gap<br>
-Key points: 16 to 24 cohort are opportunity youth, future workforce</p>
+    <p>Creating opportunity in the region, what makes &#39;vibrant communities&#39;? Knit together four slides with maps of region for homeownership, crime, affordable housing and voting. </p>
 
 <p><img src="assets/fig/unnamed-chunk-12.png" alt="plot of chunk unnamed-chunk-12"> </p>
 
@@ -734,11 +316,10 @@ Key points: 16 to 24 cohort are opportunity youth, future workforce</p>
 
 <slide class="" id="slide-17" style="background:;">
   <hgroup>
-    <h2>Home ownership sign of civic health (replace)</h2>
+    <h2>Affordable housing</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Civic health, concentration of poverty<br>
-Key points: Housing market divided, higher mobility in Hartford</p>
+    <p>Part of creating opportunity outside areas of concentrated poverty. </p>
 
 <p><img src="assets/fig/unnamed-chunk-13.png" alt="plot of chunk unnamed-chunk-13"> </p>
 
@@ -748,11 +329,10 @@ Key points: Housing market divided, higher mobility in Hartford</p>
 
 <slide class="" id="slide-18" style="background:;">
   <hgroup>
-    <h2>Affordable housing</h2>
+    <h2>Hartford getting safer.</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Concentration of poverty<br>
-Key points: Affordable housing limited to few towns</p>
+    <p>Choice in housing based on factors like schools and safety. Doing better but still understandable that those who can afford to live in low-crime towns. Swith to regional map.</p>
 
 <p><img src="assets/fig/unnamed-chunk-14.png" alt="plot of chunk unnamed-chunk-14"> </p>
 
@@ -762,27 +342,12 @@ Key points: Affordable housing limited to few towns</p>
 
 <slide class="" id="slide-19" style="background:;">
   <hgroup>
-    <h2>Hartford safest in 30 years</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Themes: Civic health<br>
-Key points: Progress on reducing crime, perception v. reality</p>
-
-<p><img src="assets/fig/unnamed-chunk-15.png" alt="plot of chunk unnamed-chunk-15"> </p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-20" style="background:;">
-  <hgroup>
     <h2>Voter turnout another measure of civic health</h2>
   </hgroup>
   <article data-timings="">
-    <p>Themes: Civic health<br>
-Key points: Connect to home-ownership</p>
+    <p>With with housing, crime. Add in factoid about diversity of gov&#39;t officials representing electorate (Hartford / region are among the worst nationally).</p>
 
-<p><img src="assets/fig/unnamed-chunk-16.png" alt="plot of chunk unnamed-chunk-16"> </p>
+<p><img src="assets/fig/unnamed-chunk-15.png" alt="plot of chunk unnamed-chunk-15"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -806,110 +371,104 @@ Key points: Connect to home-ownership</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Flat population growth'>
+        data-slide=3 title='Defining the region: Hartford + surrounding towns'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Aging population'>
+        data-slide=4 title='Low population growth'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Linguistic diversity'>
+        data-slide=5 title='Suburbanization of poverty'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='School choice unique to region'>
+        data-slide=6 title='Aging population'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Everyone commutes, mostly to Hartford'>
+        data-slide=7 title='School enrollment declining'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Suburbanization of poverty'>
+        data-slide=8 title='Linguistic diversity'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Income inequality'>
+        data-slide=9 title='Everyone commutes, mostly to Hartford'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Achievement gap starts early'>
+        data-slide=10 title='Meeting demands for a skilled workforce'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Chronic absenteeism an early warning sign'>
+        data-slide=11 title='Job growth'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='High-school graduation rising, but with gaps'>
+        data-slide=12 title='Youth unemployment highest'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Skilled workforce now, but need to look ahead'>
+        data-slide=13 title='Talent pipeline from schools'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Jobs (key sectors &gt; 20K employees in region)'>
+        data-slide=14 title='Achievement gap starts early'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Manufacturing jobs (&gt; 50 establishments)'>
+        data-slide=15 title='Chronic absenteeism an early warning sign'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Youth unemployment highest'>
+        data-slide=16 title='Where would you like to live?'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Home ownership sign of civic health (replace)'>
+        data-slide=17 title='Affordable housing'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Affordable housing'>
+        data-slide=18 title='Hartford getting safer.'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Hartford safest in 30 years'>
+        data-slide=19 title='Voter turnout another measure of civic health'>
          19
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Voter turnout another measure of civic health'>
-         20
       </a>
     </li>
   </ul>
