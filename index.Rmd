@@ -74,7 +74,7 @@ write.csv(towns,"slide4.csv", row.names = FALSE)
 ---
 ## Low population growth
 
-Low population growth overall; losing population in center city, slow outside, most rapid in outer suburbs. Not great at attracting people to the region. 
+Low population growth overall; losing population in center city, slow growth outside, most rapid in outer suburbs. Region struggles to attract new residents. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
 library(ggplot2)
@@ -108,10 +108,15 @@ New poverty will occur in suburbs, new challenges towns can't ignore.
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 gh <- merge(gh,towns, by.x = "city", by.y = "Town")
 
-gh_sum <- ddply(gh,.(Towngroup, period), summarise, population = sum(population), population.under.poverty = sum(poppoverty))
+gh_sum <- ddply(gh,.(Towngroup, period), summarise, 
+                population = sum(population), 
+                population.under.poverty = sum(poppoverty),
+                median = median(medianfamilyincome, na.rm = T),
+                min = min(medianfamilyincome, na.rm = T),
+                max = max(medianfamilyincome, na.rm = T))
 
 ggplot(aes(y = population.under.poverty, 
-           x = period), data = subset(gh_sum,period >= 1970)) + 
+           x = period), data = subset(gh_sum,period >= 1970 & period <= 2010)) + 
   geom_line(aes(group = Towngroup, colour = Towngroup), size = 1) + 
   scale_y_continuous(labels = comma, limits = c(0,41000)) + 
   labs(x = "Year", y = 'Population') +
@@ -120,10 +125,47 @@ ggplot(aes(y = population.under.poverty,
 write.csv(subset(gh_sum,period >= 1970),"slide6.csv", row.names = FALSE)
 ```
 
+--- 
+## Rising income inequality
+
+Similar to previous, but with household income instead of poverty.
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
+gh <- read.csv("../regionalreport/data/greaterhartford.csv")
+gh$poppoverty <- round((gh$poppovertyrate / 100) * gh$population,0)
+
+gh <- merge(gh,towns, by.x = "city", by.y = "Town")
+
+gh_sum <- ddply(gh,.(Towngroup, period), summarise, 
+                population = sum(population), 
+                population.under.poverty = sum(poppoverty),
+                median = median(medianfamilyincome, na.rm = T),
+                min = min(medianfamilyincome, na.rm = T),
+                max = max(medianfamilyincome, na.rm = T))
+
+ggplot(aes(x = period, group = Towngroup), 
+       data = subset(gh_sum,period >= 1960 & period <= 2010)) + 
+#  geom_linerange(aes(ymin = min, ymax = max, colour = Towngroup)) + 
+#  geom_point(aes(colour = Towngroup)) + 
+  geom_ribbon(aes(ymin=min, ymax=max, y = median, fill = Towngroup), alpha = 0.5) + 
+  geom_line(aes(y = median, colour = Towngroup)) + 
+  annotate("text", x = 2008, y = 30000, label ="Hartford: $28,970", size = 3) +
+  annotate("text", x = 2008, y = 115000, label ="Simsbury: $113,224", size = 3) +
+  annotate("text", x = 2008, y = 45000, label ="East Hartford: $48,613", size = 3) +
+  annotate("text", x = 1970, y = 8500, label ="Hartford: $9,108", size = 3) +
+  annotate("text", x = 1970, y = 18000, label ="Simsbury: $17,186", size = 3) +
+  annotate("text", x = 1970, y = 12300, label ="East Hartford: $11,771", size = 3) +
+  scale_y_continuous(labels = comma, lim = c(0,125000)) + 
+  labs(x = "Year", y = 'Median household income') +
+  theme_minimal(base_size = 16)
+
+write.csv(subset(gh_sum,period >= 1970),"slide6.csv", row.names = FALSE)
+```
+
 ---
 ## Aging population
 
-Suburbs are aging quickly and not good prospects for replacing with younger generation, based on current projections. 
+Suburbs are aging quickly with no good prospects for replacing with younger generation, based on current projections. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
 projections <- read.csv('../reviewversion/sdc-projections.csv')
@@ -160,7 +202,7 @@ ggplot(data =
          ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),
        aes(x = YEAR, y = value)) + 
   geom_line(aes(group = AGE, colour = AGE), size = 1, linetype = 'dotted') +
-  geom_point(aes(group = AGE, colour = AGE, shape = AGE)) +
+  geom_point(aes(group = AGE, colour = AGE)) +
   facet_wrap(~ Towngroup, ncol = 3) +
   scale_fill_brewer(name = "Age") +
   scale_y_continuous(labels = comma) + 
@@ -170,10 +212,28 @@ ggplot(data =
 write.csv(ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),'slide7.csv', row.names = F)
 ```
 
+---
+## Aging population v. 2
+
+Same as previous with different grouping. Is this more easier to understand?
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
+ggplot(data = 
+         ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),
+       aes(x = YEAR, y = value)) + 
+  geom_line(aes(group = Towngroup, colour = Towngroup), size = 1, linetype = 'dotted') +
+  geom_point(aes(group = Towngroup, colour = Towngroup)) +
+  facet_wrap(~ AGE, ncol = 4) +
+  scale_fill_brewer(name = "Age") +
+  scale_y_continuous(labels = comma) + 
+  labs(y = "Population", x = "Year") +
+  theme_minimal(base_size = 16)
+```
+
 --- 
 ## School enrollment declining
 
-Aging population reflected in overall declining school enrollment. Local schools hit twice - once with demographics, again through increase in magnet / private enrollment.
+Aging population reflected in overall decline in school enrollment. Local schools impacted by demographics and through increase in magnet / private enrollment. Leading to large number of neighborhood school closures/consolidations.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 enroll <- read.csv("../regionalreport/data/all-schools.csv", stringsAsFactors=FALSE)
@@ -255,7 +315,7 @@ write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")),
 --- 
 ## Linguistic diversity
 
-Diversity part of changing population (tie back to 1st chart); which suburbs will 'globalize'? Where will new population in our region come from? (Add refugee factoid.)
+More diversity in changing population (tie back to 1st chart); which suburbs will 'globalize'? Where will new population in our region come from and what impact will this have?
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
 languages <- read.csv('../reviewversion/Languages-all.csv', na.strings = c("**","-"))
@@ -284,14 +344,39 @@ write.csv(languages,'slide10.csv', row.names = F)
 --- 
 ## Everyone commutes, mostly to Hartford
 
-Globally connected city via employers as well. Draws high-skill jobs to the region, so people commute to the job centers (Hartford and some other towns).
+Large segments of regions workers commute to Hartford and some other communities with high concentration of high-skill jobs. Typical of capital cities.
 
-![image](../mockup/commute-patterns.png)
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
+inflow <- read.csv('../reviewversion/inflow-outflow.csv')
+
+#inflow$x = inflow$Commute.in...Work.and.live + inflow$Commute.out...Work.and.live
+
+inflow$commute.to.pop = 
+  inflow$Employed.in.the.Selection.Area.but.Living.Outside / 
+  inflow$Living.in.the.Selection.Area
+
+#ggplot(data = subset(inflow, Type == "City"), 
+#       aes(x = commute.to.pop, y = Geography)) + 
+#  geom_point()
+
+ggplot(data = subset(inflow, Type != "CBSA" & 
+                       Employed.in.the.Selection.Area < 250000), 
+       aes(x = Commute.in...Work.and.live, 
+           y = Commute.out...Work.and.live)) +
+#  geom_point(aes(size = Employed.in.the.Selection.Area)) + 
+  geom_text(aes(label = Geography, size = Employed.in.the.Selection.Area, 
+                colour= Type)) + 
+  scale_size(name = "Number\nemployed (2011)", labels = comma) + 
+  labs(x = "# people commuting into city / # people living and working in city", 
+       y = "# people commuting out of city / # people living and working in city") + 
+  theme_minimal()
+```
+
 
 --- 
 ## Demand for a skilled workforce
 
-Commuting and the next 2 slides together, making the case that region has high skilled jobs as an asset, but skills not equitably distributed in the workforce. 
+Region continues to have highly skilled workforce, but skills are not equitably distributed among all resident populations. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 library(acs)
@@ -376,7 +461,7 @@ write.csv(attainment.by.race,"slide11.csv", row.names = FALSE)
 --- 
 ## Job growth
 
-And job growth in historically strong sectors (finance & insurance, manufacturing) has not been strong recently. Changes in job market - strengths are strengths no longer. 
+While still providing large numbers of jobs, historically strong sectors (finance & insurance, manufacturing) have seen their numbers decrease recently. Sectors with greatest opportunity for growth involve service industries related to serving the needs of an aging, poorer population.  
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 qcew <- read.csv('../mockup/qcewannual-t.csv')
@@ -413,7 +498,7 @@ write.csv(subset(jobgrowth, X2013 > 1000 & sectortitle != "Total - All Industrie
 --- 
 ## Talent pipeline from schools
 
-Where is future workforce? Don't know what future jobs will be, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand.
+Where is future workforce? Don't know what future jobs will be, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand. As in the workforce pipeline, academic achievement gaps exist among various resident populations. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
 hsgrad <- read.csv("../hsgraduation/hsgraduationrates-district.csv")
@@ -458,7 +543,7 @@ write.csv(subset(gradregion, !(Category %in% c("American Indian"))),"slide13.csv
 --- 
 ## Achievement gap starts early
 
-And can start addressing gaps in education early on, including even earlier in early childhood. 
+As third grade reading scores indicate, there is an urgent need to addressing gaps in education early on, including even earlier in early childhood.  Gaps between ELL and special education students are most significant.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 cmt_subgroups <- read.csv('../testscores/cmt-subgroups.csv', na.strings = c("**","-"))
@@ -499,7 +584,7 @@ write.csv(cmt_subgroups_region,"slide14.csv", row.names = FALSE)
 --- 
 ## What makes a vibrant community?
 
-Creating opportunity in the region, what makes 'vibrant communities'? Knit together four slides with maps of region for homeownership, crime, affordable housing and voting. 
+Creating opportunity in the region, what makes 'vibrant communities'? Significant gap in the number homeowners Hartford versus neighboring communities in the region.  
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
 library(acs)
@@ -556,7 +641,7 @@ write.csv(homeownership.tract,"slide15.csv", row.names = FALSE)
 --- 
 ## Affordable housing
 
-Part of creating opportunity outside areas of concentrated poverty. 
+The lack of affordable housing outside of Hartford leads to high levels of concentrated poverty in the city. Need to increase affordable housing options in suburban communities must be addressed.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
 appeals <- read.csv('../housingcost/appeals-list-2012.csv')
@@ -592,7 +677,7 @@ write.csv(appeals,"slide16.csv",row.names = FALSE)
 --- 
 ## Hartford getting safer
 
-Choice in housing based on factors like schools and safety. Doing better but still understandable that those who can afford to live in low-crime towns. 
+While crime in Hartford has been reduced, neighboring communities still enjoy higher levels of public safety. This contributes to ensuring that residents who can afford to live in low-crime areas outside the city will do so. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
 totalcrime <- read.csv("../crime/totalcrime.csv")
@@ -626,7 +711,7 @@ write.csv(totalcrime_avg,"slide17.csv",row.names = FALSE)
 --- 
 ## Voter turnout another measure of civic health
 
-With with housing, crime. Add in factoid about diversity of gov't officials representing electorate (Hartford / region are among the worst nationally).
+Significant difference in voter turnout between city and its neighbors. Lack of engagement in the electoral process makes it difficult for city residents to make changes in their community. Add in factoid about diversity of gov't officials representing electorate (Hartford / region are among the worst nationally).
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 voting <- read.csv('2012-voting.csv')
