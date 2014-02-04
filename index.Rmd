@@ -546,6 +546,7 @@ write.csv(subset(gradregion, !(Category %in% c("American Indian"))),"slide13.csv
 As third grade reading scores indicate, there is an urgent need to addressing gaps in education early on, including even earlier in early childhood.  Gaps between ELL and special education students are most significant.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
+library(gridExtra)
 cmt_subgroups <- read.csv('../testscores/cmt-subgroups.csv', na.strings = c("**","-"))
 cmt_subgroups <- subset(cmt_subgroups, cmt_subgroups$District.ID %in% 
                      levels(as.factor(districts$districtid)))
@@ -569,14 +570,70 @@ cmt_subgroups_region <- ddply(cmt_subgroups,.(School.Year, Subgroup, Status),
                               summarise,
                               Percent.at.or.Above.Goal = weighted.mean(Percent.at.or.Above.Goal, Students.Tested, na.rm = TRUE),
                               Average.Scale.Score = weighted.mean(Average.Scale.Score, Students.Tested, na.rm = TRUE))
-#Show trends for the region
-ggplot(data = cmt_subgroups_region, aes(x = School.Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status)) + 
-#  geom_point(aes(group = Status)) + 
-  facet_wrap(~ Subgroup, ncol = 5) + 
-  scale_x_discrete(breaks = c("2006-07","2008-09","2010-11")) +
-  theme_minimal(base_size = 16) + 
-  labs(x = "School Year", y = "Average scale score, 3rd grade reading")
+
+#Clean up categories for display
+cmt_subgroups_region$Status = gsub(x = cmt_subgroups_region$Status, 
+                                replacement = "White",
+                                pattern = "White, not of Hispanic Origin")
+
+cmt_subgroups_region$Status = gsub(x = cmt_subgroups_region$Status, 
+                                replacement = "Black",
+                                pattern = "Black, not of Hispanic Origin")
+
+cmt_subgroups_region$Status = gsub(x = cmt_subgroups_region$Status, 
+                                replacement = "Special Ed",
+                                pattern = "Special Education")
+
+cmt_subgroups_region$Status = gsub(x = cmt_subgroups_region$Status, 
+                                replacement = "Not Special Ed",
+                                pattern = "Not Special Education")
+
+glr1 <- 
+  ggplot(data = subset(cmt_subgroups_region, Subgroup == "ELL"), 
+         aes(x = School.Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status)) + 
+  scale_x_discrete(breaks = c("2006-07","2010-11")) +
+  ylim(180,300) +
+  theme_minimal() + 
+  labs(x = NULL, y = "Average scale score, 3rd grade reading")
+
+glr2 <- 
+  ggplot(data = subset(cmt_subgroups_region, Subgroup == "Race / Ethnicity"), 
+         aes(x = School.Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status)) + 
+  scale_x_discrete(breaks = c("2006-07","2010-11")) +
+  ylim(180,300) +
+  theme_minimal() + 
+  labs(x = NULL, y = NULL)
+
+glr3 <- 
+  ggplot(data = subset(cmt_subgroups_region, Subgroup == "Free / Reduced Price Lunch"), 
+         aes(x = School.Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status)) + 
+  scale_x_discrete(breaks = c("2006-07","2010-11")) +
+  ylim(180,300) +
+  theme_minimal() + 
+  labs(x = NULL, y = NULL)
+
+glr4 <- 
+  ggplot(data = subset(cmt_subgroups_region, Subgroup == "Gender"), 
+         aes(x = School.Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status)) + 
+  scale_x_discrete(breaks = c("2006-07","2010-11")) +
+  ylim(180,300) +
+  theme_minimal() + 
+  labs(x = NULL, y = NULL)
+
+glr5 <- 
+  ggplot(data = subset(cmt_subgroups_region, Subgroup == "Special Education"), 
+         aes(x = School.Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status)) + 
+  scale_x_discrete(breaks = c("2006-07","2010-11")) +
+  ylim(180,300) +
+  theme_minimal() + 
+  labs(x = NULL, y = NULL)
+
+grid.arrange(glr1, glr2, glr3, glr5, ncol = 4, nrow = 1)
 
 write.csv(cmt_subgroups_region,"slide14.csv", row.names = FALSE)
 ```
@@ -687,6 +744,7 @@ totalcrime_avg <- ddply(subset(totalcrime, Year > 2005), .(Town), summarise,
                     Total.crime.Rate = weighted.mean(Total.crime.Rate, Total.estimated.population..Number, na.rm = TRUE))
 
 library(classInt)
+library(scales)
 jenks <- classIntervals(totalcrime_avg$Total.crime.Rate, 
                         n=3, style="fisher")
 choropleth=merge(CTTowns, totalcrime_avg, by.x = "id", by.y="Town")
