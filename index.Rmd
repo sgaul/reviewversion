@@ -53,7 +53,12 @@ CRCOG region. Based on characteristics of each town, using UConn categories from
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 towns <- read.csv("../regionalreport/data/hartford-towns.csv")
+CTTowns <- readShapeSpatial(fn="../townshp/wgs84/townct_37800_0000_2010_s100_census_1_shp_wgs84")
 
+#Fortify and order the CTTowns to allow ggmap to use that
+CTTowns <- fortify(CTTowns, region = "NAME10")
+
+#Merge map and data
 choropleth=merge(CTTowns, towns, by.x = "id", by.y="Town")
 choropleth=choropleth[order(choropleth$order), ]
 
@@ -68,7 +73,7 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   scale_fill_brewer(palette = "Purples", name = "Types of towns") +
   theme_minimal(base_size = 16)
 
-write.csv(towns,"slide4.csv", row.names = FALSE)
+write.csv(towns,"../rawdata/towns.csv", row.names = FALSE)
 ```
 
 ---
@@ -82,6 +87,7 @@ library(scales)
 library(reshape)
 
 gh <- read.csv("../regionalreport/data/greaterhartford.csv")
+towns <- read.csv("../regionalreport/data/hartford-towns.csv")
 gh$poppoverty <- round((gh$poppovertyrate / 100) * gh$population,0)
 gh_test <- ddply(merge(gh,towns,by.x = "city", by.y = "Town"),
                  .(period,Towngroup), summarise, 
@@ -97,13 +103,13 @@ ggplot() +
   scale_y_continuous(labels = comma, lim = c(0,500000)) +  
   labs(x = "Year", y = "Population")
 
-write.csv(subset(gh_test, period >= 1900),"slide5.csv", row.names = FALSE)
+write.csv(subset(gh_test, period >= 1900),"../rawdata/population.csv", row.names = FALSE)
 ```
 
 --- 
 ## Suburbanization of poverty
 
-New poverty will occur in suburbs, new challenges towns can't ignore. 
+New poverty occurring in suburbs, new challenges towns can't ignore. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 gh <- merge(gh,towns, by.x = "city", by.y = "Town")
@@ -116,50 +122,13 @@ gh_sum <- ddply(gh,.(Towngroup, period), summarise,
                 max = max(medianfamilyincome, na.rm = T))
 
 ggplot(aes(y = population.under.poverty, 
-           x = period), data = subset(gh_sum,period >= 1970 & period <= 2010)) + 
+           x = period), data = subset(gh_sum,period >= 1970 & period <= 2012)) + 
   geom_line(aes(group = Towngroup, colour = Towngroup), size = 1) + 
-  scale_y_continuous(labels = comma, limits = c(0,41000)) + 
-  labs(x = "Year", y = 'Population') +
+  scale_y_continuous(labels = comma, limits = c(0,50000)) + 
+  labs(x = "Year", y = 'Population living under poverty line') +
   theme_minimal(base_size = 16)
 
-write.csv(subset(gh_sum,period >= 1970),"slide6.csv", row.names = FALSE)
-```
-
---- 
-## Rising income inequality
-
-Similar to previous, but with household income instead of poverty.
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
-gh <- read.csv("../regionalreport/data/greaterhartford.csv")
-gh$poppoverty <- round((gh$poppovertyrate / 100) * gh$population,0)
-
-gh <- merge(gh,towns, by.x = "city", by.y = "Town")
-
-gh_sum <- ddply(gh,.(Towngroup, period), summarise, 
-                population = sum(population), 
-                population.under.poverty = sum(poppoverty),
-                median = median(medianfamilyincome, na.rm = T),
-                min = min(medianfamilyincome, na.rm = T),
-                max = max(medianfamilyincome, na.rm = T))
-
-ggplot(aes(x = period, group = Towngroup), 
-       data = subset(gh_sum,period >= 1960 & period <= 2010)) + 
-#  geom_linerange(aes(ymin = min, ymax = max, colour = Towngroup)) + 
-#  geom_point(aes(colour = Towngroup)) + 
-  geom_ribbon(aes(ymin=min, ymax=max, y = median, fill = Towngroup), alpha = 0.5) + 
-  geom_line(aes(y = median, colour = Towngroup)) + 
-  annotate("text", x = 2008, y = 30000, label ="Hartford: $28,970", size = 3) +
-  annotate("text", x = 2008, y = 115000, label ="Simsbury: $113,224", size = 3) +
-  annotate("text", x = 2008, y = 45000, label ="East Hartford: $48,613", size = 3) +
-  annotate("text", x = 1970, y = 8500, label ="Hartford: $9,108", size = 3) +
-  annotate("text", x = 1970, y = 18000, label ="Simsbury: $17,186", size = 3) +
-  annotate("text", x = 1970, y = 12300, label ="East Hartford: $11,771", size = 3) +
-  scale_y_continuous(labels = comma, lim = c(0,125000)) + 
-  labs(x = "Year", y = 'Median household income') +
-  theme_minimal(base_size = 16)
-
-write.csv(subset(gh_sum,period >= 1970),"slide6.csv", row.names = FALSE)
+write.csv(subset(gh_sum,period >= 1970),"../rawdata/poverty.csv", row.names = FALSE)
 ```
 
 ---
@@ -172,7 +141,7 @@ projections <- read.csv('../reviewversion/sdc-projections.csv')
 towns <- read.csv("../regionalreport/data/hartford-towns.csv")
 projections <- subset(projections, projections$TOWN %in% levels(towns$Town))
 projections$TOWN <- factor(projections$TOWN)
-projections$YEAR <- paste("20",projections$YEAR, sep = "")
+#projections$YEAR <- paste("20",projections$YEAR, sep = "")
 
 projections <- merge(projections, towns, by.x = "TOWN", by.y = "Town")
 
@@ -198,36 +167,24 @@ projections$Towngroup <- factor(projections$Towngroup, levels = c("Hartford",
                                                                   "Urban periphery",
                                                                   "Suburban / rural"))
 
-ggplot(data = 
-         ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),
-       aes(x = YEAR, y = value)) + 
-  geom_line(aes(group = AGE, colour = AGE), size = 1, linetype = 'dotted') +
-  geom_point(aes(group = AGE, colour = AGE)) +
-  facet_wrap(~ Towngroup, ncol = 3) +
-  scale_fill_brewer(name = "Age") +
-  scale_y_continuous(labels = comma) + 
-  labs(y = "Population", x = "Year") +
-  theme_minimal(base_size = 16)
-
-write.csv(ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),'slide7.csv', row.names = F)
-```
-
----
-## Aging population v. 2
-
-Same as previous with different grouping. Is this more easier to understand?
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
-ggplot(data = 
-         ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),
-       aes(x = YEAR, y = value)) + 
-  geom_line(aes(group = Towngroup, colour = Towngroup), size = 1, linetype = 'dotted') +
-  geom_point(aes(group = Towngroup, colour = Towngroup)) +
+ggplot() + 
+  geom_line(data = ddply(subset(projections, YEAR >= 2010), 
+                         .(YEAR, AGE, Towngroup), summarise, value = sum(value)), 
+            aes(x = YEAR, y = value, group = Towngroup, colour = Towngroup), 
+            size = 1, linetype = 'dotted') +
+  geom_line(data = ddply(subset(projections, YEAR <= 2010), 
+                         .(YEAR, AGE, Towngroup), summarise, value = sum(value)), 
+            aes(x = YEAR, y = value, group = Towngroup, colour = Towngroup), 
+            size = 1) +
   facet_wrap(~ AGE, ncol = 4) +
+  scale_x_continuous(breaks = c(2000,2010,2020)) + 
   scale_fill_brewer(name = "Age") +
   scale_y_continuous(labels = comma) + 
   labs(y = "Population", x = "Year") +
   theme_minimal(base_size = 16)
+
+write.csv(ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(value)),
+          "../rawdata/aging.csv", row.names = F)
 ```
 
 --- 
@@ -284,14 +241,23 @@ enroll <- aggregate(enroll$value,
                          variable = enroll$variable), 
                     sum)
 
+enroll$School.Type <- factor(enroll$School.Type)
+
+levels(enroll$School.Type) <- list(
+  "Public" = c("Public"),
+  "Private" = c("Private"),
+  "Magnet/Charter/Choice" = c("Public charter","Magnet School","Open Choice"),
+  "Other" = c("Other"))
+
 #Sort the school types for the display
 enroll$School.Type <- factor(enroll$School.Type, levels = c("Public",
                                                             "Private",
-                                                            "Public charter",
-                                                            "Magnet School",
-                                                            "Open Choice","Other"))
+                                                            "Magnet/Charter/Choice",
+                                                            "Other"))
 
-ggplot(data = ddply(merge(subset(enroll, variable == "Total"), towns, 
+ggplot(data = ddply(merge(subset(enroll, variable == "Total" & 
+                                   School.Type != "Other"),
+                          towns, 
                           by.x = "Resident.Town",by.y = "Town"),
       .(Towngroup, School.Type, School.Year),summarise, x = sum(x)),
        aes(x = School.Year, y = x, group = School.Type, fill = School.Type)) +
@@ -306,10 +272,8 @@ ggplot(data = ddply(merge(subset(enroll, variable == "Total"), towns,
 write.csv(ddply(merge(subset(enroll, variable == "Total"), towns, 
                           by.x = "Resident.Town",by.y = "Town"),
       .(Towngroup, School.Type, School.Year),summarise, x = sum(x)), 
-          "slide8.csv", row.names = FALSE)
+          "../rawdata/enrollment.csv", row.names = FALSE)
 
-write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")), 
-          "slide9.csv", row.names = FALSE)
 ```
 
 --- 
@@ -338,7 +302,7 @@ ggplot(data = languages_agg) +
   scale_x_continuous(labels = comma) + 
   theme_minimal(base_size = 16)
 
-write.csv(languages,'slide10.csv', row.names = F)
+write.csv(languages,"../rawdata/languages.csv", row.names = F)
 ```
 
 --- 
@@ -370,6 +334,20 @@ ggplot(data = subset(inflow, Type != "CBSA" &
   labs(x = "# people commuting into city / # people living and working in city", 
        y = "# people commuting out of city / # people living and working in city") + 
   theme_minimal()
+
+
+otm <- read.csv("../regionalreport/data/otmdata.csv")
+otm$Destination <- gsub(pattern = " (town|borough) \\(([A-z]|[^A-z])+,[ \t\n\r\f\v][A-Z]+\\)", 
+                        replacement = "", otm$Destination)
+otm$Starting.point <- gsub(pattern = " (town|borough) \\(([A-z]|[^A-z])+,[ \t\n\r\f\v][A-Z]+\\)", 
+                           replacement = "", otm$Starting.point)
+
+#Add the ratio of workers for each starting point town
+sum <- tapply(otm$Number, otm$Starting.point, sum)
+otm$ratio <- otm$Number / sum[otm$Starting.point]
+
+write.csv(subset(otm, ratio > 0.05 & !(Destination == "All Other Locations")), 
+          "../rawdata/commuting.csv", row.names = FALSE)
 ```
 
 
@@ -455,7 +433,7 @@ ggplot(data = attainment.by.race,
   coord_flip() + 
   theme_minimal(base_size = 16)
 
-write.csv(attainment.by.race,"slide11.csv", row.names = FALSE)
+write.csv(attainment.by.race,"../rawdata/attainment.csv", row.names = FALSE)
 ```
 
 --- 
@@ -482,17 +460,18 @@ jobgrowth$growth = jobgrowth$X2013 / jobgrowth$X2003 - 1
 
 jobgrowth$sectortitle <- reorder(jobgrowth$sectortitle, jobgrowth$growth)
 
-ggplot(data = subset(jobgrowth, X2013 > 1000 & 
+ggplot(data = subset(jobgrowth, X2013 > 20000 & 
                        sectortitle != "Total - All Industries"), 
        aes(x = growth, y = sectortitle)) + 
   geom_point(aes(size = X2013)) +
   theme_minimal(base_size = 16) +
   scale_size(name = "Number of\n employees (2013)") + 
-  labs(x = "Growth (2010 - 2013)", y = "Sector") +
+  labs(x = "Growth in employees (2003 - 2013)", y = NULL) +
   scale_x_continuous(labels = percent)
 
-write.csv(subset(jobgrowth, X2013 > 1000 & sectortitle != "Total - All Industries"),
-          "slide12.csv", row.names = FALSE)
+write.csv(subset(jobgrowth, X2013 > 1000 & 
+                   sectortitle != "Total - All Industries"),
+          "../rawdata/jobgrowth.csv", row.names = FALSE)
 ```
 
 --- 
@@ -536,7 +515,8 @@ ggplot(data = subset(gradregion, !(Category %in% c("American Indian")))) +
   geom_hline(yintercept = 82.18249, alpha = 0.5) + 
   labs(x = NULL, y = "Average four-year graduation rate by major subgroup (2003 - 2011)")
 
-write.csv(subset(gradregion, !(Category %in% c("American Indian"))),"slide13.csv", 
+write.csv(subset(gradregion, !(Category %in% c("American Indian"))),
+          "../rawdata/hsgraduation.csv", 
           row.names = FALSE)
 ```
 
@@ -547,257 +527,188 @@ As third grade reading scores indicate, there is an urgent need to addressing ga
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 library(gridExtra)
-cmt_subgroups <- read.csv('../testscores/cmt-subgroups.csv', na.strings = c("**","-"))
-cmt_subgroups <- subset(cmt_subgroups, cmt_subgroups$District.ID %in% 
-                     levels(as.factor(districts$districtid)))
+cmt_summary <- read.csv('../reviewversion/cmt-summary-2.csv', 
+                        na.strings = c("-","NA"))
+cmt_summary <- subset(cmt_summary, cmt_summary$Dist..ID %in% 
+                        levels(as.factor(districts$districtid)))
 
 #Clean up race categories - make compatible with old categories
-cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
-                                pattern = "American Indian/Alaska Native",
-                                replacement = "American Indian")
+cmt_summary <- subset(cmt_summary, Total.Reading > 0)
 
-cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
-                                pattern = "Black/African American",
-                                replacement = "Black, not of Hispanic Origin")
-
-cmt_subgroups$Status = gsub(x = cmt_subgroups$Status, 
-                                pattern = "(White$)",
-                                replacement = "White, not of Hispanic Origin")
-
-cmt_subgroups <- subset(cmt_subgroups, Students.Tested > 0)
-
-cmt_subgroups_region <- ddply(cmt_subgroups,.(School.Year, Subgroup, Status),
+cmt_subgroups_region <- ddply(cmt_summary,.(Year, Category, Status),
                               summarise,
-                              Percent.at.or.Above.Goal = weighted.mean(Percent.at.or.Above.Goal, Students.Tested, na.rm = TRUE),
-                              Average.Scale.Score = weighted.mean(Average.Scale.Score, Students.Tested, na.rm = TRUE))
-
-#Clean up categories for display
-cmt_subgroups_region$Status = gsub(x = cmt_subgroups_region$Status, 
-                                replacement = "White",
-                                pattern = "White, not of Hispanic Origin")
-
-cmt_subgroups_region$Status = gsub(x = cmt_subgroups_region$Status, 
-                                replacement = "Black",
-                                pattern = "Black, not of Hispanic Origin")
-
-cmt_subgroups_region$Status = gsub(x = cmt_subgroups_region$Status, 
-                                replacement = "Special Ed",
-                                pattern = "Special Education")
-
-cmt_subgroups_region$Status = gsub(x = cmt_subgroups_region$Status, 
-                                replacement = "Not Special Ed",
-                                pattern = "Not Special Education")
+                              Average.Scale.Score = 
+                                weighted.mean(
+                                  Total.Reading.Average.Scale.Score, 
+                                  Total.Reading, 
+                                  na.rm = TRUE))
 
 glr1 <- 
-  ggplot(data = subset(cmt_subgroups_region, Subgroup == "ELL"), 
-         aes(x = School.Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status)) + 
-  scale_x_discrete(breaks = c("2006-07","2010-11")) +
-  ylim(180,300) +
+  ggplot(data = subset(cmt_subgroups_region, Category == "ELL"), 
+         aes(x = Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) + 
+  scale_x_continuous(breaks = c(2006,2009,2012)) +
+  ylim(180,275) +
   theme_minimal() + 
   labs(x = NULL, y = "Average scale score, 3rd grade reading")
 
 glr2 <- 
-  ggplot(data = subset(cmt_subgroups_region, Subgroup == "Race / Ethnicity"), 
-         aes(x = School.Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status)) + 
-  scale_x_discrete(breaks = c("2006-07","2010-11")) +
-  ylim(180,300) +
+  ggplot(data = subset(cmt_subgroups_region, Category == "Race / ethnicity"), 
+         aes(x = Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) + 
+  scale_x_continuous(breaks = c(2006,2009,2012)) +
+  ylim(180,275) +
   theme_minimal() + 
   labs(x = NULL, y = NULL)
 
 glr3 <- 
-  ggplot(data = subset(cmt_subgroups_region, Subgroup == "Free / Reduced Price Lunch"), 
-         aes(x = School.Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status)) + 
-  scale_x_discrete(breaks = c("2006-07","2010-11")) +
-  ylim(180,300) +
+  ggplot(data = subset(cmt_subgroups_region, Category =="Free / Reduced Price Lunch"), 
+         aes(x = Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) + 
+  scale_x_continuous(breaks = c(2006,2009,2012)) +
+  ylim(180,275) +
   theme_minimal() + 
   labs(x = NULL, y = NULL)
 
 glr4 <- 
-  ggplot(data = subset(cmt_subgroups_region, Subgroup == "Gender"), 
-         aes(x = School.Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status)) + 
-  scale_x_discrete(breaks = c("2006-07","2010-11")) +
-  ylim(180,300) +
+  ggplot(data = subset(cmt_subgroups_region, Category == "Gender"), 
+         aes(x = Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) + 
+  scale_x_continuous(breaks = c(2006,2009,2012)) +
+  ylim(180,275) +
   theme_minimal() + 
   labs(x = NULL, y = NULL)
 
 glr5 <- 
-  ggplot(data = subset(cmt_subgroups_region, Subgroup == "Special Education"), 
-         aes(x = School.Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status)) + 
-  scale_x_discrete(breaks = c("2006-07","2010-11")) +
-  ylim(180,300) +
+  ggplot(data = subset(cmt_subgroups_region, Category == "Special Education"), 
+         aes(x = Year, y = Average.Scale.Score)) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) + 
+  scale_x_continuous(breaks = c(2006,2009,2012)) +
+  ylim(180,275) +
   theme_minimal() + 
   labs(x = NULL, y = NULL)
 
-grid.arrange(glr1, glr2, glr3, glr5, ncol = 4, nrow = 1)
+grid.arrange(glr1, glr2, glr3, glr5, ncol = 3, nrow = 1)
 
-write.csv(cmt_subgroups_region,"slide14.csv", row.names = FALSE)
+write.csv(cmt_subgroups_region,"../rawdata/3rdgradereading.csv", row.names = FALSE)
 ```
+
 
 --- 
 ## What makes a vibrant community?
 
-Creating opportunity in the region, what makes 'vibrant communities'? Significant gap in the number homeowners Hartford versus neighboring communities in the region.  
+Significant gap in the number homeowners Hartford versus neighboring communities in the region. Lack of affordable housing outside of Hartford leads to high levels of concentrated poverty in the city. Affordable housing options in suburban communities must be increased. Crime in Hartford has declined but neighboring communities still enjoy higher levels of public safety. Residents who can afford to live in low-crime areas outside the city will do so. Lack of engagement in the electoral process makes it difficult for city residents to make changes in their community. 
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 library(acs)
 library(maps)
 library(maptools)
+library(gridExtra)
 key = "ba67d3a427e1f785987b9c8bc59341bf7c8a7cc1"
 api.key.install(key)
-hartford.tracts = geo.make(state = "CT", county = c("Hartford","Tolland"), tract = "*", check = F)
-B25008 = acs.fetch(geography = hartford.tracts, table.number = "B25008", col.names = "pretty", year = 2012)
+hartford.towns = geo.make(state = "CT", county = c("Hartford","Tolland"), county.subdivision = "*", check = F)
+B25008 = acs.fetch(geography = hartford.towns, table.number = "B25008", col.names = "pretty", year = 2012)
 own.estimate = divide.acs(numerator=B25008[,2],denominator=B25008[,1], method = 'proportion')
-homeownership.tract = data.frame(tract=geography(B25008)[[1]], 
-                         rate=as.numeric(estimate(own.estimate)),
-                         se=standard.error(own.estimate))
-names(homeownership.tract) <- c("tract","rate","se")
+homeownership = data.frame(Town=geography(B25008)[[1]], 
+                           number=as.numeric(estimate(B25008[,2])),
+                           rate=as.numeric(estimate(own.estimate)),
+                           se=standard.error(own.estimate))
+names(homeownership) <- c("Town","number","rate","se")
 
-homeownership.tract$tract= gsub("Census Tract ", "", homeownership.tract$tract)
-homeownership.tract$tract= gsub(", Tolland County, Connecticut", "",
-                                homeownership.tract$tract)
-homeownership.tract$tract= gsub(", Hartford County, Connecticut", "", 
-                                homeownership.tract$tract)
+homeownership$Town= gsub(" town, Tolland County, Connecticut", "", homeownership$Town)
+homeownership$Town= gsub(" town, Hartford County, Connecticut", "", homeownership$Town)
 
-#Load the UConn tract and town-level shapefiles
-CTTracts <- readShapeSpatial(fn="../tractct_37800_0000_2010_s100_census_1_shp/wgs84/tractct_37800_0000_2010_s100_census_1_shp_wgs84")
-CTTracts <- fortify(CTTracts, region = "NAME10")
-CTTracts <- CTTracts[order(CTTracts$order),]
-#Load the UConn shapefile
-CTTowns <- readShapeSpatial(fn="../townshp/wgs84/townct_37800_0000_2010_s100_census_1_shp_wgs84")
-#Fortify and order the CTTowns to allow ggmap to use that
-CTTowns <- fortify(CTTowns, region = "NAME10")
-CTTowns <- CTTowns[order(CTTowns$order),]
-#Merge with data
-library(classInt)
-jenks <- classIntervals(homeownership.tract$rate, 
-                        n=4, style="fisher")
-choropleth=merge(CTTracts, homeownership.tract, by.x = "id", by.y="tract")
-choropleth=choropleth[order(choropleth$order), ]
-choropleth$rate=cut(choropleth$rate, 
-                          breaks=jenks$brks,
-                          include.lowest=T, dig.lab = T)
-#Make the map
-ggplot(data = choropleth, aes(long, lat, group = group)) +
-  geom_polygon(aes(fill = rate)) + 
-  scale_x_continuous(breaks = NULL) +
-  scale_y_continuous(breaks = NULL) +
-  labs(x = NULL, y = NULL) + 
-  coord_equal() +
-  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.1, fill = NA) +
-  scale_fill_brewer(palette = "Purples", name = "% owner-occupied\nhousing") +
-  theme_minimal(base_size = 16)
-
-write.csv(homeownership.tract,"slide15.csv", row.names = FALSE)
-```
-
---- 
-## Affordable housing
-
-The lack of affordable housing outside of Hartford leads to high levels of concentrated poverty in the city. Need to increase affordable housing options in suburban communities must be addressed.
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
-appeals <- read.csv('../housingcost/appeals-list-2012.csv')
-
-appeals <- subset(appeals, appeals$Town %in% levels(towns$Town) & Year == 2012)
-
-#appeals <- merge(appeals,towns, by = "Town")
-
-#appeals <- merge(appeals, subset(gh, period == 2010), by.x = "Town", by.y = "city")
-
-library(classInt)
-jenks <- classIntervals(appeals$Percent.Affordable, 
-                        n=4, style="fisher")
-choropleth=merge(CTTowns, appeals, by.x = "id", by.y="Town")
-choropleth=choropleth[order(choropleth$order), ]
-choropleth$Percent.Affordable=cut(choropleth$Percent.Affordable, 
-                          breaks=jenks$brks,
-                          include.lowest=T, dig.lab = T)
-#Make the map
-ggplot(data = choropleth, aes(long, lat, group = group)) +
-  geom_polygon(aes(fill = Percent.Affordable)) + 
-  scale_x_continuous(breaks = NULL) +
-  scale_y_continuous(breaks = NULL) +
-  labs(x = NULL, y = NULL) + 
-  coord_equal() +
-  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
-  scale_fill_brewer(palette = "Purples", name = "% Affordable\nHousing (2012)") +
+home <- 
+ggplot(data = ddply(merge(homeownership, towns,by = "Town"),.(Towngroup), summarise,
+                    rate = weighted.mean(rate, 
+                                         number, 
+                                         na.rm = TRUE)),
+       aes(x = Towngroup, y = rate)) + 
+  geom_bar(stat = 'identity', width = 0.5) + 
+  labs(x = NULL, y = "Population in owner-occupied housing units", 
+       title = "Homeownership") + 
+  scale_y_continuous(labels = percent) + 
+  coord_flip() + 
   theme_minimal()
 
-write.csv(appeals,"slide16.csv",row.names = FALSE)
-```
+write.csv(ddply(merge(homeownership, towns,by = "Town"),.(Towngroup), summarise,
+                    rate = weighted.mean(rate, 
+                                         number, 
+                                         na.rm = TRUE)),
+          "../rawdata/homeownership.csv", row.names = FALSE)
 
---- 
-## Hartford getting safer
+#Affordable housing section
+appeals <- read.csv('../housingcost/appeals-list-2012.csv')
 
-While crime in Hartford has been reduced, neighboring communities still enjoy higher levels of public safety. This contributes to ensuring that residents who can afford to live in low-crime areas outside the city will do so. 
+appeals <- subset(appeals, appeals$Town %in% levels(towns$Town))
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+affordable  <- 
+ggplot(data = ddply(merge(appeals, towns,by = "Town"),.(Towngroup), summarise,
+                    Percent.Affordable =
+                      weighted.mean(Percent.Affordable, 
+                                    Total.housing.units...2010.census, na.rm = TRUE)),
+       aes(x = Towngroup, y = Percent.Affordable)) + 
+  geom_bar(stat = 'identity', width = 0.5) + 
+  labs(x = NULL, y = "Percent affordable housing (rent and own)", 
+       title = "Affordable housing") + 
+  scale_y_continuous(labels = percent) + 
+  coord_flip() + 
+  theme_minimal()
+
+write.csv(ddply(merge(appeals, towns,by = "Town"),.(Towngroup), summarise,
+                    Percent.Affordable =
+                      weighted.mean(Percent.Affordable, 
+                                    Total.housing.units...2010.census, na.rm = TRUE)),
+          "../rawdata/affordablehousing.csv",row.names = FALSE)
+
+#Crime section
 totalcrime <- read.csv("../crime/totalcrime.csv")
 totalcrime <- subset(totalcrime, totalcrime$Town %in% levels(towns$Town))
 totalcrime$Town <- factor(totalcrime$Town)
-totalcrime_avg <- ddply(subset(totalcrime, Year > 2005), .(Town), summarise, 
-                    Total.crime.Rate = weighted.mean(Total.crime.Rate, Total.estimated.population..Number, na.rm = TRUE))
 
-library(classInt)
-library(scales)
-jenks <- classIntervals(totalcrime_avg$Total.crime.Rate, 
-                        n=3, style="fisher")
-choropleth=merge(CTTowns, totalcrime_avg, by.x = "id", by.y="Town")
-choropleth=choropleth[order(choropleth$order), ]
-choropleth$Total.crime.Rate= cut(choropleth$Total.crime.Rate, 
-                          breaks=jenks$brks,
-                          include.lowest=T, dig.lab = T)
-#Make the map
-ggplot(data = choropleth, aes(long, lat, group = group)) +
-  geom_polygon(aes(fill = Total.crime.Rate)) + 
-  scale_x_continuous(breaks = NULL) +
-  scale_y_continuous(breaks = NULL) +
-  labs(x = NULL, y = NULL) + 
-  coord_equal() +
-  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
-  scale_fill_brewer(palette = "Purples", name = "Total crime rate\n(Crimes per 100K residents)") +
-  theme_minimal(base_size = 16)
+crime <- 
+ggplot(data = ddply(merge(subset(totalcrime, Year > 2008),
+                          towns,by = "Town"),.(Towngroup), summarise,
+                    Total.crime.Rate =
+                      weighted.mean(Total.crime.Rate, 
+                                    Total.estimated.population..Number, na.rm = TRUE)),
+       aes(x = Towngroup, y = Total.crime.Rate)) + 
+  geom_bar(stat = 'identity', width = 0.5) + 
+  labs(x = NULL, y = "Crimes per 100K residents", title = "Crime rate") + 
+  scale_y_continuous(labels = comma) + 
+  coord_flip() + 
+  theme_minimal()
 
-write.csv(totalcrime_avg,"slide17.csv",row.names = FALSE)
-```
+write.csv(ddply(merge(subset(totalcrime, Year > 2008),
+                          towns,by = "Town"),.(Towngroup), summarise,
+                    Total.crime.Rate =
+                      weighted.mean(Total.crime.Rate, 
+                                    Total.estimated.population..Number, na.rm = TRUE)),
+          "../rawdata/crime.csv",row.names = FALSE)
 
---- 
-## Voter turnout another measure of civic health
-
-Significant difference in voter turnout between city and its neighbors. Lack of engagement in the electoral process makes it difficult for city residents to make changes in their community. Add in factoid about diversity of gov't officials representing electorate (Hartford / region are among the worst nationally).
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
+#Voting section
 voting <- read.csv('2012-voting.csv')
 #voting$Town <- gsub(pattern = " (CD1&2)", replacement = "", voting$Town)
 voting <- subset(voting, voting$Town %in% levels(towns$Town))
 
-voting$Town <- reorder(voting$Town, voting$Percentage.Checked.as.Having.Voted)
+vote <- 
+ggplot(data = ddply(merge(voting,towns,by = "Town"),.(Year,Towngroup), summarise,
+                    Percentage.Checked.as.Having.Voted =
+                      weighted.mean(Percentage.Checked.as.Having.Voted,
+                                    Names.on.Official.Check.List..Active.,na.rm = TRUE)),
+       aes(x = Towngroup, y = Percentage.Checked.as.Having.Voted)) + 
+  geom_bar(stat = 'identity', width = 0.5) + 
+  labs(x = NULL, y = "Percent of registered voters that voted", title = "Voter turnout") + 
+  scale_y_continuous(labels = percent) + 
+  coord_flip() + 
+  theme_minimal()
 
-library(classInt)
-jenks <- classIntervals(voting$Percentage.Checked.as.Having.Voted, 
-                        n=3, style="fisher")
-choropleth=merge(CTTowns, voting, by.x = "id", by.y="Town")
-choropleth=choropleth[order(choropleth$order), ]
-choropleth$Percentage.Checked.as.Having.Voted=
-  cut(choropleth$Percentage.Checked.as.Having.Voted, 
-                          breaks=jenks$brks,
-                          include.lowest=T, dig.lab = T)
-#Make the map
-ggplot(data = choropleth, aes(long, lat, group = group)) +
-  geom_polygon(aes(fill = Percentage.Checked.as.Having.Voted)) + 
-  scale_x_continuous(breaks = NULL) +
-  scale_y_continuous(breaks = NULL) +
-  labs(x = NULL, y = NULL) + 
-  coord_equal() +
-  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
-  scale_fill_brewer(palette = "Purples", name = "% registered voters\nthat voted") +
-  theme_minimal(base_size = 16)
+write.csv(ddply(merge(voting,towns,by = "Town"),.(Year,Towngroup), summarise,
+      Percentage.Checked.as.Having.Voted = 
+        weighted.mean(Percentage.Checked.as.Having.Voted,
+                      Names.on.Official.Check.List..Active.,na.rm = TRUE)),
+      "../rawdata/voterturnout.csv",row.names = FALSE)
 
-write.csv(voting,"slide18.csv",row.names = FALSE)
+grid.arrange(home,affordable,crime,vote, ncol = 2, nrow = 4)
 ```
 
