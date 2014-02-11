@@ -114,7 +114,7 @@ Region continues to have highly skilled workforce, but skills are not equitably 
 --- 
 ## Job growth
 
-While still providing large numbers of jobs, historically strong sectors (finance & insurance, manufacturing) have seen their numbers decrease recently. Sectors with greatest opportunity for growth involve service industries related to serving the needs of an aging, poorer population.  
+While still providing many jobs, historically strong sectors (finance & insurance, manufacturing) have seen declines recently. Sectors with opportunities for growth involve service industries related to serving the needs of an aging, poorer population.  
 
 ![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
 
@@ -143,4 +143,12 @@ Significant gap in the number homeowners Hartford versus neighboring communities
 
 ![plot of chunk unnamed-chunk-12](assets/fig/unnamed-chunk-12.png) 
 
+
+
+--- 
+## What makes a vibrant community?
+
+Version with trend graphs instead 
+
+![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
 
