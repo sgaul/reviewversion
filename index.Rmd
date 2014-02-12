@@ -531,21 +531,31 @@ districts <- read.csv("../regionalreport/data/hartford-districts.csv")
 hsgrad <- subset(hsgrad, hsgrad$District.Name %in% levels(districts$district))
 hsgrad$District.Name <- factor(hsgrad$District.Name)
 
-hsgrad_agg <- ddply(subset(hsgrad, X4.Year.Graduation..Rate > 0),
-                    .(School.Year, Category, Status), summarise,
-                    mean = mean(X4.Year.Graduation..Rate, na.rm = TRUE),
-                    median = median(X4.Year.Graduation..Rate, na.rm = TRUE),
-                    wm = weighted.mean(X4.Year.Graduation..Rate,
-                                       Estimated.enrollment,na.rm = TRUE))
+hsgrad_agg <- ddply(hsgrad, .(Category, Status), summarise,
+                    mean = mean(X4.Year.Graduation..Rate, na.rm = T) / 100,
+                    percent95 = quantile(X4.Year.Graduation..Rate, 0.95, na.rm = T)/ 100,
+                    percent05 = quantile(X4.Year.Graduation..Rate, 0.05, na.rm = T) / 100)
 
-#Show trends for region
-ggplot(data = hsgrad_agg, aes(x =as.factor(School.Year), y =mean)) + 
-  geom_line(aes(group = Status)) + 
-  ylim(0,100) +
-  theme_minimal() + 
-  labs(x = NULL, y = "4-year graduation rate") + 
-  facet_wrap(~ Category, ncol = 6)
+hsgrad_agg$Status <- reorder(hsgrad_agg$Status, hsgrad_agg$mean)
 
+#Remove the groups we don't want / need to report
+hsgrad_agg <- subset(hsgrad_agg, !(Status %in% c("Two or More Races",
+                                               "American Indian",
+                                               "Hawaiian or Pacific Islander",
+                                               "Non-Hispanic",
+                                               "Non-ELL",
+                                               "Non-Special Education",
+                                               "Not Eligible For Lunch")))
+
+#Show variation for region
+ggplot(data = hsgrad_agg, aes(y = mean, x = Status)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = percent05, ymax = percent95), width = 0.2) + 
+  coord_flip() + 
+  labs(title = '4-year graduation rate (average, + 5th / 95th percentiles)', y = NULL, 
+       x = NULL) + 
+  scale_y_continuous(labels = percent, lim = c(0,1)) + 
+  theme_minimal()
 
 write.csv(hsgrad_agg, "../rawdata/hsgraduation.csv", row.names = FALSE)
 ```
@@ -577,54 +587,64 @@ glr1 <-
   ggplot(data = subset(cmt_subgroups_region, Category == "ELL"), 
          aes(x = Year, y = Average.Scale.Score)) + 
   geom_line(aes(group = Status, colour = Status), size = 1) +
-#  annotate("text", label = "Proficient", x = 2012, y = 218) +
-  geom_hline(yintercept = 217, size = 2, alpha = 0.1) + 
+  geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  ylim(180,275) +
+  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
+  theme(legend.position = "top") +
   labs(x = NULL, y = "Average scale score, 3rd grade reading")
 
 glr2 <- 
-  ggplot(data = subset(cmt_subgroups_region, Category == "Race / ethnicity"), 
+  ggplot(data = subset(cmt_subgroups_region, Category == "Race / ethnicity" & 
+                         Status != "Two or more races"), 
          aes(x = Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status), size = 1) + 
-  geom_hline(yintercept = 217, size = 2, alpha = 0.1) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) +
+  geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  ylim(180,275) +
+  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
+  theme(legend.position = "top") +
   labs(x = NULL, y = NULL)
 
 glr3 <- 
   ggplot(data = subset(cmt_subgroups_region, Category =="Free / Reduced Price Lunch"), 
          aes(x = Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status), size = 1) + 
-  geom_hline(yintercept = 217, size = 2, alpha = 0.1) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) +
+  geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  ylim(180,275) +
+  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
+  theme(legend.position = "top") +
   labs(x = NULL, y = NULL)
 
 glr4 <- 
   ggplot(data = subset(cmt_subgroups_region, Category == "Gender"), 
          aes(x = Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status), size = 1) + 
-  geom_hline(yintercept = 217, size = 2, alpha = 0.1) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) +
+  geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  ylim(180,275) +
+  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
+  theme(legend.position = "top") +
   labs(x = NULL, y = NULL)
 
 glr5 <- 
   ggplot(data = subset(cmt_subgroups_region, Category == "Special Education"), 
          aes(x = Year, y = Average.Scale.Score)) + 
-  geom_line(aes(group = Status, colour = Status), size = 1) + 
-  geom_hline(yintercept = 217, size = 2, alpha = 0.1) + 
+  geom_line(aes(group = Status, colour = Status), size = 1) +
+  geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  ylim(180,275) +
+  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
+  theme(legend.position = "top") + 
   labs(x = NULL, y = NULL)
 
-grid.arrange(glr1, glr2, glr3, glr5, ncol = 3, nrow = 1)
+grid.arrange(glr1, glr2, glr3, glr4, glr5, ncol = 5, nrow = 1)
 
 write.csv(cmt_subgroups_region,"../rawdata/3rdgradereading.csv", row.names = FALSE)
 ```
