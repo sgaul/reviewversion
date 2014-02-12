@@ -527,7 +527,7 @@ write.csv(subset(qcew, series == "Employees" &
 
 Where is future workforce? Don't know what future jobs will be, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand. As in the workforce pipeline, academic achievement gaps exist among various resident populations. 
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 11}
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 hsgrad <- read.csv("../hsgraduation/hsgraduationrates-school.csv", 
                    na.strings = c("*","NA"))
 
@@ -539,7 +539,9 @@ hsgrad$District.Name <- factor(hsgrad$District.Name)
 hsgrad_agg <- ddply(hsgrad, .(Category, Status), summarise,
                     mean = mean(X4.Year.Graduation..Rate, na.rm = T) / 100,
                     percent95 = quantile(X4.Year.Graduation..Rate, 0.95, na.rm = T)/ 100,
-                    percent05 = quantile(X4.Year.Graduation..Rate, 0.05, na.rm = T) / 100)
+                    percent05 = quantile(X4.Year.Graduation..Rate, 0.05, na.rm = T) / 100,
+                    percent75 = quantile(X4.Year.Graduation..Rate, 0.75, na.rm = T)/ 100,
+                    percent25 = quantile(X4.Year.Graduation..Rate, 0.25, na.rm = T)/ 100)
 
 hsgrad_agg$Status <- reorder(hsgrad_agg$Status, hsgrad_agg$mean)
 
@@ -550,17 +552,18 @@ hsgrad_agg <- subset(hsgrad_agg, !(Status %in% c("Two or More Races",
                                                "Non-Hispanic",
                                                "Non-ELL",
                                                "Non-Special Education",
-                                               "Not Eligible For Lunch")))
+                                               "Not Eligible For Lunch",
+                                               "Eligible For Lunch")))
 
 #Show variation for region
 ggplot(data = hsgrad_agg, aes(y = mean, x = Status)) + 
   geom_point() + 
-  geom_errorbar(aes(ymin = percent05, ymax = percent95), width = 0.2) + 
+  geom_linerange(aes(ymin = percent25, ymax = percent75), width = 0.2, 
+                 colour = "blue", alpha = 0.1, size = 4) + 
   coord_flip() + 
-  labs(title = '4-year graduation rate (average, + 5th / 95th percentiles)', y = NULL, 
-       x = NULL) + 
+  labs(y = '4-year graduation rate (average + interquartile range)', x = NULL) + 
   scale_y_continuous(labels = percent, lim = c(0,1)) + 
-  theme_minimal()
+  theme_minimal(base_size = 16)
 
 write.csv(hsgrad_agg, "../rawdata/hsgraduation.csv", row.names = FALSE)
 ```
