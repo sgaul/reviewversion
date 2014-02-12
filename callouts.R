@@ -1,9 +1,23 @@
 
 #Refugee arrivals since 2003
+refugees <- read.csv('Arrivals by Destination and Natoinality.csv')
+refugees <- subset(refugees, refugees$textbox12City %in% levels(towns$Town))
+refugees$textbox12City <- factor(refugees$textbox12City)
+
+refugees$textbox14 <- gsub(pattern = "CY ",replacement = "",refugees$textbox14)
+
+refugees$TownType = ifelse(refugees$textbox12City == "Hartford","Hartford","Suburbs")
+
+
 ddply(subset(refugees, textbox14 >= 2000), 
       .(TownType),
       summarise,
       count = sum(textbox18))
+
+head(arrange(ddply(refugees,.(textbox6),
+                   summarise,
+                   count = sum(textbox18)),
+             desc(count)), n = 10)
 
 #Change in population from 2003 to 2012
 gh <- read.csv("../regionalreport/data/greaterhartford.csv")
@@ -21,6 +35,9 @@ ddply(merge(subset(gh, period %in% c(2000, 2012)),
 languages <- read.csv('../reviewversion/Languages-all.csv', na.strings = c("**","-"))
 districts <- read.csv("../regionalreport/data/hartford-districts.csv")
 languages <- merge(languages, districts, by.x = "District.Name", by.y = "district")
+
+#Language overall
+unique(languages$Languages)
 
 #Top 10 for all students
 write.csv(
@@ -88,3 +105,21 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
   scale_fill_brewer(palette = "Purples", name = "Change in \n% Affordable\nHousing\n(2008 - 2012)") +
   theme_minimal() 
+
+#Languages by district
+langdist <- merge(read.csv('../reviewversion/Languages-by-district.csv', na.strings = c("**","-")),
+                  read.csv('../reviewversion/ELL-by-district.csv', na.strings = c("**","-")))
+
+langdist <- merge(langdist, districts, by.x = "District.ID", by.y = "districtid")
+langdist$Percent.NonEnglish = round((langdist$Number.of.Students.with.Non.English.Home.Language / langdist$Total.Enrollment)*100,1)
+
+write.csv(langdist,'../rawdata/percent-ELL-non-English.csv',row.names = F)
+
+ggplot(data = ddply(langdist,.(School.Year),
+                   summarise,
+                   Percent.NonEnglish = weighted.mean(Percent.NonEnglish,Total.Enrollment, na.rm = T),
+                   Percentage.ELL = weighted.mean(Percentage.ELL,Total.Enrollment, na.rm = T))) + 
+  geom_line(aes(x = School.Year, y = Percentage.ELL, group = "")) + 
+  geom_line(aes(x = School.Year, y = Percent.NonEnglish, group = "")) + 
+  ylim(0,20) + 
+  theme_minimal()

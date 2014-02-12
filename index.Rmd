@@ -59,6 +59,11 @@ library(acs)
 library(maps)
 library(maptools)
 towns <- read.csv("../regionalreport/data/hartford-towns.csv")
+
+towns$Towngroup <- factor(towns$Towngroup, levels = c("Hartford",
+                                                      "Urban periphery",
+                                                      "Suburban / rural"))
+
 CTTowns <- readShapeSpatial(fn="../townshp/wgs84/townct_37800_0000_2010_s100_census_1_shp_wgs84")
 
 #Fortify and order the CTTowns to allow ggmap to use that
@@ -76,7 +81,7 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   labs(x = NULL, y = NULL) + 
   coord_equal() +
   geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
-  scale_fill_brewer(palette = "Purples", name = "Types of towns") +
+  scale_fill_brewer(palette = "Blues", name = "Types of towns") +
   theme_minimal(base_size = 16)
 
 write.csv(towns,"../rawdata/towns.csv", row.names = FALSE)
@@ -593,7 +598,8 @@ glr1 <-
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") +
-  labs(x = NULL, y = "Average scale score, 3rd grade reading")
+  labs(x = NULL, y = "Average scale score, 3rd grade reading") + 
+  guides(colour = guide_legend(ncol = 1, title = NULL))
 
 glr2 <- 
   ggplot(data = subset(cmt_subgroups_region, Category == "Race / ethnicity" & 
@@ -606,7 +612,8 @@ glr2 <-
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") +
-  labs(x = NULL, y = NULL)
+  labs(x = NULL, y = NULL) + 
+  guides(colour = guide_legend(ncol = 2, title = NULL))
 
 glr3 <- 
   ggplot(data = subset(cmt_subgroups_region, Category =="Free / Reduced Price Lunch"), 
@@ -618,7 +625,8 @@ glr3 <-
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") +
-  labs(x = NULL, y = NULL)
+  labs(x = NULL, y = NULL) + 
+  guides(colour = guide_legend(ncol = 1, title = NULL))
 
 glr4 <- 
   ggplot(data = subset(cmt_subgroups_region, Category == "Gender"), 
@@ -630,7 +638,8 @@ glr4 <-
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") +
-  labs(x = NULL, y = NULL)
+  labs(x = NULL, y = NULL) + 
+  guides(colour = guide_legend(ncol = 1, title = NULL))
 
 glr5 <- 
   ggplot(data = subset(cmt_subgroups_region, Category == "Special Education"), 
@@ -642,7 +651,8 @@ glr5 <-
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") + 
-  labs(x = NULL, y = NULL)
+  labs(x = NULL, y = NULL) + 
+  guides(colour = guide_legend(ncol = 1, title = NULL))
 
 grid.arrange(glr1, glr2, glr3, glr4, glr5, ncol = 5, nrow = 1)
 
