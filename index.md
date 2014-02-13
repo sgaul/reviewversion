@@ -37,11 +37,11 @@ Quality of life / civic health
 ---
 ## Key themes
 
-1. 'We are a region'
+1. We are a region
 2. Concentration of poverty in Hartford
 3. Suburbanization of poverty
-4. Aging population and workforce
-5. Globally connected region
+4. Globally connected region
+5. Aging population and workforce
 6. Achievement gap and talent pipeline
 7. Creating opportunity in communities throughout the region
 
@@ -49,7 +49,7 @@ Quality of life / civic health
 
 ## Defining the region: Hartford + surrounding towns
 
-CRCOG region. Based on characteristics of each town, using UConn categories from [5 CTs report](http://ctsdc.uconn.edu/projections/5cts.html), with slight updates. 
+CRCOG region. Based on characteristics of each town, using categories from [5 Connecticuts report](http://ctsdc.uconn.edu/projections/5cts.html). 
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
 
@@ -57,15 +57,15 @@ CRCOG region. Based on characteristics of each town, using UConn categories from
 ---
 ## Low population growth
 
-Low population growth overall; losing population in center city, slow growth outside, most rapid in outer suburbs. Region struggles to attract new residents. 
-
+Low population growth overall and suburbanization rather than urbanization. Most live in the urban periphery now - but growth has flattened and poverty has doubled in these towns since the 1970s. Most growth  projected in affluent outer suburbs
+ 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
 
 
 --- 
 ## Suburbanization of poverty
 
-New poverty occurring in suburbs, new challenges towns can't ignore. 
+New poverty occurring in suburbs leading to new challenges towns can't ignore. Hartford poverty rate at 38 percent now, among highest nationally.
 
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
 
@@ -73,7 +73,7 @@ New poverty occurring in suburbs, new challenges towns can't ignore.
 ---
 ## Aging population
 
-Suburbs are aging quickly with no good prospects for replacing with younger generation, based on current projections. 
+Suburbs are aging quickly with no projected decline in next generation population. 
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
@@ -89,7 +89,7 @@ Aging population reflected in overall decline in school enrollment. Local school
 --- 
 ## Linguistic diversity
 
-More diversity in changing population (tie back to 1st chart); which suburbs will 'globalize'? Where will new population in our region come from and what impact will this have?
+More diversity in changing population - seen through lens of school languages; which suburbs have or will 'globalize'? Where will new population in our region come from and what impact will this have?
 
 ![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
 
@@ -97,7 +97,8 @@ More diversity in changing population (tie back to 1st chart); which suburbs wil
 --- 
 ## Everyone commutes, mostly to Hartford
 
-Large segments of regions workers commute to Hartford and some other communities with high concentration of high-skill jobs. Typical of capital cities.
+More than 106,000 jobs bring commuters into Hartford for work every day, mostly high-skills jobs. At the same time, twice as many Hartford residents work in the suburbs as work in the city, often low-skills jobs. Spatial mismatch more extreme than many similar cities.
+
 
 ![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
 
@@ -122,7 +123,7 @@ While still providing many jobs, historically strong sectors (finance & insuranc
 --- 
 ## Talent pipeline from schools
 
-Where is future workforce? Don't know what future jobs will be, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand. As in the workforce pipeline, academic achievement gaps exist among various resident populations. 
+Where is future workforce? Don't know what jobs future will hold, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand. As in the workforce pipeline, academic achievement gaps exist among various resident populations. 
 
 ![plot of chunk unnamed-chunk-10](assets/fig/unnamed-chunk-10.png) 
 
@@ -130,7 +131,7 @@ Where is future workforce? Don't know what future jobs will be, but best strateg
 --- 
 ## Achievement gap starts early
 
-As third grade reading scores indicate, there is an urgent need to addressing gaps in education early on, including even earlier in early childhood.  Gaps between ELL and special education students are most significant.
+Scores improving for all subgroups, but gaps not narrowing over time. An urgent need to address gaps in education early on, including in early childhood.  Gaps between ELL and special education students are most significant.
 
 ![plot of chunk unnamed-chunk-11](assets/fig/unnamed-chunk-11.png) 
 
@@ -148,7 +149,7 @@ Significant gap in the number homeowners Hartford versus neighboring communities
 --- 
 ## What makes a vibrant community?
 
-Version with trend graphs instead 
+Same thing as before with line graphs. 
 
 ![plot of chunk unnamed-chunk-13](assets/fig/unnamed-chunk-13.png) 
 

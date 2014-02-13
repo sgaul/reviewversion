@@ -37,11 +37,11 @@ Quality of life / civic health
 ---
 ## Key themes
 
-1. 'We are a region'
+1. We are a region
 2. Concentration of poverty in Hartford
 3. Suburbanization of poverty
-4. Aging population and workforce
-5. Globally connected region
+4. Globally connected region
+5. Aging population and workforce
 6. Achievement gap and talent pipeline
 7. Creating opportunity in communities throughout the region
 
@@ -49,7 +49,7 @@ Quality of life / civic health
 
 ## Defining the region: Hartford + surrounding towns
 
-CRCOG region. Based on characteristics of each town, using UConn categories from [5 CTs report](http://ctsdc.uconn.edu/projections/5cts.html), with slight updates. 
+CRCOG region. Based on characteristics of each town, using categories from [5 Connecticuts report](http://ctsdc.uconn.edu/projections/5cts.html). 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 library(ggplot2)
@@ -90,8 +90,8 @@ write.csv(towns,"../rawdata/towns.csv", row.names = FALSE)
 ---
 ## Low population growth
 
-Low population growth overall; losing population in center city, slow growth outside, most rapid in outer suburbs. Region struggles to attract new residents. 
-
+Low population growth overall and suburbanization rather than urbanization. Most live in the urban periphery now - but growth has flattened and poverty has doubled in these towns since the 1970s. Most growth  projected in affluent outer suburbs
+ 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
 library(ggplot2)
 library(scales)
@@ -120,7 +120,7 @@ write.csv(subset(gh_test, period >= 1900),"../rawdata/population.csv", row.names
 --- 
 ## Suburbanization of poverty
 
-New poverty occurring in suburbs, new challenges towns can't ignore. 
+New poverty occurring in suburbs leading to new challenges towns can't ignore. Hartford poverty rate at 38 percent now, among highest nationally.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 gh <- merge(gh,towns, by.x = "city", by.y = "Town")
@@ -145,7 +145,7 @@ write.csv(subset(gh_sum,period >= 1970),"../rawdata/poverty.csv", row.names = FA
 ---
 ## Aging population
 
-Suburbs are aging quickly with no good prospects for replacing with younger generation, based on current projections. 
+Suburbs are aging quickly with no projected decline in next generation population. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
 projections <- read.csv('../reviewversion/sdc-projections.csv')
@@ -203,7 +203,7 @@ write.csv(ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(val
 
 Aging population reflected in overall decline in school enrollment. Local schools impacted by demographics and through increase in magnet / private enrollment. Leading to large number of neighborhood school closures/consolidations.
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 enroll <- read.csv("../regionalreport/data/all-schools.csv", stringsAsFactors=FALSE)
 
 #Filter out the towns that are not in the region and clear out the factors
@@ -272,8 +272,7 @@ ggplot(data = ddply(merge(subset(enroll, variable == "Total" &
                           by.x = "Resident.Town",by.y = "Town"),
       .(Towngroup, School.Type, School.Year),summarise, x = sum(x)),
        aes(x = School.Year, y = x, group = School.Type, fill = School.Type)) +
-  geom_line(aes(group = School.Type, colour = School.Type)) +
-  geom_point(aes(group = School.Type, colour = School.Type, shape = School.Type)) +
+  geom_line(aes(group = School.Type, colour = School.Type), size = 1) +
   scale_y_continuous(labels = comma) +
   scale_x_discrete(breaks = c("2006-07","2008-09","2010-11")) +
   labs(x = NULL, y = NULL) +
@@ -290,7 +289,7 @@ write.csv(ddply(merge(subset(enroll, variable == "Total"), towns,
 --- 
 ## Linguistic diversity
 
-More diversity in changing population (tie back to 1st chart); which suburbs will 'globalize'? Where will new population in our region come from and what impact will this have?
+More diversity in changing population - seen through lens of school languages; which suburbs have or will 'globalize'? Where will new population in our region come from and what impact will this have?
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
 languages <- read.csv('../reviewversion/Languages-all.csv', na.strings = c("**","-"))
@@ -319,7 +318,8 @@ write.csv(languages,"../rawdata/languages.csv", row.names = F)
 --- 
 ## Everyone commutes, mostly to Hartford
 
-Large segments of regions workers commute to Hartford and some other communities with high concentration of high-skill jobs. Typical of capital cities.
+More than 106,000 jobs bring commuters into Hartford for work every day, mostly high-skills jobs. At the same time, twice as many Hartford residents work in the suburbs as work in the city, often low-skills jobs. Spatial mismatch more extreme than many similar cities.
+
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 inflow <- read.csv('../reviewversion/inflow-outflow.csv')
@@ -433,7 +433,7 @@ attainment.by.race <- melt(attainment.by.race)
 
 ggplot(data = attainment.by.race, 
        aes(y = value, x = race, group = race, fill = variable)) + 
-  geom_bar(position = 'fill', stat = 'identity') + 
+  geom_bar(position = 'fill', stat = 'identity', width = 0.5) + 
   scale_y_continuous(labels = percent) +
   labs(x = NULL, y = '% of adults (2008 - 2012 ACS estimates)') +
   scale_fill_brewer(labels = c("Less than high school degree",
@@ -514,7 +514,7 @@ ggplot(data = subset(qcew, series == "Employees" &
 
 
 library(gridExtra)
-grid.arrange(rising, falling, nrow = 1, ncol = 2)
+grid.arrange(rising, falling, nrow = 2, ncol = 1)
 
 write.csv(subset(qcew, series == "Employees" &
                            area == "North Central" &
@@ -525,7 +525,7 @@ write.csv(subset(qcew, series == "Employees" &
 --- 
 ## Talent pipeline from schools
 
-Where is future workforce? Don't know what future jobs will be, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand. As in the workforce pipeline, academic achievement gaps exist among various resident populations. 
+Where is future workforce? Don't know what jobs future will hold, but best strategy is to have an educated population. High skills jobs (college+) will be most in demand. As in the workforce pipeline, academic achievement gaps exist among various resident populations. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
 hsgrad <- read.csv("../hsgraduation/hsgraduationrates-school.csv", 
@@ -571,7 +571,7 @@ write.csv(hsgrad_agg, "../rawdata/hsgraduation.csv", row.names = FALSE)
 --- 
 ## Achievement gap starts early
 
-As third grade reading scores indicate, there is an urgent need to addressing gaps in education early on, including even earlier in early childhood.  Gaps between ELL and special education students are most significant.
+Scores improving for all subgroups, but gaps not narrowing over time. An urgent need to address gaps in education early on, including in early childhood.  Gaps between ELL and special education students are most significant.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 14}
 library(gridExtra)
@@ -792,7 +792,7 @@ grid.arrange(home,affordable,crime,vote, ncol = 2, nrow = 4)
 --- 
 ## What makes a vibrant community?
 
-Version with trend graphs instead 
+Same thing as before with line graphs. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 12, fig.width = 13}
 library(acs)
