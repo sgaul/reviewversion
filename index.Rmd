@@ -903,20 +903,26 @@ ggplot(data = ddply(merge(subset(totalcrime[!is.na(totalcrime$Total.crime.Rate),
   theme_minimal()
 
 #Voting section
-voting <- read.csv('../reviewversion/voting.csv')
+voting <- read.csv('../reviewversion/voting.csv', as.is = T)
 #voting$Town <- gsub(pattern = " (CD1&2)", replacement = "", voting$Town)
 voting <- subset(voting, voting$Town %in% levels(towns$Town))
 
+
 vote <- 
 ggplot(data = ddply(merge(subset(voting, Type == "Municipal"),towns,by = "Town"),
-                    .(Towngroup, Year), summarise,
+                    .(Towngroup, Date), summarise,
+                    voters = sum(Number.Checked.as.Having.Voted, na.rm = T),
+                    registered = sum(Names.on.Official.Check.List..Active., na.rm= T),
                     Percentage.Checked.as.Having.Voted =
                       weighted.mean(Percentage.Checked.as.Having.Voted,
                                     Names.on.Official.Check.List..Active.,na.rm = TRUE)),
-       aes(x = Year, y = Percentage.Checked.as.Having.Voted, group = Towngroup)) + 
+       aes(x = as.Date(Date, format = "%m/%d/%Y"), 
+           y = Percentage.Checked.as.Having.Voted, 
+           group = Towngroup)) + 
   geom_line(aes(colour = Towngroup), size = 1) + 
   labs(x = NULL, y = "Percent of registered voters that voted", 
        title = "Voter turnout, municipal elections") + 
+  scale_x_date(labels = date_format("%m/%y"), breaks = "1 year") + 
   scale_y_continuous(labels = percent, lim = c(0,1)) + 
   theme_minimal()
 
