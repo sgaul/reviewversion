@@ -198,6 +198,45 @@ write.csv(ddply(projections, .(YEAR, AGE, Towngroup), summarise, value = sum(val
           "../rawdata/aging.csv", row.names = F)
 ```
 
+---
+## Aging population
+
+Updated view based on current draft
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 12}
+projections <- read.csv('../reviewversion/sdc-projections.csv')
+towns <- read.csv("../regionalreport/data/hartford-towns.csv")
+projections <- subset(projections, projections$TOWN %in% levels(towns$Town))
+projections$TOWN <- factor(projections$TOWN)
+
+projections <- merge(projections, towns, by.x = "TOWN", by.y = "Town")
+
+levels(projections$AGE) <- list(
+  "55 years and over" = c("8084","6064","7579","5559","90OV","7074","8589","6569"),
+  "25 to 54 years" = c("4549","2529","4044","3539","5054","3034"),
+  "0 to 24 years" = c("0004","0509","1014","4","509","2024","1519"))
+
+age_chg <- within(merge(ddply(subset(projections, YEAR == 2025), .(AGE, Towngroup),summarise, value = sum(value)),
+             ddply(subset(projections, YEAR == 2010), .(AGE, Towngroup),summarise, value = sum(value)),
+             by=c("AGE","Towngroup")), {
+  value <- value.x - value.y
+})[,c("AGE","Towngroup","value")]
+
+age_chg$AGE <- factor(age_chg$AGE, levels = c("0 to 24 years",
+                                              "25 to 54 years",
+                                              "55 years and over"))
+
+age_chg$Towngroup <- factor(age_chg$Towngroup, levels = c("Hartford","Urban periphery","Suburban / rural"))
+
+ggplot(data = age_chg, aes(x = Towngroup, y = value)) + 
+  geom_bar(stat = 'identity') + 
+  facet_wrap(~AGE, ncol = 3) + 
+  labs(x = NULL, y = "Projected change in population (2010 - 2025)") +
+  scale_y_continuous(labels = comma) + 
+  theme_minimal()
+```
+
+
 --- 
 ## School enrollment declining
 
@@ -381,9 +420,9 @@ crcog.towns = geo.make(state = "CT",
                        combine = T,
                        combine.term = "CRCOG region")
 
-C15002I = acs.fetch(geography = crcog.towns, table.number = "C15002I", col.names = "pretty")
-C15002B = acs.fetch(geography = crcog.towns, table.number = "C15002B", col.names = "pretty")
-C15002H = acs.fetch(geography = crcog.towns, table.number = "C15002H", col.names = "pretty")
+C15002I = acs.fetch(geography = crcog.towns, table.number = "C15002I", col.names = "pretty", year = 2012)
+C15002B = acs.fetch(geography = crcog.towns, table.number = "C15002B", col.names = "pretty", year = 2012)
+C15002H = acs.fetch(geography = crcog.towns, table.number = "C15002H", col.names = "pretty", year = 2012)
 
 attainment.by.race = 
   rbind(data.frame(town=geography(C15002I)[[1]],
@@ -597,7 +636,8 @@ glr1 <-
   geom_line(aes(group = Status, colour = Status), size = 1) +
   geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300), 
+                     labels = c("Basic","Proficient","Goal","Advanced")) +
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") +
@@ -611,7 +651,7 @@ glr2 <-
   geom_line(aes(group = Status, colour = Status), size = 1) +
   geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_y_continuous(breaks = NULL, lim = c(180,300)) +
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") +
@@ -624,7 +664,7 @@ glr3 <-
   geom_line(aes(group = Status, colour = Status), size = 1) +
   geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_y_continuous(breaks = NULL, lim = c(180,300)) +
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") +
@@ -637,7 +677,7 @@ glr4 <-
   geom_line(aes(group = Status, colour = Status), size = 1) +
   geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_y_continuous(breaks = NULL, lim = c(180,300)) +
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") +
@@ -650,7 +690,7 @@ glr5 <-
   geom_line(aes(group = Status, colour = Status), size = 1) +
   geom_hline(yintercept = c(202, 217, 235, 279), size = 2, alpha = 0.1) + 
   scale_x_continuous(breaks = c(2006,2009,2012)) +
-  scale_y_continuous(breaks = c(202,217,235,279), lim = c(180,300)) +
+  scale_y_continuous(breaks = NULL, lim = c(180,300)) +
   scale_colour_brewer(palette = "Dark2") + 
   theme_minimal() + 
   theme(legend.position = "top") + 
