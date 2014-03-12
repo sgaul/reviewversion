@@ -44,7 +44,7 @@ write.csv(
   head(arrange(ddply(languages, .(Languages), summarise,
                    all.students = sum(Number.of.Students.with.Non.English.Home.Language, na.rm = TRUE),
                    ell.students = sum(Number.of.ELL.Students, na.rm = TRUE)),
-             desc(all.students)), n = 10),
+             desc(all.students)), n = 30),
   "../rawdata/toplanguages-all.csv",row.names = FALSE)
 
 #Top 10 for ELL
@@ -123,3 +123,155 @@ ggplot(data = ddply(langdist,.(School.Year),
   geom_line(aes(x = School.Year, y = Percent.NonEnglish, group = "")) + 
   ylim(0,20) + 
   theme_minimal()
+
+#Voter turnout for the state
+voting <- read.csv('../reviewversion/voting.csv')
+
+ddply(subset(voting, Type == "Municipal"),
+      .(Date), 
+      summarise,
+      Percentage.Checked.as.Having.Voted =
+        weighted.mean(Percentage.Checked.as.Having.Voted,
+                      Names.on.Official.Check.List..Active.,na.rm = TRUE))
+
+write.csv(ddply(merge(subset(voting, Type == "Municipal"),towns,by = "Town"),
+                .(Towngroup, Date), summarise,
+                Percentage.Checked.as.Having.Voted =
+                  weighted.mean(Percentage.Checked.as.Having.Voted,
+                                Names.on.Official.Check.List..Active.,na.rm = TRUE)),
+          '../rawdata/voter-turnout.csv',
+          row.names = FALSE)
+
+#Total unemployment figures
+laus <- read.csv("../regionalreport/data/laus.csv")
+towns <- read.csv("../regionalreport/data/hartford-towns.csv")
+laus <- merge(laus, towns)
+laus <- cast(laus, Year + Town + Towngroup + Date ~ Type, value = "Value")
+
+ddply(subset(ddply(laus, .(Year, Town, Towngroup), summarise,
+             EMP = mean(EMP, na.rm = T),
+             LF = mean(LF, na.rm = T),
+             UN = mean(UN, na.rm = T)),
+       Year == 2013),
+      .(Towngroup),
+      summarise,
+      EMP = sum(EMP, na.rm = T),
+      LF = sum(LF, na.rm = T),
+      UN = sum(UN, na.rm = T))
+
+#Race / ethnicity changes
+demo <- read.csv('../reviewversion/race-ethnicity.csv')
+demo <- merge(demo,towns)
+
+demo_agg <- melt(ddply(demo, .(Towngroup, Year), summarise,
+      White = sum(White.alone.or.in.combination.with.one.or.more.other.races),
+      Black = sum(Black.or.African.American.alone.or.in.combination.with.one.or.more.other.races),
+      Asian = sum(Asian.alone.or.in.combination.with.one.or.more.other.races),
+      Latino = sum(Hispanic.or.Latino.)), id.vars = c("Towngroup","Year"))
+
+#By town group
+ggplot(data = demo_agg, aes(x = Year, y = value)) + 
+  geom_line(aes(group = Towngroup, colour = Towngroup)) + 
+  facet_wrap(~ variable, scales = "free") +
+  theme_minimal() + 
+  labs(x = NULL, y = "Population") + 
+  scale_y_continuous(labels = comma)
+
+#By race
+ggplot(data = demo_agg, aes(x = Year, y = value)) + 
+  geom_line(aes(group = variable, colour = variable)) + 
+  facet_wrap(~ Towngroup) +
+  theme_minimal() + 
+  labs(x = NULL, y = "Population") + 
+  scale_y_continuous(labels = comma)
+
+#Majority-minority
+majmin <- ddply(demo, .(Town, Year), summarise,
+      White = sum(White.alone.or.in.combination.with.one.or.more.other.races),
+      Black = sum(Black.or.African.American.alone.or.in.combination.with.one.or.more.other.races),
+      Asian = sum(Asian.alone.or.in.combination.with.one.or.more.other.races),
+      Latino = sum(Hispanic.or.Latino.))
+
+majmin$minority = (1 - majmin$White / (majmin$Black + majmin$Asian + majmin$Latino + majmin$White))
+
+#Load map
+library(maps)
+library(maptools)
+CTTowns <- readShapeSpatial(fn="../townshp/wgs84/townct_37800_0000_2010_s100_census_1_shp_wgs84")
+
+#Fortify and order the CTTowns to allow ggmap to use that
+CTTowns <- fortify(CTTowns, region = "NAME10")
+
+library(classInt)
+jenks <- classIntervals(majmin$minority, 
+                        n=3, style="fisher")
+choropleth=merge(CTTowns, majmin, by.x = "id", by.y="Town")
+choropleth=choropleth[order(choropleth$order), ]
+choropleth$minority= cut(choropleth$minority, breaks=jenks$brks, include.lowest=T, dig.lab = T)
+#Make the map
+ggplot(data = choropleth, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = minority)) + 
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = NULL, y = NULL) + 
+  coord_equal() +
+  geom_polygon(data = CTTowns, colour = "grey", alpha = 0.5, fill = NA) +
+  scale_fill_brewer(palette = "Purples", name = "% non-white") +
+  theme_minimal(base_size = 16) + 
+  facet_wrap(~ Year, ncol = 1)
+
+#By town
+demo <- melt(ddply(demo, .(Town, Year), summarise,
+                       White = sum(White.alone.or.in.combination.with.one.or.more.other.races),
+                       Black = sum(Black.or.African.American.alone.or.in.combination.with.one.or.more.other.races),
+                       Asian = sum(Asian.alone.or.in.combination.with.one.or.more.other.races),
+                       Latino = sum(Hispanic.or.Latino.)), id.vars = c("Town","Year"))
+
+ggplot(data = demo, aes(x = Year, y = value)) + 
+  geom_line(aes(group = variable, colour = variable)) + 
+  facet_wrap(~ Town, scales = "free") +
+  theme_minimal() + 
+  labs(x = NULL, y = "Population") + 
+  scale_y_continuous(labels = comma)
+
+#Re-entry factoid
+
+reentry <- read.csv("../hodgepodge/reentry.csv")
+reentry <- melt(reentry, id = c("TOWN","YEAR"))
+reentry <- ddply(reentry, .(YEAR, TOWN), summarise, value = sum(value))
+
+towns$TOWN = toupper(towns$Town)
+reentry <- merge(reentry, towns, by = "TOWN")
+ddply(reentry, .(Towngroup, YEAR), summarise, sum = sum(value))
+
+#Job growth again
+qcew <- read.csv('../mockup/qcewannual-t.csv')
+
+qcew <- rbind(qcew,
+              ddply(subset(qcew,naicsector > 100), .(area,series,year), summarise,
+                    naicsector = 31,
+                    sectortitle = "Manufacturing",
+                    value = sum(value)))
+
+jobgrowth <- cast(subset(qcew, series == "Employees" &
+                           area == "North Central" &
+                           naicsector < 100 & 
+                           year %in% c(2013, 2003, 1993, 2008, 2012)),
+                  sectortitle ~ year)
+names(jobgrowth) <- make.names(names(jobgrowth))
+jobgrowth$growth20yr = jobgrowth$X2013 / jobgrowth$X1993 - 1
+jobgrowth$growth10yr = jobgrowth$X2013 / jobgrowth$X2003 - 1
+jobgrowth$growth5yr = jobgrowth$X2013 / jobgrowth$X2008 - 1
+jobgrowth$growth1yr = jobgrowth$X2013 / jobgrowth$X2012 - 1
+
+write.csv(jobgrowth,'jobgrowth.csv',row.names = F)
+
+ggplot(data = subset(qcew, series == "Employees" &
+                       area == "North Central" & value > 10000), 
+       aes(y = value, x = year)) + 
+  geom_line(aes(group = area)) +
+  theme_minimal(base_size = 16) +
+  labs(y = "Number of employees", x = NULL) +
+  scale_x_continuous(breaks = c(1993,2003,2013)) +
+  scale_y_continuous(labels = comma, lim = c(10000,100000)) + 
+  facet_wrap(~ sectortitle, ncol = 3)

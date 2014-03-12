@@ -243,7 +243,9 @@ ggplot(data = age_chg, aes(x = Towngroup, y = value)) +
 Aging population reflected in overall decline in school enrollment. Local schools impacted by demographics and through increase in magnet / private enrollment. Leading to large number of neighborhood school closures/consolidations.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
-enroll <- read.csv("../regionalreport/data/all-schools.csv", stringsAsFactors=FALSE)
+enroll <- read.csv("../regionalreport/data/all-schools-new.csv", 
+                   stringsAsFactors=FALSE)
+towns <- read.csv("../regionalreport/data/hartford-towns.csv")
 
 #Filter out the towns that are not in the region and clear out the factors
 enroll <- subset(enroll, enroll$Resident.Town %in% levels(towns$Town))
@@ -513,14 +515,14 @@ ggplot(data = subset(qcew, series == "Employees" &
                            area == "North Central" &
                            sectortitle %in% subset(jobgrowth, 
                                                    growth > .1 & 
-                                                     X2013 > 10000)$sectortitle), 
+                                                     X2013 > 5000)$sectortitle), 
        aes(y = value, x = year)) + 
   geom_line(aes(group = area)) +
   theme_minimal(base_size = 16) +
   labs(y = "Number of employees", x = NULL) +
   scale_x_continuous(breaks = c(1993,2003,2013)) +
-  scale_y_continuous(labels = comma, lim = c(10000,100000)) + 
-  facet_wrap(~ sectortitle, ncol = 4)
+  scale_y_continuous(labels = comma) + 
+  facet_wrap(~ sectortitle, ncol = 2)
 
 stable <- 
 ggplot(data = subset(qcew, series == "Employees" &
@@ -765,7 +767,7 @@ ggplot(data = ddply(merge(appeals, towns,by = "Town"),.(Towngroup), summarise,
   theme_minimal()
 
 write.csv(ddply(merge(appeals,towns,by = "Town"),
-                    .(Towngroup, Year), summarise,
+                    .(Towngroup), summarise,
                     Percent.Affordable =
                       weighted.mean(Percent.Affordable, 
                                     Total.housing.units...2010.census, na.rm = TRUE)),
@@ -927,4 +929,40 @@ ggplot(data = ddply(merge(subset(voting, Type == "Municipal"),towns,by = "Town")
   theme_minimal()
 
 grid.arrange(home,affordable,crime,vote, ncol = 2, nrow = 4)
+```
+
+--- 
+## Kids in pre-K programs
+
+Trying out something for pre-K enrollment
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 13}
+#Load libraries for graphs
+library(reshape)
+library(ggplot2)
+library(scales)
+
+#Load data
+prek <- read.csv("../childcare/preKSDE.csv")
+#Filter out the districts that are not in the region and clear out the factors
+prek <- subset(prek, prek$District.ID %in% levels(as.factor(districts$districtid)))
+
+#Add column for town instead of district
+prek$Town = gsub(prek$District.Name, pattern = " School District", replacement = "")
+prek$No.pre.K = (1 - prek$Percentage.of.Kindergarteners.with.PreK.Experience / 100) * prek$Number.of.K.students
+
+#Then add variable for town groups
+prek <- merge(prek, towns, by = "Town")
+
+prek_region <- ddply(prek,.(School.Year, Towngroup), summarise, 
+                     value = weighted.mean(
+                       Percentage.of.Kindergarteners.with.PreK.Experience, 
+                       Number.of.K.students),
+                     sum = sum(No.pre.K))
+
+ggplot(data = prek_region, aes(x = School.Year, y = sum)) + 
+  geom_line(aes(group = Towngroup, colour = Towngroup)) +
+#  ylim(0,100) + 
+  labs(x = NULL, y = "Students with no pre-K experience") +
+  theme_minimal()
 ```
