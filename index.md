@@ -162,3 +162,11 @@ Same thing as before with line graphs.
 
 ![plot of chunk unnamed-chunk-14](assets/fig/unnamed-chunk-14.png) 
 
+
+--- 
+## Kids in pre-K programs
+
+Trying out something for pre-K enrollment
+
+![plot of chunk unnamed-chunk-15](assets/fig/unnamed-chunk-15.png) 
+
